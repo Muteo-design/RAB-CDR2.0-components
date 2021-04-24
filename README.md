@@ -1,8 +1,6 @@
 # RAB CDR2.0 Components
 
-## Project setup
-
-### Download and installation
+## Download and installation
 
 ```
 Using your terminal navigate to the folder you want clone the project in
@@ -20,7 +18,7 @@ npm install
 
 ```
 
-### Run storybook
+## Run storybook
 
 ```
 npm run storybook
