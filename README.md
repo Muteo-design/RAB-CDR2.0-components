@@ -3,27 +3,27 @@
 ## Project setup
 
 ```
+Using your terminal navigate to the folder you want clone the project in
+
+```
+
+Run git clone https://github.com/Digitool-Lab/RAB-CDR2.0-components.git
+
+```
+Run cd RAB-CDR2.0-components
+
+```
+
 npm install
-```
-
-### Compiles and hot-reloads for development
 
 ```
-npm run serve
-```
 
-### Compiles and minifies for production
+### Runs storybook
 
 ```
-npm run build
-```
 
-### Lints and fixes files
+npm run storybook
 
 ```
-npm run lint
+
 ```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
