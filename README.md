@@ -7,7 +7,7 @@ Using your terminal navigate to the folder you want clone the project in
 ```
 
 ```
-Run git clone https://github.com/Digitool-Lab/RAB-CDR2.0-components.git
+Run git clone git@github.com:Digitool-Lab/RAB-CDR2.0-components.git
 ```
 
 ```
