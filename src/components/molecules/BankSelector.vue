@@ -1,5 +1,4 @@
 <template>
-<!-- FIXME: Vue can't interpolate inside attributes -->
 <!-- <div id="vue-{{question.id}}" class="rab-cdr">-->
   <div class="rab-cdr">
     <bank-search @searchchanged="setSearch"></bank-search>
@@ -16,25 +15,14 @@
 </template>
 
 <script>
-
 export default {
-  // FIXME: Only adding this prop to support storybook behaviour
-  props: {
-    enteredData: Object
-  },
-  // FIXME: Should be a function
-  // data: {
-  //   searchValue: "",
-  //   // REQUIRED PROPERTY - state to be shared with the rules engine - this is the entered value of the question
-  //   entered: {
-  //     dataholders: []
-  //   },
-  // },
-  data: function() {
+  data() {
     return {
       searchValue: "",
       // REQUIRED PROPERTY - state to be shared with the rules engine - this is the entered value of the question
-      entered: this.enteredData
+      entered: {
+        dataholders: []
+      },
     }
   },
   methods: {
@@ -50,7 +38,7 @@ export default {
     },
     computedDataholders: function() {
       var vm = this;
-      if (this.searchValue == "") {
+      if (this.searchValue === "") {
         return this.alphaSortedDataholders;
       }
       return vm.alphaSortedDataholders.filter(function(dataholder) {
@@ -62,12 +50,6 @@ export default {
         return (dataholder.selected);
       });
     },
-  },
-  // FIXME: Only adding this watcher in an attempt to support storybook behaviour
-  watch: {
-    enteredData: function (value) {
-      this.entered = value;
-    }
   },
 };
 </script>

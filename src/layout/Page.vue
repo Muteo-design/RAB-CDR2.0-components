@@ -22,7 +22,7 @@
                   <div class="panel-body">
                     <div class="sections-container">
                       <widget legend="Bank Selector">
-                        <bank-selector :entered-data="entered"/>
+                        <bank-selector :entered-data="bankSelectorEntered"/>
                       </widget>
                     </div>
                   </div>
@@ -41,27 +41,9 @@ import Widget from './Widget.vue';
 
 export default {
   name: 'page',
-  components: [
-    Widget
-  ],
-  computed: {
-    entered() {
-     return {
-       dataholders: [{
-         name: 'Westpac',
-         image: 'https://banking.westpac.com.au/wbc/banking/Themes/Default/Desktop/WBC/Core/Images/logo_white_bg.png.6c772a263bf42d99a2c098bf0739fc5b504ed28d.png',
-       }, {
-         name: 'NAB',
-         image: 'https://www.nab.com.au/etc/designs/nabrwd/clientlibs/images/logo.png',
-       }, {
-         name: 'Commonwealth Bank With an Excessively Long Name for Demonstration Purposes',
-         image: 'https://www.commbank.com.au/content/dam/commbank/commBank-logo.svg',
-       }, {
-         name: 'ANZ',
-         image: 'https://www.anz.com.au/content/dam/anzconz/images/common/promopages/logo-promo-anz-small.png',
-       }]
-     }
-    }
+  components: { Widget },
+  props: {
+    bankSelectorEntered: String
   },
 };
 </script>

@@ -1,8 +1,9 @@
-import BankSearch from '../components/BankSearch.vue';
+import BankSearch from '@/components/atoms/BankSearch';
 
 export default {
-  title: 'CDR 2.0/BankSearch',
+  title: 'CDR 2.0/Atoms/BankSearch',
   component: BankSearch,
+  decorators: [() => ({ template: '<div class="rab-cdr"><story/></div>' })],
 };
 
 const Template = (args, { argTypes }) => ({

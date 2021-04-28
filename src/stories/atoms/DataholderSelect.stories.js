@@ -1,7 +1,7 @@
-import DataholderSelect from '../components/DataholderSelect.vue';
+import DataholderSelect from '@/components/atoms/DataholderSelect.vue';
 
 export default {
-  title: 'CDR 2.0/DataholderSelect',
+  title: 'CDR 2.0/Atoms/DataholderSelect',
   component: DataholderSelect
 };
 
