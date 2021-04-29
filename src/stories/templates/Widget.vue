@@ -8,7 +8,9 @@
             <div class="questionannotations"><em>&nbsp;</em></div>
             <div class="questiontext" cc-text="consentchooseyourbank">
               <span>
-                <slot/>
+                <div class="rab-cdr">
+                  <slot/>
+                </div>
               </span>
             </div>
           </div>

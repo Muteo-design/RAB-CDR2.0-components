@@ -1,8 +1,8 @@
-import BankSelector from '@/components/molecules/BankSelector.vue';
+import BankSelector from './BankSelector.vue';
 import { default as dataholders } from '@/assets/dataholders.json';
 
 export default {
-  title: 'CDR 2.0/Molecules/BankSelector',
+  title: 'CDR 2.0/Organisms/BankSelector',
   component: BankSelector,
 };
 

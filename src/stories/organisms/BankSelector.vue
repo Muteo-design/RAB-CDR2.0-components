@@ -1,15 +1,16 @@
 <template>
   <!-- <div id="vue-{{question.id}}" class="rab-cdr">-->
   <div class="rab-cdr">
+    <slot/>
     <bank-search @searchchanged="setSearch"></bank-search>
     <div v-if="selectedDataholders.length > 0">
       <p class="dataholder-selected-heading">Selected banks</p>
       <div class="dataholder-selected-wrapper">
-        <dataholder-selected-pill v-for="dataholder in selectedDataholders" :dataholder="dataholder" v-bind:key="dataholder.name" @deselect="dataholder.selected = !dataholder.selected"></dataholder-selected-pill>
+        <dataholder-selected-pill v-for="dataholder in selectedDataholders" :dataholder="dataholder" :key="dataholder.name" @deselect="dataholder.selected = !dataholder.selected"></dataholder-selected-pill>
       </div>
     </div>
     <div class="dataholder-list-wrapper">
-      <dataholder-select v-for="dataholder in computedDataholders" :dataholder="dataholder" @selected="dataholder.selected = $event" v-bind:key="dataholder.name"></dataholder-select>
+      <dataholder-select v-for="dataholder in computedDataholders" :dataholder="dataholder" @update:checked="dataholder.selected = $event" v-bind:key="dataholder.name"></dataholder-select>
     </div>
   </div>
 </template>
@@ -28,7 +29,7 @@ export default {
   methods: {
     setSearch: function(value) {
       this.searchValue = value;
-    }
+    },
   },
   computed: {
     alphaSortedDataholders: function() {

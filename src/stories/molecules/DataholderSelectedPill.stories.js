@@ -1,15 +1,16 @@
-import DataholderSelect from '@/components/atoms/DataholderSelect.vue';
+import DataholderSelectedPill from './DataholderSelectedPill.vue';
 
 export default {
-  title: 'CDR 2.0/Atoms/DataholderSelect',
-  component: DataholderSelect,
+  title: 'CDR 2.0/Molecules/DataholderSelectedPill',
+  component: DataholderSelectedPill,
+  decorators: [() => ({ template: '<div class="rab-cdr"><div class="dataholder-selected-wrapper"><story/></div></div>' })],
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { DataholderSelect },
+  components: { DataholderSelectedPill },
   template:
-    '<dataholder-select :dataholder="dataholder"/>',
+    '<dataholder-selected-pill :dataholder="dataholder"/>',
 });
 
 const commBank = {
@@ -19,11 +20,3 @@ const commBank = {
 
 export const Default = Template.bind({});
 Default.args = { dataholder: commBank };
-
-export const Selected = Template.bind({});
-Selected.args = {
-  dataholder: {
-    ...commBank,
-    selected: true,
-  },
-};

@@ -29,9 +29,7 @@
                 <div id="Applicant1DataSharing" class="panel-collapse questions collapse in selected" style="">
                   <div class="panel-body">
                     <div class="sections-container">
-                      <widget legend="Bank Selector">
-                        <bank-selector :entered-data="bankSelectorEntered"/>
-                      </widget>
+                      <slot/>
                     </div>
                   </div>
                 </div>
@@ -45,13 +43,7 @@
 </template>
 
 <script>
-import Widget from './Widget.vue';
-
 export default {
-  name: 'page',
-  components: { Widget },
-  props: {
-    bankSelectorEntered: String
-  }
+  name: 'page'
 };
 </script>
