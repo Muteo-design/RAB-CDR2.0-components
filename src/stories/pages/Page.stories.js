@@ -10,11 +10,11 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Page },
   template:
-    '<page v-bind="$props"/>'
+    '<page v-bind="$props"/>',
 });
 
 export const Default = Template.bind({});
 Default.args = {
-  bankSelectorEntered: BankSelectorStories.Default.args.entered
-}
+  bankSelectorEntered: BankSelectorStories.Default.args.entered,
+};
 

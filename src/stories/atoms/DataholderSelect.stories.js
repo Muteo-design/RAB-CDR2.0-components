@@ -2,7 +2,7 @@ import DataholderSelect from '@/components/atoms/DataholderSelect.vue';
 
 export default {
   title: 'CDR 2.0/Atoms/DataholderSelect',
-  component: DataholderSelect
+  component: DataholderSelect,
 };
 
 const Template = (args, { argTypes }) => ({
@@ -12,20 +12,18 @@ const Template = (args, { argTypes }) => ({
     '<dataholder-select :dataholder="dataholder"/>',
 });
 
-const commBank =  {
-  name: "Commonwealth Bank With an Excessively Long Name for Demonstration Purposes",
-  image: "https://www.commbank.com.au/content/dam/commbank/commBank-logo.svg"
-}
+const commBank = {
+  name: 'Commonwealth Bank With an Excessively Long Name for Demonstration Purposes',
+  image: 'https://www.commbank.com.au/content/dam/commbank/commBank-logo.svg',
+};
 
 export const Default = Template.bind({});
-Default.args = {
-  dataholder: commBank
-};
+Default.args = { dataholder: commBank };
 
 export const Selected = Template.bind({});
 Selected.args = {
   dataholder: {
     ...commBank,
-    selected: true
-  }
-}
+    selected: true,
+  },
+};
