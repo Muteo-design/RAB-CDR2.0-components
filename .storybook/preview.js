@@ -10,6 +10,8 @@ import DataholderSelectedPill from '@/stories/molecules/DataholderSelectedPill';
 import Tickbox from '@/stories/atoms/Tickbox';
 /* Mixin that mimics Cloudcase passing data from server to component state */
 import cloudcaseStateMixin from '@/mixins/cloudcase-state';
+import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
+
 
 /* Add mixin to top level components only */
 BankSelector.mixins = [cloudcaseStateMixin];
@@ -26,5 +28,8 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  viewport: {
+    viewports: MINIMAL_VIEWPORTS,
   },
 };
