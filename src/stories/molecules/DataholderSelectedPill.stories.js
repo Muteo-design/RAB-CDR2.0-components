@@ -10,7 +10,7 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { DataholderSelectedPill },
   template:
-    '<dataholder-selected-pill :dataholder="dataholder"/>',
+    '<dataholder-selected-pill :dataholder="dataholder" :editing="editing"/>',
 });
 
 const commBank = {
@@ -18,5 +18,11 @@ const commBank = {
   image: 'https://www.commbank.com.au/content/dam/commbank/commBank-logo.svg',
 };
 
-export const Default = Template.bind({});
-Default.args = { dataholder: commBank };
+export const Selected = Template.bind({});
+Selected.args = { dataholder: commBank };
+
+export const Editing = Template.bind({});
+Editing.args = {
+  dataholder: commBank,
+  editing: true,
+};

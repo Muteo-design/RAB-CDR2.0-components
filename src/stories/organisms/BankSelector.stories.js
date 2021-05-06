@@ -4,6 +4,7 @@ import { default as dataholders } from '@/assets/dataholders.json';
 export default {
   title: 'CDR 2.0/Organisms/BankSelector',
   component: BankSelector,
+  decorators: [() => ({ template: '<div id="cloudcase-form" class="p-4 bg-white"><story/></div>' })],
 };
 
 const Template = (args, { argTypes }) => ({

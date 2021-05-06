@@ -57,12 +57,6 @@ export default {
 </script>
 
 <style>
-.bg-gray {
-  background-color: #F5F7F9;
-}
-.cursor-not-allowed {
-  cursor: not-allowed;
-}
 .dataholder-select-check {
   padding: 0.3rem;
   border-radius: 0.5rem;
