@@ -1,0 +1,48 @@
+import Badge from './Badge';
+import Shield from '@/stories/atoms/icons/Shield.js'
+import Calendar from '@/stories/atoms/icons/Calendar.js'
+import Clock from '@/stories/atoms/icons/Clock.js'
+
+export default {
+  title: 'CDR 2.0/Molecules/Badge',
+  component: Badge,
+  argTypes: {
+    slotTemplate: {
+      table: {
+        disable: true
+      }
+    }
+  },
+  decorators: [() => ({ template: '<div class="rab-cdr p-4 bg-white d-flex"><div class="col-xs-3"><story/></div></div>' })],
+};
+
+const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { Badge },
+  template: `
+    <badge v-bind="$props">
+      ${args.slotTemplate}
+    </badge>
+  `
+});
+
+export const Convenient = Template.bind({});
+Convenient.args = {
+  heading: 'Convenient',
+  text: 'Say goodbye to manually collecting bank statements. With CDR, we can do it for you',
+  slotTemplate: Shield.$options.template
+};
+
+export const Accurate = Template.bind({});
+Accurate.args = {
+  heading: 'Accurate',
+  text: 'CDR allows us to precisely get the data we need to generate accurate results',
+  slotTemplate: Calendar.$options.template
+};
+
+export const Secure = Template.bind({});
+Secure.args = {
+  heading: 'Secure',
+  text: 'The safety of your data matters most to us. That\'s why we\'re CDR accredited',
+  slotTemplate: Clock.$options.template
+};

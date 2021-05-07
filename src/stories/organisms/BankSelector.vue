@@ -3,7 +3,7 @@
   <div class="rab-cdr">
     <slot/>
     <bank-search @searchchanged="setSearch"></bank-search>
-<!--    <p class="dataholder-selected-heading">{{ selectedDataholders.length }} bank{{ plural }} selected</p>-->
+    <!--    <p class="dataholder-selected-heading">{{ selectedDataholders.length }} bank{{ plural }} selected</p>-->
     <div v-if="selectedDataholders.length > 0">
       <p class="dataholder-selected-heading">Banks selected: {{ selectedDataholders.length }}</p>
       <div class="dataholder-selected-wrapper" :class="{ 'editing-pills': editingPills }">
@@ -50,7 +50,7 @@ export default {
     editPills: function(event) {
       this.editingPills = !this.editingPills;
       event.currentTarget.blur();
-    }
+    },
   },
   computed: {
     alphaSortedDataholders: function() {
@@ -75,7 +75,7 @@ export default {
     plural: function() {
       var selectedLength = this.selectedDataholders.length;
       return (selectedLength > 1 || selectedLength === 0) ? 's' : '';
-    }
+    },
   },
 };
 </script>

@@ -8,6 +8,10 @@
   width: 24px;
   height: 24px;
 }
+.rab-svg-icon-lg {
+  width: 37px;
+  height: 37px;
+}
 
 .conceal {
   position: relative;
@@ -27,4 +31,11 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.border {
+  border-color: #c4c4c4 !important;
+}
+.border-extra-thick {
+  border-width: 3px !important;
 }

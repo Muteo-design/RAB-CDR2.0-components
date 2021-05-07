@@ -1,4 +1,4 @@
-import BankSelector from './BankSelector.vue';
+import BankSelector from './BankSelector';
 import { default as dataholders } from '@/assets/dataholders.json';
 
 export default {

@@ -19,7 +19,6 @@
 
 <script>
 export default {
-  name: 'tickbox',
   props: {
     checked: Boolean,
     disabled: Boolean,

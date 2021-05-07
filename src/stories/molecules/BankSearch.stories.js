@@ -1,4 +1,4 @@
-import BankSearch from './BankSearch.vue';
+import BankSearch from './BankSearch';
 
 export default {
   title: 'CDR 2.0/Molecules/BankSearch',

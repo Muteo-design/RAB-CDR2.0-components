@@ -1,4 +1,4 @@
-import DataholderSelectedPill from './DataholderSelectedPill.vue';
+import DataholderSelectedPill from './DataholderSelectedPill';
 
 export default {
   title: 'CDR 2.0/Molecules/DataholderSelectedPill',

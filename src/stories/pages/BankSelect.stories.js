@@ -1,5 +1,5 @@
-import BankSelect from './BankSelect.vue';
-import * as BankSelectorStories from '../organisms/BankSelector.stories.js';
+import BankSelect from './BankSelect';
+import * as BankSelectorStories from '../organisms/BankSelector.stories';
 
 export default {
   title: 'CDR 2.0/Pages/BankSelect',

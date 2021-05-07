@@ -1,25 +1,23 @@
 <template>
-  <div id="fieldset_section_applicant1consent_chooseyourbank" class="sectionheader">
+  <div id="fieldset_section_Applicant1Consent_Chooseyourbank" class="sectionHeader">
     <legend>{{ legend }}</legend>
-    <div id="id_section_applicant1consent_chooseyourbank">
-      <div id="question_consentchooseyourbank" cc-panel="consentchooseyourbank" class="questionpanel shownquestionpanel shownquestiontextpanel">
-        <div class="questioncontainer fullwidthquestion" cc-type="type-less">
-          <div class="questionannotationsandtext">
-            <div class="questionannotations"><em>&nbsp;</em></div>
-            <div class="questiontext" cc-text="consentchooseyourbank">
-              <span>
-                <div class="rab-cdr">
-                  <slot/>
-                </div>
+    <div id="id_section_Applicant1Consent_Chooseyourbank">
+      <div id="question_ConsentChooseYourBank" cc-panel="ConsentChooseYourBank" class="questionPanel shownQuestionPanel shownQuestionTextPanel">
+        <div class="questionContainer fullWidthQuestion" cc-type="type-less">
+          <div class="questionAnnotationsAndText">
+            <div class="questionAnnotations"><em>&nbsp;</em></div>
+            <div class="questionText" cc-text="ConsentChooseYourBank">
+              <span class="rab-cdr">
+                <slot/>
               </span>
             </div>
           </div>
-          <div class="questionoutcomecontainer">
-            <div class="questionresultcontainer">
-              <div cc-result-panel="consentchooseyourbank" class="result_content"></div>
+          <div class="questionOutcomeContainer">
+            <div class="questionResultContainer">
+              <div cc-result-panel="ConsentChooseYourBank" class="result_content"></div>
             </div>
-            <div class="questionerrorcontainer">
-              <div cc-error-panel="consentchooseyourbank" class="error_content"></div>
+            <div class="questionErrorContainer">
+              <div cc-error-panel="ConsentChooseYourBank" class="error_content"></div>
             </div>
           </div>
         </div>
