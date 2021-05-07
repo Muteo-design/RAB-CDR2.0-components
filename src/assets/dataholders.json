@@ -1,6 +1,6 @@
 [{
   "name": "ANZ",
-  "image": "https://www.anz.com.au/content/dam/anzcomau/logos/anz/ANZ-MB-Logo-3rd-Party-RGB.png",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/ANZ-Logo-2009.svg",
   "CDREnabled": false,
   "selected": false
 }, {
@@ -10,7 +10,7 @@
   "selected": false
 }, {
   "name": "Westpac",
-  "image": "https://www.commbank.com.au/content/dam/commbank-assets/cba-stacked.jpg",
+  "image": "https://www.finder.com.au/niche-builder/5eccc248b8fcb.png",
   "CDREnabled": false,
   "selected": false
 }, {
@@ -25,12 +25,12 @@
   "selected": false
 }, {
   "name": "Australian Unity",
-  "image": "https://www.finder.com.au/global/images/providers/australia-unity-140px.png?fit=1200",
+  "image": "https://upload.wikimedia.org/wikipedia/en/4/49/Australian_Unity_logo.jpg",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "Bank Australia",
-  "image": "https://www.finder.com.au/global/images/providers/bank-australia-logo-140px.png?fit=1200",
+  "image": "https://upload.wikimedia.org/wikipedia/en/e/ef/Bank_Australia_logo.svg",
   "CDREnabled": false,
   "selected": false
 }, {
