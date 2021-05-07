@@ -4,6 +4,13 @@ import * as BankSelectorStories from '../organisms/BankSelector.stories';
 export default {
   title: 'CDR 2.0/Pages/BankSelect',
   component: BankSelect,
+  argTypes: {
+    bankSelectorEntered: {
+      table: {
+        disable: true
+      }
+    }
+  },
 };
 
 const Template = (args, { argTypes }) => ({

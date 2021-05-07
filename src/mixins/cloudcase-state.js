@@ -4,7 +4,9 @@ export default {
     enteredData: String
   },
   created() {
-    this.setEntered();
+    if (this.enteredData) {
+      this.setEntered();
+    }
   },
   methods: {
     setEntered() {

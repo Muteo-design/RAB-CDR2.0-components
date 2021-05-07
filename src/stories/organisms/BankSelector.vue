@@ -5,7 +5,7 @@
     <bank-search @searchchanged="setSearch"></bank-search>
     <!--    <p class="dataholder-selected-heading">{{ selectedDataholders.length }} bank{{ plural }} selected</p>-->
     <div v-if="selectedDataholders.length > 0">
-      <p class="dataholder-selected-heading">Banks selected: {{ selectedDataholders.length }}</p>
+      <h5 class="mb-1">Banks selected: {{ selectedDataholders.length }}</h5>
       <div class="dataholder-selected-wrapper" :class="{ 'editing-pills': editingPills }">
         <button type="button" class="btn btn-info px-4 m-0 w-auto h-auto mb-2" @click="editPills($event)">{{ editingPills ? 'Done' : 'Edit' }}</button>
         <div class="ml-2 border-left border-dark pr-2 mb-2"/>
@@ -13,7 +13,7 @@
       </div>
     </div>
     <div :class="{ 'conceal': editingPills }">
-      <div class="dataholder-list-container pt-2 mt-4" :class="{ 'overflow-hidden pr-4': editingPills }">
+      <div class="dataholder-list-container pt-2 mt-3" :class="{ 'overflow-hidden pr-4': editingPills }">
         <div class="dataholder-list-wrapper" :class="{ 'overflow-hidden': editingPills }">
           <label v-for="dataholder in computedDataholders" :key="dataholder.name" tabindex="0" class="dataholder-select-wrapper">
             <dataholder-details :dataholder="dataholder"/>
@@ -127,16 +127,6 @@ export default {
   }
 }
 
-.dataholder-selected-heading {
-  font-family: Karbon;
-  font-style: normal;
-  margin-top: 16px;
-  font-size: 16px;
-  font-weight: 800;
-  color: #00424D;
-  line-height: 20px !important;
-  padding-bottom: 8px !important;
-}
 .dataholder-selected-wrapper {
   display: flex;
   margin-right: -1.5rem;

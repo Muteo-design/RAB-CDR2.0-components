@@ -1,9 +1,6 @@
-.bg-gray {
-  background-color: #F5F7F9;
-}
-.cursor-not-allowed {
-  cursor: not-allowed;
-}
+/* TODO: Move to community CSS and consolidate */
+
+/* New utilities */
 .rab-svg-icon {
   width: 24px;
   height: 24px;
@@ -12,7 +9,13 @@
   width: 37px;
   height: 37px;
 }
-
+.rab-svg-logo-cdr {
+  width: 118px;
+  height: 44px;
+}
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
 .conceal {
   position: relative;
 }
@@ -32,10 +35,23 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-.border {
-  border-color: #c4c4c4 !important;
+.shadow-subtle {
+  -webkit-box-shadow:  0px 6px 20px rgba(158, 158, 158, 0.08);
+  -moz-box-shadow:  0px 6px 20px rgba(158, 158, 158, 0.08);
+  box-shadow:  0px 6px 20px rgba(158, 158, 158, 0.08);
 }
-.border-extra-thick {
-  border-width: 3px !important;
+
+/* Utility overrides and extensions */
+.bg-gray {
+  background-color: #F5F7F9;
+}
+.border {
+  border-color: #CBD6E1;
+}
+.border-heavy {
+  border-width: 4px !important;
+  border-color: #A5D867 !important;
+}
+.rounded {
+  border-radius: 12px !important;
 }

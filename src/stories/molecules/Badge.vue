@@ -1,7 +1,9 @@
 <template>
-  <div class="d-flex flex-column align-items-center rounded border px-3 pt-4 pb-2 mt-4 text-center">
-    <div class="mt-n5 rounded-circle border border-extra-thick bg-white p-2 mb-2">
-      <slot/>
+  <div class="rounded border px-3 pt-4 pb-2 my-4 text-center shadow-subtle">
+    <div class="mx-auto d-inline-block rounded-circle border border-heavy bg-white mt-n5 mb-2">
+      <div class="p-2 m-1">
+        <slot/>
+      </div>
     </div>
     <h4 class="mb-1">{{ heading }}</h4>
     <p>{{ text }}</p>

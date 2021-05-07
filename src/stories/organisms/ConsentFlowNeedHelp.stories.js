@@ -1,0 +1,27 @@
+import ConsentFlowNeedHelp from './ConsentFlowNeedHelp';
+
+export default {
+  title: 'CDR 2.0/Organisms/ConsentFlowNeedHelp',
+  component: ConsentFlowNeedHelp,
+  decorators: [() => ({ template: '<div id="cloudcase-form" class="p-4 bg-white"><story/></div>' })],
+};
+
+const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { ConsentFlowNeedHelp },
+  template:
+    '<consent-flow-need-help :entered-data="entered"/>',
+});
+
+export const Default = Template.bind({});
+Default.args = {
+  entered: JSON.stringify({
+    dataholders: [{
+      "name": "ANZ",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/ANZ-Logo-2009.svg",
+    }, {
+      "name": "NATIONAL AUSTRALIA BANK",
+      "image": "https://www.nab.com.au/etc/designs/nabrwd/clientlibs/images/logo.png",
+    }]
+  })
+};

@@ -6,7 +6,7 @@
       </div>
       <canvas ref="canvas" class="dataholder-logo-canvas" width="1px" height="1px"></canvas>
     </div>
-    <p class="dataholder-name mb-0">{{ dataholder.name }}</p>
+    <p class="dataholder-name overflow-text mb-0">{{ dataholder.name }}</p>
   </div>
 </template>
 
@@ -75,15 +75,8 @@ export default {
   transform: scale(200);
 }
 
-.dataholder-name {
-  font-size: 18px;
-  font-family: Karbon;
-}
 .dataholder-pill .dataholder-name {
   font-size: 14px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   max-width: 2.8rem;
 }
 .editing-pills .dataholder-pill .dataholder-name {

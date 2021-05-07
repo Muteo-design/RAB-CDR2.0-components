@@ -1,8 +1,9 @@
 import ConsentFlow1 from './ConsentFlow1';
-// import * as BankSelectorStories from '../organisms/BankSelector.stories';
+import * as ConsentFlowCanConnect from '../organisms/ConsentFlowCanConnect.stories';
+import * as ConsentFlowNeedHelp from '../organisms/ConsentFlowNeedHelp.stories';
 
 export default {
-  title: 'CDR 2.0/Pages/ConsentFlow1of3',
+  title: 'CDR 2.0/Pages/ConsentFlow1',
   component: ConsentFlow1,
 };
 
@@ -15,6 +16,10 @@ const Template = (args, { argTypes }) => ({
 
 export const Default = Template.bind({});
 Default.args = {
-  // bankSelectorEntered: BankSelectorStories.Default.args.entered,
-};
+  consentFlowCanConnectEntered: ConsentFlowCanConnect.Default.args.entered,
+  consentFlowNeedHelpEntered: ConsentFlowNeedHelp.Default.args.entered,
+}
 
+Default.parameters = {
+  controls: { hideNoControlsWarning: true },
+}
