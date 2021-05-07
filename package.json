@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "storybook": "start-storybook -s ./public -p 6006",
+    "storybook": "BROWSER=none start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -s public",
     "chromatic": "npx chromatic --project-token 7e6808db6957"
   },
