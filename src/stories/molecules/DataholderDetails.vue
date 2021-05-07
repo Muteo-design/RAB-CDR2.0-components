@@ -6,7 +6,7 @@
       </div>
       <canvas ref="canvas" class="dataholder-logo-canvas" width="1px" height="1px"></canvas>
     </div>
-    <p class="dataholder-name">{{ dataholder.name }}</p>
+    <p class="dataholder-name mb-0">{{ dataholder.name }}</p>
   </div>
 </template>
 
@@ -31,9 +31,13 @@ export default {
   width: 100%;
 }
 .dataholder-pill .dataholder-details {
-  max-width: calc(100% - 3rem);
+  max-width: calc(100% - 2rem);
 }
-
+@media (min-width: 768px) {
+  .dataholder-pill .dataholder-details {
+    max-width: none;
+  }
+}
 .dataholder-logo,
 .dataholder-logo > div {
   border-radius: 50%;
@@ -72,8 +76,6 @@ export default {
 }
 
 .dataholder-name {
-  margin-bottom: 0 !important;
-  line-height: 1 !important;
   font-size: 18px;
   font-family: Karbon;
 }
@@ -82,7 +84,7 @@ export default {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 2.65rem;
+  max-width: 2.8rem;
 }
 .editing-pills .dataholder-pill .dataholder-name {
   max-width: 100%;
