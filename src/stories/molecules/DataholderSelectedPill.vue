@@ -37,20 +37,10 @@ export default {
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   flex-shrink: 0;
+  max-width: 100%;
 }
 
 .dataholder-pill-icon {
   flex: none;
 }
-/*
-.dataholder-pill .dataholder-name {
-  font-size: 14px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.editing-pills .dataholder-pill .dataholder-name {
-  white-space: nowrap;
-}
-*/
 </style>

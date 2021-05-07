@@ -30,6 +30,9 @@ export default {
   align-items: center;
   width: 100%;
 }
+.dataholder-pill .dataholder-details {
+  max-width: calc(100% - 3rem);
+}
 
 .dataholder-logo,
 .dataholder-logo > div {
@@ -73,5 +76,20 @@ export default {
   line-height: 1 !important;
   font-size: 18px;
   font-family: Karbon;
+}
+.dataholder-pill .dataholder-name {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 2.65rem;
+}
+.editing-pills .dataholder-pill .dataholder-name {
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .dataholder-pill .dataholder-name {
+    max-width: 100%;
+  }
 }
 </style>
