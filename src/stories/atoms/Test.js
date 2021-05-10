@@ -2,7 +2,7 @@ export default {
   template: `
     <div class="rounded py-2 hover-bg-brand-secondary-three"
          :class="[ disabled ? 'cursor-not-allowed' : 'cursor-pointer' ]">
-         <h1>JC Test</h1>
+         <h1>JC Testing....</h1>
     </div>
   `,
   props: {
