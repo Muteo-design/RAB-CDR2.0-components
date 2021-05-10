@@ -1,0 +1,22 @@
+/* TODO: Move to community CSS and consolidate */
+
+/**
+ * NOTE: Colour changes below
+ *
+ * TODO: Confirm new palette with Bjorn
+ */
+
+.rab-cdr .brand-primary-three {
+  /*color: #016e80;*/
+  color: #015060;
+}
+.rab-cdr .brand-secondary-three {
+  /*color: #eff5fb;*/
+  color: #f5f7f9;
+}
+.rab-cdr .bg-brand-secondary-three,
+.rab-cdr .hover-bg-brand-secondary-three:hover,
+.rab-cdr .hover-bg-brand-secondary-three:focus {
+  /*background-color: #eff5fb !important;*/
+  background-color: #f5f7f9 !important;
+}

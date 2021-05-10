@@ -9,8 +9,10 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { DataholderSelectedPill },
-  template:
-    '<dataholder-selected-pill :dataholder="dataholder" :editing="editing"/>',
+  template: `
+    <code>Deprecated</code>
+    <dataholder-selected-pill :dataholder="dataholder" :editing="editing"/>
+  `,
 });
 
 const commBank = {

@@ -1,17 +1,48 @@
 /* TODO: Move to community CSS and consolidate */
 
+/* Global overrides */
+.cloudcase-skin h4,
+.cloudcase-skin #cloudcase-form h4,
+.cloudcase-skin .h4,
+.cloudcase-skin #cloudcase-form .h4 {
+  font-size: 20px;
+}
+.cloudcase-skin #cloudcase-form .btn-pill:not(.dropdown-toggle),
+.cloudcase-skin #cloudcase-form .multiAnswerGroup .btn-pill,
+.cloudcase-skin .ui-dialog .btn-pill,
+.cloudcase-skin .ui-dialog .ui-dialog-buttonpane .btn-pill {
+  min-width: 0 !important;
+  min-height: 0 !important;
+}
+
+/* Utility overrides and extensions */
+.bg-gray {
+  background-color: #F5F7F9;
+}
+.text-dark {
+  color: #151515 !important;
+}
+.border {
+  border-color: #bdbdbd !important;
+}
+.border-light {
+  border-color: #e5e5e5 !important;
+}
+.border-heavy {
+  border-width: 4px !important;
+  border-style: solid;
+  border-color: inherit;
+}
+.rounded {
+  border-radius: 9px !important;
+}
+.rounded-lg {
+  border-radius: 12px !important;
+}
+
 /* New utilities */
-.rab-svg-icon {
-  width: 24px;
-  height: 24px;
-}
-.rab-svg-icon-lg {
-  width: 37px;
-  height: 37px;
-}
-.rab-svg-logo-cdr {
-  width: 118px;
-  height: 44px;
+.flex-none {
+  flex: none;
 }
 .cursor-not-allowed {
   cursor: not-allowed;
@@ -40,18 +71,12 @@
   -moz-box-shadow:  0px 6px 20px rgba(158, 158, 158, 0.08);
   box-shadow:  0px 6px 20px rgba(158, 158, 158, 0.08);
 }
-
-/* Utility overrides and extensions */
-.bg-gray {
-  background-color: #F5F7F9;
+.text-tiny {
+  font-size: 12px;
 }
-.border {
-  border-color: #CBD6E1;
+.text-small {
+  font-size: 14px;
 }
-.border-heavy {
-  border-width: 4px !important;
-  border-color: #A5D867 !important;
-}
-.rounded {
-  border-radius: 12px !important;
+.text-large {
+  font-size: 18px;
 }
