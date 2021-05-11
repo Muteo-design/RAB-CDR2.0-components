@@ -1,0 +1,97 @@
+p,
+ul,
+ol {
+  font-family: "Arial", "Helvetica", sans-serif;
+  margin-bottom: 16px;
+  letter-spacing: 0.016em;
+  line-height: 1.4;
+}
+
+ul,
+ol {
+  padding-left: 16px;
+}
+
+ul li,
+ol li {
+  margin-bottom: 16px;
+}
+
+a {
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  text-decoration: none;
+  line-height: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  border-bottom-color: transparent;
+}
+
+hr {
+  border-color: #00424d !important;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+/* Utilities */
+.text-tiny {
+  font-size: 12px;
+}
+
+.text-small {
+  font-size: 14px;
+}
+
+.text-large {
+  font-size: 18px;
+}
+
+.font-brand {
+  font-family: "Karbon";
+}
+
+.font-brand-bold {
+  font-family: "Karbon";
+  font-weight: 800;
+}
+
+.font-body {
+  font-family: "Arial", "Helvetica", sans-serif !important;
+}
+
+.line-height-1 {
+  line-height: 0.25 !important;
+}
+
+.line-height-2 {
+  line-height: 0.5 !important;
+}
+
+.line-height-3 {
+  line-height: 1 !important;
+}
+
+.line-height-4 {
+  line-height: 1.5 !important;
+}
+
+.line-height-5 {
+  line-height: 3 !important;
+}
+
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
+.text-feature {
+  font-family: "Karbon";
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #00424d;
+  font-size: 20px;
+  line-height: 1.25;
+  border-left: 3px solid #a5d867;
+  margin-bottom: 3rem;
+}

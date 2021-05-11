@@ -6,7 +6,6 @@ import ConsentFlowIntro from '@/stories/organisms/ConsentFlowIntro';
 import ConsentFlowCanConnect from '@/stories/organisms/ConsentFlowCanConnect';
 import ConsentFlowNeedHelp from '@/stories/organisms/ConsentFlowNeedHelp';
 /* Molecules */
-import BankSearch from '@/stories/molecules/BankSearch';
 import DataholderDetails from '@/stories/molecules/DataholderDetails';
 import DataholderConnectCard from '@/stories/molecules/DataholderConnectCard';
 import DataholderSelectedPill from '@/stories/molecules/DataholderSelectedPill'; // NOTE: deprecated
@@ -33,7 +32,6 @@ Vue.component('consent-flow-intro', ConsentFlowIntro);
 Vue.component('consent-flow-can-connect', ConsentFlowCanConnect);
 Vue.component('consent-flow-need-help', ConsentFlowNeedHelp);
 /* Molecules */
-Vue.component('bank-search', BankSearch);
 Vue.component('dataholder-details', DataholderDetails);
 Vue.component('dataholder-connect-card', DataholderConnectCard);
 Vue.component('dataholder-selected-pill', DataholderSelectedPill); // NOTE: deprecated
@@ -42,12 +40,7 @@ Vue.component('cdr-badge', CDRBadge);
 /* Atoms */
 Vue.component('tickbox', Tickbox);
 
-/* TODO: Temporary solution for storybook. Need to compile, export and combine these with community.css for handoff */
-import '@/assets/css/utilities.css';
-import '@/assets/css/colors.css';
-import '@/assets/css/icons.css';
-import '@/assets/css/logos.css';
-import '@/assets/css/components.css';
+import '@/assets/css/app.css';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

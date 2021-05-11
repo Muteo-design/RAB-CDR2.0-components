@@ -1,8 +1,10 @@
 export default {
   template: `
-    <div class="rounded py-2 hover-bg-brand-secondary-three"
+    <div class="rounded p-2 hover-bg-brand-secondary-three"
+         @mouseenter="hover = true"
+         @mouseleave="hover = false"
          :class="[ disabled ? 'cursor-not-allowed' : 'cursor-pointer' ]">
-      <i class="icon-2" :class="variation"/>
+      <i class="icon-1" :class="iconName"/>
       <input type="checkbox" class="d-none" v-model="checkedLocal" :disabled="disabled">
     </div>
   `,
@@ -24,11 +26,11 @@ export default {
     },
   },
   computed: {
-    variation: function() {
+    iconName: function() {
       if (this.isChecked) {
         return 'icon-rab-tickbox-active' + (this.disabled ? '-disabled' : '');
       } else {
-        return 'icon-rab-tickbox' + (this.disabled ? '-disabled' : '');
+        return 'icon-rab-tickbox' + (this.disabled ? '-disabled' : (this.hover ? '-hover' : ''));
       }
     },
     checkedLocal: {

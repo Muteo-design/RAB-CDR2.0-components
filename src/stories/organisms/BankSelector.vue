@@ -2,8 +2,12 @@
   <!-- <div id="vue-{{question.id}}" class="rab-cdr">-->
   <div class="rab-cdr">
     <slot/>
-    <bank-search @searchchanged="setSearch"></bank-search>
-    <!--    <p class="dataholder-selected-heading">{{ selectedDataholders.length }} bank{{ plural }} selected</p>-->
+    <div @click="focusSearchInput()"
+         class="bank-search d-flex align-items-center rounded shadow-subtle bg-white border border-brand-primary-one bg-white py-3 px-2">
+      <i v-if="searchValue" class="icon-rab-arrow-left-gray cursor-pointer" @click="searchValue = ''"/>
+      <i v-else class="icon-rab-search-gray"/>
+      <input type="text" ref="search" name="search" id="search" class="bank-search-input" v-model="searchValue" placeholder="Find your bank"/>
+    </div>
     <div v-if="selectedDataholders.length > 0">
       <h5 class="mb-1">Banks selected: {{ selectedDataholders.length }}</h5>
       <div class="dataholder-selected-wrapper" :class="{ 'editing-pills': editingPills }">
@@ -15,9 +19,9 @@
         <div v-for="dataholder in selectedDataholders" :key="dataholder.name"
              class="dataholder-pill d-flex align-items-center justify-content-between py-2 pl-2 bg-white border border-brand-primary-one rounded-pill mr-2 mb-2 mw-100 text-tiny">
           <dataholder-details :dataholder="dataholder" small/>
-          <div class="flex-none pl-2">
-            <i v-if="editingPills" @click="deselect(dataholder)" class="icon-rab-close icon-2 cursor-pointer"/>
-            <i v-else class="icon-rab-check icon-2"/>
+          <div class="flex-none px-2">
+            <i v-if="editingPills" @click="deselect(dataholder)" class="icon-rab-close icon-1 cursor-pointer"/>
+            <i v-else class="icon-rab-check icon-1"/>
           </div>
         </div>
       </div>
@@ -27,7 +31,7 @@
         <div class="dataholder-list-wrapper" :class="{ 'overflow-hidden': editingPills }">
           <div v-for="dataholder in computedDataholders" :key="dataholder.name" class="pb-sm-1">
             <label tabindex="0" class="dataholder-select-wrapper d-flex flex-row align-items-center justify-content-between w-100 rounded-lg border bg-white cursor-pointer p-2 mb-2">
-              <dataholder-details :dataholder="dataholder" class="font-brand text-large p-sm-1"/>
+              <dataholder-details :dataholder="dataholder" name-class="font-brand text-large mb-n1 p-sm-1"/>
               <tickbox :checked="dataholder.selected" @update:checked="dataholder.selected = $event" class="flex-none"/>
             </label>
           </div>
@@ -50,6 +54,9 @@ export default {
     };
   },
   methods: {
+    focusSearchInput: function() {
+      this.$refs.search.focus();
+    },
     setSearch: function(value) {
       this.searchValue = value;
     },
@@ -93,11 +100,30 @@ export default {
 </script>
 
 <style>
+.bank-search-input {
+  border: none;
+  border-radius: 9px;
+  display: flex;
+  font-family: Karbon;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px !important;
+  flex: 1 auto;
+  height: 1rem !important;
+  padding-left: 8px;
+}
+
+.bank-search-input:focus {
+  outline: none;
+}
+
 .dataholder-list-container {
   padding-right: 1rem;
   margin-right: -1rem;
   position: relative;
 }
+
 .dataholder-list-container:before,
 .dataholder-list-container:after {
   content: '';
@@ -109,12 +135,15 @@ export default {
   right: 1rem;
   box-shadow: 0 0 5px #ccc;
 }
+
 .dataholder-list-container:before {
   top: 0;
 }
+
 .dataholder-list-container:after {
   bottom: 0;
 }
+
 .dataholder-list-wrapper {
   height: 300px;
   overflow-y: scroll;
@@ -147,9 +176,11 @@ export default {
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
 }
+
 .dataholder-selected-wrapper::-webkit-scrollbar {
   display: none;
 }
+
 .dataholder-selected-wrapper.editing-pills {
   flex-wrap: wrap;
   overflow-y: none;

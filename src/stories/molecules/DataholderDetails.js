@@ -3,16 +3,17 @@ export default {
     <div class="dataholder-details d-flex align-items-center">
       <div class="dataholder-logo flex-none rounded-circle overflow-hidden position-relative mr-2">
         <canvas ref="canvas" width="1px" height="1px"></canvas>
-        <div class="rounded-circle overflow-hidden position-relative bg-white border-thick border-white" :class="[ small ? 'icon-2' : 'icon-3' ]">
+        <div class="rounded-circle overflow-hidden position-relative bg-white border-thick border-white" :class="[ smallLogo ? 'icon-1' : 'icon-2' ]">
           <img :src="dataholder.image" @load="setBrand($event)" class="center-xy">
         </div>
       </div>
-      <div class="dataholder-name overflow-text">{{ dataholder.name }}</div>
+      <div class="dataholder-name overflow-text" :class="nameClass">{{ dataholder.name }}</div>
     </div>
   `,
   props: {
     dataholder: Object,
-    small: Boolean
+    smallLogo: Boolean,
+    nameClass: String,
   },
   methods: {
     setBrand: function(event) {

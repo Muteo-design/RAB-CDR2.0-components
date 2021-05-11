@@ -1,0 +1,51 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+label {
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem;
+  color: #00424d;
+  font-family: Arial, sans-serif;
+}
+
+label p {
+  color: #666;
+}
+
+input[type=text] {
+  height: 3rem;
+  font-family: Arial, sans-serif;
+  margin-bottom: 0;
+  color: #666;
+}
+
+.form-control:focus {
+  border-color: #00424d;
+}
+
+button {
+  -webkit-appearance: none;
+}
+
+.cloudcase-skin h4,
+.cloudcase-skin #cloudcase-form h4,
+.cloudcase-skin .h4,
+.cloudcase-skin #cloudcase-form .h4 {
+  font-size: 20px;
+}
+
+.cloudcase-skin #cloudcase-form .btn-pill:not(.dropdown-toggle),
+.cloudcase-skin #cloudcase-form .multiAnswerGroup .btn-pill,
+.cloudcase-skin .ui-dialog .btn-pill,
+.cloudcase-skin .ui-dialog .ui-dialog-buttonpane .btn-pill {
+  min-width: 0 !important;
+  min-height: 0 !important;
+}

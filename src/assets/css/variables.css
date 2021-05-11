@@ -1,0 +1,20 @@
+:root {
+  /* Colors */
+  /* TODO: Confirm brand colours. Some are still from CDR 1 */
+  --brand-primary-one: #00424d;
+  --brand-primary-two: #a5d867;
+  /*--brand-primary-three: #016e80;*/
+  --brand-primary-three: #015060;
+  --brand-secondary-one: #308796;
+  --brand-secondary-two: #009db0;
+  /*--brand-secondary-three: #eff5fb;*/
+  --brand-secondary-three: #f5f7f9;
+  --brand-secondary-four: #f9f9f9;
+
+  --brand-success: #74d003;
+  --brand-warning: #f6a78c;
+  --brand-danger: #e84a5e;
+
+  --brand-gray: #666;
+  --brand-white: #fff;
+}

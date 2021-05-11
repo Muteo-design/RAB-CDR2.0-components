@@ -1,22 +1,140 @@
-/* TODO: Move to community CSS and consolidate */
-
-/**
- * NOTE: Colour changes below
- *
- * TODO: Confirm new palette with Bjorn
- */
-
-.rab-cdr .brand-primary-three {
-  /*color: #016e80;*/
-  color: #015060;
+.brand-primary-one {
+  color: var(--brand-primary-one);
 }
-.rab-cdr .brand-secondary-three {
-  /*color: #eff5fb;*/
-  color: #f5f7f9;
+
+.brand-primary-two {
+  color: var(--brand-primary-two);
 }
-.rab-cdr .bg-brand-secondary-three,
-.rab-cdr .hover-bg-brand-secondary-three:hover,
-.rab-cdr .hover-bg-brand-secondary-three:focus {
-  /*background-color: #eff5fb !important;*/
-  background-color: #f5f7f9 !important;
+
+.brand-primary-three {
+  color: var(--brand-primary-three);
+}
+
+.brand-secondary-one {
+  color: var(--brand-secondary-one);
+}
+
+.brand-secondary-two {
+  color: var(--brand-secondary-two);
+}
+
+.brand-secondary-three {
+  color: var(--brand-secondary-three);
+}
+
+.brand-secondary-four {
+  color: var(--brand-secondary-four);
+}
+
+.bg-brand-primary-one,
+.hover-bg-brand-primary-one:hover,
+.hover-bg-brand-primary-one:focus {
+  background-color: var(--brand-primary-one) !important;
+}
+
+.bg-brand-primary-two,
+.hover-bg-brand-primary-two:hover,
+.hover-bg-brand-primary-two:focus {
+  background-color: var(--brand-primary-two) !important;
+}
+
+.bg-brand-primary-three,
+.hover-bg-brand-primary-three:hover,
+.hover-bg-brand-primary-three:focus {
+  background-color: var(--brand-primary-three) !important;
+}
+
+.bg-brand-secondary-two,
+.hover-bg-brand-secondary-two:hover,
+.hover-bg-brand-secondary-two:focus {
+  background-color: var(--brand-secondary-two) !important;
+}
+
+.bg-brand-secondary-three,
+.hover-bg-brand-secondary-three:hover,
+.hover-bg-brand-secondary-three:focus {
+  background-color: var(--brand-secondary-three) !important;
+}
+
+.bg-brand-secondary-four,
+.hover-bg-brand-secondary-four:hover,
+.hover-bg-brand-secondary-four:focus {
+  background-color: var(--brand-secondary-four) !important;
+}
+
+.border-brand-primary-one {
+  border-color: var(--brand-primary-one) !important;
+}
+
+.border-brand-primary-two {
+  border-color: var(--brand-primary-two) !important;
+}
+
+.border-brand-primary-three {
+  border-color: var(--brand-primary-three) !important;
+}
+
+.border-brand-secondary-one {
+  border-color: var(--brand-secondary-one) !important;
+}
+
+.border-brand-secondary-two {
+  border-color: var(--brand-secondary-two) !important;
+}
+
+.border-brand-secondary-three {
+  border-color: var(--brand-secondary-three) !important;
+}
+
+.border-brand-secondary-four {
+  border-color: var(--brand-secondary-four) !important;
+}
+
+.border-transparent {
+  border-color: transparent !important;
+}
+
+.text-success {
+  color: var(--brand-success) !important;
+}
+
+.text-warning {
+  color: var(--brand-warning) !important;;
+}
+
+.text-danger {
+  color: var(--brand-danger) !important;
+}
+
+.text-info {
+  color: var(--brand-primary-one) !important;
+}
+
+/* Default body text color */
+.text-gray {
+  color: var(--brand-gray) !important;
+}
+
+.border-gray {
+  border-color: var(--brand-gray) !important;
+}
+
+.text-white,
+.hover-white:hover,
+.hover-white:focus {
+  color: var(--brand-white) !important;
+}
+
+.bg-white,
+.hover-bg-white:hover,
+.hover-bg-white:focus {
+  background-color: var(--brand-white);
+}
+
+.desaturate {
+  filter: grayscale(100%);
+}
+
+.saturate {
+  filter: grayscale(0%);
 }

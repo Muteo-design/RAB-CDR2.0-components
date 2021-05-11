@@ -1,0 +1,33 @@
+[class*="alert-"] {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+[class*="alert-"] > strong:first-child {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #00424d;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.alert-default {
+  background-color: #f7f7f7;
+}
+
+.alert-info {
+  background-color: #fff;
+  color: #016e80;
+  border: 1px solid #016e80;
+}
+
+.alert-warning {
+  background-color: #fef6f3;
+}
+
+.alert-danger {
+  background-color: #fdedef;
+}

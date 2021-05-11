@@ -8,7 +8,7 @@
     "lint": "vue-cli-service lint",
     "storybook": "BROWSER=none start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "npx chromatic --auto-accept-changes --project-token 7e6808db6957" 
+    "chromatic": "npx chromatic --auto-accept-changes --project-token 7e6808db6957"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -19,15 +19,21 @@
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/vue": "^6.2.9",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
+    "autoprefixer": "^9.8.6",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "chromatic": "^5.8.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "postcss": "^8.2.15",
+    "postcss-custom-properties": "^11.0.0",
+    "postcss-import": "^14.0.2",
+    "postcss-prefix-selector": "^1.9.0",
     "vue-loader": "^15.9.6",
     "vue-template-compiler": "^2.6.11"
   },
@@ -48,6 +54,7 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not dead"
+    "not dead",
+    "ie >= 11"
   ]
 }
