@@ -12,7 +12,7 @@
   }
 }
 .dataholder-logo {
-  padding: 1px;
+  padding: 2px;
 }
 .dataholder-logo > canvas {
   position: absolute;
@@ -34,4 +34,12 @@
   .dataholder-pill .dataholder-name {
     max-width: 100%;
   }
+}
+
+.dataholder-connect-card .dataholder-name {
+  font-family: Karbon;
+  font-weight: bold;
+  font-size: 18px;
+  color: #151515;
+  margin-top: 0.25rem;
 }

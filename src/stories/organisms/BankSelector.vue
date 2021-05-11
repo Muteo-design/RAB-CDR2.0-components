@@ -25,11 +25,12 @@
     <div :class="{ 'conceal': editingPills }">
       <div class="dataholder-list-container pt-2 mt-3" :class="{ 'overflow-hidden pr-4': editingPills }">
         <div class="dataholder-list-wrapper" :class="{ 'overflow-hidden': editingPills }">
-          <label v-for="dataholder in computedDataholders" :key="dataholder.name" tabindex="0"
-                 class="dataholder-select-wrapper d-flex flex-row align-items-center justify-content-between w-100 rounded-lg border bg-white cursor-pointer px-2 py-1 mb-2">
-            <dataholder-details :dataholder="dataholder" class="font-brand text-large"/>
-            <tickbox :checked="dataholder.selected" @update:checked="dataholder.selected = $event" class="flex-none"/>
-          </label>
+          <div v-for="dataholder in computedDataholders" :key="dataholder.name" class="pb-sm-1">
+            <label tabindex="0" class="dataholder-select-wrapper d-flex flex-row align-items-center justify-content-between w-100 rounded-lg border bg-white cursor-pointer p-2 mb-2">
+              <dataholder-details :dataholder="dataholder" class="font-brand text-large p-sm-1"/>
+              <tickbox :checked="dataholder.selected" @update:checked="dataholder.selected = $event" class="flex-none"/>
+            </label>
+          </div>
         </div>
       </div>
     </div>
