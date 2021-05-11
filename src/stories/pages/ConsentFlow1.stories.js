@@ -1,4 +1,5 @@
 import ConsentFlow1 from './ConsentFlow1';
+import * as ConsentFlowIntro from '../organisms/ConsentFlowIntro.stories';
 import * as ConsentFlowCanConnect from '../organisms/ConsentFlowCanConnect.stories';
 import * as ConsentFlowNeedHelp from '../organisms/ConsentFlowNeedHelp.stories';
 
@@ -16,6 +17,7 @@ const Template = (args, { argTypes }) => ({
 
 export const Default = Template.bind({});
 Default.args = {
+  consentFlowIntroEntered: ConsentFlowIntro.Default.args.entered,
   consentFlowCanConnectEntered: ConsentFlowCanConnect.Default.args.entered,
   consentFlowNeedHelpEntered: ConsentFlowNeedHelp.Default.args.entered,
 }

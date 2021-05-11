@@ -25,6 +25,6 @@ Default.args = {
     }, {
       "name": "Regional Australia Bank",
       "image": "https://www.finder.com.au/global/images/providers/regional-australia-bank-logo-140px.png?fit=1200",
-    }]
+    }],
   })
 };

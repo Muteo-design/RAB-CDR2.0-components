@@ -10,8 +10,12 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { ConsentFlowIntro },
   template:
-    '<consent-flow-intro/>',
+    '<consent-flow-intro :entered-data="entered"/>',
 });
 
 export const Default = Template.bind({});
-Default.args = null;
+Default.args = {
+  entered: JSON.stringify({
+    adrNumber: 'ADRBNK000001'
+  }),
+};

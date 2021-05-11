@@ -6,9 +6,12 @@ export default {
       </div>
       <div class="text-left">
         <h5 class="my-0 line-height-3">Regional Australia Bank</h5>
-        <p class="my-0 h6 line-height-1"><small class="text-dark">Accredited Data Recipient: 000001</small></p>
+        <p class="my-0 h6 line-height-1"><small class="text-dark">Accredited Data Recipient: {{ adrNumber }}</small></p>
       </div>
     </div>
-  `
-}
+  `,
+  props: {
+    adrNumber: String,
+  },
+};
 

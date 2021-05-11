@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="text-center">
-      <cdr-badge class="mx-auto"/>
+      <cdr-badge :adr-number="entered.adrNumber" class="mx-auto"/>
     </div>
   </div>
 </template>
@@ -31,6 +31,7 @@ export default {
       // REQUIRED PROPERTY - state to be shared with the rules engine - this is the entered value of the question
       entered: {
         dataholders: [],
+        adrNumber: ''
       },
     };
   },
