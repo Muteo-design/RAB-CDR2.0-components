@@ -1,6 +1,6 @@
 export default {
   template: `
-    <div class="rounded py-2 hover-bg-brand-secondary-three"
+    <div class="rounded py-2 hover-bg-brand-secondary-3"
          :class="[ disabled ? 'cursor-not-allowed' : 'cursor-pointer' ]">
          <h1>JC Testing.</h1>
     </div>

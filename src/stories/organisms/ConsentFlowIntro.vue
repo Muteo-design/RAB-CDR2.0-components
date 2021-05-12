@@ -3,23 +3,23 @@
   <div class="rab-cdr">
     <div class="row d-sm-flex">
       <div class="col-sm-4 d-flex align-items-stretch">
-        <badge heading="Convenient" text="Say goodbye to manually collecting bank statements. With CDR, we can do it for you">
+        <card-badge heading="Convenient" text="Say goodbye to manually collecting bank statements. With CDR, we can do it for you">
           <i class="icon-rab-shield icon-3"/>
-        </badge>
+        </card-badge>
       </div>
       <div class="col-sm-4 d-flex align-items-stretch">
-        <badge heading="Accurate" text="CDR allows us to precisely get the data we need to generate accurate results">
+        <card-badge heading="Accurate" text="CDR allows us to precisely get the data we need to generate accurate results">
           <i class="icon-rab-calendar icon-3"/>
-        </badge>
+        </card-badge>
       </div>
       <div class="col-sm-4 d-flex align-items-stretch">
-        <badge heading="Secure" text="The safety of your data matters most to us. That's why we're CDR accredited">
+        <card-badge heading="Secure" text="The safety of your data matters most to us. That's why we're CDR accredited">
           <i class="icon-rab-clock icon-3"/>
-        </badge>
+        </card-badge>
       </div>
     </div>
     <div class="text-center">
-      <cdr-badge :adr-number="entered.adrNumber" class="mx-auto"/>
+      <card-cdr :adr-number="entered.adrNumber" class="mx-auto"/>
     </div>
   </div>
 </template>

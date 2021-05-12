@@ -3,10 +3,12 @@
   <div class="rab-cdr">
     <slot/>
     <div @click="focusSearchInput()"
-         class="bank-search d-flex align-items-center rounded shadow-subtle bg-white border border-brand-primary-one bg-white py-3 px-2">
+         class="bank-search d-flex align-items-center rounded bg-white border border-brand-primary-1 shadow-subtle py-3 px-2">
       <i v-if="searchValue" class="icon-rab-arrow-left-gray cursor-pointer" @click="searchValue = ''"/>
       <i v-else class="icon-rab-search-gray"/>
-      <input type="text" ref="search" name="search" id="search" class="bank-search-input" v-model="searchValue" placeholder="Find your bank"/>
+      <input type="text" ref="search" name="search" id="search"
+             v-model="searchValue" placeholder="Find your bank"
+             class="border-0 h-auto w-100 pl-2 font-brand mb-n1"/>
     </div>
     <div v-if="selectedDataholders.length > 0">
       <h5 class="mb-1">Banks selected: {{ selectedDataholders.length }}</h5>
@@ -17,18 +19,20 @@
         </button>
         <div class="ml-2 border-left border-dark pr-2 mb-2"/>
         <div v-for="dataholder in selectedDataholders" :key="dataholder.name"
-             class="dataholder-pill d-flex align-items-center justify-content-between py-2 pl-2 bg-white border border-brand-primary-one rounded-pill mr-2 mb-2 mw-100 text-tiny">
-          <dataholder-details :dataholder="dataholder" small/>
-          <div class="flex-none px-2">
-            <i v-if="editingPills" @click="deselect(dataholder)" class="icon-rab-close icon-1 cursor-pointer"/>
-            <i v-else class="icon-rab-check icon-1"/>
+             class="dataholder-pill border border-brand-primary-1 rounded-pill bg-white p-1 mr-2 mb-2 mw-100">
+          <div class="d-flex align-items-center justify-content-between border-thick border-transparent">
+            <dataholder-details :dataholder="dataholder" smallLogo name-class="text-tiny"/>
+            <div class="flex-none pl-2">
+              <i v-if="editingPills" @click="deselect(dataholder)" class="icon-rab-close icon-1 cursor-pointer"/>
+              <i v-else class="icon-rab-check icon-1"/>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div :class="{ 'conceal': editingPills }">
-      <div class="dataholder-list-container pt-2 mt-3" :class="{ 'overflow-hidden pr-4': editingPills }">
-        <div class="dataholder-list-wrapper" :class="{ 'overflow-hidden': editingPills }">
+      <div class="dataholder-list-container mt-3" :class="{ 'overflow-hidden pr-4': editingPills }">
+        <div class="dataholder-list-wrapper pt-2" :class="{ 'overflow-hidden': editingPills }">
           <div v-for="dataholder in computedDataholders" :key="dataholder.name" class="pb-sm-1">
             <label tabindex="0" class="dataholder-select-wrapper d-flex flex-row align-items-center justify-content-between w-100 rounded-lg border bg-white cursor-pointer p-2 mb-2">
               <dataholder-details :dataholder="dataholder" name-class="font-brand text-large mb-n1 p-sm-1"/>
@@ -100,21 +104,7 @@ export default {
 </script>
 
 <style>
-.bank-search-input {
-  border: none;
-  border-radius: 9px;
-  display: flex;
-  font-family: Karbon;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 21px !important;
-  flex: 1 auto;
-  height: 1rem !important;
-  padding-left: 8px;
-}
-
-.bank-search-input:focus {
+.bank-search > input:focus {
   outline: none;
 }
 

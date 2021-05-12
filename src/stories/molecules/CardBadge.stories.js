@@ -1,8 +1,8 @@
-import Badge from './Badge';
+import CardBadge from './CardBadge';
 
 export default {
-  title: 'CDR 2.0/Molecules/Badge',
-  component: Badge,
+  title: 'CDR 2.0/Molecules/CardBadge',
+  component: CardBadge,
   argTypes: {
     slotTemplate: {
       table: {
@@ -17,9 +17,9 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Badge },
   template: `
-    <badge v-bind="$props">
+    <card-badge v-bind="$props">
       <i class="${args.icon}"/>
-    </badge>
+    </card-badge>
   `
 });
 

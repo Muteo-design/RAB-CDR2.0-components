@@ -30,7 +30,7 @@ a:hover {
 }
 
 hr {
-  border-color: #00424d !important;
+  border-color: var(--brand-primary-1) !important;
   margin-top: 32px;
   margin-bottom: 32px;
 }
@@ -48,11 +48,15 @@ hr {
   font-size: 18px;
 }
 
-.font-brand {
+.font-brand,
+label.font-brand,
+input.font-brand {
   font-family: "Karbon";
 }
 
-.font-brand-bold {
+.font-brand-bold,
+label.font-brand-bold,
+input.font-brand-bold {
   font-family: "Karbon";
   font-weight: 800;
 }
@@ -92,6 +96,6 @@ hr {
   color: #00424d;
   font-size: 20px;
   line-height: 1.25;
-  border-left: 3px solid #a5d867;
+  border-left: 3px solid var(--brand-primary-2);
   margin-bottom: 3rem;
 }

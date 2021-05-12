@@ -8,10 +8,10 @@
           <li>At this time, not all banks feature CDR. We still need more information to process your application, so please provide online statements for all accounts listed below. You can upload the PDFs later, but within the next 30 days.</li>
         </ul>
         <div class="row d-sm-flex flex-wrap">
-          <dataholder-connect-card v-for="dataholder in entered.dataholders" :dataholder="dataholder" :key="dataholder.name">
+          <card-dataholder-connect v-for="dataholder in entered.dataholders" :dataholder="dataholder" :key="dataholder.name" class="col-sm-6 mt-4 pb-2">
             <div><strong>We cannot connect your data from this bank.</strong></div>
             <div>This means we will need you to upload statements for accounts held at this bank instead.</div>
-          </dataholder-connect-card>
+          </card-dataholder-connect>
         </div>
       </div>
     </div>

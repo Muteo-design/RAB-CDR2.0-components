@@ -1,6 +1,6 @@
 export default {
   template: `
-    <div class="rounded p-2 hover-bg-brand-secondary-three"
+    <div class="rounded p-2 hover-bg-brand-secondary-3"
          @mouseenter="hover = true"
          @mouseleave="hover = false"
          :class="[ disabled ? 'cursor-not-allowed' : 'cursor-pointer' ]">

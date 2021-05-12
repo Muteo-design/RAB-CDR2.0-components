@@ -7,10 +7,10 @@ import ConsentFlowCanConnect from '@/stories/organisms/ConsentFlowCanConnect';
 import ConsentFlowNeedHelp from '@/stories/organisms/ConsentFlowNeedHelp';
 /* Molecules */
 import DataholderDetails from '@/stories/molecules/DataholderDetails';
-import DataholderConnectCard from '@/stories/molecules/DataholderConnectCard';
 import DataholderSelectedPill from '@/stories/molecules/DataholderSelectedPill'; // NOTE: deprecated
-import Badge from '@/stories/molecules/Badge';
-import CDRBadge from '@/stories/molecules/CDRBadge';
+import CardDataholderConnect from '@/stories/molecules/CardDataholderConnect';
+import CardBadge from '@/stories/molecules/CardBadge';
+import CardCDR from '@/stories/molecules/CardCDR';
 /* Atoms */
 import Tickbox from '@/stories/atoms/Tickbox';
 /* Mixin that mimics Cloudcase passing data from server to component state */
@@ -33,10 +33,10 @@ Vue.component('consent-flow-can-connect', ConsentFlowCanConnect);
 Vue.component('consent-flow-need-help', ConsentFlowNeedHelp);
 /* Molecules */
 Vue.component('dataholder-details', DataholderDetails);
-Vue.component('dataholder-connect-card', DataholderConnectCard);
 Vue.component('dataholder-selected-pill', DataholderSelectedPill); // NOTE: deprecated
-Vue.component('badge', Badge);
-Vue.component('cdr-badge', CDRBadge);
+Vue.component('card-dataholder-connect', CardDataholderConnect);
+Vue.component('card-badge', CardBadge);
+Vue.component('card-cdr', CardCDR);
 /* Atoms */
 Vue.component('tickbox', Tickbox);
 

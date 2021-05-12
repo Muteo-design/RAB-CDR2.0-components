@@ -16,18 +16,6 @@
   background-color: #F5F7F9;
 }
 
-.text-dark {
-  color: #151515 !important;
-}
-
-.border {
-  border-color: #bdbdbd !important;
-}
-
-.border-light {
-  border-color: #e5e5e5 !important;
-}
-
 .border-thick {
   border-width: 2px;
   border-style: solid;

@@ -8,26 +8,26 @@
 [class*="alert-"] > strong:first-child {
   display: block;
   margin-bottom: 0.25rem;
-  color: #00424d;
+  color: var(--brand-primary-1);
   font-weight: 800;
   font-size: 18px;
   line-height: 1.5;
 }
 
 .alert-default {
-  background-color: #f7f7f7;
+  background-color: var(--brand-secondary-4);
 }
 
 .alert-info {
-  background-color: #fff;
-  color: #016e80;
-  border: 1px solid #016e80;
+  background-color: var(--brand-white);
+  color: var(--brand-info);
+  border: 1px solid var(--brand-info);
 }
 
 .alert-warning {
-  background-color: #fef6f3;
+  background-color: var(--brand-warning);
 }
 
 .alert-danger {
-  background-color: #fdedef;
+  background-color: var(--brand-danger);
 }
