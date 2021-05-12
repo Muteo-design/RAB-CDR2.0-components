@@ -8,14 +8,14 @@ export default {
       table: { disable: true },
     },
   },
-  decorators: [() => ({ template: '<div class="col-sm-3"><story/></div>' })],
+  decorators: [() => ({ template: '<div class="row"><div class="col-sm-3"><story/></div></div>' })],
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { CardBadge },
   template:
-    '<card-badge v-bind="$props"><i class="icon-3 icon-rab-${args.icon}"/></card-badge>',
+    `<card-badge v-bind="$props"><i class="icon-3 icon-rab-${args.icon}"/></card-badge>`,
 });
 
 export const Convenient = Template.bind({});

@@ -47,7 +47,7 @@ export const decorators = [
     if (!paths.includes('Pages')) {
       const nested = !paths.includes('Organisms');
       return {
-        template: `<div id="cloudcase-form"><div class="${nested ? 'rab-cdr ' : ''}p-4 bg-white"><story/></div></div>`
+        template: `<div id="cloudcase-form"><div class="${nested ? 'rab-cdr ' : ''}p-5 bg-white"><story/></div></div>`
       }
     } else {
       return { template: '<story/>' }
