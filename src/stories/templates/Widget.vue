@@ -7,7 +7,7 @@
           <div class="questionAnnotationsAndText">
             <div class="questionAnnotations"><em>&nbsp;</em></div>
             <div class="questionText" cc-text="ConsentChooseYourBank">
-              <span class="rab-cdr">
+              <span>
                 <slot/>
               </span>
             </div>

@@ -3,7 +3,6 @@ import Icons from './_Icons';
 export default {
   title: 'CDR 2.0/Atoms/Icons',
   component: Icons,
-  decorators: [() => ({ template: '<div class="rab-cdr p-4 bg-white"><story/></div>' })],
 };
 
 const Template = (args, { argTypes }) => ({

@@ -6,10 +6,8 @@ export default {
   component: BankSelect,
   argTypes: {
     bankSelectorEntered: {
-      table: {
-        disable: true
-      }
-    }
+      table: { disable: true },
+    },
   },
 };
 

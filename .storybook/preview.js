@@ -7,7 +7,6 @@ import ConsentFlowCanConnect from '@/stories/organisms/ConsentFlowCanConnect';
 import ConsentFlowNeedHelp from '@/stories/organisms/ConsentFlowNeedHelp';
 /* Molecules */
 import DataholderDetails from '@/stories/molecules/DataholderDetails';
-import DataholderSelectedPill from '@/stories/molecules/DataholderSelectedPill'; // NOTE: deprecated
 import CardDataholderConnect from '@/stories/molecules/CardDataholderConnect';
 import CardBadge from '@/stories/molecules/CardBadge';
 import CardCDR from '@/stories/molecules/CardCDR';
@@ -22,10 +21,10 @@ const topLevelComponents = [
   BankSelector,
   ConsentFlowIntro,
   ConsentFlowCanConnect,
-  ConsentFlowNeedHelp
+  ConsentFlowNeedHelp,
 ];
 for (const component of topLevelComponents) {
-  component.mixins = [cloudcaseStateMixin]
+  component.mixins = [cloudcaseStateMixin];
 }
 Vue.component('bank-selector', BankSelector);
 Vue.component('consent-flow-intro', ConsentFlowIntro);
@@ -33,7 +32,6 @@ Vue.component('consent-flow-can-connect', ConsentFlowCanConnect);
 Vue.component('consent-flow-need-help', ConsentFlowNeedHelp);
 /* Molecules */
 Vue.component('dataholder-details', DataholderDetails);
-Vue.component('dataholder-selected-pill', DataholderSelectedPill); // NOTE: deprecated
 Vue.component('card-dataholder-connect', CardDataholderConnect);
 Vue.component('card-badge', CardBadge);
 Vue.component('card-cdr', CardCDR);
@@ -41,6 +39,21 @@ Vue.component('card-cdr', CardCDR);
 Vue.component('tickbox', Tickbox);
 
 import '@/assets/css/app.css';
+
+/* Add decorator templates based on context */
+export const decorators = [
+  (story, { kind }) => {
+    const paths = kind.split('/');
+    if (!paths.includes('Pages')) {
+      const nested = !paths.includes('Organisms');
+      return {
+        template: `<div id="cloudcase-form"><div class="${nested ? 'rab-cdr ' : ''}p-4 bg-white"><story/></div></div>`
+      }
+    } else {
+      return { template: '<story/>' }
+    }
+  },
+];
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

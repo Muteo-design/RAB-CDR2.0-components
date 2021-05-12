@@ -3,7 +3,6 @@ import ConsentFlowIntro from './ConsentFlowIntro';
 export default {
   title: 'CDR 2.0/Organisms/ConsentFlowIntro',
   component: ConsentFlowIntro,
-  decorators: [() => ({ template: '<div class="p-4 bg-white"><story/></div>' })],
 };
 
 const Template = (args, { argTypes }) => ({
@@ -15,7 +14,5 @@ const Template = (args, { argTypes }) => ({
 
 export const Default = Template.bind({});
 Default.args = {
-  entered: JSON.stringify({
-    adrNumber: 'ADRBNK000001'
-  }),
+  entered: JSON.stringify({ adrNumber: 'ADRBNK000001' }),
 };

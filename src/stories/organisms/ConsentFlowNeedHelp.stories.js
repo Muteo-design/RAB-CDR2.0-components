@@ -3,7 +3,6 @@ import ConsentFlowNeedHelp from './ConsentFlowNeedHelp';
 export default {
   title: 'CDR 2.0/Organisms/ConsentFlowNeedHelp',
   component: ConsentFlowNeedHelp,
-  decorators: [() => ({ template: '<div class="p-4 bg-white"><story/></div>' })],
 };
 
 const Template = (args, { argTypes }) => ({
@@ -26,5 +25,5 @@ Default.args = {
       "name": "Regional Australia Bank",
       "image": "https://www.finder.com.au/global/images/providers/regional-australia-bank-logo-140px.png?fit=1200",
     }],
-  })
+  }),
 };

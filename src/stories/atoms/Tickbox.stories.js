@@ -3,7 +3,7 @@ import Tickbox from './Tickbox';
 export default {
   title: 'CDR 2.0/Atoms/Tickbox',
   component: Tickbox,
-  decorators: [() => ({ template: '<div class="rab-cdr p-4 bg-white"><label><story/></label></div>' })],
+  decorators: [() => ({ template: '<label><story/></label>' })],
 };
 
 const Template = (args, { argTypes }) => ({

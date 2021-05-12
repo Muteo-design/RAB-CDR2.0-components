@@ -20,8 +20,8 @@ Default.args = {
   consentFlowIntroEntered: ConsentFlowIntro.Default.args.entered,
   consentFlowCanConnectEntered: ConsentFlowCanConnect.Default.args.entered,
   consentFlowNeedHelpEntered: ConsentFlowNeedHelp.Default.args.entered,
-}
+};
 
 Default.parameters = {
   controls: { hideNoControlsWarning: true },
-}
+};
