@@ -3,7 +3,7 @@
   <div class="rab-cdr">
     <slot/>
     <div @click="focusSearchInput()"
-         class="bank-search d-flex align-items-center rounded bg-white border border-brand-primary-1 shadow-subtle py-3 px-2">
+         class="bank-search d-flex align-items-center rounded bg-white border-brand-primary-1 shadow-subtle py-3 px-2">
       <i v-if="searchValue" class="icon-rab-arrow-left-gray cursor-pointer" @click="searchValue = ''"/>
       <i v-else class="icon-rab-search-gray"/>
       <input type="text" ref="search" name="search" id="search" v-model="searchValue" placeholder="Find your bank"
@@ -16,9 +16,9 @@
                 class="flex-none btn btn-info btn-pill w-auto h-auto px-4 pt-2 pb-1 m-0 mb-2 font-weight-bold">
           {{ editingPills ? 'Done' : 'Edit' }}
         </button>
-        <div class="ml-2 border-left border-dark pr-2 mb-2"/>
+        <div class="border-brand-primary-1 border-right-0 mx-2 mb-2"/>
         <div v-for="dataholder in selectedDataholders" :key="dataholder.name"
-             class="dataholder-pill border border-brand-primary-1 rounded-pill bg-white p-1 mr-2 mb-2 mw-100">
+             class="dataholder-pill border-brand-primary-1 rounded-pill bg-white p-1 mr-2 mb-2 mw-100">
           <div class="d-flex align-items-center justify-content-between border-thick border-transparent">
             <dataholder-details :dataholder="dataholder" smallLogo name-class="text-tiny"/>
             <div class="flex-none pl-2">

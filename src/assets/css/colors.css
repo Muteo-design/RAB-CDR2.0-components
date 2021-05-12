@@ -123,9 +123,6 @@
 }
 
 /* BS overrides */
-.text-dark {
-  color: var(--brand-copy-1) !important;
-}
 
 .border {
   border-color: var(--brand-secondary-2) !important;
@@ -136,7 +133,7 @@
 }
 
 /* Default body text color */
-/* Note: @deprecated
+/* NOTE: @deprecated
 .text-gray {
   color: var(--brand-gray) !important;
 }

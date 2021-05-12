@@ -23,6 +23,9 @@
   --brand-warning: #f6a78c;
   --brand-danger: #e84a5e;
 
+  /* NOTE: @deprecated
   --brand-gray: #666;
+  */
+  --brand-black: #000;
   --brand-white: #fff;
 }

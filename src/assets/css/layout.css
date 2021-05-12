@@ -16,18 +16,6 @@
   background-color: #F5F7F9;
 }
 
-.border-thick {
-  border-width: 2px;
-  border-style: solid;
-  border-color: inherit;
-}
-
-.border-heavy {
-  border-width: 4px;
-  border-style: solid;
-  border-color: inherit;
-}
-
 .rounded {
   border-radius: 9px !important;
 }
@@ -37,6 +25,20 @@
 }
 
 /* New Utilities */
+[class*="border-"] {
+  border-width: 1px;
+  border-style: solid;
+  border-color: inherit;
+}
+
+.border-thick {
+  border-width: 2px;
+}
+
+.border-heavy {
+  border-width: 4px;
+}
+
 .content-box {
   box-sizing: content-box;
 }
