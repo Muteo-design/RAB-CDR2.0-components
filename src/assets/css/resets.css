@@ -35,7 +35,7 @@ button {
   -webkit-appearance: none;
 }
 
-.btn.btn-pill {
+.btn-pill {
   min-width: 0 !important;
   min-height: 0 !important;
 }

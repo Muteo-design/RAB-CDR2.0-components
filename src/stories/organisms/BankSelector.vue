@@ -6,15 +6,14 @@
          class="bank-search d-flex align-items-center rounded bg-white border border-brand-primary-1 shadow-subtle py-3 px-2">
       <i v-if="searchValue" class="icon-rab-arrow-left-gray cursor-pointer" @click="searchValue = ''"/>
       <i v-else class="icon-rab-search-gray"/>
-      <input type="text" ref="search" name="search" id="search"
-             v-model="searchValue" placeholder="Find your bank"
+      <input type="text" ref="search" name="search" id="search" v-model="searchValue" placeholder="Find your bank"
              class="border-0 h-auto w-100 pl-2 font-brand mb-n1"/>
     </div>
     <div v-if="selectedDataholders.length > 0">
       <h5 class="mb-1">Banks selected: {{ selectedDataholders.length }}</h5>
       <div class="dataholder-selected-wrapper" :class="{ 'editing-pills': editingPills }">
         <button type="button" @click="editPills($event)"
-                class="flex-none btn btn-pill btn-info px-4 pt-2 pb-1 m-0 w-auto h-auto mb-2">
+                class="flex-none btn btn-info btn-pill w-auto h-auto px-4 pt-2 pb-1 m-0 mb-2 font-weight-bold">
           {{ editingPills ? 'Done' : 'Edit' }}
         </button>
         <div class="ml-2 border-left border-dark pr-2 mb-2"/>

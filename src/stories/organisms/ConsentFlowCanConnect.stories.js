@@ -3,7 +3,7 @@ import ConsentFlowCanConnect from './ConsentFlowCanConnect';
 export default {
   title: 'CDR 2.0/Organisms/ConsentFlowCanConnect',
   component: ConsentFlowCanConnect,
-  decorators: [() => ({ template: '<div id="cloudcase-form" class="p-4 bg-white"><story/></div>' })],
+  decorators: [() => ({ template: '<div class="p-4 bg-white"><story/></div>' })],
 };
 
 const Template = (args, { argTypes }) => ({

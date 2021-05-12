@@ -5,6 +5,9 @@ ol {
   margin-bottom: 16px;
   letter-spacing: 0.016em;
   line-height: 1.4;
+  /* TODO: Move to community.css? Would inherit from here:
+  /* .cloudcase-skin .questionText, .cloudcase-skin label .answerText */
+  color: var(--brand-copy-3);
 }
 
 ul,
