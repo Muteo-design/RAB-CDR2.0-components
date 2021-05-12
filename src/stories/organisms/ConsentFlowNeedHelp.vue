@@ -1,7 +1,7 @@
 <template>
   <!-- <div id="vue-{{question.id}}" class="rab-cdr">-->
   <div class="rab-cdr">
-    <div class="border rounded-lg shadow-subtle px-4 pt-4 pb-3">
+    <div class="border rounded-lg shadow-1 px-4 pt-4 pb-3">
       <div class="p-2">
         <h3>We need your help</h3>
         <ul class="bullet-info-warning pl-0">

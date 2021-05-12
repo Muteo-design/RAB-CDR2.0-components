@@ -3,7 +3,7 @@
   <div class="rab-cdr">
     <slot/>
     <div @click="focusSearchInput()"
-         class="bank-search d-flex align-items-center rounded bg-white border-brand-primary-1 shadow-subtle py-3 px-2">
+         class="bank-search d-flex align-items-center rounded bg-white border-brand-primary-1 shadow-1 py-3 px-2">
       <i v-if="searchValue" class="icon-rab-arrow-left-gray cursor-pointer" @click="searchValue = ''"/>
       <i v-else class="icon-rab-search-gray"/>
       <input type="text" ref="search" name="search" id="search" v-model="searchValue" placeholder="Find your bank"
@@ -30,10 +30,10 @@
       </div>
     </div>
     <div :class="{ 'conceal': editingPills }">
-      <div class="dataholder-list-container mt-3" :class="{ 'overflow-hidden pr-4': editingPills }">
+      <div class="dataholder-list-container mt-3 overflow-hidden" :class="{ 'pr-4': editingPills }">
         <div class="dataholder-list-wrapper pt-2" :class="{ 'overflow-hidden': editingPills }">
-          <div v-for="dataholder in computedDataholders" :key="dataholder.name" class="pb-sm-1">
-            <label tabindex="0" class="dataholder-select-wrapper d-flex flex-row align-items-center justify-content-between w-100 rounded-lg border bg-white cursor-pointer p-2 mb-2">
+          <div v-for="dataholder in computedDataholders" :key="dataholder.name" class="pb-sm-1 ">
+            <label tabindex="0" class="dataholder-select-wrapper d-flex flex-row align-items-center justify-content-between w-100 rounded-lg border-brand-secondary-2 bg-white hover-bg-brand-secondary-4 cursor-pointer p-2 mb-2">
               <dataholder-details :dataholder="dataholder" name-class="font-brand text-large mb-n1 p-sm-1"/>
               <tickbox :checked="dataholder.selected" @update:checked="dataholder.selected = $event" class="flex-none"/>
             </label>
@@ -103,6 +103,8 @@ export default {
 </script>
 
 <style>
+@import '../../assets/css/variables.css';
+
 .bank-search > input:focus {
   outline: none;
 }
@@ -118,11 +120,11 @@ export default {
   content: '';
   display: block;
   height: 1px;
-  background: #bdbdbd;
+  background: var(--brand-secondary-2);
   position: absolute;
   left: 0;
   right: 1rem;
-  box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px var(--brand-secondary-2);
 }
 
 .dataholder-list-container:before {
@@ -172,14 +174,12 @@ export default {
 
 .dataholder-selected-wrapper.editing-pills {
   flex-wrap: wrap;
-  overflow-y: none;
-  overflow-x: none;
-  margin-right: -0;
+  overflow: auto;
+  margin-right: 0;
 }
 
 .dataholder-select-wrapper:hover {
-  background: #fefefe;
-  border-color: #015060 !important;
-  box-shadow: 0px 2px 4px rgba(117, 117, 117, 0.1), 0px 4px 5px rgba(117, 117, 117, 0.08), 0px 1px 10px rgba(117, 117, 117, 0.12);
+  border-color: var(--brand-primary-3) !important;
+  box-shadow: var(--shadow-2);
 }
 </style>

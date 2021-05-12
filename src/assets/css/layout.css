@@ -81,10 +81,12 @@
   text-overflow: ellipsis;
 }
 
-.shadow-subtle {
-  -webkit-box-shadow: 0px 6px 20px rgba(158, 158, 158, 0.08);
-  -moz-box-shadow: 0px 6px 20px rgba(158, 158, 158, 0.08);
-  box-shadow: 0px 6px 20px rgba(158, 158, 158, 0.08);
+.shadow-1 {
+  box-shadow: var(--shadow-1);
+}
+
+.shadow-2 {
+  box-shadow: var(--shadow-2);
 }
 
 .center-y {
