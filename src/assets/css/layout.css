@@ -71,7 +71,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: 0.6;
+  opacity: 0.5;
   z-index: 1;
 }
 
@@ -102,6 +102,9 @@
   transform: translate(-50%, -50%);
 }
 
+/* -------------------------------------------------- */
+/* TODO: Might be deprecated */
+/* -------------------------------------------------- */
 @media (min-width: 768px) {
   .sm-center-y {
     position: absolute;
@@ -110,9 +113,6 @@
   }
 }
 
-/* -------------------------------------------------- */
-/* TODO: Might be deprecated */
-/* -------------------------------------------------- */
 .fill-margins {
   margin-left: -1.5rem;
   margin-right: -1.5rem;

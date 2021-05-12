@@ -1,13 +1,15 @@
 <template>
   <!-- <div id="vue-{{question.id}}" class="rab-cdr">-->
   <div class="rab-cdr">
-    <slot/>
+    <p class="text-feature">Michael, tell us about all the banks where you have accounts for transactions, savings, credit cards or loans.</p>
     <div @click="focusSearchInput()"
-         class="bank-search d-flex align-items-center rounded bg-white border-brand-primary-1 shadow-1 py-3 px-2">
-      <i v-if="searchValue" class="icon-rab-arrow-left-gray cursor-pointer" @click="searchValue = ''"/>
-      <i v-else class="icon-rab-search-gray"/>
-      <input type="text" ref="search" name="search" id="search" v-model="searchValue" placeholder="Find your bank"
-             class="border-0 h-auto w-100 pl-2 font-brand mb-n1"/>
+         class="bank-search d-flex align-items-center rounded bg-white shadow-1 p-3"
+         :class="[ editingPills ? 'border conceal' : 'border-brand-primary-1' ]">
+      <i v-if="searchValue" class="icon-rab-arrow-left-gray cursor-pointer mr-1" @click="searchValue = ''"/>
+      <i v-else class="icon-rab-search-gray mr-1"/>
+      <input type="text" ref="search" name="search" id="search" placeholder="Find your bank"
+             v-model="searchValue" :disabled="editingPills"
+             class="border-0 h-auto w-100 ml-2 font-brand h6 mb-n1"/>
     </div>
     <div v-if="selectedDataholders.length > 0">
       <h5 class="mb-1">Banks selected: {{ selectedDataholders.length }}</h5>
@@ -31,10 +33,10 @@
     </div>
     <div :class="{ 'conceal': editingPills }">
       <div class="dataholder-list-container mt-3 overflow-hidden" :class="{ 'pr-4': editingPills }">
-        <div class="dataholder-list-wrapper pt-2" :class="{ 'overflow-hidden': editingPills }">
+        <div class="dataholder-list-wrapper pt-2 mt-sm-1" :class="{ 'overflow-hidden': editingPills }">
           <div v-for="dataholder in computedDataholders" :key="dataholder.name" class="pb-sm-1 ">
-            <label tabindex="0" class="dataholder-select-wrapper d-flex flex-row align-items-center justify-content-between w-100 rounded-lg border-brand-secondary-2 bg-white hover-bg-brand-secondary-4 cursor-pointer p-2 mb-2">
-              <dataholder-details :dataholder="dataholder" name-class="font-brand text-large mb-n1 p-sm-1"/>
+            <label tabindex="0" class="dataholder-select-wrapper d-flex flex-row align-items-center justify-content-between w-100 rounded-lg border bg-white hover-bg-brand-secondary-4 cursor-pointer p-2 mb-2">
+              <dataholder-details :dataholder="dataholder" name-class="font-brand h6 mb-n1 p-sm-1"/>
               <tickbox :checked="dataholder.selected" @update:checked="dataholder.selected = $event" class="flex-none"/>
             </label>
           </div>

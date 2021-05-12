@@ -1,3 +1,9 @@
+/* TODO: Move to community.css? Would apply globally to all rulebooks */
+h4,
+.h4 {
+  font-size: 20px !important;
+}
+
 p,
 ul,
 ol {
@@ -5,7 +11,7 @@ ol {
   margin-bottom: 16px;
   letter-spacing: 0.016em;
   line-height: 1.4;
-  /* TODO: Move to community.css? Would inherit from here:
+  /* TODO: Move to community.css? Would inherit from here: */
   /* .cloudcase-skin .questionText, .cloudcase-skin label .answerText */
   color: var(--brand-copy-3);
 }
@@ -39,16 +45,34 @@ hr {
 }
 
 /* Utilities */
-.text-tiny {
-  font-size: 12px;
+
+/* The follow sizing utilities are already defined in RABSkin: */
+/* .h1, .h2, .h3. .h4, .h5, .h6 */
+/* Additional sizes and responsive utilities */
+.h7 {
+  font-size: 12px !important;
 }
 
-.text-small {
-  font-size: 14px;
+.h8 {
+  font-size: 10px !important;
 }
 
-.text-large {
-  font-size: 18px;
+@media (min-width: 768px) {
+  .text-sm-h5 {
+    font-size: 18px !important;
+  }
+
+  .text-sm-h6 {
+    font-size: 14px !important;
+  }
+
+  .text-sm-h7 {
+    font-size: 12px !important;
+  }
+
+  .text-sm-h8 {
+    font-size: 10px !important;
+  }
 }
 
 .font-brand,

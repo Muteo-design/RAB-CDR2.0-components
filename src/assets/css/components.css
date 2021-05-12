@@ -37,3 +37,9 @@
     max-width: 100%;
   }
 }
+
+@media (max-width: 769px) {
+  .component-card-cdr .icon-rab-logo-cdr {
+    width: 90px;
+  }
+}

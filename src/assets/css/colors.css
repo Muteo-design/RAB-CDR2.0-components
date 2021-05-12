@@ -122,18 +122,24 @@
   color: var(--brand-danger) !important;
 }
 
+.text-black {
+  color: var(--brand-black) !important;
+}
+
 /* BS overrides */
 
+/* alias for .border-brand-secondary-2 */
 .border {
   border-color: var(--brand-secondary-2) !important;
 }
 
+/* alias for .border-brand-secondary-3 */
 .border-light {
   border-color: var(--brand-secondary-3) !important;
 }
 
 /* Default body text color */
-/* NOTE: @deprecated
+/* NOTE: deprecated
 .text-gray {
   color: var(--brand-gray) !important;
 }
