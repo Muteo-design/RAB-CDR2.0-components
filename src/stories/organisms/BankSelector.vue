@@ -9,7 +9,7 @@
       <i v-else class="icon-rab-search-gray mr-1"/>
       <input type="text" ref="search" name="search" id="search" placeholder="Find your bank"
              v-model="searchValue" :disabled="editingPills"
-             class="border-0 h-auto w-100 ml-2 font-brand h6 mb-n1"/>
+             class="border-0 h-auto w-100 ml-2 font-brand h5 mb-n1"/>
     </div>
     <div v-if="selectedDataholders.length > 0">
       <h5 class="mb-1">Banks selected: {{ selectedDataholders.length }}</h5>
@@ -35,8 +35,8 @@
       <div class="dataholder-list-container mt-3 overflow-hidden" :class="{ 'pr-4': editingPills }">
         <div class="dataholder-list-wrapper pt-2 mt-sm-1" :class="{ 'overflow-hidden': editingPills }">
           <div v-for="dataholder in computedDataholders" :key="dataholder.name" class="pb-sm-1 ">
-            <label tabindex="0" class="dataholder-select-wrapper d-flex flex-row align-items-center justify-content-between w-100 rounded-lg border bg-white hover-bg-brand-secondary-4 cursor-pointer p-2 mb-2">
-              <dataholder-details :dataholder="dataholder" name-class="font-brand h6 mb-n1 p-sm-1"/>
+            <label tabindex="0" class="dataholder-select-wrapper d-flex flex-row align-items-center justify-content-between w-100 rounded-lg border bg-white cursor-pointer p-2 mb-2">
+              <dataholder-details :dataholder="dataholder" name-class="font-brand h5 mb-n1 p-sm-1"/>
               <tickbox :checked="dataholder.selected" @update:checked="dataholder.selected = $event" class="flex-none"/>
             </label>
           </div>

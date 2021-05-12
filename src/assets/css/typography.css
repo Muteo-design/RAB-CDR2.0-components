@@ -116,6 +116,7 @@ input.font-brand-bold {
   text-decoration: underline;
 }
 
+/* TODO: Move to RABSkin to remove prefix and allow this to be used outside of widgets */
 .text-feature {
   font-family: "Karbon";
   padding-left: 1rem;

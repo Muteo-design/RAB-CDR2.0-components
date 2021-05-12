@@ -1,9 +1,9 @@
 export default {
   template: `
-    <div class="rounded p-2 hover-bg-brand-secondary-3"
+    <div class="rounded p-2"
          @mouseenter="hover = true"
          @mouseleave="hover = false"
-         :class="[ disabled ? 'cursor-not-allowed' : 'cursor-pointer' ]">
+         :class="[ disabled ? 'cursor-not-allowed' : 'cursor-pointer hover-bg-brand-secondary-1' ]">
       <i class="icon-1" :class="iconName"/>
       <input type="checkbox" class="d-none" v-model="checkedLocal" :disabled="disabled">
     </div>

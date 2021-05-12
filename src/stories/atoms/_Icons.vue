@@ -50,7 +50,7 @@
     <h4>CDR Logos</h4>
     <ul class="d-flex flex-wrap list-unstyled pl-0">
       <li class="pr-5">
-        <h5><code class="mr-2">.icon-rab-logo-cdr</code> (43px × 118px)</h5>
+        <h5><code class="mr-2">.icon-rab-logo-cdr</code> (118px × 43px)</h5>
         <i class="icon-rab-logo-cdr"/>
       </li>
       <li class="">
