@@ -110,8 +110,17 @@ export default {
 /* Can't use imported variables. Need to build first, then copy the output. */
 @import '../../assets/css/variables.css';
 
+/* TODO: These input states probably need to be graduated to theme in community.css */
 .bank-search > input:focus {
   outline: none;
+}
+.bank-search > input::placeholder {
+  color: var(--brand-copy-2);
+  caret-color: var(--brand-primary-3);
+}
+.bank-search > input:hover::placeholder,
+.bank-search > input:focus::placeholder {
+  color: var(--brand-secondary-2);
 }
 
 .dataholder-list-container {
