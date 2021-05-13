@@ -2,6 +2,12 @@ const path = require('path');
 
 module.exports = {
   'stories': [
+    // Set story order in sidebar
+    '../src/**/pages/*.stories.js',
+    '../src/**/organisms/*.stories.js',
+    '../src/**/molecules/*.stories.js',
+    '../src/**/atoms/*.stories.js',
+    //
     '../src/**/*.stories.mdx',
     '../src/**/*.stories.@(js|jsx|ts|tsx)',
   ],
