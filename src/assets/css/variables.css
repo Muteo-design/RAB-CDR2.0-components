@@ -2,15 +2,10 @@
   /* Colors */
   --brand-primary-1: #00424d;
   --brand-primary-2: #a5d867;
-  /*--brand-primary-3: #016e80;*/
   --brand-primary-3: #015060;
-  /*--brand-secondary-1: #308796;*/
   --brand-secondary-1: #f5faff;
-  /*--brand-secondary-2: #009db0;*/
   --brand-secondary-2: #bdbdbd;
-  /*--brand-secondary-3: #eff5fb;*/
   --brand-secondary-3: #eee;
-  /*--brand-secondary-4: #f9f9f9;*/
   --brand-secondary-4: #fafafa;
 
   --brand-copy-1: #212121;
@@ -23,9 +18,8 @@
   --brand-warning: #f6a78c;
   --brand-danger: #e84a5e;
 
-  /* NOTE: deprecated
-  --brand-gray: #666;
-  */
+  /* NOTE: deprecated */
+  /*--brand-gray: #666;*/
   --brand-black: #000;
   --brand-white: #fff;
 

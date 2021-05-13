@@ -1,4 +1,7 @@
-export default {
+// ComponentTickbox
+// [[
+export default/*vueJSWidget.registerComponent('tickbox',*/ {
+  // v0.1.0
   template: `
     <div class="rounded p-2"
          @mouseenter="hover = true"

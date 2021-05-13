@@ -1,6 +1,6 @@
-// CardBadgeComponent
+// ComponentCardBadge
 // [[
-export default /*vueJSWidget.registerComponent('card-badge',*/ {
+export default/*vueJSWidget.registerComponent('card-badge',*/ {
   // v0.1.0
   template: `
     <div class="rounded-lg border px-3 pt-4 pb-3 my-4 text-center shadow-1">

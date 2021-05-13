@@ -1,4 +1,6 @@
+ComponentBankSelector
 <template>
+  <!-- v0.2.0 -->
   <!-- <div id="vue-{{question.id}}" class="rab-cdr">-->
   <div class="rab-cdr">
     <p class="text-feature">Michael, tell us about all the banks where you have accounts for transactions, savings, credit cards or loans.</p>

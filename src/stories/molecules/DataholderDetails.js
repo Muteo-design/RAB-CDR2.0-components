@@ -1,4 +1,7 @@
-export default {
+// ComponentDataholderDetails
+// [[
+export default/*vueJSWidget.registerComponent('dataholder-details',*/ {
+  // v0.1.0
   template: `
     <div class="dataholder-details d-flex align-items-center">
       <div class="dataholder-logo flex-none rounded-circle overflow-hidden position-relative mr-2"
