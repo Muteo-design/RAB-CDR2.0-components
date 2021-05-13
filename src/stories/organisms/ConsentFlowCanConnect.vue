@@ -9,9 +9,7 @@
           <li>With your consent and as a qualified data recipient, Regional Australia Bank can securely connect and collect data on your behalf.</li>
         </ul>
         <div class="row d-sm-flex flex-wrap">
-          <card-dataholder-connect v-for="dataholder in entered.dataholders" :dataholder="dataholder" :key="dataholder.name" connected class="col-sm-6 mt-3 mt-sm-4 pb-2">
-            <div><strong>Ready to connect</strong></div>
-          </card-dataholder-connect>
+          <card-dataholder-connect v-for="dataholder in entered.dataholders" :dataholder="dataholder" :key="dataholder.name" hasCdr class="col-sm-6 mt-3 mt-sm-4 pb-2"/>
         </div>
       </div>
     </div>

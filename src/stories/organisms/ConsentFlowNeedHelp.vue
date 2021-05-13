@@ -9,7 +9,6 @@
         </ul>
         <div class="row d-sm-flex flex-wrap">
           <card-dataholder-connect v-for="dataholder in entered.dataholders" :dataholder="dataholder" :key="dataholder.name" class="col-sm-6 mt-3 mt-sm-4 pb-2">
-            <div><strong>We cannot connect your data from this bank.</strong></div>
             <div>This means we will need you to upload statements for accounts held at this bank instead.</div>
           </card-dataholder-connect>
         </div>
