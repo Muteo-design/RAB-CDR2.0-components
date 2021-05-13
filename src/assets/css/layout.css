@@ -12,16 +12,12 @@
   padding-left: 12px;
 }
 
-.bg-gray {
-  background-color: #F5F7F9;
-}
-
 .rounded {
-  border-radius: 9px !important;
+  border-radius: var(--rounded) !important;
 }
 
 .rounded-lg {
-  border-radius: 12px !important;
+  border-radius: var(--rounded-lg) !important;
 }
 
 /* New Utilities */
@@ -53,6 +49,10 @@
 
 .cursor-not-allowed {
   cursor: not-allowed;
+}
+
+.pointer-none {
+  pointer-events: none;
 }
 
 .flex-none {

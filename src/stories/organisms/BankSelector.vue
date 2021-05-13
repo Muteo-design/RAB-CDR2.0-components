@@ -2,28 +2,36 @@
   <!-- <div id="vue-{{question.id}}" class="rab-cdr">-->
   <div class="rab-cdr">
     <p class="text-feature">Michael, tell us about all the banks where you have accounts for transactions, savings, credit cards or loans.</p>
-    <div @click="focusSearchInput()"
-         class="bank-search d-flex align-items-center rounded bg-white shadow-1 p-3"
-         :class="[ editingPills ? 'border conceal' : 'border-brand-primary-1' ]">
-      <i v-if="searchValue" class="icon-rab-arrow-left-gray cursor-pointer mr-1" @click="searchValue = ''"/>
-      <i v-else class="icon-rab-search-gray mr-1"/>
+    <div @click="focusSearchInput()" class="bank-search position-relative" :class="{ 'conceal': editingPills }">
+      <div class="position-absolute center-y p-4"
+           :class="{ 'pointer-none': !searchValue }">
+        <i v-if="searchValue" class="center-xy icon-rab-arrow-left-gray cursor-pointer" @click="searchValue = ''"/>
+        <i v-else class="center-xy" :class="[ searchFocussed || searchHovered || editingPills ? 'icon-rab-search-gray' : 'icon-rab-search' ]"/>
+      </div>
       <input type="text" ref="search" name="search" id="search" placeholder="Find your bank"
              v-model="searchValue" :disabled="editingPills"
-             class="border-0 h-auto w-100 bg-white ml-2 font-brand h5"/>
+             @mouseenter="searchHovered = true" @mouseleave="searchHovered = false"
+             @focus="searchFocussed = true" @blur="searchFocussed = false"
+             class="h-auto w-100 rounded bg-white pl-5 py-3 pr-3 font-brand h5"
+             :class="[
+               { 'border' : editingPills },
+               computedDataholders.length ? 'border-brand-primary-1' : 'border-danger',
+               { 'hover-shadow-2': searchHovered }
+             ]"/>
     </div>
     <div v-if="selectedDataholders.length > 0">
-      <h5 class="mb-1">Banks selected: {{ selectedDataholders.length }}</h5>
-      <div class="dataholder-selected-wrapper" :class="{ 'editing-pills': editingPills }">
+      <h5 class="mb-2">Banks selected: {{ selectedDataholders.length }}</h5>
+      <div class="dataholder-selected-wrapper d-flex mr-n4" :class="{ 'flex-wrap overflow-auto mr-2': editingPills }">
         <button type="button" @click="editPills($event)"
                 class="flex-none btn btn-info btn-pill w-auto h-auto px-4 pt-1 pb-2 m-0 mb-2 font-weight-bold">
           {{ editingPills ? 'Done' : 'Edit' }}
         </button>
         <div class="border-brand-primary-1 border-right-0 mx-2 mb-2"/>
         <div v-for="dataholder in selectedDataholders" :key="dataholder.name"
-             class="dataholder-pill rounded-pill border-brand-primary-1 bg-white p-1 mr-2 mb-2 mw-100"
+             class="dataholder-pill rounded-pill border-brand-primary-1 bg-white p-2 mr-2 mb-2 mw-100"
              :class="{ 'hover-shadow-2': editingPills }">
-          <div class="d-flex align-items-center justify-content-between border-thick border-transparent">
-            <dataholder-details :dataholder="dataholder" smallLogo name-class="text-tiny"/>
+          <div class="d-flex align-items-center justify-content-between">
+            <dataholder-details :dataholder="dataholder" smallLogo :name-class="dataholderPillNameClass"/>
             <div class="flex-none pl-2">
               <i v-if="editingPills" @click="deselect(dataholder)" class="icon-rab-close icon-1 cursor-pointer"/>
               <i v-else class="icon-rab-check icon-1"/>
@@ -34,9 +42,9 @@
     </div>
     <div :class="{ 'conceal': editingPills }">
       <div class="dataholder-list-container mt-3 overflow-hidden" :class="{ 'pr-4': editingPills }">
-        <div class="dataholder-list-wrapper pt-2 mt-sm-1" :class="{ 'overflow-hidden': editingPills }">
+        <div class="dataholder-list-wrapper pt-2 mt-sm-1 pr-2 mr-n3" :class="{ 'overflow-hidden': editingPills }">
           <div v-for="dataholder in computedDataholders" :key="dataholder.name" class="pb-sm-1 ">
-            <label tabindex="0" class="dataholder-select-wrapper d-flex flex-row align-items-center justify-content-between w-100 rounded-lg border bg-white cursor-pointer p-2 mb-2">
+            <label :tabindex="editingPills ? -1 : 0" class="dataholder-select-wrapper d-flex align-items-center justify-content-between w-100 rounded-lg border hover-border-brand-primary-3 bg-white hover-shadow-2 cursor-pointer p-2 mb-2">
               <dataholder-details :dataholder="dataholder" name-class="font-brand h5"/>
               <tickbox :checked="dataholder.selected" @update:checked="dataholder.selected = $event" class="flex-none"/>
             </label>
@@ -56,11 +64,14 @@ export default {
         dataholders: [],
       },
       searchValue: '',
+      searchHovered: false,
+      searchFocussed: false,
       editingPills: false,
     };
   },
   methods: {
     focusSearchInput: function() {
+      this.searchFocussed = true;
       this.$refs.search.focus();
     },
     setSearch: function(value) {
@@ -97,10 +108,9 @@ export default {
         return (dataholder.selected);
       });
     },
-    plural: function() {
-      var selectedLength = this.selectedDataholders.length;
-      return (selectedLength > 1 || selectedLength === 0) ? 's' : '';
-    },
+    dataholderPillNameClass: function() {
+      return 'h7' + (this.editingPills ? ' mw-100' : '');
+    }
   },
 };
 </script>
@@ -114,10 +124,12 @@ export default {
 .bank-search > input:focus {
   outline: none;
 }
+
 .bank-search > input::placeholder {
   color: var(--brand-copy-2);
   caret-color: var(--brand-primary-3);
 }
+
 .bank-search > input:hover::placeholder,
 .bank-search > input:focus::placeholder {
   color: var(--brand-secondary-2);
@@ -154,8 +166,6 @@ export default {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: 0.5rem;
-  padding-right: 0.5rem;
-  margin-right: -1rem;
 }
 
 .dataholder-list-wrapper::-webkit-scrollbar {
@@ -174,8 +184,6 @@ export default {
 }
 
 .dataholder-selected-wrapper {
-  display: flex;
-  margin-right: -1.5rem;
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -186,14 +194,4 @@ export default {
   display: none;
 }
 
-.dataholder-selected-wrapper.editing-pills {
-  flex-wrap: wrap;
-  overflow: auto;
-  margin-right: 0;
-}
-
-.dataholder-select-wrapper:hover {
-  border-color: var(--brand-primary-3) !important;
-  box-shadow: var(--shadow-2);
-}
 </style>

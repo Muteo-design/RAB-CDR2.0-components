@@ -30,6 +30,9 @@
   --brand-white: #fff;
 
   /* Layout */
+  --rounded: 9px;
+  --rounded-lg: 12px;
+
   --shadow-1: 0px 6px 20px rgba(158, 158, 158, 0.08);
   --shadow-2: 0px 2px 4px rgba(117, 117, 117, 0.1), 0px 4px 5px rgba(117, 117, 117, 0.08), 0px 1px 10px rgba(117, 117, 117, 0.12);
 }

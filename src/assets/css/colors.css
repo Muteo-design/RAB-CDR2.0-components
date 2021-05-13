@@ -68,32 +68,62 @@
   background-color: var(--brand-secondary-4) !important;
 }
 
-.border-brand-primary-1 {
+.border-brand-primary-1,
+.hover-border-brand-primary-1:hover,
+.hover-border-brand-primary-1:focus {
   border-color: var(--brand-primary-1) !important;
 }
 
-.border-brand-primary-2 {
+.border-brand-primary-2,
+.hover-border-brand-primary-2:hover,
+.hover-border-brand-primary-2:focus {
   border-color: var(--brand-primary-2) !important;
 }
 
-.border-brand-primary-3 {
+.border-brand-primary-3,
+.hover-border-brand-primary-3:hover,
+.hover-border-brand-primary-3:focus {
   border-color: var(--brand-primary-3) !important;
 }
 
-.border-brand-secondary-1 {
+.border-brand-secondary-1,
+.hover-border-brand-secondary-1:hover,
+.hover-border-brand-secondary-1:focus {
   border-color: var(--brand-secondary-1) !important;
 }
 
-.border-brand-secondary-2 {
+.border-brand-secondary-2,
+.hover-border-brand-secondary-2:hover,
+.hover-border-brand-secondary-2:focus {
   border-color: var(--brand-secondary-2) !important;
 }
 
-.border-brand-secondary-3 {
+.border-brand-secondary-3,
+.hover-border-brand-secondary-3:hover,
+.hover-border-brand-secondary-3:focus {
   border-color: var(--brand-secondary-3) !important;
 }
 
-.border-brand-secondary-4 {
+.border-brand-secondary-4,
+.hover-border-brand-secondary-4:hover,
+.hover-border-brand-secondary-4:focus {
   border-color: var(--brand-secondary-4) !important;
+}
+
+.border-info {
+  border-color: var(--brand-info) !important;
+}
+
+.border-success {
+  border-color: var(--brand-success) !important;
+}
+
+.border-warning {
+  border-color: var(--brand-warning) !important;
+}
+
+.border-danger {
+  border-color: var(--brand-danger) !important;
 }
 
 .border-transparent {
