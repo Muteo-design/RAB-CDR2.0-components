@@ -10,7 +10,7 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { CardDataholderConnect },
   template:
-    '<card-dataholder-connect v-bind="$props"/>',
+    `<card-dataholder-connect v-bind="$props">${args.slotTemplate || ''}</card-dataholder-connect>`,
 });
 
 const dataholder = {
@@ -18,11 +18,14 @@ const dataholder = {
   "image": "https://www.commbank.com.au/content/dam/commbank-assets/cba-stacked.jpg",
 };
 
-export const NoCDR = Template.bind({});
-NoCDR.args = { dataholder };
+export const NotDataholder = Template.bind({});
+NotDataholder.args = {
+  dataholder,
+  slotTemplate: `<div>This means we will need you to upload statements for accounts held at this bank instead.</div>`
+}
 
-export const HasCDR = Template.bind({});
-HasCDR.args = {
+export const IsDataholder = Template.bind({});
+IsDataholder.args = {
   dataholder,
   hasCdr: true,
 };
