@@ -12,6 +12,7 @@ import CardBadge from '@/stories/molecules/CardBadge';
 import CardCDR from '@/stories/molecules/CardCDR';
 /* Atoms */
 import Tickbox from '@/stories/atoms/Tickbox';
+import Chevron from '@/stories/atoms/Chevron';
 /* Mixin that mimics Cloudcase passing data from server to component state */
 import cloudcaseStateMixin from '@/mixins/cloudcase-state';
 
@@ -37,6 +38,7 @@ Vue.component('card-badge', CardBadge);
 Vue.component('card-cdr', CardCDR);
 /* Atoms */
 Vue.component('tickbox', Tickbox);
+Vue.component('chevron', Chevron);
 
 import '@/assets/css/app.css';
 
