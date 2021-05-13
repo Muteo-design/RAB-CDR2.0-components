@@ -151,6 +151,7 @@ export default {
   left: 0;
   right: 1rem;
   box-shadow: 0 0 5px var(--brand-secondary-2);
+  z-index: 1;
 }
 
 .dataholder-list-container:before {
