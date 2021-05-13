@@ -2,7 +2,7 @@ export default {
   template: `
     <div class="rounded-circle cursor-pointer hover-bg-brand-secondary-1 p-1">
       <i class="icon-24" :class="iconName"/>
-      <input type="checkbox" class="d-none" v-model="expandedLocal" :disabled="disabled">
+      <input type="checkbox" class="d-none" v-model="expandedLocal"/>
     </div>
   `,
   props: {
