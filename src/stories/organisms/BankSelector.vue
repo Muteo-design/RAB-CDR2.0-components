@@ -9,18 +9,19 @@
       <i v-else class="icon-rab-search-gray mr-1"/>
       <input type="text" ref="search" name="search" id="search" placeholder="Find your bank"
              v-model="searchValue" :disabled="editingPills"
-             class="border-0 h-auto w-100 ml-2 font-brand h5 mb-n1"/>
+             class="border-0 h-auto w-100 bg-white ml-2 font-brand h5"/>
     </div>
     <div v-if="selectedDataholders.length > 0">
       <h5 class="mb-1">Banks selected: {{ selectedDataholders.length }}</h5>
       <div class="dataholder-selected-wrapper" :class="{ 'editing-pills': editingPills }">
         <button type="button" @click="editPills($event)"
-                class="flex-none btn btn-info btn-pill w-auto h-auto px-4 pt-2 pb-1 m-0 mb-2 font-weight-bold">
+                class="flex-none btn btn-info btn-pill w-auto h-auto px-4 pt-1 pb-2 m-0 mb-2 font-weight-bold">
           {{ editingPills ? 'Done' : 'Edit' }}
         </button>
         <div class="border-brand-primary-1 border-right-0 mx-2 mb-2"/>
         <div v-for="dataholder in selectedDataholders" :key="dataholder.name"
-             class="dataholder-pill border-brand-primary-1 rounded-pill bg-white p-1 mr-2 mb-2 mw-100">
+             class="dataholder-pill rounded-pill border-brand-primary-1 bg-white p-1 mr-2 mb-2 mw-100"
+             :class="{ 'hover-shadow-2': editingPills }">
           <div class="d-flex align-items-center justify-content-between border-thick border-transparent">
             <dataholder-details :dataholder="dataholder" smallLogo name-class="text-tiny"/>
             <div class="flex-none pl-2">
@@ -36,7 +37,7 @@
         <div class="dataholder-list-wrapper pt-2 mt-sm-1" :class="{ 'overflow-hidden': editingPills }">
           <div v-for="dataholder in computedDataholders" :key="dataholder.name" class="pb-sm-1 ">
             <label tabindex="0" class="dataholder-select-wrapper d-flex flex-row align-items-center justify-content-between w-100 rounded-lg border bg-white cursor-pointer p-2 mb-2">
-              <dataholder-details :dataholder="dataholder" name-class="font-brand h5 mb-n1 p-sm-1"/>
+              <dataholder-details :dataholder="dataholder" name-class="font-brand h5"/>
               <tickbox :checked="dataholder.selected" @update:checked="dataholder.selected = $event" class="flex-none"/>
             </label>
           </div>
@@ -105,6 +106,8 @@ export default {
 </script>
 
 <style>
+/* Note: These styles should not be directly copied to CC template. */
+/* Can't use imported variables. Need to build first, then copy the output. */
 @import '../../assets/css/variables.css';
 
 .bank-search > input:focus {

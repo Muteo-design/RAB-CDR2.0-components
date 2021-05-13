@@ -4,6 +4,30 @@ h4,
   font-size: 20px !important;
 }
 
+/* TODO: Move to community.css? Replace these lines: */
+/* .cloudcase-skin .h1,
+.cloudcase-skin #cloudcase-form .h1,
+.cloudcase-skin .h2,
+.cloudcase-skin #cloudcase-form .h2,
+.cloudcase-skin .h3,
+.cloudcase-skin #cloudcase-form .h3,
+.cloudcase-skin .h4,
+.cloudcase-skin #cloudcase-form .h4,
+.cloudcase-skin .h5,
+.cloudcase-skin #cloudcase-form .h5,
+.cloudcase-skin .h6,
+.cloudcase-skin #cloudcase-form .h6 { */
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: unset;
+  margin-top: unset;
+  margin-bottom: unset;
+}
+
 p,
 ul,
 ol {

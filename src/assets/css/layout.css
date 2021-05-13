@@ -67,10 +67,10 @@
   content: '';
   position: absolute;
   background: #fff;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
   opacity: 0.5;
   z-index: 1;
 }
@@ -81,11 +81,13 @@
   text-overflow: ellipsis;
 }
 
-.shadow-1 {
+.shadow-1,
+.hover-shadow-1:hover {
   box-shadow: var(--shadow-1);
 }
 
-.shadow-2 {
+.shadow-2,
+.hover-shadow-2:hover {
   box-shadow: var(--shadow-2);
 }
 
