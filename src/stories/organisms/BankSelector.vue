@@ -33,8 +33,8 @@
           <div class="d-flex align-items-center justify-content-between">
             <dataholder-details :dataholder="dataholder" smallLogo :name-class="dataholderPillNameClass"/>
             <div class="flex-none pl-2">
-              <i v-if="editingPills" @click="deselect(dataholder)" class="icon-rab-close icon-1 cursor-pointer"/>
-              <i v-else class="icon-rab-check icon-1"/>
+              <i v-if="editingPills" @click="deselect(dataholder)" class="icon-rab-close icon-24 cursor-pointer"/>
+              <i v-else class="icon-rab-check icon-24"/>
             </div>
           </div>
         </div>

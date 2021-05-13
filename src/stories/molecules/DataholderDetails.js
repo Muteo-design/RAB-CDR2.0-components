@@ -1,9 +1,10 @@
 export default {
   template: `
     <div class="dataholder-details d-flex align-items-center">
-      <div class="dataholder-logo flex-none rounded-circle overflow-hidden position-relative mr-2">
+      <div class="dataholder-logo flex-none rounded-circle overflow-hidden position-relative mr-2"
+           :class="[ smallLogo ? 'icon-24' : 'icon-32' ]">
         <canvas ref="canvas" width="1px" height="1px"></canvas>
-        <div class="rounded-circle overflow-hidden position-relative bg-white border-thick border-white" :class="[ smallLogo ? 'icon-1' : 'icon-2' ]">
+        <div class="w-100 h-100 rounded-circle overflow-hidden position-relative bg-white border-white">
           <img :src="dataholder.image" @load="setBrand($event)" class="center-xy">
         </div>
       </div>

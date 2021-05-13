@@ -5,17 +5,17 @@
     <div class="row d-sm-flex">
       <div class="col-sm-4 d-flex align-items-stretch">
         <card-badge heading="Convenient" text="Say goodbye to manually collecting bank statements. With CDR, we can do it for you." class="w-100">
-          <i class="icon-rab-shield icon-3"/>
+          <i class="icon-rab-shield icon-48"/>
         </card-badge>
       </div>
       <div class="col-sm-4 d-flex align-items-stretch">
         <card-badge heading="Accurate" text="CDR allows us to precisely get the data we need to generate accurate results." class="w-100">
-          <i class="icon-rab-calendar icon-3"/>
+          <i class="icon-rab-calendar icon-48"/>
         </card-badge>
       </div>
       <div class="col-sm-4 d-flex align-items-stretch">
         <card-badge heading="Secure" text="The safety of your data matters most to us. That's why we're CDR accredited." class="w-100">
-          <i class="icon-rab-clock icon-3"/>
+          <i class="icon-rab-clock icon-48"/>
         </card-badge>
       </div>
     </div>

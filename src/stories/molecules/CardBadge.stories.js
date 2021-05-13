@@ -15,7 +15,7 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { CardBadge },
   template:
-    `<card-badge v-bind="$props"><i class="icon-3 icon-rab-${args.icon}"/></card-badge>`,
+    `<card-badge v-bind="$props"><i class="icon-48 icon-rab-${args.icon}"/></card-badge>`,
 });
 
 export const Convenient = Template.bind({});

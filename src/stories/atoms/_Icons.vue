@@ -1,61 +1,121 @@
 <template>
   <div>
-    <h4>Icons</h4>
-    <h5>default size <code class="mr-2">.rab-icon-*</code> (18px × 18px)</h5>
-    <ul class="d-flex flex-wrap list-unstyled pl-0">
-      <li class="p-2">
-        <i class="icon-rab-check"/>
-      </li>
-      <li class="p-2">
-        <i class="icon-rab-close"/>
-      </li>
-      <li class="p-2">
-        <i class="icon-rab-info-warning"/>
-      </li>
-      <li class="p-2">
-        <i class="icon-rab-search-gray"/>
-      </li>
-      <li class="p-2">
-        <i class="icon-rab-arrow-left-gray"/>
-      </li>
-    </ul>
-    <h5><code class="mr-2">.rab-icon-*.icon-2</code> (24px × 24px)</h5>
-    <ul class="d-flex flex-wrap list-unstyled pl-0">
-      <li class="p-2">
-        <i class="icon-rab-tickbox icon-2"/>
-      </li>
-      <li class="p-2">
-        <i class="icon-rab-tickbox-active icon-2"/>
-      </li>
-      <li class="p-2">
-        <i class="icon-rab-tickbox-disabled icon-2"/>
-      </li>
-      <li class="p-2">
-        <i class="icon-rab-tickbox-active-disabled icon-2"/>
-      </li>
-    </ul>
-    <h5><code class="mr-2">.rab-icon-*.icon-4</code> (36px × 36px)</h5>
-    <ul class="d-flex flex-wrap list-unstyled pl-0">
-      <li class="p-2">
-        <i class="icon-rab-shield icon-4"/>
-      </li>
-      <li class="p-2">
-        <i class="icon-rab-calendar icon-4"/>
-      </li>
-      <li class="p-2">
-        <i class="icon-rab-clock icon-4"/>
-      </li>
-    </ul>
+    <h3>Icons</h3>
+    <div class="d-flex flex-wrap">
+      <div class="pr-5">
+        <h5>default size <code class="mr-2">.rab-icon-*</code> (18px × 18px)</h5>
+        <ul class="d-flex flex-wrap list-unstyled pl-0">
+          <li class="p-2">
+            <i class="icon-rab-check"/>
+          </li>
+          <li class="p-2">
+            <i class="icon-rab-close"/>
+          </li>
+          <li class="p-2">
+            <i class="icon-rab-info-warning"/>
+          </li>
+          <li class="p-2">
+            <i class="icon-rab-search"/>
+          </li>
+          <li class="p-2">
+            <i class="icon-rab-search-gray"/>
+          </li>
+          <li class="p-2">
+            <i class="icon-rab-arrow-left-gray"/>
+          </li>
+          <li class="p-2">
+            <i class="icon-rab-chevron-down"/>
+          </li>
+          <li class="p-2">
+            <i class="icon-rab-chevron-up"/>
+          </li>
+        </ul>
+      </div>
+      <div class="pr-5">
+        <h5><code class="mr-2">.rab-icon-*.icon-24</code> (24px × 24px)</h5>
+        <ul class="d-flex flex-wrap list-unstyled pl-0">
+          <li class="p-2">
+            <i class="icon-rab-tickbox icon-24"/>
+          </li>
+          <li class="p-2">
+            <i class="icon-rab-tickbox-active icon-24"/>
+          </li>
+          <li class="p-2">
+            <i class="icon-rab-tickbox-disabled icon-24"/>
+          </li>
+          <li class="p-2">
+            <i class="icon-rab-tickbox-active-disabled icon-24"/>
+          </li>
+        </ul>
+      </div>
+      <div class="pr-5">
+        <h5><code class="mr-2">.rab-icon-*.icon-32</code> (32px × 32px)</h5>
+        <ul class="d-flex flex-wrap list-unstyled pl-0">
+          <li class="m-2 border">
+            <i class="icon-rab-wallet icon-32"/>
+          </li>
+          <li class="m-2 border">
+            <i class="icon-rab-coins icon-32"/>
+          </li>
+        </ul>
+      </div>
+      <div class="pr-5">
+        <h5><code class="mr-2">.rab-icon-*.icon-48</code> (48px × 48px)</h5>
+        <ul class="d-flex flex-wrap list-unstyled pl-0">
+          <li class="m-2 border">
+            <i class="icon-rab-shield icon-48"/>
+          </li>
+          <li class="m-2 border">
+            <i class="icon-rab-calendar icon-48"/>
+          </li>
+          <li class="m-2 border">
+            <i class="icon-rab-clock icon-48"/>
+          </li>
+        </ul>
+      </div>
+    </div>
     <hr>
-    <h4>CDR Logos</h4>
+    <h3>Bullet Lists</h3>
+    <div class="d-flex flex-wrap">
+      <div class="pr-5">
+        <h5><code class="mr-2">.bullet-info</code> (18px × 18px)</h5>
+        <ul class="bullet-info">
+          <li>Organic keytar</li>
+          <li>Butcher bushwick meggings food truck,<br/>hoodie cloud bread man braid meditation cliche.</li>
+          <li>Etsy poke messenger bag lyft bitters prism</li>
+        </ul>
+      </div>
+      <div class="pr-5">
+        <h5><code class="mr-2">.bullet-info-warning</code> (18px × 18px)</h5>
+        <ul class="bullet-info-warning">
+          <li>Organic keytar</li>
+          <li>Butcher bushwick meggings food truck,<br/>hoodie cloud bread man braid meditation cliche.</li>
+          <li>Etsy poke messenger bag lyft bitters prism</li>
+        </ul>
+      </div>
+      <div class="pr-5">
+        <h5><code class="mr-2">.bullet-check-green</code> (18px × 18px)</h5>
+        <ul class="bullet-check-green">
+          <li>Organic keytar</li>
+          <li>Butcher bushwick meggings food truck,<br/>hoodie cloud bread man braid meditation cliche.</li>
+          <li>Etsy poke messenger bag lyft bitters prism</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <h3>CDR Logos</h3>
     <ul class="d-flex flex-wrap list-unstyled pl-0">
       <li class="pr-5">
         <h5><code class="mr-2">.icon-rab-logo-cdr</code> (118px × 43px)</h5>
         <i class="icon-rab-logo-cdr"/>
       </li>
-      <li class="">
-        <h5><code class="mr-2">.icon-rab-logo-cdr-brandmark.icon-5</code> (44px × 44px)</h5>
-        <i class="icon-rab-logo-cdr-brandmark icon-5"/>
+      <li class="pr-5">
+        <h5><code class="mr-2">.icon-rab-logo-cdr-monogram</code> (64px × 64px)</h5>
+        <i class="icon-rab-logo-cdr-monogram"/>
+      </li>
+      <li class="pr-5">
+        <h5><code class="mr-2">.icon-rab-logo-cdr-short</code> (64px × 95px)</h5>
+        <i class="icon-rab-logo-cdr-short"/>
       </li>
     </ul>
   </div>

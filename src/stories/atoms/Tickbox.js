@@ -4,7 +4,7 @@ export default {
          @mouseenter="hover = true"
          @mouseleave="hover = false"
          :class="[ disabled ? 'cursor-not-allowed' : 'cursor-pointer hover-bg-brand-secondary-1' ]">
-      <i class="icon-1" :class="iconName"/>
+      <i class="icon-24" :class="iconName"/>
       <input type="checkbox" class="d-none" v-model="checkedLocal" :disabled="disabled">
     </div>
   `,
