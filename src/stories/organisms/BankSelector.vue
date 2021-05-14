@@ -118,7 +118,7 @@ export default {
 </script>
 
 <style>
-/* Note: These styles should not be directly copied to CC template. */
+/* NOTE: These styles should not be directly copied to CC template. */
 /* Can't use imported variables. Need to build first, then copy the output. */
 @import '../../assets/css/variables.css';
 
