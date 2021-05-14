@@ -52,6 +52,9 @@
         <h5><code class="mr-2">.rab-icon-*.icon-32</code> (32px × 32px)</h5>
         <ul class="d-flex flex-wrap list-unstyled pl-0">
           <li class="m-2 border">
+            <i class="icon-rab-suitcase icon-32"/>
+          </li>
+          <li class="m-2 border">
             <i class="icon-rab-wallet icon-32"/>
           </li>
           <li class="m-2 border">
