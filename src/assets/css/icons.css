@@ -1,11 +1,15 @@
 /**
- * Icon sizing legend.
- * Width and Height are always equal;
+ * NOTE: All icons are made available via SVG URIs as background images.
+ *   Ensure hash `#` prefix on hex colors is escaped as `%23`, eg:
+ *   fill="#fff" —> fill="%23fff"
  *
- * default 18
+ * Icon sizing legend.
+ * Width and Height are always equal.
+ *
+ * 18 default
  * 24 (eg: tickbox)
  * 32
- * 36
+ * 36 (eg: accordion)
  * 48 (eg: badge icon)
  * 64
  */
