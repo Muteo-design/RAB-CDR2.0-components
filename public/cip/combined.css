@@ -3836,6 +3836,17 @@ select[multiple].input-lg {
   }
 }
 
+.button,
+.no-select {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .btn {
   display: inline-block;
   padding: 6px 12px;
@@ -3846,13 +3857,6 @@ select[multiple].input-lg {
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -4424,14 +4428,24 @@ tbody.collapse.in {
   font-family: Karbon !important;
 }
 
-.accordian-header {
+.accordian-header,
+.accordian-footer {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-column-gap: 17px;
   align-items: center;
-  padding: 0px 21px;
+}
+
+.accordian-header {
+  grid-column-gap: 8px;
+  grid-template-columns: auto 1fr auto;
+  padding: 0px 12px 0px 16px;
   height: 70px;
-  cursor: pointer;
+}
+
+.accordian-footer {
+  grid-column-gap: 17px;
+  grid-template-columns: 1fr auto;
+  padding: 0px 16px;
+  height: 48px;
 }
 
 .accordian-title {
@@ -4470,7 +4484,8 @@ tbody.collapse.in {
     ),
     #f5faff;
   background-blend-mode: multiply, multiply, normal;
-  min-height: 88px;
+  display: grid;
+  padding: 17px;
 }
 
 .dropup,

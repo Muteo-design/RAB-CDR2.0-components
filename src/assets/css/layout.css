@@ -24,6 +24,10 @@
   border-radius: 9px 9px 0px 0px !important;
 }
 
+.rounded-bottom {
+  border-radius: 0px 0px 9px 9px !important;
+}
+
 /* New Utilities */
 [class*="border-"] {
   border-width: 1px;
