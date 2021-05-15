@@ -19,7 +19,13 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Accordian, TextContent },
-  template: `<accordian v-bind="$props"><text-content title="Why we need it" body="We’ll use this data to find out about your income, assets and liabilities" /></accordian>`,
+  template: `
+  <accordian v-bind="$props">
+    <text-content title="Why we need it" body="We’ll use this data to find out about your income, assets and liabilities" />
+    <template v-slot:footer>
+        <text-content title="What's included" body="LIST GOES HERE" />
+    </template>
+  </accordian>`,
 });
 
 export const Default = Template.bind({});

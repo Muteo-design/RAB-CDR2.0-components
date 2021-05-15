@@ -1,11 +1,21 @@
 import Tickbox from "../atoms/Tickbox";
+import Chevron from "../atoms/Chevron";
 
 const accordianHeader = `
-<div :class="[ isOpen ? 'rounded-top border-bottom-0' : 'rounded border' ]" class="accordian-header border-color-secondary-2"
-  v-on:click="isOpen = !isOpen">
-  <i :class="'icon-32 icon-rab-' + icon" />
+<div class="border-bottom-0 rounded-top accordian-header border-color-secondary-2 no-select"
+  v-on:click="isChecked= !isChecked">
+  <i :class="'icon-36 icon-rab-' + icon" />
   <p class="h4 mb-1 font-weight-bold brand-primary-1">{{ title }}</p>
-  <tickbox :checked="!isOpen" class="flex-none"/>
+  <tickbox :checked="isChecked" class="flex-none"/>
+</div>
+`;
+
+const footerTitle = `{{ isOpen ? "Hide" : "What's included" }}`;
+const accordianFooter = `
+<div class="border-top-0 rounded-bottom accordian-footer border-color-secondary-2 no-select"
+  v-on:click="isOpen= !isOpen">
+  <span class="mb-2 font-weight-bold brand-primary-1">${footerTitle}</span>
+  <chevron :expanded="isOpen" class="flex-none"/>
 </div>
 `;
 
@@ -15,20 +25,25 @@ export default /*vueJSWidget.registerComponent('accordian',*/ {
   template: `
   <div class='accordian'>
     ${accordianHeader}
-    <div :class="[ isOpen ? 'accordian-slider-open' : 'accordian-slider-closed' ]">
-      <div class="accordian-content">
+    <div class="accordian-content">
       <slot/>
+      <div :class="[ isOpen ? 'accordian-slider-open' : 'accordian-slider-closed' ]">
+        <slot name="footer"/>
+      </div>
     </div>
-    </div>
+    ${accordianFooter}
+  </div>
   `,
-  components: { Tickbox },
+  components: { Tickbox, Chevron },
   props: {
     heading: String,
     title: String,
+    footerTitle: String,
     icon: String,
   },
   data: function () {
     return {
+      isChecked: this.isChecked,
       isOpen: this.isOpen,
     };
   },
