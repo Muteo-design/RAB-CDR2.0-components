@@ -4499,6 +4499,12 @@ tbody.collapse.in {
   column-count: 2;
 }
 
+.info-consent-grid {
+  display: grid;
+  grid-row-gap: 22px;
+  margin-top: 40px;
+}
+
 .info-list {
   display: flex;
   flex-direction: column;
