@@ -9,11 +9,6 @@ export default {
     title: String,
     body: String,
   },
-  data: function () {
-    return {
-      title: this.title,
-      body: this.body,
-    };
-  },
+  data: {},
   computed: {},
 };
