@@ -1,6 +1,6 @@
 <template>
   <page>
-    <widget legend="Let's fast track your application">
+    <widget legend="Data we collect with your permission">
       <consent-flow-intro :entered-data="consentFlowIntroEntered"/>
       <consent-flow-can-connect :entered-data="consentFlowCanConnectEntered"/>
       <consent-flow-need-help :entered-data="consentFlowNeedHelpEntered"/>

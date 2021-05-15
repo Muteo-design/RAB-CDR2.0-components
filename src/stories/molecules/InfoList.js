@@ -1,7 +1,7 @@
 import Tickbox from "../atoms/Tickbox";
 
-// ComponentAccordian
-export default /*vueJSWidget.registerComponent('accordian',*/ {
+// ComponentInfoList
+export default /*vueJSWidget.registerComponent('info-list',*/ {
   // v0.1.0
   template: `
     <div class='info-list'>
