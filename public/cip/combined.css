@@ -4488,6 +4488,12 @@ tbody.collapse.in {
   padding: 17px;
 }
 
+.dual-columns {
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+}
+
 .info-list {
   display: flex;
   flex-direction: column;
