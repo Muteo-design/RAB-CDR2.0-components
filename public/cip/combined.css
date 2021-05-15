@@ -4473,6 +4473,65 @@ tbody.collapse.in {
   min-height: 88px;
 }
 
+.info-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #bdbdbd;
+  border-radius: 9px;
+  justify-content: space-between;
+  width: 100%;
+  padding: 21px;
+}
+
+.info-list-title {
+  margin-bottom: 12px !important;
+}
+
+.info-list-logo {
+  width: 96px !important;
+  height: 32px !important;
+}
+
+.info-list-bullet-info {
+  padding-left: 0 !important;
+  margin: 12px 0 !important;
+}
+
+.info-list-bullet-info > li {
+  min-height: 23px;
+  margin: 0 !important;
+}
+
+.info-list-bullet-info > li:first-child {
+  margin: 0 0 17px 0 !important;
+}
+
+.info-list-column-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .info-list {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #bdbdbd;
+    border-radius: 9px;
+    justify-content: space-between;
+    width: 100%;
+    padding: 21px;
+    min-height: 162px;
+  }
+
+  .info-list-title {
+    margin-bottom: 14px !important;
+  }
+
+  .info-list-bullet-info > li:first-child {
+    margin: 0 0 14px 0 !important;
+  }
+}
+
 .dropup,
 .dropdown {
   position: relative;
