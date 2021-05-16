@@ -3238,16 +3238,27 @@ fieldset {
   border: 0;
 }
 
-legend {
+#cloudcase-form legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 20px;
-  font-size: 21px;
-  line-height: inherit;
+  font-size: 24px !important;
+  line-height: 28.8px !important;
   color: #333;
-  border: 0;
-  border-bottom: 1px solid #e5e5e5;
+}
+
+@media (min-width: 375px) {
+  #cloudcase-form legend {
+    font-size: 26px !important;
+    line-height: 31.2px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  #cloudcase-form legend {
+    font-size: 36px !important;
+    line-height: 43.2px !important;
+  }
 }
 
 label {
