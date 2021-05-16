@@ -199,7 +199,7 @@ fieldset {
 }
 
 legend {
-  padding: 0;
+  padding: 0 !important;
   border: 0;
 }
 
@@ -11709,7 +11709,6 @@ input[type="button"] + input[type="button"] {
   :not(.layoutHorizontalRow) > .shownQuestionPanel {
     display: inline-block;
     width: 100%;
-    margin-top: 20px;
   }
 
   :not(.layoutHorizontalRow)
