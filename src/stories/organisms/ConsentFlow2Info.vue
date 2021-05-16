@@ -1,12 +1,14 @@
 <template>
-<div class="rab-cdr info-consent-grid">
+<div class="rab-cdr info-consent">
     <legend>Please agree for us to collect your:</legend>
-    <accordian v-for="info in infoSections" :key="info.title" :title="info.title" :icon="info.icon">
-      <text-content title="Why we need it" :body="info.why" />
-      <template v-slot:footer>
-          <included-list title="What's included" :list="info.included" />
-      </template>
-    </accordian>
+    <div class="info-consent-grid">
+      <accordian v-for="info in infoSections" :key="info.title" :title="info.title" :icon="info.icon">
+        <text-content title="Why we need it" :body="info.why" />
+        <template v-slot:footer>
+            <included-list title="What's included" :list="info.included" />
+        </template>
+      </accordian>
+    </div>
 </div>
 </template>
 <script>

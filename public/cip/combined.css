@@ -4520,10 +4520,23 @@ tbody.collapse.in {
   }
 }
 
+.info-consent {
+    margin-top: 30px;
+}
+
+.info-consent legend {
+  margin-bottom: 25px !important;
+}
+
 .info-consent-grid {
   display: grid;
   grid-row-gap: 22px;
-  margin-top: 40px;
+}
+
+@media (min-width: 320px) {
+  .info-consent-grid {
+    grid-row-gap: 32px;
+  }
 }
 
 .info-list {
