@@ -5,7 +5,7 @@ const accordianHeader = `
 <div class="border-bottom-0 rounded-top accordian-header border-color-secondary-2 no-select"
   v-on:click="isChecked= !isChecked">
   <i :class="'icon-36 icon-rab-' + icon" />
-  <p class="h4 mb-1 font-weight-bold brand-primary-1">{{ title }}</p>
+  <p class="accordian-title mb-1 font-weight-bold brand-primary-1">{{ title }}</p>
   <tickbox :checked="isChecked" class="flex-none"/>
 </div>
 `;
