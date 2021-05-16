@@ -1,6 +1,6 @@
 <template>
   <page>
-    <widget legend="Data we collect with your permission">
+    <widget legend="Data we collect with your permission" currentStep=2 stepCount=3>
       <consent-flow-2-intro />
       <consent-flow-2-info />
     </widget>

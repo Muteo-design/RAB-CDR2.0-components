@@ -1,7 +1,7 @@
 <template>
   <!-- <div id="vue-{{question.id}}" class="rab-cdr">-->
   <div class="rab-cdr">
-    <p class="text-feature">Once you've given us your consent, we'll connect with your banks to collect the information we need for your application.</p>
+    <p class="text-feature consent-2">Once you've given us your consent, we'll connect with your banks to collect the information we need for your application.</p>
     <info-list title="What does that mean?"
                v-bind:infoList="['We only collect what we need.', 'We will only use this information to help streamline your loan application']" />
   </div>
