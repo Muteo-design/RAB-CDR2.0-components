@@ -15,7 +15,10 @@ const Template = (args, { argTypes }) => ({
 
 export const Default = Template.bind({});
 Default.args = {
-  entered: JSON.stringify({ dataholders }),
+  entered: JSON.stringify({
+    dataholders,
+    borrower: { name: "Michael Howlett" },
+  }),
 };
 
 export const PreSelected = Template.bind({});
@@ -27,5 +30,6 @@ PreSelected.args = {
       }
       return x;
     }),
+    borrower: { name: "Michael Howlett" },
   }),
 };
