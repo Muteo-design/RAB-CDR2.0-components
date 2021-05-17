@@ -1,96 +1,96 @@
 [{
   "name": "ANZ",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/ANZ-Logo-2009.svg",
+  "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/ANZ-Logo-2009.svg",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "NATIONAL AUSTRALIA BANK",
-  "image": "https://www.nab.com.au/etc/designs/nabrwd/clientlibs/images/logo.png",
+  "imageUrl": "https://www.nab.com.au/etc/designs/nabrwd/clientlibs/imageUrls/logo.png",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "Westpac",
-  "image": "https://www.finder.com.au/niche-builder/5eccc248b8fcb.png",
+  "imageUrl": "https://www.finder.com.au/niche-builder/5eccc248b8fcb.png",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "CommBank",
-  "image": "https://www.commbank.com.au/content/dam/commbank-assets/cba-stacked.jpg",
+  "imageUrl": "https://www.commbank.com.au/content/dam/commbank-assets/cba-stacked.jpg",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "AMP",
-  "image": "https://www.finder.com.au/global/images/providers/amp-bank-logo200x140.png?fit=200",
+  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/amp-bank-logo200x140.png?fit=200",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "Australian Unity",
-  "image": "https://upload.wikimedia.org/wikipedia/en/4/49/Australian_Unity_logo.jpg",
+  "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/49/Australian_Unity_logo.jpg",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "Bank Australia",
-  "image": "https://upload.wikimedia.org/wikipedia/en/e/ef/Bank_Australia_logo.svg",
+  "imageUrl": "https://upload.wikimedia.org/wikipedia/en/e/ef/Bank_Australia_logo.svg",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "Bank of Melbourne",
-  "image": "https://www.finder.com.au/global/images/providers/bom-logo-140px.png?fit=1200",
+  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/bom-logo-140px.png?fit=1200",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "BankSA",
-  "image": "https://www.finder.com.au/global/images/providers/bank-sa-new-140px.png?fit=1200",
+  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/bank-sa-new-140px.png?fit=1200",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "BOQ",
-  "image": "https://www.finder.com.au/global/images/providers/boqlogo-website-315x190.png?fit=315",
+  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/boqlogo-website-315x190.png?fit=315",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "Bank of Sydney",
-  "image": "https://www.finder.com.au/global/images/providers/bankofsydneylogo-google-232x140.png?fit=232",
+  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/bankofsydneylogo-google-232x140.png?fit=232",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "Bendigo Bank",
-  "image": "https://www.finder.com.au/global/images/providers/bendigobank-supplied-230x36.jpg?fit=230",
+  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/bendigobank-supplied-230x36.jpg?fit=230",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "Citibank",
-  "image": "https://www.finder.com.au/global/images/providers/citi-logo-1-140.png?fit=1200",
+  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/citi-logo-1-140.png?fit=1200",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "Coles",
-  "image": "https://www.finder.com.au/global/images/providers/coles-logo-140px.png?fit=1200",
+  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/coles-logo-140px.png?fit=1200",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "Credit Union SA",
-  "image": "https://www.finder.com.au/global/images/providers/credit-union-sa-new-logo-140px.png?fit=1200",
+  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/credit-union-sa-new-logo-140px.png?fit=1200",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "Defence Bank",
-  "image": "https://www.finder.com.au/global/images/providers/defence-bank-new-logo-140px.png?fit=1200",
+  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/defence-bank-new-logo-140px.png?fit=1200",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "Gateway Bank",
-  "image": "https://www.finder.com.au/global/images/providers/gateway-bank-logo-140px.png?fit=1200",
+  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/gateway-bank-logo-140px.png?fit=1200",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "HSBC",
-  "image": "https://www.finder.com.au/global/images/providers/hsbc-logo140px.png?fit=1200",
+  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/hsbc-logo140px.png?fit=1200",
   "CDREnabled": false,
   "selected": false
 }, {
   "name": "Regional Australia Bank",
-  "image": "https://www.finder.com.au/global/images/providers/regional-australia-bank-logo-140px.png?fit=1200",
+  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/regional-australia-bank-logo-140px.png?fit=1200",
   "CDREnabled": false,
   "selected": false
 }]

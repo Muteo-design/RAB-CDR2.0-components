@@ -17,10 +17,10 @@ Default.args = {
   entered: JSON.stringify({
     dataholders: [{
       "name": "CommBank",
-      "image": "https://www.commbank.com.au/content/dam/commbank-assets/cba-stacked.jpg",
+      "imageUrl": "https://www.commbank.com.au/content/dam/commbank-assets/cba-stacked.jpg",
     }, {
       "name": "Westpac",
-      "image": "https://www.finder.com.au/niche-builder/5eccc248b8fcb.png",
+      "imageUrl": "https://www.finder.com.au/niche-builder/5eccc248b8fcb.png",
     }]
   })
 };
