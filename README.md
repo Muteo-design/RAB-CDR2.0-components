@@ -30,6 +30,11 @@ npm run storybook
 ### Do not edit files in `/public/cip`
 All files in `/public/cip` should only be modified by camslice until such time as he deems another developer has enough context to safely make changes there.
 
+### Coding Style
+- Use Tabs for indentation, not spaces. Tab width should equal 4 spaces
+- Ensure closing tags exists for all HTML elements that are not "empty elements", otherwise known as "self-closing tags". This includes all Vue components. A few examples of empty elements are: `<img/>`, `<input/>` and `<br/>`. Comprehensive list: https://developer.mozilla.org/en-US/docs/Glossary/Empty_element
+- 
+
 ### CSS
 Make all css changes in `/src/assets/css`
 
@@ -41,6 +46,8 @@ If you can't achieve what you need to with the `.rab-cdr` prefix, then the CSS t
 
 Widgets are also rendered on the "staff" channel. The `.rab-cdr` prefix helps us minimise the difference between how the widgets are rendered on the customer channel vs the staff channel.
 
+CSS is integrated into Cloudcase by manually copying the output `<style>` tag from the Storybook and commiting this to the Cloudcase UAT rulebook in a separate Git repository.
+
 #### Bootstrap
 
 Cloudcase global CSS and theme are build on Bootstrap 3.
@@ -50,6 +57,17 @@ Boostrap 4 utility classes are made available us via this repo: https://github.c
 The utility classes were built from SASS with variable $spacer: 1rem; meaning that fonts and all spacing utilities are using `rem` units. Additional custom utility classes should also use `rem` units.
 
 BS4 utility class documentation: https://getbootstrap.com/docs/4.0/utilities/borders/
+
+#### Icons
+
+All icons are made available via SVG URIs as background images. The staff channel does not have access to community channel assets, so the most reliable way to serve SVG images to both channels is via CSS.
+
+Steps to generate CSS:
+
+1. Export SVG from Figma file, be sure to select entire group. 
+1. Optimise and extract markup using https://jakearchibald.github.io/svgomg/
+1. Ensure hash `#` prefix on hex colors is escaped as `%23`, eg: `fill="#fff"` becomes `fill="%23fff"`
+1. Duplicate existing icon CSS to easily copy correct data URI prefix: `data:image/svg+xml;charset=UTF-8,` 
 
 ### Cloudcase Integration
 
@@ -75,3 +93,11 @@ Server state must be passed to top level components as a JSON String via the `en
 
 Javascript ES5 limitation means certain useful language features are not available, such as:
   - shorthand syntax for method definitions on objects, eg: `{ data() {} }` should be written in longhand as `{ data: function() {} }`
+
+####
+
+Self closing tags - Jason is checking if <img/> throws an error
+
+Ensure code captilisation is retained during integration
+
+Get latest JSON from Jason
