@@ -1,5 +1,5 @@
 /*
-ComponentTickbox
+ComponentVueTickbox
 	[[
 		vueJSWidget.registerComponent('tickbox', {
 */

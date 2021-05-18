@@ -1,4 +1,4 @@
-ComponentBankSelector
+ComponentVueBankSelector
 <template>
 	<div class="rab-cdr">
 		<!-- v0.3.1 -->
