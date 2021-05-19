@@ -1,10 +1,11 @@
-ComponentVueBankSelector
+ComponentVue_BankSelector
 <template>
 	<div class="rab-cdr">
-		<!-- v0.3.1 -->
+	<!-- v0.4.0 -->
+<!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
 		<p class="text-feature">{{ borrower.name ? borrower.name + ', ' : '' }}tell us about all the banks where you have accounts for transactions, savings, credit cards or loans.</p>
 		<div @click="focusSearchInput()" class="bank-search position-relative" :class="{ 'conceal': editingPills }">
-			<div class="position-absolute center-y p-4"
+			<div class="position-absolute center-y p-4 rounded"
 				:class="{ 'pointer-none': !searchValue }">
 				<i v-if="searchValue" class="center-xy icon-rab-arrow-left-gray cursor-pointer" @click="searchValue = ''"></i>
 				<i v-else class="center-xy" :class="[ searchFocussed || searchHovered || editingPills ? 'icon-rab-search-gray' : 'icon-rab-search']"></i>
@@ -30,7 +31,7 @@ ComponentVueBankSelector
 					<div class="d-flex align-items-center justify-content-between">
 						<dataholder-details :dataholder="dataholder" smallLogo :name-class="dataholderPillNameClass"></dataholder-details>
 						<div class="flex-none pl-2">
-							<i v-if="editingPills" @click="deselect(dataholder)" class="icon-rab-close icon-24 cursor-pointer"></i>
+							<i v-if="editingPills" @click="askDeselect(dataholder)" class="icon-rab-close icon-24 cursor-pointer"></i>
 							<i v-else class="icon-rab-check icon-24"></i>
 						</div>
 					</div>
@@ -77,6 +78,45 @@ export default {
 		setSearch: function(value) {
 			this.searchValue = value;
 		},
+		askDeselect: function(dataholder) {
+			var vm = this;
+			CCExtension.showModal('Are you sure you want to remove this bank?',
+				`<div class="rab-cdr">
+					<p>A complete banking history will help us to provide you with the best possible offer.</p>
+					<div class="dataholder-pill rounded-pill border-brand-primary-1 bg-white p-2 mr-2 mb-2 d-inline-block">
+						<div class="d-flex align-items-center justify-content-between">
+							<div class="dataholder-details d-flex align-items-center">
+								<div class="dataholder-logo flex-none rounded-circle overflow-hidden position-relative mr-2 icon-24">
+									<div class="w-100 h-100 rounded-circle overflow-hidden position-relative bg-white border-white">
+										<img src="${dataholder.imageUrl}" class="center-xy"/>
+									</div>
+								</div>
+								<div class="dataholder-name overflow-text">${dataholder.name}</div>
+							</div>
+							<div class="flex-none pl-2">
+								<i class="icon-rab-close-gray icon-24"></i>
+							</div>
+						</div>
+					</div>
+				</div>`,
+				[{
+					'id': 'btn-cancel',
+					'label': 'Keep bank',
+					'type': 'default',
+					'callback': function() {
+						CCExtension.closeModal();
+					},
+				}, {
+					'id': 'btn-remove',
+					'label': 'Remove bank',
+					'type': 'default',
+					'callback': function() {
+						vm.deselect(dataholder);
+						CCExtension.closeModal();
+					},
+				}],
+			);
+		},
 		deselect: function(dataholder) {
 			dataholder.selected = !dataholder.selected;
 			if (!this.selectedDataholders.length) {
@@ -105,7 +145,7 @@ export default {
 			return vm.alphaSortedDataholders.filter(function(dataholder) {
 				var nameIndex = dataholder.name.toLowerCase().indexOf(vm.searchValue.toLowerCase());
 				var aliasIndex = (dataholder.alias || '').toLowerCase().indexOf(vm.searchValue.toLowerCase());
-				return ((nameIndex || aliasIndex) > -1);
+				return (nameIndex || aliasIndex) > -1;
 			});
 		},
 		selectedDataholders: function() {

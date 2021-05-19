@@ -1,5 +1,5 @@
 /*
-ComponentVueDataholderDetails
+ComponentVue_DataholderDetails
 	[[
 		vueJSWidget.registerComponent('dataholder-details', {
 */

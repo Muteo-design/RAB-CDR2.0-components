@@ -143,33 +143,11 @@ input.font-brand-bold {
 /* TODO: Move to RABSkin to remove prefix and allow this to be used outside of widgets */
 .text-feature {
   font-family: "Karbon";
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
   color: #00424d;
   font-size: 20px;
   line-height: 1.25;
   border-left: 3px solid var(--brand-primary-2);
-  margin-bottom: 3rem;
-}
-
-.text-feature.consent-2 {
-  margin: 20px 0;
-}
-
-@media (min-width: 768px) {
-  .text-feature.consent-2 {
-    margin: 28px 0;
-  }
-}
-
-@media (min-width: 992px) {
-  .text-feature.consent-2 {
-    margin: 30px 0;
-  }
-}
-
-@media (min-width: 1200px) {
-  .text-feature.consent-2 {
-    margin: 33px 0;
-  }
+  margin-bottom: var(--space-5);
 }

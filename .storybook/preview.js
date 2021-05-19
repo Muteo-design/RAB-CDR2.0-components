@@ -14,7 +14,7 @@ import CardCDR from '@/stories/molecules/CardCDR';
 import Tickbox from '@/stories/atoms/Tickbox';
 import Chevron from '@/stories/atoms/Chevron';
 /* Mixin that mimics Cloudcase passing data from server to component state */
-import cloudcaseStateMixin from '@/mixins/cloudcase-state';
+import mixinCloudcaseState from '@/mixins/cloudcase-state';
 
 /* Organisms (top level)*/
 /* Add mixin to top level components only */
@@ -25,7 +25,7 @@ const topLevelComponents = [
   ConsentFlowNeedHelp,
 ];
 for (const component of topLevelComponents) {
-  component.mixins = [cloudcaseStateMixin];
+  component.mixins = [mixinCloudcaseState];
 }
 Vue.component('bank-selector', BankSelector);
 Vue.component('consent-flow-intro', ConsentFlowIntro);
