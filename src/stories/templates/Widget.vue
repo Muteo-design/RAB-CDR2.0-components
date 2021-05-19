@@ -3,6 +3,7 @@
 		<!-- TODO: Move out of widget -->
 		<span class="steps" v-if="currentStep && stepCount">Step {{currentStep}} of {{stepCount}}</span>
 		<legend>{{ legend }}</legend>
+		<p class="text-feature">{{ featureText }}</p>
 		<div id="id_section_Applicant1Consent_Chooseyourbank">
 			<div id="question_ConsentChooseYourBank" cc-panel="ConsentChooseYourBank" class="questionPanel shownQuestionPanel shownQuestionTextPanel">
 				<div class="questionContainer fullWidthQuestion" cc-type="type-less">
@@ -33,6 +34,7 @@ export default {
 	name: 'widget',
 	props: {
 		legend: String,
+		featureText: String,
 		currentStep: Number,
 		stepCount: Number,
 	},

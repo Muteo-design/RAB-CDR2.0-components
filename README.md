@@ -94,6 +94,16 @@ Server state must be passed to top level components as a JSON String via the `en
 Javascript ES5 limitation means certain useful language features are not available, such as:
   - shorthand syntax for method definitions on objects, eg: `{ data() {} }` should be written in longhand as `{ data: function() {} }`
 
+Array methods that **_are_** available:
+- `indexOf`
+- `lastIndexOf`
+- `every`
+- `some`
+- `forEach`
+- `map`
+- `filter`
+- `reduce`
+
 ####
 
 Self closing tags - Jason is checking if <img/> throws an error

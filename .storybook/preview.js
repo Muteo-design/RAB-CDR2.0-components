@@ -2,9 +2,8 @@
 import Vue from 'vue';
 /* Organisms (top level)*/
 import BankSelector from '@/stories/organisms/BankSelector';
-import ConsentFlowIntro from '@/stories/organisms/ConsentFlowIntro';
-import ConsentFlowCanConnect from '@/stories/organisms/ConsentFlowCanConnect';
-import ConsentFlowNeedHelp from '@/stories/organisms/ConsentFlowNeedHelp';
+import ConsentFlow1Intro from '@/stories/organisms/ConsentFlow1Intro';
+import ConsentFlow1Dataholders from '@/stories/organisms/ConsentFlow1Dataholders';
 /* Molecules */
 import DataholderDetails from '@/stories/molecules/DataholderDetails';
 import CardDataholderConnect from '@/stories/molecules/CardDataholderConnect';
@@ -20,22 +19,20 @@ import mixinCloudcaseState from '@/mixins/cloudcase-state';
 /* Add mixin to top level components only */
 const topLevelComponents = [
   BankSelector,
-  ConsentFlowIntro,
-  ConsentFlowCanConnect,
-  ConsentFlowNeedHelp,
+  ConsentFlow1Intro,
+  ConsentFlow1Dataholders,
 ];
 for (const component of topLevelComponents) {
   component.mixins = [mixinCloudcaseState];
 }
 Vue.component('bank-selector', BankSelector);
-Vue.component('consent-flow-intro', ConsentFlowIntro);
-Vue.component('consent-flow-can-connect', ConsentFlowCanConnect);
-Vue.component('consent-flow-need-help', ConsentFlowNeedHelp);
+Vue.component('consent-flow-1-intro', ConsentFlow1Intro);
+Vue.component('consent-flow-1-dataholders', ConsentFlow1Dataholders);
 /* Molecules */
 Vue.component('dataholder-details', DataholderDetails);
-Vue.component('card-dataholder-connect', CardDataholderConnect);
 Vue.component('card-badge', CardBadge);
 Vue.component('card-cdr', CardCDR);
+Vue.component('card-dataholder-connect', CardDataholderConnect);
 /* Atoms */
 Vue.component('tickbox', Tickbox);
 Vue.component('chevron', Chevron);

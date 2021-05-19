@@ -1,25 +1,24 @@
 <template>
-  <page>
-    <widget legend="Data we collect with your permission">
-      <consent-flow-intro :entered-data="consentFlowIntroEntered"/>
-      <consent-flow-can-connect :entered-data="consentFlowCanConnectEntered"/>
-      <consent-flow-need-help :entered-data="consentFlowNeedHelpEntered"/>
-    </widget>
-  </page>
+	<page>
+		<widget legend="Data we collect with your permission" feature-text="The new Consumer Data Right (CDR) makes your home loan application more convenient, accurate and safe. Plus, we can really speed up the process.">
+			<consent-flow-1-intro :entered-data="consentFlow1IntroEntered"/>
+		</widget>
+		<widget>
+			<consent-flow-1-dataholders :entered-data="ConsentFlow1DataholdersEntered"/>
+		</widget>
+	</page>
 </template>
 
 <script>
 import Page from '../templates/Page.vue';
 import Widget from '../templates/Widget.vue';
-import ConsentFlowNeedHelp from '@/stories/organisms/ConsentFlowNeedHelp';
 
 export default {
-  name: 'consent-flow-1',
-  components: { ConsentFlowNeedHelp, Page, Widget },
-  props: {
-    consentFlowIntroEntered: String,
-    consentFlowCanConnectEntered: String,
-    consentFlowNeedHelpEntered: String,
-  },
+	name: 'consent-flow-1',
+	components: { Page, Widget },
+	props: {
+		consentFlow1IntroEntered: String,
+		ConsentFlow1DataholdersEntered: String,
+	},
 };
 </script>
