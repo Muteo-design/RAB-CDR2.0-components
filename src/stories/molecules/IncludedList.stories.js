@@ -15,10 +15,12 @@ export default {
   ],
 };
 
-const Template = (args, { argTypes }) => ({
-  props: Object.keys(argTypes),
+const Template = (args) => ({
   components: { IncludedList },
-  template: `<included-list v-bind="$props">`,
+	setup() {
+  		return { args }
+	},
+  template: `<included-list v-bind="args"/>`,
 });
 
 export const Default = Template.bind({});

@@ -5,11 +5,13 @@ export default {
 	component: CardDataholderConnect,
 };
 
-const Template = (args, { argTypes }) => ({
-	props: Object.keys(argTypes),
+const Template = (args) => ({
 	components: { CardDataholderConnect },
+	setup() {
+		return { args };
+	},
 	template: `
-		<card-dataholder-connect v-bind="$props">${args.slotTemplate || ''}</card-dataholder-connect>
+		<card-dataholder-connect v-bind="args">${args.slotTemplate || ''}</card-dataholder-connect>
 	`,
 });
 
