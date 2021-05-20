@@ -1,0 +1,35 @@
+/* NOTE: This CSS sits at the top of the `RABSkin` extension in the rulebook. */
+/*  Probably redundant apart from `#vue-modal` style. */
+
+/** Bank Selector Widget Styling **/
+
+.multiAnswerGroup > .rab-cdr {
+	float: none !important
+}
+
+#cloudcase-form #page_AffordabilityAssessmentChooseYourBanks .shownQuestionPanel.hiddenQuestionTextPanel,
+#cloudcase-form #page_ConnectToBank .shownQuestionPanel.hiddenQuestionTextPanel {
+	padding-top: 0 !important;
+	margin-top: 0 !important;
+}
+
+#cloudcase-form #page_AffordabilityAssessmentChooseYourBanks .questionContainer.fullWidthQuestion .multiAnswerGroup,
+#cloudcase-form #page_ConnectToBank .questionContainer.fullWidthQuestion .multiAnswerGroup {
+	margin-left: 0;
+}
+
+#cloudcase-form #page_AffordabilityAssessmentChooseYourBanks .questionContainer.fullWidthQuestion > .questionContent,
+#cloudcase-form #page_ConnectToBank .questionContainer.fullWidthQuestion > .questionContent {
+	margin-top: 0px !important;
+	width: 100% !important;
+}
+
+#cloudcase-form #page_AffordabilityAssessmentChooseYourBanks .questionContainer,
+#cloudcase-form #page_ConnectToBank .questionContainer {
+	margin-bottom: 0 !important;
+}
+
+#vue-modal {
+	margin-top: 20px;
+}
+

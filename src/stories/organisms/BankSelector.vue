@@ -1,11 +1,11 @@
 ComponentVue_BankSelector
 <template>
 	<div class="rab-cdr">
-	<!-- v0.4.0 -->
+	<!-- v0.5.1 -->
 <!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
-		<p class="text-feature">{{ borrower.name ? borrower.name + ', ' : '' }}tell us about all the banks where you have accounts for transactions, savings, credit cards or loans.</p>
+<!--		<p class="text-feature">{{ borrower.name ? borrower.name + ', ' : '' }}tell us about all the banks where you have accounts for transactions, savings, credit cards or loans.</p>-->
 		<div @click="focusSearchInput()" class="bank-search position-relative" :class="{ 'conceal': editingPills }">
-			<div class="position-absolute center-y p-4 rounded"
+			<div class="position-absolute center-y p-4"
 				:class="{ 'pointer-none': !searchValue }">
 				<i v-if="searchValue" class="center-xy icon-rab-arrow-left-gray cursor-pointer" @click="searchValue = ''"></i>
 				<i v-else class="center-xy" :class="[ searchFocussed || searchHovered || editingPills ? 'icon-rab-search-gray' : 'icon-rab-search']"></i>
@@ -52,6 +52,24 @@ ComponentVue_BankSelector
 				</div>
 			</div>
 		</div>
+		<teleport to="#vue-modal">
+			<div v-if="modalActive" class="rab-cdr">
+				<h3>Are you sure you want to remove this bank?</h3>
+				<p>A complete banking history will help us to provide you with the best possible offer.</p>
+				<div class="mt-2 dataholder-pill rounded-pill border-brand-primary-1 bg-white p-2 mr-2 mb-5 d-inline-block">
+					<div class="d-flex align-items-center justify-content-between">
+						<dataholder-details :dataholder="deselectingDataholder" smallLogo name-class="h7"></dataholder-details>
+						<div class="flex-none pl-2">
+							<i class="icon-rab-close-gray icon-24"></i>
+						</div>
+					</div>
+				</div>
+				<div class="d-flex align-items-center justify-content-center mt-4">
+					<div @click="closeModal" class="btn btn-info">Keep bank</div>
+					<div @click="deselect(deselectingDataholder)" class="btn btn-info">Remove Bank</div>
+				</div>
+			</div>
+		</teleport>
 	</div>
 </template>
 
@@ -68,6 +86,8 @@ export default {
 			searchHovered: false,
 			searchFocussed: false,
 			editingPills: false,
+			modalActive: false,
+			deselectingDataholder: {}
 		};
 	},
 	methods: {
@@ -80,48 +100,26 @@ export default {
 		},
 		askDeselect: function(dataholder) {
 			var vm = this;
-			CCExtension.showModal('Are you sure you want to remove this bank?',
-				`<div class="rab-cdr">
-					<p>A complete banking history will help us to provide you with the best possible offer.</p>
-					<div class="dataholder-pill rounded-pill border-brand-primary-1 bg-white p-2 mr-2 mb-2 d-inline-block">
-						<div class="d-flex align-items-center justify-content-between">
-							<div class="dataholder-details d-flex align-items-center">
-								<div class="dataholder-logo flex-none rounded-circle overflow-hidden position-relative mr-2 icon-24">
-									<div class="w-100 h-100 rounded-circle overflow-hidden position-relative bg-white border-white">
-										<img src="${dataholder.imageUrl}" class="center-xy"/>
-									</div>
-								</div>
-								<div class="dataholder-name overflow-text">${dataholder.name}</div>
-							</div>
-							<div class="flex-none pl-2">
-								<i class="icon-rab-close-gray icon-24"></i>
-							</div>
-						</div>
-					</div>
-				</div>`,
-				[{
-					'id': 'btn-cancel',
-					'label': 'Keep bank',
-					'type': 'default',
-					'callback': function() {
-						CCExtension.closeModal();
-					},
-				}, {
-					'id': 'btn-remove',
-					'label': 'Remove bank',
-					'type': 'default',
-					'callback': function() {
-						vm.deselect(dataholder);
-						CCExtension.closeModal();
-					},
-				}],
-			);
+			this.deselectingDataholder = dataholder;
+			this.modalActive = true;
+
+			// Show modal
+			CCExtension.showVueModal(function() {
+				// Close modal callback
+				vm.closeModal();
+			});
+		},
+		closeModal: function() {
+			CCExtension.closeVueModal();
+			this.modalActive = false;
+			this.deselectingDataholder = {};
 		},
 		deselect: function(dataholder) {
 			dataholder.selected = !dataholder.selected;
 			if (!this.selectedDataholders.length) {
 				this.editingPills = false;
 			}
+			this.closeModal();
 		},
 		editPills: function(event) {
 			this.editingPills = !this.editingPills;

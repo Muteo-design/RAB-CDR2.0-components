@@ -1,5 +1,3 @@
-import Tickbox from "../atoms/Tickbox";
-
 // ComponentInfoList
 export default /*vueJSWidget.registerComponent('info-list',*/ {
   // v0.1.0
@@ -16,12 +14,8 @@ export default /*vueJSWidget.registerComponent('info-list',*/ {
         <div class="info-list-column-2"> <i class="info-list-logo icon-rab-logo-cdr"/></div>
     </div>
   `,
-  components: { Tickbox },
   props: {
     title: String,
     infoList: Array,
   },
-  data:{},
-  methods: {},
-  computed: {},
 };

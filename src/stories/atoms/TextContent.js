@@ -9,6 +9,4 @@ export default {
     title: String,
     body: String,
   },
-  data: {},
-  computed: {},
 };

@@ -13,6 +13,4 @@ export default {
     title: String,
     list: Array,
   },
-  data: {},
-  computed: {},
 };

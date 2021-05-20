@@ -4,12 +4,12 @@ ComponentVue_DataholderDetails
 		vueJSWidget.registerComponent('dataholder-details', {
 */
 export default {
-	// v0.2.1
+	// v0.2.2
 	template: `
 		<div class="dataholder-details d-flex align-items-center">
 			<div class="dataholder-logo flex-none rounded-circle overflow-hidden position-relative mr-2"
 				:class="[ smallLogo ? 'icon-24' : 'icon-32' ]">
-				<canvas ref="canvas" width="1px" height="1px"></canvas>
+				<canvas ref="canvas"></canvas>
 				<div class="w-100 h-100 rounded-circle overflow-hidden position-relative bg-white border-white">
 					<img :src="dataholder.imageUrl" @load="setBrand($event)" class="center-xy"/>
 				</div>
@@ -25,6 +25,8 @@ export default {
 	methods: {
 		setBrand: function(event) {
 			var canvas = this.$refs['canvas'];
+			canvas.setAttribute('width', '1px');
+			canvas.setAttribute('height', '1px');
 			var ctx = canvas.getContext('2d');
 			var image = event.currentTarget;
 			ctx.drawImage(image, 0, 0, 1, 1);
