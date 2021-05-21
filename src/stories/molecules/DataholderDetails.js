@@ -9,7 +9,7 @@ export default {
 		<div class="dataholder-details d-flex align-items-center">
 			<div class="flex-none rounded-circle position-relative mr-2" :class="[ smallLogo ? 'icon-24' : 'icon-32' ]">
 				<div class="w-100 h-100 rounded-circle overflow-hidden position-relative bg-white border-white">
-					<img :src="dataholder.imageUrl" @load="setBrand($event)" class="center-xy"/>
+					<img v-else :src="dataholder.imageUrl" @load="setBrand($event)" class="center-xy mw-75"/>
 				</div>
 			</div>
 			<div class="dataholder-name overflow-text" :class="nameClass">{{ dataholder.name }}</div>
@@ -43,7 +43,7 @@ export default {
 			var image = event.currentTarget;
 			var rgb = this.getAvgRgb(image);
 			// If colour is too light or too dark, use fallback colour: brand-tertiary-3
-			if (((rgb[0] + rgb[1] + rgb[2]) > 715) || (rgb[0] + rgb[1] + rgb[2]) < 50) {
+			if (((rgb[0] + rgb[1] + rgb[2]) > 715) || (rgb[0] + rgb[1] + rgb[2]) < 150) {
 				rgb[0] = 2;
 				rgb[1] = 145;
 				rgb[2] = 173;

@@ -1,31 +1,22 @@
 /*
-ComponentVue_DataholderPill
+ComponentVue_DataholderSelect
 	[[
-		vueJSWidget.registerComponent('dataholder-pill', {
+		vueJSWidget.registerComponent('dataholder-select', {
 */
 export default {
 	// v0.1.0
 	template: `
-		<div class="dataholder-pill rounded-pill border-brand-primary-1 bg-white p-2 mr-2 mb-2 mw-100"
-			:class="{ 'hover-shadow-2': editing && !disabled }">
-			<div class="d-flex align-items-center justify-content-between">
-				<dataholder-details :dataholder="dataholder" smallLogo :name-class="nameClass"></dataholder-details>
-				<div class="flex-none pl-2">
-					<i v-if="editing" @click="$emit('askDeselect', dataholder)" class="icon-rab-close icon-24 cursor-pointer"></i>
-					<i v-else class="icon-24" :class="[ disabled ? 'icon-rab-close-gray' : 'icon-rab-check' ]"></i>
-				</div>
-			</div>
+		<div class="pb-sm-1">
+			<label :tabindex="editing ? -1 : 0"
+				class="dataholder-select-wrapper d-flex align-items-center justify-content-between w-100 rounded-lg border hover-border-brand-primary-3 bg-white hover-shadow-2 cursor-pointer p-2 mb-2">
+				<dataholder-details :dataholder="dataholder" name-class="font-brand h5"></dataholder-details>
+				<i v-if="editing && dataholder.selected" class="icon-rab-tickbox-close icon-24 m-2"></i>
+				<tickbox v-else :checked="dataholder.selected" @update:checked="$emit('update:checked', $event)" class="flex-none"></tickbox>
+			</label>
 		</div>
 	`,
 	props: {
 		dataholder: Object,
-		disabled: Boolean,
 		editing: Boolean,
-		dataholderNameClass: String
 	},
-	computed: {
-		nameClass: function() {
-			return this.dataholderNameClass + ((this.editing || this.disabled) ? ' mw-100' : '');
-		}
-	}
 };
