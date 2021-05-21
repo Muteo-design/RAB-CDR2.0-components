@@ -6,6 +6,7 @@ import ConsentFlow1Intro from '@/stories/organisms/ConsentFlow1Intro';
 import ConsentFlow1Dataholders from '@/stories/organisms/ConsentFlow1Dataholders';
 // Molecules
 import DataholderDetails from '@/stories/molecules/DataholderDetails';
+import DataholderPill from '@/stories/molecules/DataholderPill';
 import CardDataholderConnect from '@/stories/molecules/CardDataholderConnect';
 import CardBadge from '@/stories/molecules/CardBadge';
 import CardCDR from '@/stories/molecules/CardCDR';
@@ -30,6 +31,7 @@ app.component('consent-flow-1-intro', ConsentFlow1Intro);
 app.component('consent-flow-1-dataholders', ConsentFlow1Dataholders);
 // Molecules
 app.component('dataholder-details', DataholderDetails);
+app.component('dataholder-pill', DataholderPill);
 app.component('card-badge', CardBadge);
 app.component('card-cdr', CardCDR);
 app.component('card-dataholder-connect', CardDataholderConnect);

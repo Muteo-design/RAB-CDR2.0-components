@@ -1,9 +1,9 @@
 ComponentVue_BankSelector
 <template>
 	<div class="rab-cdr">
-	<!-- v0.5.1 -->
+	<!-- v0.6.0 -->
 <!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
-<!--		<p class="text-feature">{{ borrower.name ? borrower.name + ', ' : '' }}tell us about all the banks where you have accounts for transactions, savings, credit cards or loans.</p>-->
+		<p class="text-feature">{{ borrower.name ? borrower.name + ', ' : '' }}tell us about all the banks where you have accounts for transactions, savings, credit cards or loans.</p>
 		<div @click="focusSearchInput()" class="bank-search position-relative" :class="{ 'conceal': editingPills }">
 			<div class="position-absolute center-y p-4"
 				:class="{ 'pointer-none': !searchValue }">
@@ -25,17 +25,9 @@ ComponentVue_BankSelector
 					{{ editingPills ? 'Done' : 'Edit' }}
 				</button>
 				<div class="border-brand-primary-1 border-right-0 mx-2 mb-2"></div>
-				<div v-for="dataholder in selectedDataholders" :key="dataholder.name"
-					class="dataholder-pill rounded-pill border-brand-primary-1 bg-white p-2 mr-2 mb-2 mw-100"
-					:class="{ 'hover-shadow-2': editingPills }">
-					<div class="d-flex align-items-center justify-content-between">
-						<dataholder-details :dataholder="dataholder" smallLogo :name-class="dataholderPillNameClass"></dataholder-details>
-						<div class="flex-none pl-2">
-							<i v-if="editingPills" @click="askDeselect(dataholder)" class="icon-rab-close icon-24 cursor-pointer"></i>
-							<i v-else class="icon-rab-check icon-24"></i>
-						</div>
-					</div>
-				</div>
+				<dataholder-pill v-for="dataholder in selectedDataholders" :dataholder="dataholder" :key="dataholder.id"
+					:editing="editingPills" :dataholder-name-class="dataholderPillNameClass"
+					@askDeselect="askDeselect($event)"></dataholder-pill>
 			</div>
 		</div>
 		<div :class="{ 'conceal': editingPills }">
@@ -46,7 +38,8 @@ ComponentVue_BankSelector
 						<label :tabindex="editingPills ? -1 : 0"
 							class="dataholder-select-wrapper d-flex align-items-center justify-content-between w-100 rounded-lg border hover-border-brand-primary-3 bg-white hover-shadow-2 cursor-pointer p-2 mb-2">
 							<dataholder-details :dataholder="dataholder" name-class="font-brand h5"></dataholder-details>
-							<tickbox :checked="dataholder.selected" @update:checked="dataholder.selected = $event" class="flex-none"></tickbox>
+							<i v-if="editingPills && dataholder.selected" class="icon-rab-tickbox-close icon-24 m-2"></i>
+							<tickbox v-else :checked="dataholder.selected" @update:checked="dataholder.selected = $event" class="flex-none"></tickbox>
 						</label>
 					</div>
 				</div>
@@ -54,19 +47,12 @@ ComponentVue_BankSelector
 		</div>
 		<teleport to="#vue-modal">
 			<div v-if="modalActive" class="rab-cdr">
-				<h3>Are you sure you want to remove this bank?</h3>
-				<p>A complete banking history will help us to provide you with the best possible offer.</p>
-				<div class="mt-2 dataholder-pill rounded-pill border-brand-primary-1 bg-white p-2 mr-2 mb-5 d-inline-block">
-					<div class="d-flex align-items-center justify-content-between">
-						<dataholder-details :dataholder="deselectingDataholder" smallLogo name-class="h7"></dataholder-details>
-						<div class="flex-none pl-2">
-							<i class="icon-rab-close-gray icon-24"></i>
-						</div>
-					</div>
-				</div>
-				<div class="d-flex align-items-center justify-content-center mt-4">
-					<div @click="closeModal" class="btn btn-info">Keep bank</div>
-					<div @click="deselect(deselectingDataholder)" class="btn btn-info">Remove Bank</div>
+				<h1 class="font-italic">Are you sure you want to remove this bank?</h1>
+				<p class="mb-4">A complete banking history will help us to provide you with the best possible offer.</p>
+				<dataholder-pill :dataholder="deselectingDataholder" disabled dataholder-name-class="h7" class="d-inline-block"></dataholder-pill>
+				<div class="text-center mt-4">
+					<button type="button" @click="closeModal" class="btn btn-modal">Keep bank</button>
+					<button type="button" @click="deselect(deselectingDataholder)" class="btn btn-modal">Remove Bank</button>
 				</div>
 			</div>
 		</teleport>
