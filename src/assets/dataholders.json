@@ -1,106 +1,62 @@
-[{
-  "name": "ANZ Bank",
-  "alias": "ANZ",
-  "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/ANZ-Logo-2009.svg",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "NATIONAL AUSTRALIA BANK",
-  "alias": "NAB",
-  "imageUrl": "https://www.nab.com.au/etc/designs/nabrwd/clientlibs/imageUrls/logo.png",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "Westpac",
-  "imageUrl": "https://www.finder.com.au/niche-builder/5eccc248b8fcb.png",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "Commonwealth Bank of Australia",
-  "alias": "CBA",
-  "imageUrl": "https://www.commbank.com.au/content/dam/commbank-assets/cba-stacked.jpg",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "AMP",
-  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/amp-bank-logo200x140.png?fit=200",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "Australian Unity",
-  "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/49/Australian_Unity_logo.jpg",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "Bank Australia",
-  "imageUrl": "https://upload.wikimedia.org/wikipedia/en/e/ef/Bank_Australia_logo.svg",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "Bank of Melbourne",
-  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/bom-logo-140px.png?fit=1200",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "BankSA",
-  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/bank-sa-new-140px.png?fit=1200",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "BOQ",
-  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/boqlogo-website-315x190.png?fit=315",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "Bank of Sydney",
-  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/bankofsydneylogo-google-232x140.png?fit=232",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "Bendigo Bank",
-  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/bendigobank-supplied-230x36.jpg?fit=230",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "Citibank",
-  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/citi-logo-1-140.png?fit=1200",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "Coles",
-  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/coles-logo-140px.png?fit=1200",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "Credit Union SA",
-  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/credit-union-sa-new-logo-140px.png?fit=1200",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "Defence Bank",
-  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/defence-bank-new-logo-140px.png?fit=1200",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "Gateway Bank",
-  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/gateway-bank-logo-140px.png?fit=1200",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "HSBC",
-  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/hsbc-logo140px.png?fit=1200",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "Regional Australia Bank",
-  "alias": "RAB",
-  "imageUrl": "https://www.finder.com.au/global/imageUrls/providers/regional-australia-bank-logo-140px.png?fit=1200",
-  "CDREnabled": false,
-  "selected": false
-}, {
-  "name": "Teachers Mutual Bank",
-  "alias": "TMB",
-  "imageUrl": "data:image/png;base64,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",
-  "CDREnabled": false,
-  "selected": false
-}]
+[
+  {
+    "name": "Regional Australia Bank",
+    "alias": "RAB",
+    "id": 21087650360,
+    "imageUrl": "21087650360.png"
+  },
+  {
+    "name": "ANZ Bank",
+    "alias": "ANZ",
+    "id": 11005357522,
+    "imageUrl": "11005357522.png"
+  },
+  {
+    "name": "Bank Australia",
+    "alias": "",
+    "id": 21087651607,
+    "imageUrl": "21087651607.png"
+  },
+  {
+    "name": "Commonwealth Bank of Australia",
+    "alias": "CBA",
+    "id": 48123123124,
+    "imageUrl": "48123123124.jpg"
+  },
+  {
+    "name": "Bank First",
+    "alias": "",
+    "id": 44087651769,
+    "imageUrl": "44087651769.jpg"
+  },
+  {
+    "name": "ING Bank",
+    "alias": "",
+    "id": 24000893292,
+    "imageUrl": "24000893292.png"
+  },
+  {
+    "name": "The Mac Credit Union",
+    "alias": "",
+    "id": 83087650244,
+    "imageUrl": "83087650244.png"
+  },
+  {
+    "name": "National Australia Bank",
+    "alias": "NAB",
+    "id": 12004044937,
+    "imageUrl": "12004044937.jpg"
+  },
+  {
+    "name": "Teachers Mutual Bank",
+    "alias": "TMB",
+    "id": 30087650459,
+    "imageUrl": "30087650459.png"
+  },
+  {
+    "name": "Westpac",
+    "alias": "",
+    "id": 33007457141,
+    "imageUrl": "33007457141.png"
+  }
+]

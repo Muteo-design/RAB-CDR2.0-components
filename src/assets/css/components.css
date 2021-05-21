@@ -13,17 +13,6 @@
   }
 }
 
-.dataholder-logo {
-  padding: 2px;
-}
-
-.dataholder-logo > canvas {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: scale(50);
-}
-
 .dataholder-pill .dataholder-name {
   max-width: 2.4rem;
 }

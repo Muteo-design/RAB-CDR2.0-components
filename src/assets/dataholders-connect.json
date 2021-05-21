@@ -1,27 +1,28 @@
 [{
   "name": "Commonwealth Bank of Australia",
-  "id": 1,
   "alias": "CBA",
-  "imageUrl": "https://www.commbank.com.au/content/dam/commbank-assets/cba-stacked.jpg"
+  "id": 48123123124,
+  "imageUrl": "48123123124.jpg"
 }, {
   "name": "Westpac",
-  "id": 2,
-  "imageUrl": "https://www.finder.com.au/niche-builder/5eccc248b8fcb.png"
+  "alias": "",
+  "id": 33007457141,
+  "imageUrl": "33007457141.png"
 }, {
   "name": "ANZ Bank",
-  "id": 3,
   "alias": "ANZ",
-  "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/ANZ-Logo-2009.svg"
+  "id": 11005357522,
+  "imageUrl": "11005357522.png"
 }, {
-  "name": "NATIONAL AUSTRALIA BANK",
-  "id": 4,
+  "name": "National Australia Bank",
   "alias": "NAB",
-  "imageUrl": "https://www.nab.com.au/etc/designs/nabrwd/clientlibs/images/logo.png",
+  "id": 12004044937,
+  "imageUrl": "12004044937.jpg",
   "CDREnabled": true
 }, {
   "name": "Regional Australia Bank",
-  "id": 5,
   "alias": "RAB",
-  "imageUrl": "https://www.finder.com.au/global/images/providers/regional-australia-bank-logo-140px.png?fit=1200",
+  "id": 21087650360,
+  "imageUrl": "21087650360.png",
   "CDREnabled": true
 }]
