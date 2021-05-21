@@ -111,19 +111,19 @@
 }
 
 .border-info {
-  border-color: var(--brand-info) !important;
+  border-color: var(--brand-info-1) !important;
 }
 
 .border-success {
-  border-color: var(--brand-success) !important;
+  border-color: var(--brand-success-1) !important;
 }
 
 .border-warning {
-  border-color: var(--brand-warning) !important;
+  border-color: var(--brand-warning-1) !important;
 }
 
 .border-danger {
-  border-color: var(--brand-danger) !important;
+  border-color: var(--brand-danger-1) !important;
 }
 
 .border-transparent {
@@ -143,19 +143,19 @@
 }
 
 .text-info {
-  color: var(--brand-info) !important;
+  color: var(--brand-info-1) !important;
 }
 
 .text-success {
-  color: var(--brand-success) !important;
+  color: var(--brand-success-1) !important;
 }
 
 .text-warning {
-  color: var(--brand-warning) !important;;
+  color: var(--brand-warning-1) !important;;
 }
 
 .text-danger {
-  color: var(--brand-danger) !important;
+  color: var(--brand-danger-1) !important;
 }
 
 .text-black {
@@ -165,13 +165,21 @@
 /* BS overrides */
 
 /* alias for .border-brand-secondary-2 */
-.border {
+.border,
+.border-top,
+.border-right,
+.border-bottom,
+.border-left {
   border-color: var(--brand-secondary-2) !important;
 }
 
 /* alias for .border-brand-secondary-3 */
 .border-light {
   border-color: var(--brand-secondary-3) !important;
+}
+
+.border-dark {
+  border-color: var(--brand-black) !important;
 }
 
 /* Default body text color */

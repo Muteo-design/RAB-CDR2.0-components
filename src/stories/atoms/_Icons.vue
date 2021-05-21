@@ -12,7 +12,22 @@
             <i class="icon-rab-close"/>
           </li>
           <li class="p-2">
-            <i class="icon-rab-info-warning"/>
+            <i class="icon-rab-info"/>
+          </li>
+          <li class="p-2">
+            <i class="icon-rab-info-danger"/>
+          </li>
+          <li class="p-2">
+            <i class="icon-rab-i-info"/>
+          </li>
+          <li class="p-2">
+            <i class="icon-rab-i-success"/>
+          </li>
+          <li class="p-2">
+            <i class="icon-rab-i-warning"/>
+          </li>
+          <li class="p-2">
+            <i class="icon-rab-i-danger"/>
           </li>
           <li class="p-2">
             <i class="icon-rab-search"/>
@@ -60,6 +75,9 @@
           <li class="m-2 border">
             <i class="icon-rab-coins icon-32"/>
           </li>
+          <li class="m-2 border">
+            <i class="icon-rab-building icon-32"/>
+          </li>
         </ul>
       </div>
       <div class="pr-5">
@@ -90,7 +108,7 @@
       </div>
       <div class="pr-5">
         <h5><code class="mr-2">.bullet-info-warning</code> (18px × 18px)</h5>
-        <ul class="bullet-info-warning">
+        <ul class="bullet-i-warning">
           <li>Organic keytar</li>
           <li>Butcher bushwick meggings food truck,<br/>hoodie cloud bread man braid meditation cliche.</li>
           <li>Etsy poke messenger bag lyft bitters prism</li>
@@ -103,6 +121,44 @@
           <li>Butcher bushwick meggings food truck,<br/>hoodie cloud bread man braid meditation cliche.</li>
           <li>Etsy poke messenger bag lyft bitters prism</li>
         </ul>
+      </div>
+    </div>
+    <hr>
+    <h3>Alerts</h3>
+    <div class="d-flex flex-wrap">
+      <div class="pr-5">
+        <h5><code class="mr-2">.alert-info</code> (18px × 18px)</h5>
+        <div class="alert-info">
+          <h5>Heading</h5>
+          <p>Etsy poke messenger bag lyft bitters prism</p>
+        </div>
+      </div>
+      <div class="pr-5">
+        <h5><code class="mr-2">.alert-success</code> (18px × 18px)</h5>
+        <div class="alert-success">
+          <h5>Heading</h5>
+          <p>Etsy poke messenger bag lyft bitters prism</p>
+        </div>
+      </div>
+      <div class="pr-5">
+        <h5><code class="mr-2">.alert-warning</code> (18px × 18px)</h5>
+        <div class="alert-warning">
+          <h5>Heading</h5>
+          <p>Etsy poke messenger bag lyft bitters prism</p>
+        </div>
+      </div>
+      <div class="pr-5">
+        <h5><code class="mr-2">.alert-danger</code> (18px × 18px)</h5>
+        <div class="alert-danger">
+          <h5>Heading</h5>
+          <p>Etsy poke messenger bag lyft bitters prism</p>
+        </div>
+      </div>
+      <div class="pr-5">
+        <h5><code class="mr-2">.alert-validate</code> (18px × 18px)</h5>
+        <div class="alert-validate">
+          <p>Etsy poke messenger bag lyft <strong>bitters prism</strong></p>
+        </div>
       </div>
     </div>
     <hr>

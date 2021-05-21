@@ -12,6 +12,18 @@
   padding-left: 12px;
 }
 
+.mw-25 {
+  min-width: 25% !important;
+}
+
+.mw-50 {
+  min-width: 50% !important;
+}
+
+.mw-75 {
+  min-width: 75% !important;
+}
+
 .rounded {
   border-radius: var(--rounded) !important;
 }
@@ -29,7 +41,14 @@
 }
 
 /* New Utilities */
-[class*="border-"] {
+[class*="border-brand-"],
+.border-white,
+.border-light,
+.border-dark,
+.border-info,
+.border-success,
+.border-warning,
+.border-danger {
   border-width: 1px;
   border-style: solid;
   border-color: inherit;
