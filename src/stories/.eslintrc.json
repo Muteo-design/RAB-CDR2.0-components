@@ -17,6 +17,8 @@
     "es5/no-template-literals": "off"
   },
   "ignorePatterns": [
-    "*.stories.js"
+    "*.stories.js",
+    "/templates/*",
+    "/pages/*"
   ]
 }
