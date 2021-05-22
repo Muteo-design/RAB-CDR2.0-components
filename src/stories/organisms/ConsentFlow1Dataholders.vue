@@ -1,7 +1,7 @@
 ComponentVue_ConsentFlow1Dataholders
 <template>
 	<div class="rab-cdr">
-	<!--v0.1.0-->
+	<!-- v0.1.1 -->
 <!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
 		<div class="border rounded-lg shadow-1 px-3 px-sm-4 pt-3 pt-sm-4 pb-2 pb-sm-3 mt-4">
 			<div class="p-2">
@@ -19,7 +19,7 @@ ComponentVue_ConsentFlow1Dataholders
 		<div class="border rounded-lg shadow-1 px-3 px-sm-4 pt-3 pt-sm-4 pb-2 pb-sm-3 mt-4">
 			<div class="p-2">
 				<h3>We need your help</h3>
-				<ul class="bullet-info-warning pl-0">
+				<ul class="bullet-i-warning pl-0">
 					<li>At this time, not all banks feature CDR. We still need more information to process your application, so please provide online statements for all accounts listed below. You can upload the PDFs later, but within the next 30 days.</li>
 				</ul>
 				<div class="row d-sm-flex flex-wrap">
