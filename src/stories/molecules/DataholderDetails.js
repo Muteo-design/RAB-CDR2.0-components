@@ -7,9 +7,9 @@ export default {
 	// v0.3.1
 	template: `
 		<div class="dataholder-details d-flex align-items-center">
-			<div class="flex-none rounded-circle border mr-2" :class="[ smallLogo ? 'icon-24' : 'icon-32' ]">
-				<div class="w-100 h-100 rounded-circle overflow-hidden position-relative bg-white border-white">
-					<img :src="dataholder.imageUrl" @load="setBrand($event)" class="center-xy mw-75"/>
+			<div class="flex-none rounded-circle bg-white mr-2" :class="[ smallLogo ? 'icon-24' : 'icon-32' ]">
+				<div class="w-100 h-100 rounded-circle overflow-hidden position-relative">
+					<img :src="dataholder.imageUrl" @load="setBrand($event)" class="center-xy"/>
 				</div>
 			</div>
 			<div class="dataholder-name overflow-text" :class="nameClass">{{ dataholder.name }}</div>
@@ -49,14 +49,9 @@ export default {
 				rgb[2] = 173;
 			}
 			var rgbString = 'rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')';
-			var styleBorder = 'border-color: ' + rgbString + ' !important;';
-			// Add box-shadow to emulate 0.5px
-			var styleShadow = 'box-shadow: 0 0 1px ' + rgbString +
-				',0.25px 0.25px 0 ' + rgbString +
-				',-0.25px 0.25px 0 ' + rgbString +
-				',-0.25px -0.25px 0 ' + rgbString +
-				',0.25px -0.25px 0 ' + rgbString + ';'
-			image.parentNode.parentNode.setAttribute('style', styleBorder + styleShadow);
+			var parent = image.parentNode.parentNode;
+			parent.style.padding = '3px';
+			parent.style.boxShadow = 'inset 0 0 0 1.5px ' + rgbString;
 		},
 	},
 };
