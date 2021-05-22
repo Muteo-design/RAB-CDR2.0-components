@@ -1,4 +1,6 @@
 import CardDataholderConnect from './CardDataholderConnect';
+import { default as dataholderCdr } from '@/assets/dataholder-rab.json';
+import { default as dataholderNonCdr } from '@/assets/dataholder-cba.json';
 
 export default {
 	title: 'CDR 2.0/Molecules/CardDataholderConnect',
@@ -14,20 +16,6 @@ const Template = (args) => ({
 		<card-dataholder-connect v-bind="args">${args.slotTemplate || ''}</card-dataholder-connect>
 	`,
 });
-
-const dataholderCdr = {
-	'name': 'Regional Australia Bank',
-	'alias': 'RAB',
-	'imageUrl': 'https://www.finder.com.au/global/images/providers/regional-australia-bank-logo-140px.png?fit=1200',
-	'CDREnabled': true,
-};
-
-const dataholderNonCdr = {
-	'name': 'Commonwealth Bank of Australia',
-	'id': 1,
-	'alias': 'CBA',
-	'imageUrl': 'https://www.commbank.com.au/content/dam/commbank-assets/cba-stacked.jpg',
-};
 
 export const CDRDataholder = Template.bind({});
 CDRDataholder.args = {

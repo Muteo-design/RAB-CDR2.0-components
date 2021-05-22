@@ -1,4 +1,6 @@
 import DataholderDetails from './DataholderDetails';
+import { default as shortName } from '@/assets/dataholder-westpac.json';
+import { default as longName } from '@/assets/dataholder-cba.json';
 
 export default {
 	title: 'CDR 2.0/Molecules/DataholderDetails',
@@ -13,16 +15,6 @@ const Template = (args) => ({
 	template:
 		'<dataholder-details :dataholder="args.dataholder"/>',
 });
-
-const shortName = {
-	name: 'ANZ',
-	imageUrl: 'https://www.anz.com.au/content/dam/anzcomau/logos/anz/ANZ-MB-Logo-3rd-Party-RGB.png',
-};
-
-const longName = {
-	name: 'Commonwealth Bank With an Excessively Long Name for Demonstration Purposes',
-	imageUrl: 'https://www.commbank.com.au/content/dam/commbank-assets/cba-stacked.jpg',
-};
 
 export const ShortName = Template.bind({});
 ShortName.args = {
