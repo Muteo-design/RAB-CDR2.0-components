@@ -39,15 +39,15 @@ ComponentVue_BankSelector
 				<div class="dataholder-list-wrapper pt-2 pr-2 mr-n3" :class="{ 'overflow-hidden': editingPills }">
 					<div v-if="searchMatch">
 						<dataholder-select v-for="(dataholder, index) in filteredDataholders.match" :key="dataholder.id"
-							:dataholder="dataholder" :editing="editingPills"
-							@update:checked="dataholder.selected = $event"
+							:dataholder="dataholder" :editing="editingPills" @update:selected="dataholder.selected = $event"
 							:class="{ 'pt-sm-1': index === 0 }">
 						</dataholder-select>
 					</div>
 					<div v-if="filteredDataholders.other.length">
 						<h6 v-if="searchMatch" class="my-1">Other results:</h6>
 						<dataholder-select v-for="(dataholder, index) in filteredDataholders.other" :key="dataholder.id"
-							:dataholder="dataholder" :editing="editingPills" :class="{ 'pt-sm-1': index === 0 }">
+							:dataholder="dataholder" :editing="editingPills" @update:selected="dataholder.selected = $event"
+							:class="{ 'pt-sm-1': index === 0 }">
 						</dataholder-select>
 					</div>
 				</div>

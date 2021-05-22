@@ -6,10 +6,12 @@ export default {
 	component: BankSelector,
 };
 
-const Template = (args, { argTypes }) => ({
-	props: Object.keys(argTypes),
+const Template = (args) => ({
 	components: { BankSelector },
-	template: '<bank-selector :entered-data="entered"/>',
+	setup() {
+		return { args }
+	},
+	template: '<bank-selector :entered-data="args.entered"/>',
 });
 
 export const Default = Template.bind({});
@@ -24,7 +26,7 @@ export const PreSelected = Template.bind({});
 PreSelected.args = {
 	entered: JSON.stringify({
 		dataholders: dataholders.map(x => {
-			if (x.name === 'CommBank' || x.name === 'Westpac') {
+			if (x.name === 'Commonwealth Bank of Australia' || x.name === 'Westpac') {
 				x.selected = true;
 			}
 			return x;
