@@ -1,16 +1,44 @@
 <link rel="stylesheet" type="text/css" href="cip/css/bs4-utilities-for-bs3.min.css">
+
+<!-- Mimic CC modal behaviour-->
+<script>
+	function showModal() { document.documentElement.classList.add('show-modal'); }
+
+	function closeModal() { document.documentElement.classList.remove('show-modal'); }
+
+	window.CCExtension = window.CCExtension || {};
+	CCExtension.showVueModal = () => {
+		showModal();
+	};
+	CCExtension.closeVueModal = () => {
+		closeModal();
+	};
+
+	const modalCloseButton = document.querySelector('button.ui-dialog-titlebar-close');
+	modalCloseButton.addEventListener('click', function() {
+		closeModal();
+	});
+	document.addEventListener('keydown', (event) => {
+		if (event.key === 'Esc' || event.key === 'Escape') {
+			closeModal();
+		}
+	});
+</script>
+
 <style>
-	.ui-dialog-titlebar {
-		z-index: 1;
-	}
-	.ui-dialog,
-	.ui-widget-overlay {
-		display: none;
-	}
-	.show-modal .ui-dialog,
-	.show-modal .ui-widget-overlay {
-		display: block;
-	}
+  .ui-dialog-titlebar {
+    z-index: 1;
+  }
+
+  .ui-dialog,
+  .ui-widget-overlay {
+    display: none;
+  }
+
+  .show-modal .ui-dialog,
+  .show-modal .ui-widget-overlay {
+    display: block;
+  }
 </style>
 
 <div tabindex="-1" role="dialog" style="height: auto; width: 550px; top: 150px; left: 1271.5px; z-index: 101; box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front" aria-describedby="vue-modal" aria-labelledby="ui-id-3">
@@ -21,16 +49,3 @@
 	</div>
 </div>
 <div class="ui-widget-overlay ui-front" style="z-index: 100;"></div>
-
-<script>
-	const modalCloseButton = document.querySelector('button.ui-dialog-titlebar-close');
-	modalCloseButton.addEventListener('click', function() {
-		document.documentElement.classList.remove('show-modal');
-	});
-	document.addEventListener('keydown', (event) => {
-		if (event.key === 'Esc' || event.key === 'Escape') {
-			document.documentElement.classList.remove('show-modal');
-		}
-	})
-</script>
-
