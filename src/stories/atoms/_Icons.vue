@@ -107,7 +107,7 @@
         </ul>
       </div>
       <div class="pr-5">
-        <h5><code class="mr-2">.bullet-info-warning</code> (18px × 18px)</h5>
+        <h5><code class="mr-2">.bullet-i-warning</code> (18px × 18px)</h5>
         <ul class="bullet-i-warning">
           <li>Organic keytar</li>
           <li>Butcher bushwick meggings food truck,<br/>hoodie cloud bread man braid meditation cliche.</li>

@@ -12,18 +12,6 @@
   padding-left: 12px;
 }
 
-.mw-25 {
-  min-width: 25% !important;
-}
-
-.mw-50 {
-  min-width: 50% !important;
-}
-
-.mw-75 {
-  min-width: 75% !important;
-}
-
 .rounded {
   border-radius: var(--rounded) !important;
 }
@@ -33,11 +21,11 @@
 }
 
 .rounded-top {
-  border-radius: var(--rounded) var(--rounded) 0px 0px !important;
+  border-radius: var(--rounded) var(--rounded) 0 0 !important;
 }
 
 .rounded-bottom {
-  border-radius: 0px 0px var(--rounded) var(--rounded) !important;
+  border-radius: 0 0 var(--rounded) var(--rounded) !important;
 }
 
 /* New Utilities */
@@ -131,60 +119,6 @@
   transform: translate(-50%, -50%);
 }
 
-/* -------------------------------------------------- */
-/* TODO: Might be deprecated */
-/* -------------------------------------------------- */
-@media (min-width: 768px) {
-  .sm-center-y {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
-
-.fill-margins {
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-@media (min-width: 959px) {
-  .section-break-above {
-    position: relative;
-    margin-top: 6rem !important;
-  }
-
-  .section-break-above:before,
-  .section-break-above:after {
-    content: '';
-    position: absolute;
-    top: -4.25rem;
-  }
-
-  .section-break-above:before {
-    height: 35px;
-    left: -1rem !important;
-    right: -1rem !important;
-    margin-left: -1px;
-    margin-right: -1px;
-    background-color: #f7f7f7;
-    border-top: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;
-  }
-
-  .section-break-above:after {
-    width: 42px;
-    height: 21px;
-    left: 50%;
-    margin-left: -21px;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAAAqCAMAAAAanYxCAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6REIwRkNGMjg5MkFBMTFFQThERENBREU1QjQ1QzMyMjEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6REIwRkNGMjk5MkFBMTFFQThERENBREU1QjQ1QzMyMjEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpEQjBGQ0YyNjkyQUExMUVBOEREQ0FERTVCNDVDMzIyMSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpEQjBGQ0YyNzkyQUExMUVBOEREQ0FERTVCNDVDMzIyMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkNv9WUAAAAYUExURf////Dw8OLi4u/v7+Tk5MnJydbW1vf39/gT0L4AAAAIdFJOU/////////8A3oO9WQAAAOhJREFUeNqszIkBhCAQBDBUlP47Pk9Evn0G2BQQd53emfLn5bzxep/ehbDth9157FsId2q5PueT2q3xjKnV+p5varOmM6UW63d+6fqaz5yursVZpGtreZbpylqdVTq/1medzq7N2aRza3u26czanV06vvZnn46uxEmkYyt1UunISp5kiq/0SafoypxMiq3cyaXIyp5sqq/8yafaKpxCKq/SKaXSKp5iyq/yKafcqpxKSq/aqaXUqp5q2q/6qaftCpxAWq/IiaTlCp1QmlfsxNK0gieYxhU90fS/wiec3it84mnY4DP8BBgAr6kxHW83Sn4AAAAASUVORK5CYII=);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
-
 /* Custom button styles */
 .btn-wide {
   width: 17rem !important;
@@ -197,7 +131,7 @@
   color: var(--brand-white) !important;
 }
 
-/* TODO: Should this be graduated? Or should this button style be adopted for all default buttons */
+/* TODO: Graduate for all Modal buttons */
 .btn-modal {
   border-radius: var(--rounded) !important;
   color: var(--brand-black) !important;
@@ -206,26 +140,3 @@
   padding-bottom: var(--space-2) !important;
   font-weight: 800 !important;
 }
-
-@media (min-width: 768px) {
-  ul.list-responsive:before,
-  ul.list-responsive:after,
-  ol.list-responsive:before,
-  ol.list-responsive:after {
-    content: " ";
-    display: table;
-  }
-
-  ul.list-responsive:after,
-  ol.list-responsive:after {
-    clear: both;
-  }
-
-  ul.list-responsive li,
-  ol.list-responsive li {
-    width: 50%;
-    float: left;
-  }
-}
-
-/* -------------------------------------------------- */

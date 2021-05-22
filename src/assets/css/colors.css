@@ -230,16 +230,6 @@
   border-color: var(--brand-black) !important;
 }
 
-/* Default body text color */
-/* NOTE: deprecated
-.text-gray {
-  color: var(--brand-gray) !important;
-}
-.border-gray {
-  border-color: var(--brand-gray) !important;
-}
-*/
-
 .text-white,
 .hover-white:hover,
 .hover-white:focus {

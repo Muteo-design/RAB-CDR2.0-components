@@ -102,18 +102,18 @@ hr {
 .font-brand,
 label.font-brand,
 input.font-brand {
-  font-family: "Karbon";
+  font-family: var(--font-karbon) ;
 }
 
 .font-brand-bold,
 label.font-brand-bold,
 input.font-brand-bold {
-  font-family: "Karbon";
+  font-family: var(--font-karbon) ;
   font-weight: 800;
 }
 
 .font-body {
-  font-family: "Arial", "Helvetica", sans-serif !important;
+  font-family: var(--font-arial);
 }
 
 .line-height-1 {
@@ -142,7 +142,7 @@ input.font-brand-bold {
 
 /* TODO: Move to RABSkin to remove prefix and allow this to be used outside of widgets */
 .text-feature {
-  font-family: "Karbon";
+  font-family: var(--font-karbon);
   padding-left: var(--space-3);
   padding-right: var(--space-3);
   color: #00424d;
