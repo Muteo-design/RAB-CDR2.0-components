@@ -1,7 +1,5 @@
 <template>
 	<div id="fieldset_section_Applicant1Consent_Chooseyourbank" class="sectionHeader">
-		<!-- TODO: Move out of widget -->
-		<span class="steps" v-if="currentStep && stepCount">Step {{currentStep}} of {{stepCount}}</span>
 		<legend>{{ legend }}</legend>
 		<p class="text-feature">{{ featureText }}</p>
 		<div id="id_section_Applicant1Consent_Chooseyourbank">
@@ -35,8 +33,6 @@ export default {
 	props: {
 		legend: String,
 		featureText: String,
-		currentStep: Number,
-		stepCount: Number,
 	},
 };
 </script>

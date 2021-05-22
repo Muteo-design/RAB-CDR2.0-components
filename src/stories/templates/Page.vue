@@ -42,6 +42,8 @@
 								<div id="Applicant1DataSharing" class="panel-collapse questions collapse in selected" style="">
 									<div class="panel-body">
 										<div class="sections-container">
+											<!-- TODO: Supply to CC -->
+											<span class="steps" v-if="currentStep && stepCount">Step {{ currentStep }} of {{ stepCount }}</span>
 											<slot/>
 										</div>
 									</div>
@@ -58,5 +60,9 @@
 <script>
 export default {
 	name: 'page',
+	props: {
+		currentStep: Number,
+		stepCount: Number,
+	},
 };
 </script>
