@@ -56,16 +56,8 @@
 </template>
 
 <script>
+/* eslint-disable */
 export default {
 	name: 'page',
-	created() {
-		window.CCExtension = window.CCExtension || {};
-		CCExtension.showVueModal = () => {
-			document.documentElement.classList.add('show-modal');
-		};
-		CCExtension.closeVueModal = () => {
-			document.documentElement.classList.remove('show-modal');
-		};
-	},
 };
 </script>

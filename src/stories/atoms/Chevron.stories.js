@@ -1,16 +1,18 @@
 import Chevron from './Chevron';
 
 export default {
-  title: 'CDR 2.0/Atoms/Chevron',
-  component: Chevron,
-  decorators: [() => ({ template: '<label><story/></label>' })],
+	title: 'CDR 2.0/Atoms/Chevron',
+	component: Chevron,
+	decorators: [() => ({ template: '<label><story/></label>' })],
 };
 
-const Template = (args, { argTypes }) => ({
-  props: Object.keys(argTypes),
-  components: { Chevron },
-  template:
-    '<chevron v-bind="$props"/>',
+const Template = (args) => ({
+	components: { Chevron },
+	setup() {
+		return { args };
+	},
+	template:
+		'<chevron v-bind="args"/>',
 });
 
 export const Default = Template.bind({});
