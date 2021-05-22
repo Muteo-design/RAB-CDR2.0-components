@@ -1,7 +1,7 @@
 ComponentVue_BankSelector
 <template>
 	<div class="rab-cdr">
-	<!-- v0.7.0 -->
+	<!-- v0.7.1 -->
 	<!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
 <!--		<p class="text-feature">{{ borrower.name ? borrower.name + ', ' : '' }}tell us about all the banks where you have accounts for transactions, savings, credit cards or loans.</p>-->
 		<div @click="focusSearchInput()" class="bank-search position-relative" :class="{ 'conceal': editingPills }">
@@ -18,7 +18,7 @@ ComponentVue_BankSelector
 				:class="[ { 'border' : editingPills }, (searchValue && !filteredDataholders.match.length) ? 'border-danger' : 'border-brand-primary-1', { 'hover-shadow-2': searchHovered } ]"/>
 		</div>
 		<div v-if="selectedDataholders.length > 0">
-			<h5 class="mb-2">Banks selected: {{ selectedDataholders.length }}</h5>
+			<h6 class="mt-3 mb-2">Banks selected: {{ selectedDataholders.length }}</h6>
 			<div class="dataholder-selected-wrapper d-flex mr-n4" :class="{ 'flex-wrap overflow-auto mr-2': editingPills }">
 				<button type="button" @click="editPills($event)"
 					class="flex-none btn btn-info btn-pill w-auto h-auto px-4 pt-1 pb-2 m-0 mb-2 font-weight-bold">
@@ -45,7 +45,7 @@ ComponentVue_BankSelector
 						</dataholder-select>
 					</div>
 					<div v-if="filteredDataholders.other.length">
-						<h5 v-if="searchMatch" class="my-1">Other results:</h5>
+						<h6 v-if="searchMatch" class="my-1">Other results:</h6>
 						<dataholder-select v-for="(dataholder, index) in filteredDataholders.other" :key="dataholder.id"
 							:dataholder="dataholder" :editing="editingPills" :class="{ 'pt-sm-1': index === 0 }">
 						</dataholder-select>

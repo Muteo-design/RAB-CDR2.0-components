@@ -1263,7 +1263,7 @@ input[type="checkbox"]:disabled + label:before {
 .cloudcase-skin #cloudcase-form h6,
 .cloudcase-skin .h6,
 .cloudcase-skin #cloudcase-form .h6 {
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .cloudcase-skin p a,
