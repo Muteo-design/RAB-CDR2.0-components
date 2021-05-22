@@ -51,7 +51,7 @@ export default {
 			var rgbString = 'rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')';
 			var parent = image.parentNode.parentNode;
 			parent.style.padding = '3px';
-			parent.style.boxShadow = 'inset 0 0 0 1.5px ' + rgbString;
+			parent.style.boxShadow = 'inset 0 0 0 1.7px ' + rgbString;
 		},
 	},
 };
