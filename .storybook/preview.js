@@ -4,6 +4,8 @@ import { app } from '@storybook/vue3';
 import BankSelector from '@/stories/organisms/BankSelector';
 import ConsentFlow1Intro from '@/stories/organisms/ConsentFlow1Intro';
 import ConsentFlow1Dataholders from '@/stories/organisms/ConsentFlow1Dataholders';
+import ConsentFlow2Intro from '@/stories/organisms/ConsentFlow2Intro';
+import ConsentFlow2Info from '@/stories/organisms/ConsentFlow2Info';
 // Molecules
 import DataholderDetails from '@/stories/molecules/DataholderDetails';
 import DataholderSelect from '@/stories/molecules/DataholderSelect';
@@ -11,6 +13,7 @@ import DataholderPill from '@/stories/molecules/DataholderPill';
 import CardDataholderConnect from '@/stories/molecules/CardDataholderConnect';
 import CardBadge from '@/stories/molecules/CardBadge';
 import CardCDR from '@/stories/molecules/CardCDR';
+import Accordion from '@/stories/molecules/Accordion';
 // Atoms
 import Tickbox from '@/stories/atoms/Tickbox';
 import Chevron from '@/stories/atoms/Chevron';
@@ -30,6 +33,8 @@ for (const component of topLevelComponents) {
 app.component('bank-selector', BankSelector);
 app.component('consent-flow-1-intro', ConsentFlow1Intro);
 app.component('consent-flow-1-dataholders', ConsentFlow1Dataholders);
+app.component('consent-flow-2-intro', ConsentFlow2Intro);
+app.component('consent-flow-2-info', ConsentFlow2Info);
 // Molecules
 app.component('dataholder-details', DataholderDetails);
 app.component('dataholder-select', DataholderSelect);
@@ -37,6 +42,7 @@ app.component('dataholder-pill', DataholderPill);
 app.component('card-badge', CardBadge);
 app.component('card-cdr', CardCDR);
 app.component('card-dataholder-connect', CardDataholderConnect);
+app.component('accordion', Accordion);
 // Atoms
 app.component('tickbox', Tickbox);
 app.component('chevron', Chevron);

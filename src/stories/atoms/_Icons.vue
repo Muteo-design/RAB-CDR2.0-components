@@ -6,7 +6,10 @@
         <h5>default size <code class="mr-2">.rab-icon-*</code> (18px × 18px)</h5>
         <ul class="d-flex flex-wrap list-unstyled pl-0">
           <li class="p-2">
-            <i class="icon-rab-check"/>
+            <i class="icon-rab-check-green"/>
+          </li>
+          <li class="p-2">
+            <i class="icon-rab-check-invert"/>
           </li>
           <li class="p-2">
             <i class="icon-rab-close"/>
@@ -117,6 +120,14 @@
       <div class="pr-5">
         <h5><code class="mr-2">.bullet-check-green</code> (18px × 18px)</h5>
         <ul class="bullet-check-green">
+          <li>Organic keytar</li>
+          <li>Butcher bushwick meggings food truck,<br/>hoodie cloud bread man braid meditation cliche.</li>
+          <li>Etsy poke messenger bag lyft bitters prism</li>
+        </ul>
+      </div>
+      <div class="pr-5">
+        <h5><code class="mr-2">.bullet-check-invert</code> (18px × 18px)</h5>
+        <ul class="bullet-check-invert">
           <li>Organic keytar</li>
           <li>Butcher bushwick meggings food truck,<br/>hoodie cloud bread man braid meditation cliche.</li>
           <li>Etsy poke messenger bag lyft bitters prism</li>

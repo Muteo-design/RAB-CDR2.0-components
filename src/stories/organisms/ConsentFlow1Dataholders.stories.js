@@ -6,10 +6,12 @@ export default {
 	component: ConsentFlow1Dataholders,
 };
 
-const Template = (args, { argTypes }) => ({
-	props: Object.keys(argTypes),
+const Template = (args) => ({
 	components: { ConsentFlow1Dataholders },
-	template: '<consent-flow-1-dataholders :entered-data="entered"/>',
+	setup() {
+		return { args };
+	},
+	template: '<consent-flow-1-dataholders :entered-data="args.entered"/>',
 });
 
 export const Default = Template.bind({});

@@ -1,5 +1,5 @@
 <template>
-	<page>
+	<page :currentStep="1" :stepCount="3">
 		<widget legend="Data we collect with your permission" feature-text="The new Consumer Data Right (CDR) makes your home loan application more convenient, accurate and safe. Plus, we can really speed up the process.">
 			<consent-flow-1-intro :entered-data="consentFlow1IntroEntered"/>
 		</widget>

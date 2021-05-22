@@ -98,6 +98,11 @@
   background-color: var(--brand-tertiary-3) !important;
 }
 
+.bg-gradient-top {
+  background: rgb(229,239,249);
+  background: linear-gradient(180deg, rgba(229,239,249,1) 0%, rgba(245,250,255,1) 10%, rgba(245,250,255,1) 95%, rgba(239,246,253,1) 100%);
+}
+
 .border-brand-primary-1,
 .hover-border-brand-primary-1:hover,
 .hover-border-brand-primary-1:focus {
