@@ -170,7 +170,7 @@ export default {
 		},
 		searchMatch: function() {
 			return this.filteredDataholders.match.length > 0;
-		}
+		},
 	},
 };
 </script>
