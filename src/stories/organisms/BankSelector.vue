@@ -19,7 +19,7 @@ ComponentVue_BankSelector
 		</div>
 		<div v-if="selectedDataholders.length > 0">
 			<h6 class="mt-3 mb-2">Banks selected: {{ selectedDataholders.length }}</h6>
-			<div class="dataholder-selected-wrapper d-flex mr-n4" :class="{ 'flex-wrap overflow-auto mr-2': editingPills }">
+			<div class="dataholder-selected-wrapper d-flex" :class="[ editingPills ? 'flex-wrap overflow-auto' : 'mr-n4' ]">
 				<button type="button" @click="editPills($event)"
 					class="flex-none btn btn-info btn-pill w-auto h-auto px-4 pt-1 pb-2 m-0 mb-2 font-weight-bold">
 					{{ editingPills ? 'Done' : 'Edit' }}
