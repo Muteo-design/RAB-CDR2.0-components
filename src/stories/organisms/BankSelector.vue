@@ -26,7 +26,7 @@ ComponentVue_BankSelector
 				</button>
 				<div class="border-brand-primary-1 border-right-0 mx-2 mb-2"></div>
 				<dataholder-pill v-for="dataholder in selectedDataholders" :key="dataholder.id"
-					:dataholder="dataholder" :editing="editingPills" :dataholder-name-class="dataholderPillNameClass"
+					:dataholder="dataholder" :editing="editingPills" :truncate="!editingPills"
 					@ask-deselect="askDeselect($event)">
 				</dataholder-pill>
 			</div>
@@ -57,7 +57,7 @@ ComponentVue_BankSelector
 			<div v-if="modalActive" class="rab-cdr">
 				<h1 class="font-italic">Are you sure you want to remove this bank?</h1>
 				<p class="mb-4">A complete banking history will help us to provide you with the best possible offer.</p>
-				<dataholder-pill :dataholder="deselectingDataholder" disabled dataholder-name-class="h7" class="d-inline-block"></dataholder-pill>
+				<dataholder-pill :dataholder="deselectingDataholder" disabled small class="d-inline-block"></dataholder-pill>
 				<div class="text-center mt-4">
 					<button type="button" @click="closeModal" class="btn btn-modal">Keep bank</button>
 					<button type="button" @click="deselect(deselectingDataholder)" class="btn btn-modal">Remove Bank</button>
@@ -164,9 +164,6 @@ export default {
 			return this.alphaSortedDataholders().filter(function(dataholder) {
 				return (dataholder.selected);
 			});
-		},
-		dataholderPillNameClass: function() {
-			return 'h7' + (this.editingPills ? ' mw-100' : '');
 		},
 		searchMatch: function() {
 			return this.filteredDataholders.match.length > 0;
