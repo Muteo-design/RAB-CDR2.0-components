@@ -27,7 +27,7 @@ ComponentVue_BankSelector
 				<div class="border-brand-primary-1 border-right-0 mx-2 mb-2"></div>
 				<dataholder-pill v-for="dataholder in selectedDataholders" :key="dataholder.id"
 					:dataholder="dataholder" :editing="editingPills" :dataholder-name-class="dataholderPillNameClass"
-					@askDeselect="askDeselect($event)">
+					@ask-deselect="askDeselect($event)">
 				</dataholder-pill>
 			</div>
 		</div>
