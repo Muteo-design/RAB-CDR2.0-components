@@ -4,13 +4,13 @@ ComponentVue_Tickbox
 		vueJSWidget.registerComponent('tickbox', {
 */
 export default {
-	// v0.1.1
+	// v0.1.2
 	template: `
 		<div class="rounded p-2"
 			@mouseenter="hover = true"
 			@mouseleave="hover = false"
 			:class="[ disabled ? 'cursor-not-allowed' : 'cursor-pointer hover-bg-brand-secondary-1' ]">
-			<i class="icon-24" :class="iconName"></i>
+			<i class="icon-24" :class="[ 'icon-rab-tickbox' + iconName ]"></i>
 			<input type="checkbox" class="d-none" v-model="checkedLocal" :disabled="disabled"/>
 		</div>
 	`,
@@ -33,21 +33,25 @@ export default {
 	},
 	computed: {
 		iconName: function() {
-			if (this.isChecked) {
-				return 'icon-rab-tickbox-active' + (this.disabled ? '-disabled' : '');
+			if (this.checkedLocal) {
+				return '-active' + (this.disabled ? '-disabled' : '');
 			} else {
-				return 'icon-rab-tickbox' + (this.disabled ? '-disabled' : (this.hover ? '-hover' : ''));
+				return this.disabled ? '-disabled' : (this.hover ? '-hover' : '');
 			}
 		},
 		checkedLocal: {
 			get: function() {
-				this.isChecked = this.checked;
-				return this.checked;
+				return this.isChecked;
 			},
 			set: function(value) {
 				this.isChecked = value;
 				this.$emit('update:checked', value);
 			},
+		},
+	},
+	watch: {
+		checked: function(value) {
+			this.isChecked = value;
 		},
 	},
 };
