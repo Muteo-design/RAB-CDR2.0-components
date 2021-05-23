@@ -6,6 +6,8 @@ import ConsentFlow1Intro from '@/stories/organisms/ConsentFlow1Intro';
 import ConsentFlow1Dataholders from '@/stories/organisms/ConsentFlow1Dataholders';
 import ConsentFlow2Intro from '@/stories/organisms/ConsentFlow2Intro';
 import ConsentFlow2Consent from '@/stories/organisms/ConsentFlow2Consent';
+import ConsentFlow3Intro from '@/stories/organisms/ConsentFlow3Intro';
+import ConsentFlow3Confirm from '@/stories/organisms/ConsentFlow3Confirm';
 // Molecules
 import DataholderDetails from '@/stories/molecules/DataholderDetails';
 import DataholderSelect from '@/stories/molecules/DataholderSelect';
@@ -35,6 +37,8 @@ app.component('consent-flow-1-intro', ConsentFlow1Intro);
 app.component('consent-flow-1-dataholders', ConsentFlow1Dataholders);
 app.component('consent-flow-2-intro', ConsentFlow2Intro);
 app.component('consent-flow-2-consent', ConsentFlow2Consent);
+app.component('consent-flow-3-intro', ConsentFlow3Intro);
+app.component('consent-flow-3-confirm', ConsentFlow3Confirm);
 // Molecules
 app.component('dataholder-details', DataholderDetails);
 app.component('dataholder-select', DataholderSelect);
@@ -79,6 +83,7 @@ export const parameters = {
 					'BankSelect',
 					'ConsentFlow1',
 					'ConsentFlow2',
+					'ConsentFlow3',
 				],
 				'Organisms', [
 					'BankSelector',
@@ -86,6 +91,8 @@ export const parameters = {
 					'ConsentFlow1Dataholders',
 					'ConsentFlow2Intro',
 					'ConsentFlow2Consent',
+					'ConsentFlow3Intro',
+					'ConsentFlow3Foo',
 				],
 				'Molecules',
 				'Atoms',

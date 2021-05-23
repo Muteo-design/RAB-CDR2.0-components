@@ -4,9 +4,9 @@ ComponentVue_CardCDR
 		vueJSWidget.registerComponent('card-cdr', {
 */
 export default {
-	// v0.2.0
+	// v0.2.1
 	template: `
-		<div class="component-card-cdr rounded border-light px-2 pb-2 p-sm-3 text-left">
+		<div class="component-card-cdr rounded border border-light px-2 pb-2 p-sm-3 text-left">
 			<div class="d-flex align-items-center pb-1 pb-sm-0">
 				<i class="icon-rab-logo-cdr"></i>
 				<div class="pt-1 mt-n3 ml-2 ml-sm-4">

@@ -42,8 +42,6 @@ svg {
 /* New Utilities */
 [class*="border-brand-"],
 .border-white,
-.border-light,
-.border-dark,
 .border-info,
 .border-success,
 .border-warning,
