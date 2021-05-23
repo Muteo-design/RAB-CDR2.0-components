@@ -1853,7 +1853,6 @@ html {background-color: unset;}
 body {font-family: "Karbon", "Open Sans";font-size: 20px;}
 
 
-
 /* Hide the top button panel */
 .cloudcase-skin #cloudcase-form .buttonPanel:nth-of-type(1) {display: none;}
 
@@ -1867,6 +1866,11 @@ body {font-family: "Karbon", "Open Sans";font-size: 20px;}
 .cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.selected::before {border-left-color: #006778;}
 .cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li a {line-height: 1.1;letter-spacing: 0.018em;white-space: normal;font-size: 20px;color: #666;font-family: "Karbon";vertical-align: middle;display: inline-block;padding-right: 20px;margin-top: -4px;}
 .cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.selected a, .cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.selected i {color: #ffffff;font-weight: normal;}
+
+/* Hide extra whitespace above all questions */
+.overlay-container {
+	display:none
+}
 
 /* -------------------------------------------------------------------------- */
 /* small screens e.g. mobiles in portrait. All media. */
@@ -1887,28 +1891,37 @@ body {font-family: "Karbon", "Open Sans";font-size: 20px;}
 /* big screens, but not small or medium screens */
 /* -------------------------------------------------------------------------- */
 @media (min-device-width: 1200px) and (min-width: 1200px) {
+	.infobox-desktop {
+		width: 300px;
+	}
+
 	.cloudcase-skin #cloudcase-progress-and-header-panel {
 		position: fixed;
 	}
+
 	/* set button panel padding*/
 	.buttonPanel {
 		padding: 0 30px;
 	}
+
 	/* Enable page width support for 3rd col */
 	#page {
 		display:flex;
 		background: #ffffff !important;
 	}
+
 	/* grow page content to 2nd col when no help text*/
 	#page-content .panel-group {
 		flex: 1;
 		max-width: 870px;
 	}
+
 	/* Default the help container */
 	#cloudcase-info-container .questionHelpContainer {
 		margin: 30px;
 		width: 200px;
 	}
+
 	.cloudcase-skin #cloudcase-progress-and-header-panel #header {
 		display: block;
 		max-width: 1200px;
