@@ -4,21 +4,21 @@ ComponentVue_DataholderDetails
 		vueJSWidget.registerComponent('dataholder-details', {
 */
 export default {
-	// v0.3.1
+	// v0.4.0
 	template: `
 		<div class="dataholder-details d-flex align-items-center">
-			<div class="flex-none rounded-circle bg-white mr-2" :class="[ smallLogo ? 'icon-24' : 'icon-32' ]">
+			<div class="flex-none rounded-circle bg-white mr-2" :class="[ small ? 'icon-24' : 'icon-32' ]">
 				<div class="w-100 h-100 rounded-circle overflow-hidden position-relative">
 					<img :src="dataholder.imageUrl" @load="setBrand($event)" class="center-xy"/>
 				</div>
 			</div>
-			<div class="dataholder-name overflow-text" :class="nameClass">{{ dataholder.name }}</div>
+			<div class="dataholder-name overflow-text" :class="{ 'h7': small, 'mw-100': !truncate }">{{ dataholder.name }}</div>
 		</div>
 	`,
 	props: {
 		dataholder: Object,
-		smallLogo: Boolean,
-		nameClass: String,
+		small: Boolean,
+		truncate: Boolean,
 	},
 	data: function() {
 		return {
