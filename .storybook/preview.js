@@ -75,7 +75,11 @@ export const parameters = {
 	options: {
 		storySort: {
 			order: ['CDR 2.0', [
-				'Pages',
+				'Pages', [
+					'BankSelect',
+					'ConsentFlow1',
+					'ConsentFlow2',
+				],
 				'Organisms', [
 					'BankSelector',
 					'ConsentFlow1Intro',
