@@ -33,7 +33,7 @@ ComponentVue_BankSelector
 		</div>
 		<div :class="{ 'conceal': editingPills }">
 			<div v-if="!searchMatch" class="alert alert-validate">
-				We can't find this bank. Try again or choose <strong>Other banks</strong>
+				We can't find this bank. Try again or choose <strong>My bank is not listed</strong>
 			</div>
 			<div class="dataholder-list-container mt-3 overflow-hidden" :class="{ 'pr-4': editingPills }">
 				<div class="dataholder-list-wrapper pt-2 pr-2 mr-n3" :class="{ 'overflow-hidden': editingPills }">
@@ -44,7 +44,7 @@ ComponentVue_BankSelector
 						</dataholder-select>
 					</div>
 					<div v-if="filteredDataholders.other.length">
-						<h6 v-if="searchMatch" class="my-1">Other results:</h6>
+						<h6 v-if="searchMatch" class="my-1">Other banks:</h6>
 						<dataholder-select v-for="(dataholder, index) in filteredDataholders.other" :key="dataholder.id"
 							:dataholder="dataholder" :editing="editingPills" @update:selected="dataholder.selected = $event"
 							:class="{ 'pt-sm-1': index === 0 }">
