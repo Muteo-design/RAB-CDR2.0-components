@@ -1,0 +1,73 @@
+label {
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem;
+  color: var(--brand-primary-1);
+  font-family: Arial, sans-serif;
+}
+
+label p {
+  color: #666;
+}
+
+input[type=text] {
+  height: 3rem;
+  font-family: Arial, sans-serif;
+  margin-bottom: 0;
+  color: #666;
+}
+
+.form-control:focus {
+  border-color: var(--brand-primary-1);
+}
+
+button {
+  -webkit-appearance: none;
+}
+
+label {
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem;
+  color: var(--brand-primary-1);
+  font-family: Arial, sans-serif;
+}
+
+label p {
+  color: #666;
+}
+
+input[type=text] {
+  height: 3rem;
+  font-family: Arial, sans-serif;
+  margin-bottom: 0;
+  color: #666;
+}
+
+.form-control:focus {
+  border-color: var(--brand-primary-1);
+}
+
+button {
+  -webkit-appearance: none;
+}
+
+/* Custom button styles */
+.btn-wide {
+  width: 17rem !important;
+}
+
+.btn-pill {
+  min-width: 0 !important;
+  min-height: 2.6rem !important;
+  background-color: var(--brand-primary-3) !important;
+  color: var(--brand-white) !important;
+}
+
+/* TODO: Graduate for all Modal buttons */
+.btn-modal {
+  border-radius: var(--rounded) !important;
+  color: var(--brand-black) !important;
+  border: 1px solid var(--brand-black) !important;
+  padding-top: var(--space-2) !important;
+  padding-bottom: var(--space-2) !important;
+  font-weight: 800 !important;
+}
