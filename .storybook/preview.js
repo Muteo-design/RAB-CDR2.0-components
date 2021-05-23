@@ -5,7 +5,7 @@ import BankSelector from '@/stories/organisms/BankSelector';
 import ConsentFlow1Intro from '@/stories/organisms/ConsentFlow1Intro';
 import ConsentFlow1Dataholders from '@/stories/organisms/ConsentFlow1Dataholders';
 import ConsentFlow2Intro from '@/stories/organisms/ConsentFlow2Intro';
-import ConsentFlow2Info from '@/stories/organisms/ConsentFlow2Info';
+import ConsentFlow2Consent from '@/stories/organisms/ConsentFlow2Consent';
 // Molecules
 import DataholderDetails from '@/stories/molecules/DataholderDetails';
 import DataholderSelect from '@/stories/molecules/DataholderSelect';
@@ -34,7 +34,7 @@ app.component('bank-selector', BankSelector);
 app.component('consent-flow-1-intro', ConsentFlow1Intro);
 app.component('consent-flow-1-dataholders', ConsentFlow1Dataholders);
 app.component('consent-flow-2-intro', ConsentFlow2Intro);
-app.component('consent-flow-2-info', ConsentFlow2Info);
+app.component('consent-flow-2-consent', ConsentFlow2Consent);
 // Molecules
 app.component('dataholder-details', DataholderDetails);
 app.component('dataholder-select', DataholderSelect);
@@ -70,6 +70,22 @@ export const parameters = {
 		matchers: {
 			color: /(background|color)$/i,
 			date: /Date$/,
+		},
+	},
+	options: {
+		storySort: {
+			order: ['CDR 2.0', [
+				'Pages',
+				'Organisms', [
+					'BankSelector',
+					'ConsentFlow1Intro',
+					'ConsentFlow1Dataholders',
+					'ConsentFlow2Intro',
+					'ConsentFlow2Consent',
+				],
+				'Molecules',
+				'Atoms',
+			]],
 		},
 	},
 };
