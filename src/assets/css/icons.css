@@ -243,10 +243,11 @@ div[class*="bullet-"]:before {
   content: "";
   display: table-cell;
   height: 18px;
-  width: 2rem;
+  /* NOTE: using 'em' unit here to ensure space between bullet and text is proportionate to font size */
+  width: 2em;
   background-size: 18px;
   background-repeat: no-repeat;
-  background-position: 0 1px;
+  background-position: 0 0;
   speak: none;
 }
 

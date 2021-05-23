@@ -1,39 +1,58 @@
 import Accordion from './Accordion';
-import IncludedList from '../molecules/IncludedList';
 
 export default {
-	// title: 'CDR 2.0/Molecules/Accordion',
-	title: 'WIP/Accordion',
+	title: 'CDR 2.0/Molecules/Accordion',
 	component: Accordion,
-	decorators: [() => ({ template: '<div class="clearfix"><div class="col-sm-4"><story/></div></div>' })],
 };
 
 const Template = (args) => ({
-	components: { Accordion, IncludedList },
+	components: { Accordion },
 	setup() {
 		return { args };
 	},
 	template: `
 		<accordion v-bind="args">
-			<included-list title="What's included" :list="args.included"/>
+			<ul class="pl-0 list-unstyled bullet-check-invert text-brand-copy-2 h7 columns-sm-2">
+				<li v-for="listItem in args.accountBalanceList" :key="listItem">{{ listItem }}</li>
+			</ul>
 		</accordion>
 	`,
 });
 
-export const Default = Template.bind({});
-Default.args = {
-	title: 'Title goes here',
-	icon: 'icon-rab-coins',
-	included: [
+const props = {
+	title: 'Account balance and details',
+	icon: 'coins',
+	accountBalanceList: [
 		'Name of account',
+		'Type of account',
 		'Account balance',
+		'Account number',
 		'Interest rates',
 		'Fees',
 		'Discounts',
-		'Account mail address',
-		'Type of account',
-		'Fees',
-		'Discounts',
 		'Account terms',
+		'Account mail address',
 	],
+};
+
+export const Default = Template.bind({});
+Default.args = { ...props };
+
+export const Open = Template.bind({});
+Open.args = {
+	...props,
+	open: true,
+};
+
+export const Checked = Template.bind({});
+Checked.args = {
+	...props,
+	checked: true,
+};
+
+export const OpenChecked = Template.bind({});
+OpenChecked.args = {
+	...props,
+	open: true,
+	checked: true,
 };

@@ -1,8 +1,7 @@
 import ConsentFlow2Intro from './ConsentFlow2Intro';
 
 export default {
-	// title: 'CDR 2.0/Organisms/ConsentFlow2Intro',
-	title: 'WIP/ConsentFlow2Intro',
+	title: 'CDR 2.0/Organisms/ConsentFlow2Intro',
 	component: ConsentFlow2Intro,
 };
 

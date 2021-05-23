@@ -1,17 +1,16 @@
-import ConsentFlow2Info from './ConsentFlow2Info';
+import ConsentFlow2Consent from './ConsentFlow2Consent';
 
 export default {
-	// title: 'CDR 2.0/Organisms/ConsentFlow2Info',
-	title: 'WIP/ConsentFlow2Info',
-	component: ConsentFlow2Info,
+	title: 'CDR 2.0/Organisms/ConsentFlow2Consent',
+	component: ConsentFlow2Consent,
 };
 
 const Template = (args) => ({
-	components: { ConsentFlow2Info },
+	components: { ConsentFlow2Consent },
 	setup() {
 		return { args };
 	},
-	template: '<consent-flow-2-info/>',
+	template: '<consent-flow-2-consent/>',
 });
 
 export const Default = Template.bind({});

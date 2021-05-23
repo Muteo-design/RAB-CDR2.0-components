@@ -1,13 +1,19 @@
 ComponentVue_ConsentFlow2Intro
 <template>
 	<div class="rab-cdr">
-	<!--v0.1.0-->
+	<!-- v0.1.0 -->
 <!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
-		<p class="text-feature consent-2">Once you've given us your consent, we'll connect with your banks to collect the information we need for your application.</p>
-<!--		<info-list title="What does that mean?"-->
-<!--			v-bind:infoList="['We only collect what we need.', 'We will only use this information to help streamline your loan application']"/>-->
+		<div class="rounded-lg border p-4">
+			<i class="icon-rab-logo-cdr float-right" style="width: 90px;"></i>
+			<h3>What does that mean?</h3>
+			<ul class="pl-0 mb-0 bullet-info">
+				<li>We only collect what we need</li>
+				<li class="mb-0">We will only use this information to help streamline your loan application</li>
+			</ul>
+		</div>
 	</div>
 </template>
+
 <script>
 export default {
 	data: function() {

@@ -1,4 +1,8 @@
 /* TODO: Move to community.css? Would apply globally to all rulebooks */
+h3,
+.h3 {
+  font-size: 24px !important;
+}
 h4,
 .h4 {
   font-size: 20px !important;
@@ -74,10 +78,14 @@ hr {
 /* .h1, .h2, .h3. .h4, .h5, .h6 */
 /* Additional sizes and responsive utilities */
 .h7 {
-  font-size: 12px !important;
+  font-size: 14px !important;
 }
 
 .h8 {
+  font-size: 12px !important;
+}
+
+.h9 {
   font-size: 10px !important;
 }
 
@@ -87,14 +95,18 @@ hr {
   }
 
   .text-sm-h6 {
-    font-size: 14px !important;
+    font-size: 16px !important;
   }
 
   .text-sm-h7 {
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
 
   .text-sm-h8 {
+    font-size: 12px !important;
+  }
+
+  .text-sm-h9 {
     font-size: 10px !important;
   }
 }
@@ -102,13 +114,13 @@ hr {
 .font-brand,
 label.font-brand,
 input.font-brand {
-  font-family: var(--font-karbon) ;
+  font-family: var(--font-karbon);
 }
 
 .font-brand-bold,
 label.font-brand-bold,
 input.font-brand-bold {
-  font-family: var(--font-karbon) ;
+  font-family: var(--font-karbon);
   font-weight: 800;
 }
 
@@ -116,24 +128,28 @@ input.font-brand-bold {
   font-family: var(--font-arial);
 }
 
+.font-weight-normal {
+  font-weight: 600 !important;
+}
+
 .line-height-1 {
-  line-height: 0.25 !important;
+  line-height: 0.3125 !important;
 }
 
 .line-height-2 {
-  line-height: 0.5 !important;
+  line-height: 0.625 !important;
 }
 
 .line-height-3 {
-  line-height: 1 !important;
+  line-height: 1.25 !important;
 }
 
 .line-height-4 {
-  line-height: 1.5 !important;
+  line-height: 1.875 !important;
 }
 
 .line-height-5 {
-  line-height: 3 !important;
+  line-height: 3.75 !important;
 }
 
 .text-decoration-underline {
