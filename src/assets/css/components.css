@@ -57,7 +57,7 @@
   border-radius: 0.25rem;
 }
 
-@media (min-width: 768px) {
+@media (--breakpoint-sm) {
   .dataholder-list-wrapper {
     height: 500px;
   }
@@ -83,7 +83,7 @@
   max-width: calc(100% - 2.5rem);
 }
 
-@media (min-width: 768px) {
+@media (--breakpoint-sm) {
   .dataholder-pill .dataholder-details {
     max-width: none;
   }
@@ -93,13 +93,13 @@
   max-width: 2.4rem;
 }
 
-@media (min-width: 768px) {
+@media (--breakpoint-sm) {
   .dataholder-pill .dataholder-name {
     max-width: 100%;
   }
 }
 
-@media (max-width: 769px) {
+@media (--breakpoint-to-sm) {
   .component-card-cdr .icon-rab-logo-cdr {
     width: 90px;
   }

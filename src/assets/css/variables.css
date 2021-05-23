@@ -1,3 +1,8 @@
+@custom-media --breakpoint-sm (min-width: 768px);
+@custom-media --breakpoint-md (min-width: 992px);
+@custom-media --breakpoint-lg (min-width: 1200px);
+@custom-media --breakpoint-to-sm (max-width: 767px);
+
 :root {
   /* Colors */
   --brand-primary-1: #00424d;

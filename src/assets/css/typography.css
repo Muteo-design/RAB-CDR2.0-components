@@ -81,7 +81,7 @@ hr {
   font-size: 10px !important;
 }
 
-@media (min-width: 768px) {
+@media (--breakpoint-sm) {
   .text-sm-h5 {
     font-size: 18px !important;
   }
