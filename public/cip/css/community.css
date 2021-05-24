@@ -541,6 +541,7 @@ body.cloudcase-skin {
 	color: #666;
 	font-size: 16px;
 	font-family: "Arial", "Helvetica", sans-serif;
+	background-color: #ffffff;
 }
 
 body {
@@ -603,7 +604,7 @@ body {
 
 .cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul {
 	background-color: #fff;
-	border: 1px solid #e0e0e0;
+	border: unset;
 }
 
 .cloudcase-skin .panel-default > .panel-heading.selected i.errorIcon {
@@ -914,6 +915,20 @@ input[type="button"].uploadDocumentButton {
 .cloudcase-skin .ui-dialog .ui-dialog-buttonpane .btn-info:hover {
 	color: #fff;
 	background-color: #016e80;
+}
+
+.cloudcase-skin #cloudcase-form input[type="button"].editSearchButton,
+.cloudcase-skin #cloudcase-form input[type="button"].removeDocumentButton {
+	background-color: #006778;
+	color: #ffffff;
+	width: 100px;
+	height: 35px;
+	padding: 6px 12px;
+	min-width: 100px !important;
+	min-height: 1rem !important;
+	font-size: 15px;
+	font-weight: 400;
+	margin: 13px 0;
 }
 
 .cloudcase-skin #cloudcase-form .btn:before,
@@ -1857,15 +1872,111 @@ body {font-family: "Karbon", "Open Sans";font-size: 20px;}
 .cloudcase-skin #cloudcase-form .buttonPanel:nth-of-type(1) {display: none;}
 
 /* Navigator styling */
-.cloudcase-skin #cloudcase-form .page_navigator_item .errorIcon, .cloudcase-skin #cloudcase-form .page_navigator_item .warningIcon, #cloudcase-form .page_navigator_item .completedIcon {margin-top: 21px;}
-.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li {border: none;margin-top: 0px;-webkit-transition: box-shadow 0.4s;-moz-transition: box-shadow 0.4s;transition: box-shadow 0.4s;position: relative;height: 54px;padding-top: 0px;padding-bottom: 0px;}
-.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li::before {content: "";display: block;border-left: solid 17px transparent;position: absolute;right: -17px;top: 0;border-right: none;border-top: solid 27px transparent;border-bottom: solid 27px transparent;-webkit-transition: all 0.5s;-moz-transition: all 0.5s;transition: all 0.5s;}
-.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li::after {content: "";display: inline-block;width: 0;vertical-align:middle;height: 60px;}
-.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li:not(.selected):hover {-webkit-box-shadow: inset 0 0 999px rgba(0, 0, 0, 0.1);-moz-box-shadow: inset 0 0 999px rgba(0, 0, 0, 0.1);box-shadow: inset 0 0 999px rgba(0, 0, 0, 0.1);}
-.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.selected {background-color: #006778;border: none;border-radius: 0px;}
-.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.selected::before {border-left-color: #006778;}
-.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li a {line-height: 1.1;letter-spacing: 0.018em;white-space: normal;font-size: 20px;color: #666;font-family: "Karbon";vertical-align: middle;display: inline-block;padding-right: 20px;margin-top: -4px;}
-.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.selected a, .cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.selected i {color: #ffffff;font-weight: normal;}
+.cloudcase-skin #cloudcase-form .page_navigator_item .errorIcon,
+.cloudcase-skin #cloudcase-form .page_navigator_item .warningIcon,
+.cloudcase-skin #cloudcase-form .page_navigator_item .completedIcon {
+	margin-top: 21px;
+	float: left
+}
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li {
+	-webkit-transition: box-shadow 0.4s;
+	-moz-transition: box-shadow 0.4s;
+	transition: box-shadow 0.4s;
+	position: relative;
+	height: 54px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li::before {
+	content: "";
+	display: block;
+	border-left: solid 17px transparent;
+	position: absolute;
+	right: -17px;
+	top: 0;
+	border-right: none;
+	border-top: solid 27px transparent;
+	border-bottom: solid 27px transparent;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li::after {
+	content: "";
+	display: inline-block;
+	width: 0;
+	vertical-align: middle;
+	height: 60px;
+}
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li:not(.selected):hover {
+	-webkit-box-shadow: inset 0 0 999px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: inset 0 0 999px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 0 999px rgba(0, 0, 0, 0.1);
+}
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.selected:not(.subpage),
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.completed.subpageParent,
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.expanded.subpageParent,
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.completed:not(.subpage) {
+	background-color: #015060;
+	border: none;
+}
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li a {
+	line-height: 1.1;
+	letter-spacing: 0.018em;
+	white-space: normal;
+	font-size: 20px;
+	color: #00424D;
+	font-family: "Karbon";
+	vertical-align: middle;
+	display: inline-block;
+	padding-right: 20px;
+	margin-top: -4px;
+}
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.selected:not(.subpage) a,
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.selected:not(.subpage) i,
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.completed.subpageParent a,
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.completed.subpageParent i,
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.subpageParent.expanded a,
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.subpageParent.expanded i,
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.completed:not(.subpage) a,
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.completed:not(.subpage) i {
+	color: #ffffff;
+	font-weight: normal;
+}
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li:not(.subpageParent):not(.subpage) {
+	border-radius: 9px;
+	border: 1px solid #BDBDBD;
+}
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li:not(.subpage) {
+	margin-top: 10px;
+}
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.subpageParent.expanded {
+	border-top-left-radius: 9px;
+	border-top-right-radius: 9px;
+	border-top: 1px solid #BDBDBD;
+	border-left: 1px solid #BDBDBD;
+	border-right: 1px solid #BDBDBD;
+}
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.subpageParent:not(.expanded) {
+	border-radius: 9px;
+	border: 1px solid #015060;
+}
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.subpage {
+	border-left: 1px solid #BDBDBD;
+	border-right: 1px solid #BDBDBD;
+}
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.subpage.selected {
+	background-color: #F5FAFF;
+}
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.subpage:last-child {
+	border-bottom-left-radius: 9px;
+	border-bottom-right-radius: 9px;
+}
+.cloudcase-skin #cloudcase-form #cloudcase-page-navigator ul li.subpage:last-of-type {
+	border-bottom-left-radius: 9px;
+	border-bottom-right-radius: 9px;
+}
+
 
 /* Hide extra whitespace above all questions */
 .overlay-container {
@@ -1907,7 +2018,6 @@ body {font-family: "Karbon", "Open Sans";font-size: 20px;}
 	/* Enable page width support for 3rd col */
 	#page {
 		display:flex;
-		background: #ffffff !important;
 	}
 
 	/* grow page content to 2nd col when no help text*/
@@ -1928,7 +2038,7 @@ body {font-family: "Karbon", "Open Sans";font-size: 20px;}
 	}
 	.cloudcase-skin #cloudcase-progress-and-header-panel #header svg,
 	.cloudcase-skin #cloudcase-progress-and-header-panel #header span,
-	.cloudcase-skin #cloudcase-progress-and-header-panel #header button,
+	.cloudcase-skin #cloudcase-progress-and-header-panel #header .buttonPanel,
 	.cloudcase-skin #cloudcase-progress-and-header-panel #header #logo {
 		position: relative;
 		transform: translate(0, -50%);
@@ -1936,5 +2046,8 @@ body {font-family: "Karbon", "Open Sans";font-size: 20px;}
 	}
 	.cloudcase-skin #cloudcase-progress-and-header-panel #header span {
 		margin: 0 30px 0 15px;
+	}
+	.cloudcase-skin #cloudcase-progress-and-header-panel #header span a {
+		color: #015060;
 	}
 }
