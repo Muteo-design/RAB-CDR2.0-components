@@ -16,6 +16,7 @@ import CardDataholderConnect from '@/stories/molecules/CardDataholderConnect';
 import CardBadge from '@/stories/molecules/CardBadge';
 import CardCDR from '@/stories/molecules/CardCDR';
 import Accordion from '@/stories/molecules/Accordion';
+import AccordionConsent from '@/stories/molecules/AccordionConsent';
 // Atoms
 import Tickbox from '@/stories/atoms/Tickbox';
 import Chevron from '@/stories/atoms/Chevron';
@@ -47,6 +48,7 @@ app.component('card-badge', CardBadge);
 app.component('card-cdr', CardCDR);
 app.component('card-dataholder-connect', CardDataholderConnect);
 app.component('accordion', Accordion);
+app.component('accordion-consent', AccordionConsent);
 // Atoms
 app.component('tickbox', Tickbox);
 app.component('chevron', Chevron);

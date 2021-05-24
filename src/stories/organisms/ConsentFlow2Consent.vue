@@ -1,18 +1,18 @@
 ComponentVue_ConsentFlow2Consent
 <template>
 	<div class="rab-cdr">
-	<!-- v0.1.0 -->
-	<!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
-		<accordion title="Transaction Details" icon="wallet" :checked="entered.transactionDetailsConsent" class="mb-4">
+	<!-- v0.3.0 -->
+<!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
+		<accordion-consent title="Transaction Details" icon="wallet" :checked="entered.transactionDetailsConsent" class="mb-4">
 			<ul class="pl-0 bullet-check-invert text-brand-copy-2 h7 columns-sm-2">
 				<li v-for="listItem in transactionDetailsList" :key="listItem">{{ listItem }}</li>
 			</ul>
-		</accordion>
-		<accordion title="Account balance and details" icon="coins" :checked="entered.accountBalanceConsent" class="mb-4">
+		</accordion-consent>
+		<accordion-consent title="Account balance and details" icon="coins" :checked="entered.accountBalanceConsent" class="mb-4">
 			<ul class="pl-0 bullet-check-invert text-brand-copy-2 h7 columns-sm-2">
 				<li v-for="listItem in accountBalanceList" :key="listItem">{{ listItem }}</li>
 			</ul>
-		</accordion>
+		</accordion-consent>
 	</div>
 </template>
 
@@ -22,7 +22,6 @@ export default {
 		return {
 			// REQUIRED PROPERTY - state to be shared with the rules engine - this is the entered value of the question
 			entered: {
-				dataholders: [],
 				transactionDetailsConsent: false,
 				accountBalanceConsent: false,
 			},
