@@ -10,8 +10,7 @@ const Template = (args) => ({
 	setup() {
 		return { args };
 	},
-	template:
-		'<consent-flow-2 v-bind="args"/>',
+	template: '<consent-flow-2 v-bind="args"/>',
 });
 
 export const Default = Template.bind({});

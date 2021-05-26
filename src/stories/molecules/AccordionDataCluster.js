@@ -1,10 +1,10 @@
 /*
-ComponentVue_AccordionConsent
+ComponentVue_AccordionDataCluster
 	[[
-		vueJSWidget.registerComponent('accordion-consent', {
+		vueJSWidget.registerComponent('accordion-data-cluster', {
 */
 export default {
-	// v0.1.0
+	// v0.3.0
 	template: `
 		<accordion :title="accordionTitle" :open="isOpen" @update:released="updateReleased">
 			<template v-slot:above="{ setClass, setStyle }">

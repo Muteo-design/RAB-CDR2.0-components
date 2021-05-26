@@ -1,18 +1,18 @@
-ComponentVue_ConsentFlow2Consent
+ComponentVue_ConsentFlow2Clusters
 <template>
 	<div class="rab-cdr">
-	<!-- v0.3.0 -->
+	<!-- v0.5.0 -->
 <!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
-		<accordion-consent title="Transaction Details" icon="wallet" :checked="entered.transactionDetailsConsent" class="mb-4">
+		<accordion-data-cluster title="Transaction Details" icon="wallet" v-model:checked="entered.transactionDetailsConsent" class="mb-4 mb-sm-3">
 			<ul class="pl-0 bullet-check-invert text-brand-copy-2 h7 columns-sm-2">
 				<li v-for="listItem in transactionDetailsList" :key="listItem">{{ listItem }}</li>
 			</ul>
-		</accordion-consent>
-		<accordion-consent title="Account balance and details" icon="coins" :checked="entered.accountBalanceConsent" class="mb-4">
+		</accordion-data-cluster>
+		<accordion-data-cluster title="Account balance and details" icon="coins" v-model:checked="entered.accountBalanceConsent" class="mb-4 mb-sm-3">
 			<ul class="pl-0 bullet-check-invert text-brand-copy-2 h7 columns-sm-2">
 				<li v-for="listItem in accountBalanceList" :key="listItem">{{ listItem }}</li>
 			</ul>
-		</accordion-consent>
+		</accordion-data-cluster>
 	</div>
 </template>
 
@@ -45,5 +45,13 @@ export default {
 			],
 		};
 	},
+	created: function() {
+		console.log(this.entered)
+	},
+	watch: {
+		entered: function(value) {
+			console.log(value)
+		}
+	}
 };
 </script>

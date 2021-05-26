@@ -1,21 +1,21 @@
-import AccordionConsent from './AccordionConsent';
+import AccordionDataCluster from './AccordionDataCluster';
 
 export default {
-	title: 'CDR 2.0/Molecules/AccordionConsent',
-	component: AccordionConsent,
+	title: 'CDR 2.0/Molecules/AccordionDataCluster',
+	component: AccordionDataCluster,
 };
 
 const Template = ({ accountBalanceList, ...args }) => ({
-	components: { AccordionConsent },
+	components: { AccordionDataCluster },
 	setup() {
 		return { args, accountBalanceList };
 	},
 	template: `
-		<accordion-consent v-bind="args">
+		<accordion-data-cluster v-bind="args">
 			<ul class="pl-0 bullet-check-invert text-brand-copy-2 h7 columns-sm-2">
 				<li v-for="listItem in accountBalanceList" :key="listItem">{{ listItem }}</li>
 			</ul>
-		</accordion-consent>
+		</accordion-data-cluster>
 	`,
 });
 

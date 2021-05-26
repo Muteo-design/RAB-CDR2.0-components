@@ -4,7 +4,7 @@
 			<consent-flow-2-intro/>
 		</widget>
 		<widget legend="Please agree for us to collect your:">
-			<consent-flow-2-consent/>
+			<consent-flow-2-clusters/>
 		</widget>
 	</page>
 </template>

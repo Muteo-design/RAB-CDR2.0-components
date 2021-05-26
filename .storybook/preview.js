@@ -5,7 +5,7 @@ import BankSelector from '@/stories/organisms/BankSelector';
 import ConsentFlow1Intro from '@/stories/organisms/ConsentFlow1Intro';
 import ConsentFlow1Dataholders from '@/stories/organisms/ConsentFlow1Dataholders';
 import ConsentFlow2Intro from '@/stories/organisms/ConsentFlow2Intro';
-import ConsentFlow2Consent from '@/stories/organisms/ConsentFlow2Consent';
+import ConsentFlow2Clusters from '@/stories/organisms/ConsentFlow2Clusters';
 import ConsentFlow3Intro from '@/stories/organisms/ConsentFlow3Intro';
 import ConsentFlow3Confirm from '@/stories/organisms/ConsentFlow3Confirm';
 // Molecules
@@ -16,7 +16,7 @@ import CardDataholderConnect from '@/stories/molecules/CardDataholderConnect';
 import CardBadge from '@/stories/molecules/CardBadge';
 import CardCDR from '@/stories/molecules/CardCDR';
 import Accordion from '@/stories/molecules/Accordion';
-import AccordionConsent from '@/stories/molecules/AccordionConsent';
+import AccordionDataCluster from '@/stories/molecules/AccordionDataCluster';
 // Atoms
 import Tickbox from '@/stories/atoms/Tickbox';
 import Chevron from '@/stories/atoms/Chevron';
@@ -29,6 +29,10 @@ const topLevelComponents = [
 	BankSelector,
 	ConsentFlow1Intro,
 	ConsentFlow1Dataholders,
+	ConsentFlow2Intro,
+	ConsentFlow2Clusters,
+	ConsentFlow3Intro,
+	ConsentFlow3Confirm
 ];
 for (const component of topLevelComponents) {
 	component.mixins = [mixinCloudcaseState];
@@ -37,7 +41,7 @@ app.component('bank-selector', BankSelector);
 app.component('consent-flow-1-intro', ConsentFlow1Intro);
 app.component('consent-flow-1-dataholders', ConsentFlow1Dataholders);
 app.component('consent-flow-2-intro', ConsentFlow2Intro);
-app.component('consent-flow-2-consent', ConsentFlow2Consent);
+app.component('consent-flow-2-clusters', ConsentFlow2Clusters);
 app.component('consent-flow-3-intro', ConsentFlow3Intro);
 app.component('consent-flow-3-confirm', ConsentFlow3Confirm);
 // Molecules
@@ -48,7 +52,7 @@ app.component('card-badge', CardBadge);
 app.component('card-cdr', CardCDR);
 app.component('card-dataholder-connect', CardDataholderConnect);
 app.component('accordion', Accordion);
-app.component('accordion-consent', AccordionConsent);
+app.component('accordion-data-cluster', AccordionDataCluster);
 // Atoms
 app.component('tickbox', Tickbox);
 app.component('chevron', Chevron);
@@ -92,9 +96,9 @@ export const parameters = {
 					'ConsentFlow1Intro',
 					'ConsentFlow1Dataholders',
 					'ConsentFlow2Intro',
-					'ConsentFlow2Consent',
+					'ConsentFlow2Clusters',
 					'ConsentFlow3Intro',
-					'ConsentFlow3Foo',
+					'ConsentFlow3Confirm',
 				],
 				'Molecules',
 				'Atoms',
