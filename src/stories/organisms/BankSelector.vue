@@ -1,9 +1,8 @@
 ComponentVue_BankSelector
 <template>
 	<div class="rab-cdr">
-	<!-- v0.7.1 -->
+	<!-- v0.8.0 -->
 	<!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
-<!--		<p class="text-feature">{{ borrower.name ? borrower.name + ', ' : '' }}tell us about all the banks where you have accounts for transactions, savings, credit cards or loans.</p>-->
 		<div @click="focusSearchInput()" class="bank-search position-relative" :class="{ 'conceal': editingPills }">
 			<div class="position-absolute center-y p-4"
 				:class="{ 'pointer-none': !searchValue }">
@@ -74,8 +73,8 @@ export default {
 			// REQUIRED PROPERTY - state to be shared with the rules engine - this is the entered value of the question
 			entered: {
 				dataholders: [],
-				borrower: {},
 			},
+			text: '',
 			searchValue: '',
 			searchHovered: false,
 			searchFocussed: false,
@@ -126,9 +125,6 @@ export default {
 		},
 	},
 	computed: {
-		borrower: function() {
-			return this.entered.borrower;
-		},
 		filteredDataholders: function() {
 			var results = {
 				match: [],
