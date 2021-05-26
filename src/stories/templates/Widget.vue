@@ -1,13 +1,13 @@
 <template>
 	<div id="fieldset_section_Applicant1Consent_Chooseyourbank" class="sectionHeader">
 		<legend>{{ legend }}</legend>
-		<p class="text-feature">{{ featureText }}</p>
 		<div id="id_section_Applicant1Consent_Chooseyourbank">
 			<div id="question_ConsentChooseYourBank" cc-panel="ConsentChooseYourBank" class="questionPanel shownQuestionPanel shownQuestionTextPanel">
 				<div class="questionContainer fullWidthQuestion" cc-type="type-less">
 					<div class="questionAnnotationsAndText">
 						<div class="questionAnnotations"><em>&nbsp;</em></div>
 						<div class="questionText" cc-text="ConsentChooseYourBank">
+							<div class="text-feature">{{ featureText }}</div>
 							<span>
 								<slot/>
 							</span>

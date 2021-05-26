@@ -1,5 +1,5 @@
 /* BankSelector */
-/* TODO: These input states probably need to be graduated to theme in community.css */
+/* TODO: Move to RABSkin */
 .bank-search > input:focus {
   outline: none;
 }
@@ -13,6 +13,8 @@
 .bank-search > input:focus::placeholder {
   color: var(--brand-secondary-2);
 }
+
+/* --------------------- */
 
 .dataholder-list-container {
   padding-right: 1rem;
@@ -79,28 +81,16 @@
   max-width: calc(100% - 2rem);
 }
 
-.dataholder-select-wrapper .dataholder-details {
-  max-width: calc(100% - 2.5rem);
+.dataholder-pill .dataholder-name {
+  max-width: 2.4rem;
 }
 
 @media (--breakpoint-sm) {
   .dataholder-pill .dataholder-details {
     max-width: none;
   }
-}
-
-.dataholder-pill .dataholder-name {
-  max-width: 2.4rem;
-}
-
-@media (--breakpoint-sm) {
   .dataholder-pill .dataholder-name {
     max-width: 100%;
   }
 }
 
-@media (--breakpoint-to-sm) {
-  .component-card-cdr .icon-rab-logo-cdr {
-    width: 90px;
-  }
-}

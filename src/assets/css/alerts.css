@@ -1,5 +1,4 @@
-/* TODO: Graduate to non-scoped RABSkin or community.css? */
-/*  Can all icon and bullet CSS be graduated? */
+/* TODO: Graduate alerts and icons to non-scoped RABSkin */
 /* NOTE: Duplicated from icon.css. Can remove duplication if graduated */
 [class*="alert-"] {
   display: table;
@@ -172,32 +171,3 @@
   font-size: 18px !important;
   line-height: inherit !important;
 }
-
-/*
-[class*="alert-"] > strong:first-child {
-  display: block;
-  margin-bottom: var(--space-3);
-  color: var(--brand-primary-1);
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-.alert-default {
-  background-color: var(--brand-secondary-4);
-}
-
-.alert-info {
-  background-color: var(--brand-white);
-  color: var(--brand-info-1);
-  border: 1px solid var(--brand-info-1);
-}
-
-.alert-warning {
-  background-color: var(--brand-warning-1);
-}
-
-.alert-danger {
-  background-color: var(--brand-danger-1);
-}
-*/
