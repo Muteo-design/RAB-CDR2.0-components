@@ -1,12 +1,12 @@
 ComponentVue_ConsentFlow1Dataholders
 <template>
 	<div class="rab-cdr">
-	<!-- v0.1.1 -->
+	<!-- v0.1.2 -->
 <!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
 		<div class="border rounded-lg shadow-1 px-3 px-sm-4 pt-3 pt-sm-4 pb-2 pb-sm-3 mt-4">
 			<div class="p-2">
 				<h3>We can connect with your banks</h3>
-				<ul class="bullet-check-green pl-0">
+				<ul class="bullet-check-lime pl-0">
 					<li>You're using one or more banks that feature CDR.</li>
 					<li>With your consent and as a qualified data recipient, Regional Australia Bank can securely connect and collect data on your behalf.</li>
 				</ul>
