@@ -4,7 +4,7 @@ ComponentVue_AccordionDataCluster
 		vueJSWidget.registerComponent('accordion-data-cluster', {
 */
 export default {
-	// v0.3.0
+	// v0.3.1
 	template: `
 		<accordion :title="accordionTitle" :open="isOpen" @update:released="updateReleased">
 			<template v-slot:above="{ setClass, setStyle }">
@@ -15,12 +15,12 @@ export default {
 				</div>
 				<div class="px-3 bg-gradient-top">
 					<div :class="setClass" :style="setStyle(content)" class="position-relative text-brand-copy-2 compress">
-						<div ref="content">
+						<div ref="content" class="px-1">
 							<h6 class="pt-3 font-weight-normal brand-primary-3">What's included</h6>
 							<slot></slot>
 						</div>
 					</div>
-					<div class="py-3">
+					<div class="py-3 px-1">
 						<h6 class="font-weight-normal brand-primary-3">Why we need it</h6>
 						<p class="h7 mb-0 text-brand-copy-2">We'll use this data to find out about your income, assets and liabilities</p>
 					</div>

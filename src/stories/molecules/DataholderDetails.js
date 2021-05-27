@@ -5,10 +5,10 @@ ComponentVue_DataholderDetails
 		vueJSWidget.registerComponent('dataholder-details', {
 */
 export default {
-	// v0.5.0
+	// v0.5.1
 	template: `
-		<!-- NOTE: class attribute on this component is rendered on child element .dataholder-name -->
-		<!--  dummy div required to ensure $attr.class is not rendered on the parent by default -->
+		<!-- NOTE: class attribute on this component is rendered on child element .dataholder-name via $attr.class -->
+		<!--  dummy div required to prevent default behaviour, ie: $attr.class rendered on parent -->
 		<div></div>
 		<div class="dataholder-details d-flex align-items-center">
 			<div class="flex-none rounded-circle bg-white mr-2" :class="[ small ? 'icon-24' : 'icon-32' ]" :style="brandStyle">
@@ -16,7 +16,7 @@ export default {
 					<img :src="dataholder.imageUrl" @load="setBrand($event)" class="center-xy"/>
 				</div>
 			</div>
-			<div class="dataholder-name" :class="[$attrs.class, { 'h7': small }, truncate ? 'overflow-text' : 'mw-100']">{{ dataholder.name }}</div>
+			<div class="dataholder-name" :class="[$attrs.class, { 'h8': small }, truncate ? 'overflow-text' : 'mw-100']">{{ dataholder.name }}</div>
 		</div>
 	`,
 	props: {
