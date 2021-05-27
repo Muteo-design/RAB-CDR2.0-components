@@ -1,3 +1,4 @@
+// Custom config file for processing RABSkin
 module.exports = {
   plugins: [
     require('postcss-import'),
@@ -5,12 +6,10 @@ module.exports = {
     require('postcss-custom-properties')({
       preserve: false,
     }),
-    require('postcss-prefix-selector')({
-      prefix: '.rab-cdr',
-    }),
     require('autoprefixer')({
       flexbox: 'no-2009',
     }),
-    require('cssnano'),
+    require('postcss-discard-comments'),
+    require('postcss-discard-empty'),
   ],
 };

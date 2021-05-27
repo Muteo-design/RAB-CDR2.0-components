@@ -126,6 +126,14 @@
         </ul>
       </div>
       <div class="pr-5">
+        <h5><code class="mr-2">.bullet-check-lime</code> (18px × 18px)</h5>
+        <ul class="bullet-check-lime">
+          <li>Organic keytar</li>
+          <li>Butcher bushwick meggings food truck,<br/>hoodie cloud bread man braid meditation cliche.</li>
+          <li>Etsy poke messenger bag lyft bitters prism</li>
+        </ul>
+      </div>
+      <div class="pr-5">
         <h5><code class="mr-2">.bullet-check-invert</code> (18px × 18px)</h5>
         <ul class="bullet-check-invert">
           <li>Organic keytar</li>
@@ -133,6 +141,14 @@
           <li>Etsy poke messenger bag lyft bitters prism</li>
         </ul>
       </div>
+<!--      <div class="pr-5">-->
+<!--        <h5><code class="mr-2">.bullet-number</code> (18px × 18px)</h5>-->
+<!--        <ol class="bullet-number">-->
+<!--          <li>Organic keytar</li>-->
+<!--          <li>Butcher bushwick meggings food truck,<br/>hoodie cloud bread man braid meditation cliche.</li>-->
+<!--          <li>Etsy poke messenger bag lyft bitters prism</li>-->
+<!--        </ol>-->
+<!--      </div>-->
     </div>
     <hr>
     <h3>Alerts</h3>

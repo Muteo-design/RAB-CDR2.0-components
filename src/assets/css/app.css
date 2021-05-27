@@ -1,6 +1,4 @@
-/* ----------------------------- */
-/* Custom scoped CSS for RAB CDR */
-/* ----------------------------- */
+/* NOTE: Located in `RABSkinScoped` in the rulebook */
 @import "./variables.css";
 @import "./layout.css";
 @import "./forms.css";

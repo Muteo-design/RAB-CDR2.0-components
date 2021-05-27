@@ -1,152 +1,3 @@
-/* TODO: Graduate alerts and icons to non-scoped RABSkin */
-/* NOTE: Duplicated from icon.css. Can remove duplication if graduated */
-[class*="alert-"] {
-  display: table;
-  width: 100%;
-  margin-top: var(--space-3);
-  margin-bottom: var(--space-3);
-  padding: var(--space-3);
-  border: none;
-  border-radius: var(--rounded-lg);
-  font-size: 13px;
-}
-[class*="alert-"]:before {
-  content: "";
-  display: table-cell;
-  height: 18px;
-  width: 2rem;
-  background-size: 18px;
-  background-repeat: no-repeat;
-  background-position: 0 1px;
-  speak: none;
-}
-[class*="alert-"] h1:first-child,
-[class*="alert-"] h2:first-child,
-[class*="alert-"] h3:first-child,
-[class*="alert-"] h4:first-child,
-[class*="alert-"] h5:first-child,
-[class*="alert-"] h6:first-child {
-  margin-top: 0 !important;
-  margin-bottom: var(--space-1) !important;
-  font-size: 16px !important;
-  font-style: italic;
-}
-
-[class*="alert-"] p,
-[class*="alert-"] li,
-[class*="alert-"] ul,
-[class*="alert-"] ol {
-  font-family: var(--font-arial);
-  font-size: 13px !important;
-}
-[class*="alert-"] p:last-child,
-[class*="alert-"] li:last-child,
-[class*="alert-"] ul:last-child,
-[class*="alert-"] ol:last-child {
-  margin-bottom: 0 !important;
-}
-
-/* info */
-.alert-info:before {
-  background-image: var(--icon-i-info);
-}
-
-.alert-info {
-  background-color: var(--brand-info-3);
-  color: var(--brand-info-copy-2);
-}
-
-.alert-info h1,
-.alert-info h2,
-.alert-info h3,
-.alert-info h5,
-.alert-info h6 {
-  color: var(--brand-info-copy-1);
-}
-
-.alert-info p,
-.alert-info li,
-.alert-info ul,
-.alert-info ol {
-  color: var(--brand-info-copy-2);
-}
-
-/* success */
-.alert-success:before {
-  background-image: var(--icon-i-success);
-}
-
-.alert-success {
-  background-color: var(--brand-success-3);
-  color: var(--brand-success-copy-2);
-}
-
-.alert-success h1,
-.alert-success h2,
-.alert-success h3,
-.alert-success h5,
-.alert-success h6 {
-  color: var(--brand-success-copy-1) !important;
-}
-
-.alert-success p,
-.alert-success li,
-.alert-success ul,
-.alert-success ol {
-  color: var(--brand-success-copy-2);
-}
-
-/* warning */
-.alert-warning:before {
-  background-image: var(--icon-i-warning);
-}
-
-.alert-warning {
-  background-color: var(--brand-warning-3);
-  color: var(--brand-warning-copy-2);
-}
-
-.alert-warning h1,
-.alert-warning h2,
-.alert-warning h3,
-.alert-warning h5,
-.alert-warning h6 {
-  color: var(--brand-warning-copy-1) !important;
-}
-
-.alert-warning p,
-.alert-warning li,
-.alert-warning ul,
-.alert-warning ol {
-  color: var(--brand-warning-copy-2);
-}
-
-/* danger */
-.alert-danger:before {
-  background-image: var(--icon-i-danger);
-}
-
-.alert-danger {
-  background-color: var(--brand-danger-3);
-  color: var(--brand-danger-copy-2);
-}
-
-.alert-danger h1,
-.alert-danger h2,
-.alert-danger h3,
-.alert-danger h5,
-.alert-danger h6 {
-  color: var(--brand-danger-copy-1) !important;
-}
-
-.alert-danger p,
-.alert-danger li,
-.alert-danger ul,
-.alert-danger ol {
-  color: var(--brand-danger-copy-2);
-}
-
-/* NOTE: This should probably be scoped because it relates to field validation within widgets */
 /* Validation alert */
 .alert-validate {
   background-color: var(--brand-danger-3);
@@ -154,20 +5,23 @@
   line-height: 1.1;
   font-size: 18px;
 }
+
 .alert-validate {
   padding-left: var(--space-2-1);
   padding-right: var(--space-2-1);
 }
+
+/* NOTE: Icon defined in icons.css */
 .alert-validate:before {
-  background-image: var(--icon-info-danger);
   width: 1.75rem;
 }
+
 .alert-validate p,
 .alert-validate li,
 .alert-validate ul,
 .alert-validate ol {
   color: var(--brand-danger-copy-1);
-  font-family: Karbon  !important;
+  font-family: Karbon !important;
   font-size: 18px !important;
   line-height: inherit !important;
 }

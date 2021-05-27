@@ -1,0 +1,11 @@
+/*! Utilities */
+.text-feature {
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
+  color: var(--brand-primary-1);
+  font-size: 20px;
+  line-height: var(--line-height-3);
+  border-left: 3px solid var(--brand-primary-2);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-4);
+}

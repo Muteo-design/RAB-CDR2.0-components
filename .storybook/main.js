@@ -14,9 +14,6 @@ module.exports = {
         postcssLoaderOptions: {
           implementation: require('postcss'),
         },
-        styleLoaderOptions: {
-          injectType: 'singletonStyleTag',
-        },
       },
     },
   ],

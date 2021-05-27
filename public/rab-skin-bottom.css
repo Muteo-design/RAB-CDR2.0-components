@@ -1,0 +1,208 @@
+/*! Typography */
+/*! Default font family and colour */
+#cloudcase-page-container,
+.ui-dialog {
+	color: #616161;
+	font-family: Karbon, Arial, Helvetica, sans-serif;
+}
+p {
+	font-family: Arial, Helvetica, sans-serif;
+}
+/*! Modals */
+.ui-dialog.ui-widget.ui-widget-content {
+	border-radius: 12px;
+}
+.ui-dialog.ui-widget.ui-widget-content .ui-dialog-titlebar {
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+}
+.ui-dialog.ui-widget.ui-widget-content .btn-modal {
+	border: 1px solid #000;
+	border-radius: 12px;
+	color: #000;
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+	font-weight: 800;
+	min-height: auto;
+}
+/*! Utilities */
+.text-feature {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	color: #00424d;
+	font-size: 20px;
+	line-height: 1.25;
+	border-left: 3px solid #a5d867;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+/*! Alert Icons and Bullets */
+/*! Default size for all icons */
+[class*="icon-rab-"] {
+	width: 18px;
+	height: 18px;
+}
+[class*="icon-rab-"]:before {
+	content: "";
+	vertical-align: top;
+	speak: none;
+	display: inline-block;
+	width: inherit;
+	height: inherit;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+[class*="alert-"],
+ol[class*="bullet-"] li,
+ul[class*="bullet-"] li,
+p[class*="bullet-"],
+div[class*="bullet-"] {
+	display: table;
+}
+[class*="alert-"] {
+	width: 100%;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	border: none;
+	border-radius: 12px;
+	font-size: 13px;
+}
+[class*="alert-"]:before,
+ol[class*="bullet-"] li:before,
+ul[class*="bullet-"] li:before,
+p[class*="bullet-"]:before,
+div[class*="bullet-"]:before {
+	content: "";
+	display: table-cell;
+	height: 18px;
+	width: 2em;
+	background-size: 18px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	speak: none;
+}
+[class*="alert-"]:before {
+	width: 2rem;
+}
+.alert-info:before,
+.icon-rab-i-info:before,
+ul.bullet-i-info li:before,
+p.bullet-i-info:before,
+div.bullet-i-info:before {
+	background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9 0C4.03724 0 0 4.03743 0 9c0 4.9626 4.03724 9 9 9 4.9628 0 9-4.0374 9-9 0-4.96257-4.0372-9-9-9z" fill="%2382d5ff"/><path d="M11.417 4.53903c-.0001.18564-.0552.3671-.1584.52142-.1032.15433-.2498.27459-.4213.34559-.1715.071-.3603.08954-.5423.05329-.1821-.03626-.34933-.12569-.48058-.25698-.13125-.13129-.22062-.29855-.25681-.48063-.0362-.18209-.01759-.37081.05347-.54231.07106-.17151.19137-.3181.34573-.42123.15439-.10313.33579-.15817.52149-.15817.1233.00002.2454.02432.3593.07153.1139.0472.2174.11637.3045.20357.0872.0872.1563.19071.2035.30463.0472.11391.0714.23599.0714.35929zm-.7701 8.48717c-.3414.5135-.81405.926-1.36889 1.1949-.8883.4295-2.26197.0601-2.02224-.8348l1.2956-4.83681c.4532-1.69194-.79312-1.13718-1.35137-.89203.34137-.51346.81407-.9261 1.36893-1.195.88828-.4295 2.26197-.06006 2.02227.83482L9.29557 12.1342c-.45322 1.692.79313 1.1372 1.35133.892z" fill="%23fff"/></svg>');
+}
+.alert-success:before,
+.icon-rab-i-success:before,
+ul.bullet-i-success li:before,
+p.bullet-i-success:before,
+div.bullet-i-success:before {
+	background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9 0C4.03724 0 0 4.03743 0 9c0 4.9626 4.03724 9 9 9 4.9628 0 9-4.0374 9-9 0-4.96257-4.0372-9-9-9z" fill="%2334c240"/><path d="M11.417 4.53903c-.0001.18564-.0552.3671-.1584.52142-.1032.15433-.2498.27459-.4213.34559-.1715.071-.3603.08954-.5423.05329-.1821-.03626-.34933-.12569-.48058-.25698-.13125-.13129-.22062-.29855-.25681-.48063-.0362-.18209-.01759-.37081.05347-.54231.07106-.17151.19137-.3181.34573-.42123.15439-.10313.33579-.15817.52149-.15817.1233.00002.2454.02432.3593.07153.1139.0472.2174.11637.3045.20357.0872.0872.1563.19071.2035.30463.0472.11391.0714.23599.0714.35929zm-.7701 8.48717c-.3414.5135-.81405.926-1.36889 1.1949-.8883.4295-2.26197.0601-2.02224-.8348l1.2956-4.83681c.4532-1.69194-.79312-1.13718-1.35137-.89203.34137-.51346.81407-.9261 1.36893-1.195.88828-.4295 2.26197-.06006 2.02227.83482L9.29557 12.1342c-.45322 1.692.79313 1.1372 1.35133.892z" fill="%23fff"/></svg>');
+}
+.alert-warning:before,
+.icon-rab-i-warning:before,
+ul.bullet-i-warning li:before,
+p.bullet-i-warning:before,
+div.bullet-i-warning:before {
+	background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9 0C4.03724 0 0 4.03743 0 9c0 4.9626 4.03724 9 9 9 4.9628 0 9-4.0374 9-9 0-4.96257-4.0372-9-9-9z" fill="%23fadc5a"/><path d="M11.417 4.53903c-.0001.18564-.0552.3671-.1584.52142-.1032.15433-.2498.27459-.4213.34559-.1715.071-.3603.08954-.5423.05329-.1821-.03626-.34933-.12569-.48058-.25698-.13125-.13129-.22062-.29855-.25681-.48063-.0362-.18209-.01759-.37081.05347-.54231.07106-.17151.19137-.3181.34573-.42123.15439-.10313.33579-.15817.52149-.15817.1233.00002.2454.02432.3593.07153.1139.0472.2174.11637.3045.20357.0872.0872.1563.19071.2035.30463.0472.11391.0714.23599.0714.35929zm-.7701 8.48717c-.3414.5135-.81405.926-1.36889 1.1949-.8883.4295-2.26197.0601-2.02224-.8348l1.2956-4.83681c.4532-1.69194-.79312-1.13718-1.35137-.89203.34137-.51346.81407-.9261 1.36893-1.195.88828-.4295 2.26197-.06006 2.02227.83482L9.29557 12.1342c-.45322 1.692.79313 1.1372 1.35133.892z" fill="%23fff"/></svg>');
+}
+.alert-danger:before,
+.icon-rab-i-danger:before,
+ul.bullet-i-danger li:before,
+p.bullet-i-danger:before,
+div.bullet-i-danger:before {
+	background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9 0C4.03724 0 0 4.03743 0 9c0 4.9626 4.03724 9 9 9 4.9628 0 9-4.0374 9-9 0-4.96257-4.0372-9-9-9z" fill="%23e84a5e"/><path d="M11.417 4.53903c-.0001.18564-.0552.3671-.1584.52142-.1032.15433-.2498.27459-.4213.34559-.1715.071-.3603.08954-.5423.05329-.1821-.03626-.34933-.12569-.48058-.25698-.13125-.13129-.22062-.29855-.25681-.48063-.0362-.18209-.01759-.37081.05347-.54231.07106-.17151.19137-.3181.34573-.42123.15439-.10313.33579-.15817.52149-.15817.1233.00002.2454.02432.3593.07153.1139.0472.2174.11637.3045.20357.0872.0872.1563.19071.2035.30463.0472.11391.0714.23599.0714.35929zm-.7701 8.48717c-.3414.5135-.81405.926-1.36889 1.1949-.8883.4295-2.26197.0601-2.02224-.8348l1.2956-4.83681c.4532-1.69194-.79312-1.13718-1.35137-.89203.34137-.51346.81407-.9261 1.36893-1.195.88828-.4295 2.26197-.06006 2.02227.83482L9.29557 12.1342c-.45322 1.692.79313 1.1372 1.35133.892z" fill="%23fff"/></svg>');
+}
+[class*="alert-"] h1:first-child,
+[class*="alert-"] h2:first-child,
+[class*="alert-"] h3:first-child,
+[class*="alert-"] h4:first-child,
+[class*="alert-"] h5:first-child,
+[class*="alert-"] h6:first-child {
+	margin-top: 0 !important;
+	margin-bottom: 0.25rem !important;
+	font-size: 16px !important;
+	font-style: italic;
+}
+[class*="alert-"] p,
+[class*="alert-"] li,
+[class*="alert-"] ul,
+[class*="alert-"] ol {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px !important;
+}
+[class*="alert-"] p:last-child,
+[class*="alert-"] li:last-child,
+[class*="alert-"] ul:last-child,
+[class*="alert-"] ol:last-child {
+	margin-bottom: 0 !important;
+}
+.alert-info {
+	background-color: #f5faff;
+	color: #31708f;
+}
+.alert-info h1,
+.alert-info h2,
+.alert-info h3,
+.alert-info h5,
+.alert-info h6 {
+	color: #245269;
+}
+.alert-info p,
+.alert-info li,
+.alert-info ul,
+.alert-info ol {
+	color: #31708f;
+}
+.alert-success {
+	background-color: #eff7eb;
+	color: #3c763d;
+}
+.alert-success h1,
+.alert-success h2,
+.alert-success h3,
+.alert-success h5,
+.alert-success h6 {
+	color: #224421 !important;
+}
+.alert-success p,
+.alert-success li,
+.alert-success ul,
+.alert-success ol {
+	color: #3c763d;
+}
+.alert-warning {
+	background-color: #fffae6;
+	color: #8a6d3b;
+}
+.alert-warning h1,
+.alert-warning h2,
+.alert-warning h3,
+.alert-warning h5,
+.alert-warning h6 {
+	color: #66512c !important;
+}
+.alert-warning p,
+.alert-warning li,
+.alert-warning ul,
+.alert-warning ol {
+	color: #8a6d3b;
+}
+.alert-danger {
+	background-color: #ffe6e6;
+	color: #a94442;
+}
+.alert-danger h1,
+.alert-danger h2,
+.alert-danger h3,
+.alert-danger h5,
+.alert-danger h6 {
+	color: #721c24 !important;
+}
+.alert-danger p,
+.alert-danger li,
+.alert-danger ul,
+.alert-danger ol {
+	color: #a94442;
+}

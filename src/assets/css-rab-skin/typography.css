@@ -1,0 +1,12 @@
+/*! Typography */
+/*! Default font family and colour */
+#cloudcase-page-container,
+.ui-dialog {
+  color: var(--brand-copy-3);
+  font-family: var(--font-karbon);
+}
+
+p {
+  font-family: var(--font-arial);
+}
+

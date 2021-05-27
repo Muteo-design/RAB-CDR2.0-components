@@ -1,0 +1,19 @@
+/*! Modals */
+.ui-dialog.ui-widget.ui-widget-content {
+  border-radius: var(--rounded-lg);
+}
+
+.ui-dialog.ui-widget.ui-widget-content .ui-dialog-titlebar {
+  border-top-left-radius: var(--rounded-lg);
+  border-top-right-radius: var(--rounded-lg);
+}
+
+.ui-dialog.ui-widget.ui-widget-content .btn-modal {
+  border: 1px solid #000;
+  border-radius: var(--rounded-lg);
+  color: #000;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-weight: 800;
+  min-height: auto;
+}

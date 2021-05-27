@@ -8,7 +8,10 @@
     "lint": "vue-cli-service lint",
     "storybook": "BROWSER=none start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "npx chromatic --auto-accept-changes --project-token 7e6808db6957"
+    "chromatic": "npx chromatic --auto-accept-changes --project-token 7e6808db6957",
+    "export-css": "npm run css:rab-skin-bottom && npm run css:rab-skin-scoped",
+    "css:rab-skin-bottom": "postcss src/assets/css-rab-skin/app.css --config src/assets/css-rab-skin/ -o public/rab-skin-bottom.css",
+    "css:rab-skin-scoped": "postcss src/assets/css/app.css -o public/rab-skin-scoped.css"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -29,12 +32,16 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "chromatic": "^5.8.0",
+    "cssnano": "^4.1.11",
     "eslint": "^6.8.0",
     "eslint-plugin-es5": "^1.5.0",
     "eslint-plugin-vue": "^7.0.0",
     "postcss": "^8.2.15",
+    "postcss-cli": "^8.3.1",
     "postcss-custom-media": "^8.0.0",
     "postcss-custom-properties": "^11.0.0",
+    "postcss-discard-comments": "^4.0.2",
+    "postcss-discard-empty": "^4.0.1",
     "postcss-import": "^14.0.2",
     "postcss-prefix-selector": "^1.9.0",
     "vue-loader": "^16.2.0"
