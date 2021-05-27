@@ -1480,21 +1480,6 @@ label.input-toggle > input {
 
 /* * * * * * * * * * * */
 
-@media (min-device-width: 768px) and (min-width: 768px) {
-	.cloudcase-skin #cloudcase-progress-and-header-panel .btn,
-	.cloudcase-skin #cloudcase-form .btn:not(.dropdown-toggle),
-	.cloudcase-skin #cloudcase-form .multiAnswerGroup .btn,
-	.cloudcase-skin .ui-dialog .btn,
-	.cloudcase-skin .ui-dialog .ui-dialog-buttonpane .btn {
-		width: auto;
-		min-width: 12rem;
-	}
-
-	.cloudcase-skin .sm-h4 {
-		font-size: 24px;
-	}
-}
-
 @media (min-device-width: 960px) and (min-width: 960px) {
 	.cloudcase-skin #header h1 {
 		display: none;
@@ -1699,21 +1684,20 @@ label.input-toggle > input {
 		width: 100%;
 	}
 
-	/* buttons */
-	/* TODO: Confirm that we want to show arrows on mobile */
-	.cloudcase-skin .btn.next::after {
-		/*display: none;*/
-	}
-
-	.cloudcase-skin .btn.previous::before {
-		/*display: none;*/
-	}
-
 	.cloudcase-skin .btn.previous {
 		float: right;
 	}
+}
 
-	/* end buttons */
+@media (min-device-width: 650px) and (min-width: 650px) {
+  .cloudcase-skin #cloudcase-progress-and-header-panel .btn,
+  .cloudcase-skin #cloudcase-form .btn:not(.dropdown-toggle),
+  .cloudcase-skin #cloudcase-form .multiAnswerGroup .btn,
+  .cloudcase-skin .ui-dialog .btn,
+  .cloudcase-skin .ui-dialog .ui-dialog-buttonpane .btn {
+    width: auto;
+    min-width: 12rem;
+  }
 }
 
 /* -------------------------------------------------------------------------- */
