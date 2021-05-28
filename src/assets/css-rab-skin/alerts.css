@@ -1,22 +1,4 @@
 /*! Alert Icons and Bullets */
-/*! Default size for all icons */
-[class*="icon-rab-"] {
-  width: 18px;
-  height: 18px;
-}
-
-[class*="icon-rab-"]:before {
-  content: "";
-  vertical-align: top;
-  speak: none;
-  display: inline-block;
-  width: inherit;
-  height: inherit;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50%;
-}
-
 [class*="alert-"],
 ol[class*="bullet-"] li,
 ul[class*="bullet-"] li,

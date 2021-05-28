@@ -9,8 +9,8 @@
     "storybook": "BROWSER=none start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -s public",
     "chromatic": "npx chromatic --auto-accept-changes --project-token 7e6808db6957",
-    "export-css": "npm run css:rab-skin-bottom && npm run css:rab-skin-scoped",
-    "css:rab-skin-bottom": "postcss src/assets/css-rab-skin/app.css --config src/assets/css-rab-skin/ -o public/rab-skin-bottom.css",
+    "watch:css": "run-p css:rab-skin-bottom css:rab-skin-scoped",
+    "css:rab-skin-bottom": "postcss src/assets/css-rab-skin/app.css --config src/assets/css-rab-skin/ -o public/rab-skin-bottom.css -w",
     "css:rab-skin-scoped": "postcss src/assets/css/app.css -o public/rab-skin-scoped.css"
   },
   "dependencies": {

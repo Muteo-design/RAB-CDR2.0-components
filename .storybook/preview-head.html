@@ -4,16 +4,30 @@
 <link rel="stylesheet" type="text/css" href="rab-skin-top.css">
 <link rel="stylesheet" type="text/css" href="rab-skin-bottom.css">
 <script>setTimeout(function() {
-	document.body.classList.add('cloudcase-skin', 'p-0');
+  document.body.classList.add('cloudcase-skin', 'p-0');
 }, 0);</script>
 <style>
-	/* TODO: Move to RABSkin */
-	#cloudcase-form .steps {
-		font-family: Karbon;
-		font-style: italic;
-		font-weight: 900;
-		font-size: 14px;
-		line-height: 17px;
-		color: #336871;
-	}
+  /* TODO: Move to RABSkin */
+  #cloudcase-form .steps {
+    font-family: Karbon;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 17px;
+    color: #336871;
+  }
+  .rab-skin:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -0.5rem;
+    right: -1rem;
+    font-family: monospace;
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    border: 1px solid #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+  }
 </style>

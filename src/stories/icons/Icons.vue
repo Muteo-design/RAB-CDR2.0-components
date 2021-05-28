@@ -4,13 +4,64 @@
     <div class="d-flex flex-wrap">
       <div class="pr-5">
         <h5>default size <code class="mr-2">.rab-icon-*</code> (18px × 18px)</h5>
+        <div class="p-2 mb-4 mx-n2 border">
+          <h6><code>RABSkin</code></h6>
+          <ul class="d-flex flex-wrap list-unstyled pl-0 mb-n4">
+            <li class="p-2">
+              <i class="icon-rab-i-info"/>
+            </li>
+            <li class="p-2">
+              <i class="icon-rab-i-success"/>
+            </li>
+            <li class="p-2">
+              <i class="icon-rab-i-warning"/>
+            </li>
+            <li class="p-2">
+              <i class="icon-rab-i-danger"/>
+            </li>
+            <li class="p-2">
+              <i class="icon-rab-check-green"/>
+            </li>
+            <li class="p-2">
+              <i class="icon-rab-check-green-glow"/>
+            </li>
+            <li class="p-2">
+              <i class="icon-rab-check-invert"/>
+            </li>
+            <li class="p-2">
+              <i class="icon-rab-chevron-down"/>
+            </li>
+            <li class="p-2">
+              <i class="icon-rab-chevron-down-lime"/>
+            </li>
+            <li class="p-2">
+              <i class="icon-rab-chevron-up"/>
+            </li>
+            <li class="p-2 mb-0">
+              <i class="icon-rab-chevron-up-lime"/>
+            </li>
+            <li class="p-2">
+              <i class="icon-rab-arrow-right-green"/>
+            </li>
+            <li class="p-2 bg-brand-secondary-2">
+              <i class="icon-rab-arrow-right-white"/>
+            </li>
+            <li class="p-2">
+              <i class="icon-rab-plus-green"/>
+            </li>
+            <li class="p-2">
+              <i class="icon-rab-plus-invert"/>
+            </li>
+            <li class="p-2">
+              <i class="icon-rab-minus-green"/>
+            </li>
+            <li class="p-2">
+              <i class="icon-rab-minus-invert"/>
+            </li>
+          </ul>
+        </div>
+        <h6><code>RABSkinScoped</code></h6>
         <ul class="d-flex flex-wrap list-unstyled pl-0">
-          <li class="p-2">
-            <i class="icon-rab-check-green"/>
-          </li>
-          <li class="p-2">
-            <i class="icon-rab-check-invert"/>
-          </li>
           <li class="p-2">
             <i class="icon-rab-close"/>
           </li>
@@ -21,18 +72,6 @@
             <i class="icon-rab-info-danger"/>
           </li>
           <li class="p-2">
-            <i class="icon-rab-i-info"/>
-          </li>
-          <li class="p-2">
-            <i class="icon-rab-i-success"/>
-          </li>
-          <li class="p-2">
-            <i class="icon-rab-i-warning"/>
-          </li>
-          <li class="p-2">
-            <i class="icon-rab-i-danger"/>
-          </li>
-          <li class="p-2">
             <i class="icon-rab-search"/>
           </li>
           <li class="p-2">
@@ -40,12 +79,6 @@
           </li>
           <li class="p-2">
             <i class="icon-rab-arrow-left-gray"/>
-          </li>
-          <li class="p-2">
-            <i class="icon-rab-chevron-down"/>
-          </li>
-          <li class="p-2">
-            <i class="icon-rab-chevron-up"/>
           </li>
         </ul>
       </div>
