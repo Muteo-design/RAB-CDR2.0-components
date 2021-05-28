@@ -26,16 +26,16 @@ import mixinCloudcaseState from '@/mixins/cloudcase-state';
 // Organisms (top level)
 // Add mixin to top level components only
 const topLevelComponents = [
-	BankSelector,
-	ConsentFlow1Intro,
-	ConsentFlow1Dataholders,
-	ConsentFlow2Intro,
-	ConsentFlow2Clusters,
-	ConsentFlow3Intro,
-	ConsentFlow3Confirm
+  BankSelector,
+  ConsentFlow1Intro,
+  ConsentFlow1Dataholders,
+  ConsentFlow2Intro,
+  ConsentFlow2Clusters,
+  ConsentFlow3Intro,
+  ConsentFlow3Confirm,
 ];
 for (const component of topLevelComponents) {
-	component.mixins = [mixinCloudcaseState];
+  component.mixins = [mixinCloudcaseState];
 }
 app.component('bank-selector', BankSelector);
 app.component('consent-flow-1-intro', ConsentFlow1Intro);
@@ -61,48 +61,51 @@ import '@/assets/css/app.css';
 
 // Add decorator templates based on context
 export const decorators = [
-	(story, { kind }) => {
-		const paths = kind.split('/');
-		if (!paths.includes('Pages')) {
-			const nested = !paths.includes('Organisms');
-			return {
-				template: `<div id="cloudcase-form"><div class="${nested ? 'rab-cdr ' : ''}p-4 bg-white"><story/></div></div>`,
-			};
-		} else {
-			return { template: '<story/>' };
-		}
-	},
+  (story, { kind }) => {
+    const paths = kind.split('/');
+    if (!paths.includes('Pages') && !paths.includes('Standard Questions')) {
+      const nested = !paths.includes('Organisms');
+      return {
+        template: `<div id="cloudcase-form"><div class="${nested ? 'rab-cdr ' : ''}p-4 bg-white"><story/></div></div>`,
+      };
+    } else {
+      return { template: '<story/>' };
+    }
+  },
 ];
 
 export const parameters = {
-	actions: { argTypesRegex: '^on[A-Z].*' },
-	controls: {
-		matchers: {
-			color: /(background|color)$/i,
-			date: /Date$/,
-		},
-	},
-	options: {
-		storySort: {
-			order: ['CDR 2.0', [
-				'Pages', [
-					'BankSelect',
-					'ConsentFlow1',
-					'ConsentFlow2',
-					'ConsentFlow3',
-				],
-				'Organisms', [
-					'BankSelector',
-					'ConsentFlow1Intro',
-					'ConsentFlow1Dataholders',
-					'ConsentFlow2Intro',
-					'ConsentFlow2Clusters',
-					'ConsentFlow3Intro',
-					'ConsentFlow3Confirm',
-				],
-				'Molecules',
-				'Atoms',
-			]],
-		},
-	},
+  actions: { argTypesRegex: '^on[A-Z].*' },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
+  options: {
+    storySort: {
+      order: [
+        'CDR 2.0', [
+          'Pages', [
+            'BankSelect',
+            'ConsentFlow1',
+            'ConsentFlow2',
+            'ConsentFlow3',
+          ],
+          'Organisms', [
+            'BankSelector',
+            'ConsentFlow1Intro',
+            'ConsentFlow1Dataholders',
+            'ConsentFlow2Intro',
+            'ConsentFlow2Clusters',
+            'ConsentFlow3Intro',
+            'ConsentFlow3Confirm',
+          ],
+          'Molecules',
+          'Atoms',
+        ],
+        'Cloudcase',
+      ],
+    },
+  },
 };

@@ -33,8 +33,8 @@ p {
 	font-size: 20px;
 	line-height: 1.25;
 	border-left: 3px solid #a5d867;
-	margin-top: 1.5rem;
-	margin-bottom: 1.5rem;
+	margin-top: 1rem !important;
+	margin-bottom: 1.5rem !important;
 }
 /*! Default size for all icons */
 [class*="icon-rab-"] {

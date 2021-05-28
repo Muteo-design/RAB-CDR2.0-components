@@ -6,6 +6,6 @@
   font-size: 20px;
   line-height: var(--line-height-3);
   border-left: 3px solid var(--brand-primary-2);
-  margin-top: var(--space-4);
-  margin-bottom: var(--space-4);
+  margin-top: var(--space-3) !important;
+  margin-bottom: var(--space-4) !important;
 }
