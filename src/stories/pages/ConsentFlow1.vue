@@ -18,7 +18,7 @@ import Question from '../templates/Question';
 
 export default {
 	name: 'consent-flow-1',
-	components: { Question, Page, Panel },
+	components: { Page, Panel, Question },
 	props: {
 		consentFlow1IntroEntered: String,
 		ConsentFlow1DataholdersEntered: String,

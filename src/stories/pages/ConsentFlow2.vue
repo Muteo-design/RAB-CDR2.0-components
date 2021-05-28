@@ -18,6 +18,6 @@ import Question from '../templates/Question';
 
 export default {
 	name: 'consent-flow-2',
-	components: { Question, Page, Panel },
+	components: { Page, Panel, Question },
 };
 </script>
