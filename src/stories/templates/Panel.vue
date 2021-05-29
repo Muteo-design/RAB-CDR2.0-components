@@ -1,22 +1,23 @@
 <template>
-	<div id="fieldset_section_Loan_AboutYourLoan" class="sectionHeader">
+	<div id="fieldset_section_Borrower1ConsentFlow1_Letsfasttrackyourapplication" class="sectionHeader">
 		<div class="overlay-container">
 			<div class="overlay"></div>
 		</div>
 		<legend>{{ legend }}</legend>
-		<!-- TODO: Confirm feature text markup -->
-		<div class="text-feature">{{ featureText }}</div>
-		<div id="id_section_Loan_AboutYourLoan">
-			<div id="question_LoanDetails" cc-panel="LoanDetails" class="questionPanel hiddenQuestionPanel hiddenQuestionTextPanel">
-				<slot></slot>
-			</div>
+		<div id="id_section_Borrower1ConsentFlow1_Letsfasttrackyourapplication">
+			<question :feature-text="featureText">
+				<slot/>
+			</question>
 		</div>
 	</div>
 </template>
 
 <script>
+import Question from '@/stories/templates/Question';
+
 export default {
 	name: 'panel',
+	components: { Question },
 	props: {
 		legend: String,
 		featureText: String,
