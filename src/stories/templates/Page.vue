@@ -118,7 +118,7 @@
 						</div>
 						<div id="cloudcase-info-container" :style="[wide && { width: '85px' }]">
 							<div attach-to="Borrower1ShowInfoboxQuestion" associated-page="Borrower1ConsentFlow9" class="rab-cdr infobox-desktop rounded-lg info"
-								:style="[wide && { display: 'none'}]">
+								:style="[!wide && { display: 'block'}]">
 								<i class="icon-rab-info"></i>
 								<div class="mt-2"><strong>Test infobox</strong></div>
 								<div class="mt-2">Test text for infobox</div>
