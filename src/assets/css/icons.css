@@ -4,21 +4,12 @@
  *  Ensure hash `#` prefix on hex colors is escaped as `%23`, eg:
  *  fill="#fff" —> fill="%23fff"
  *
- * NOTE: Base styles and default size for icons, alerts and bullets are defined in rab-skin.css
+ * NOTE: Base styles and default size for icons, alerts and bullets are defined in rab-skin-bottom.css
  *  This provides them for use in the rulebook outside widget scope
  *
- * Icon sizing legend.
- * Width and Height are always equal.
- *
- * 18 default
- * 24 (eg: tickbox)
- * 32
- * 36 (eg: accordion)
- * 48 (eg: badge icon)
- * 64
  */
 
-/* Sizing Utilities */
+/* Icon sizing utilities */
 .icon-24,
 [class*="icon-rab-"].icon-24 {
   width: 24px;

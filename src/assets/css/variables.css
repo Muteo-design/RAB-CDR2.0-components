@@ -68,12 +68,16 @@
 
   /* Fonts */
   --font-arial: Arial, Helvetica, sans-serif;
-  --font-karbon: Karbon, Arial, Helvetica, sans-serif;
+  --font-karbon: Karbon, var(--font-arial);
 
   /* Typograhpy */
-  --line-height-1: 0.3125;
-  --line-height-2: 0.625;
-  --line-height-3: 1.25;
-  --line-height-4: 1.875;
-  --line-height-5: 3.75;
+  --line-height-1: 0.5;
+  --line-height-2: 0.75;
+  --line-height-3: 1;
+  --line-height-4: 1.25;
+  --line-height-5: 1.5;
+  --line-height-normal: normal;
+
+  --h3: 24px;
+  --h4: 20px;
 }

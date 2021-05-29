@@ -16,6 +16,52 @@
   background-position: 50%;
 }
 
+/*! Alert and bullet icon layout */
+[class*="alert-"],
+ol[class*="bullet-"] li,
+ul[class*="bullet-"] li,
+p[class*="bullet-"],
+div[class*="bullet-"] {
+  display: table;
+}
+
+ol[class*="bullet-"],
+ul[class*="bullet-"] {
+  padding-left: 0 !important;
+}
+
+[class*="alert-"] {
+  width: 100%;
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-3);
+  padding: var(--space-3);
+  border: none;
+  border-radius: var(--rounded-lg);
+  font-size: 13px;
+}
+
+[class*="alert-"]:before,
+ol[class*="bullet-"] li:before,
+ul[class*="bullet-"] li:before,
+p[class*="bullet-"]:before,
+div[class*="bullet-"]:before {
+  content: "";
+  display: table-cell;
+  height: 18px;
+  /* NOTE: using 'em' unit here to ensure space between bullet and text is proportionate to font size */
+  width: 2em;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  speak: none;
+}
+
+[class*="alert-"]:before {
+  /* NOTE: using 'rem' unit here to ensure space is fixed, regardless of font size */
+  width: 2rem;
+}
+
+/*! SVG icons */
 .icon-rab-check-green:before,
 ul.bullet-check-green li:before,
 p.bullet-check-green:before,

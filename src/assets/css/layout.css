@@ -59,6 +59,14 @@ svg {
   border-width: 4px;
 }
 
+@media (--breakpoint-sm) {
+  .sm-border {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--brand-secondary-2);
+  }
+}
+
 .content-box {
   box-sizing: content-box;
 }
@@ -113,6 +121,12 @@ svg {
 .shadow-2,
 .hover-shadow-2:hover {
   box-shadow: var(--shadow-2);
+}
+
+@media (--breakpoint-sm) {
+  .shadow-sm-1 {
+    box-shadow: var(--shadow-2);
+  }
 }
 
 .center-y {

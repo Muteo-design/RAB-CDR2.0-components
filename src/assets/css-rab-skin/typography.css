@@ -6,7 +6,95 @@
   font-family: var(--font-karbon);
 }
 
+h1 {
+  font-style: italic;
+}
+
 p {
   font-family: var(--font-arial);
 }
 
+/*! Reset some utility props (inherited from community.css) */
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: unset;
+  margin-top: unset;
+  margin-bottom: unset;
+}
+
+/*! Overrides */
+h3,
+.h3 {
+  font-size: var(--h3) !important;
+}
+
+h4,
+.h4 {
+  font-size: var(--h4) !important;
+}
+
+/*! Additional utilities */
+.h7 {
+  font-size: 14px !important;
+}
+
+.h8 {
+  font-size: 12px !important;
+}
+
+.h9 {
+  font-size: 10px !important;
+}
+
+/*! Responsive utilities  */
+@media (--breakpoint-sm) {
+  .sm-h5 {
+    font-size: 18px !important;
+  }
+
+  .sm-h6 {
+    font-size: 16px !important;
+  }
+
+  .sm-h7 {
+    font-size: 14px !important;
+  }
+
+  .sm-h8 {
+    font-size: 12px !important;
+  }
+
+  .sm-h9 {
+    font-size: 10px !important;
+  }
+}
+
+/*! Page pagination */
+.page-pagination {
+  padding: 0 var(--space-4);
+}
+
+.page-pagination span {
+  font-style: italic;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: var(--line-height-4);
+  color: var(--brand-tertiary-1);
+}
+
+/*! Feature text */
+.text-feature {
+  font-family: var(--font-karbon);
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
+  color: var(--brand-primary-1);
+  font-size: 20px;
+  line-height: var(--line-height-4);
+  border-left: 3px solid var(--brand-primary-2);
+  margin-top: var(--space-3) !important;
+  margin-bottom: var(--space-4) !important;
+}
