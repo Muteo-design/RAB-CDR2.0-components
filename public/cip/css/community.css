@@ -511,7 +511,7 @@ input[type="button"] + input[type="button"] {margin-left:5px;}
 	font-family: "Karbon";
 	src: url("../fonts/community/Karbon-Semibold.woff2") format("woff2"),
 	url("../fonts/community/Karbon-Semibold.woff") format("woff");
-	font-weight: 800;
+	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
@@ -519,7 +519,22 @@ input[type="button"] + input[type="button"] {margin-left:5px;}
 	font-family: "Karbon";
 	src: url("../fonts/community/Karbon-SemiboldItalic.woff2") format("woff2"),
 	url("../fonts/community/Karbon-SemiboldItalic.woff") format("woff");
-	font-weight: 800;
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Karbon";
+	src: url("../fonts/community/Karbon-Bold.woff2") format("woff2"),
+	url("../fonts/community/Karbon-Bold.woff") format("woff");
+	font-weight: 900;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Karbon";
+	src: url("../fonts/community/Karbon-BoldItalic.woff2") format("woff2"),
+	url("../fonts/community/Karbon-BoldItalic.woff") format("woff");
+	font-weight: 900;
 	font-style: italic;
 	font-display: swap;
 }
@@ -596,12 +611,12 @@ body {
 
 .cloudcase-skin #cloudcase-form legend {
 	font-family: "Karbon", "Open Sans";
-	font-weight: 800;
+	font-weight: 900;
 	font-size: 35px;
 	letter-spacing: 0.01em;
 	margin: 0;
 	margin-top: 10px;
-	color: #00424d;
+	color: #015060;
 	border: none;
 	line-height: 1;
 }
@@ -755,7 +770,7 @@ input[type="button"].uploadDocumentButton {
 }
 
 .cloudcase-skin h1 {
-	color: #00424d;
+	color: #015060;
 }
 
 .cloudcase-skin #page {
@@ -824,7 +839,7 @@ input[type="button"].uploadDocumentButton {
 	border-radius: 100px;
 	font-family: "Karbon";
 	font-weight: 600;
-	line-height: normal;
+	line-height: 1;
 	display: inline-block;
 	box-sizing: border-box;
 	letter-spacing: 0.05em;
@@ -945,10 +960,9 @@ input[type="button"].uploadDocumentButton {
 	-moz-transition: all .2s;
 	transition: all .2s;
 	font-family: icomoon;
-	line-height: 0;
 	vertical-align: middle;
 	position: relative;
-	top: -0.05rem;
+	top: -2px;
 }
 
 .cloudcase-skin #cloudcase-form .btn:before {
@@ -1208,11 +1222,17 @@ input[type="checkbox"]:disabled + label:before {
 .cloudcase-skin h6,
 .cloudcase-skin #cloudcase-form h6 {
 	font-family: "Karbon";
-	font-weight: 800;
+	font-weight: 900;
 	margin-top: 0;
 	color: #00424d;
 	letter-spacing: 0.01em;
 }
+
+.cloudcase-skin h1,
+.cloudcase-skin #cloudcase-form h1 {
+	color: #015060;
+}
+
 
 .cloudcase-skin h1,
 .cloudcase-skin #cloudcase-form h1,
@@ -1376,7 +1396,7 @@ input[type="checkbox"]:disabled + label:before {
 }
 
 .cloudcase-skin .ui-dialog .ui-dialog-titlebar .ui-dialog-title {
-	font-weight: 800;
+	font-weight: 900;
 	white-space: normal;
 	padding: 0;
 	margin-top: 1.5rem;
@@ -2031,14 +2051,6 @@ svg {
 	display:none
 }
 
-/* Page pagination styling */
-.page-pagination {
-	padding: 0 1.5rem;
-}
-.page-pagination span {
-	color: #336871;
-	font-weight: 900;
-}
 /* Mobile tab bar */
 .nav-tabs {
 	display: flex;
@@ -2072,17 +2084,14 @@ svg {
 	border-bottom: 3px solid #ffffff;
 	scroll-snap-align: start;
 }
-.tab.selected {
-	border-bottom: 3px solid #A5D867;
-	color: #015060;
-	font-weight: 800;
-}
 .nav-tabs .tab:first-of-type {
 	margin-left: 0;
 }
 .tab-selected {
+	border-bottom: 3px solid #A5D867;
+	color: #015060;
 	background: #303030 !important;
-	font-weight: 500;
+	font-weight: 600;
 }
 
 .nav-wrapper {
