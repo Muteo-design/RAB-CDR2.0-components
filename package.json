@@ -9,10 +9,10 @@
     "storybook": "BROWSER=none start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -s public",
     "chromatic": "npx chromatic --auto-accept-changes --project-token 7e6808db6957",
-    "watch:css": "run-p css:rab-skin-bottom css:rab-skin-scoped css:prettier",
+    "watch:css": "run-p css:rab-skin-bottom css:rab-skin-scoped css:stylelint",
     "css:rab-skin-bottom": "postcss src/assets/css-rab-skin/app.css --config src/assets/css-rab-skin/ -o public/rab-skin-bottom.css -w",
     "css:rab-skin-scoped": "postcss src/assets/css/app.css -o public/rab-skin-scoped.css -w",
-    "css:prettier": "onchange public/rab-skin-bottom.css -- prettier --write public/rab-skin-bottom.css"
+    "css:stylelint": "onchange public/rab-skin-bottom.css -- stylelint public/rab-skin-bottom.css --config src/assets/css-rab-skin/stylelint.config.js --fix"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -47,7 +47,9 @@
     "postcss-discard-empty": "^4.0.1",
     "postcss-import": "^14.0.2",
     "postcss-prefix-selector": "^1.9.0",
-    "prettier": "2.2.1",
+    "postcss-reporter": "^7.0.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
     "vue-loader": "^16.2.0"
   },
   "eslintConfig": {
