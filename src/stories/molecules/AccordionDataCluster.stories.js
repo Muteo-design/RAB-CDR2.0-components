@@ -12,7 +12,7 @@ const Template = ({ accountBalanceList, ...args }) => ({
 	},
 	template: `
 		<accordion-data-cluster v-bind="args">
-			<ul class="pl-0 bullet-check-invert text-brand-copy-2 h7 columns-sm-2">
+			<ul class="bullet-check-invert text-brand-copy-2 h7 columns-sm-2">
 				<li v-for="listItem in accountBalanceList" :key="listItem">{{ listItem }}</li>
 			</ul>
 		</accordion-data-cluster>

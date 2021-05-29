@@ -1,26 +1,25 @@
 ComponentVue_ConsentFlow2Intro
 <template>
 	<div class="rab-cdr">
-	<!-- v0.2.1 -->
+	<!-- v0.4.0 -->
 <!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
-		<div class="rounded-lg border p-4">
-			<i class="icon-rab-logo-cdr float-right" :style="{ width: '90px' }"></i>
+		<card-cdr-intro class="mb-4">
 			<h3>What does that mean?</h3>
-			<ul class="pl-0 mb-0 bullet-info">
+			<ul class="bullet-info mb-0">
 				<li>We only collect what we need</li>
 				<li class="mb-0">We will only use this information to help streamline your loan application</li>
 			</ul>
-		</div>
+		</card-cdr-intro>
 	</div>
 </template>
 
 <script>
 export default {
+	name: 'ConsentFlow2Intro',
 	data: function() {
 		return {
 			// REQUIRED PROPERTY - state to be shared with the rules engine - this is the entered value of the question
-			entered: {
-			},
+			entered: {},
 		};
 	},
 };

@@ -4,7 +4,8 @@ ComponentVue_Accordion
 		vueJSWidget.registerComponent('accordion', {
 */
 export default {
-	// v0.2.1
+	// v0.3.0
+	name: 'Accordion',
 	template: `
 		<div>
 			<slot name="above" :setClass="setClass" :setStyle="setStyle"></slot>

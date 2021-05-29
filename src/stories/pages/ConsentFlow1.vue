@@ -1,5 +1,5 @@
 <template>
-	<page wide :currentStep="1" :stepCount="3">
+	<page wide>
 		<panel legend="Data we collect with your permission" feature-text="The new Consumer Data Right (CDR) makes your home loan application more convenient, accurate and safe. Plus, we can really speed up the process.">
 			<question>
 				<consent-flow-1-intro :entered-data="consentFlow1IntroEntered"/>

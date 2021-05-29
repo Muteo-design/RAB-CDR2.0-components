@@ -1,7 +1,7 @@
 ComponentVue_ConsentFlow1Intro
 <template>
 	<div class="rab-cdr">
-	<!--v0.1.0-->
+	<!--v0.2.0-->
 <!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
 		<div class="row d-sm-flex">
 			<div v-for="card in cards" :key="card.heading" class="col-sm-4 d-flex align-items-stretch">
@@ -18,6 +18,7 @@ ComponentVue_ConsentFlow1Intro
 
 <script>
 export default {
+	name: 'ConsentFlow1Intro',
 	data: function() {
 		return {
 			// REQUIRED PROPERTY - state to be shared with the rules engine - this is the entered value of the question

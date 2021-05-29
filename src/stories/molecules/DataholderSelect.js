@@ -5,7 +5,8 @@ ComponentVue_DataholderSelect
 		vueJSWidget.registerComponent('dataholder-select', {
 */
 export default {
-	// v0.2.0
+	// v0.3.0
+	name: 'DataholderSelect',
 	template: `
 		<div class="pb-sm-1">
 			<label :tabindex="editing ? -1 : 0"

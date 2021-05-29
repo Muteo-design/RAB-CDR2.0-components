@@ -1,5 +1,5 @@
 <template>
-	<page :currentStep="3" :stepCount="3">
+	<page :currentStep="2" :stepCount="3">
 		<panel legend="What happens next" feature-text="We've summarised below how we use your data once we've collected it. Your consent is needed before we can connect to your banks.">
 			<question>
 				<consent-flow-3-intro/>

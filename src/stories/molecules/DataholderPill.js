@@ -4,7 +4,8 @@ ComponentVue_DataholderPill
 		vueJSWidget.registerComponent('dataholder-pill', {
 */
 export default {
-	// v0.3.0
+	// v0.4.0
+	name: 'DataholderPill',
 	template: `
 		<div class="dataholder-pill rounded-pill border-brand-primary-1 bg-white p-2 mr-2 mb-2 mw-100"
 			:class="{ 'hover-shadow-2': editing && !disabled }">

@@ -10,8 +10,8 @@
 <script>
 import Page from '../templates/Page';
 import Panel from '../templates/Panel';
-import QuestionText from '../templates/QuestionText';
-import QuestionTextarea from '../templates/QuestionTextarea';
+import QuestionText from './QuestionText';
+import QuestionTextarea from './QuestionTextarea';
 
 export default {
   name: 'questions',

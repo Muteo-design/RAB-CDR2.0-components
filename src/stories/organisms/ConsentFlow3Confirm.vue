@@ -1,7 +1,7 @@
 ComponentVue_ConsentFlow3Confirm
 <template>
 	<div class="rab-cdr">
-	<!-- v0.2.0 -->
+	<!-- v0.3.1 -->
 <!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
 		<div class="py-3 px-sm-3 mb-3 border-bottom border-light">
 			<div class="p-sm-1">
@@ -21,7 +21,7 @@ ComponentVue_ConsentFlow3Confirm
 		<accordion title="How to review your consent" class="my-3 pb-1 pb-sm-0">
 			<div class="h7 px-1">
 				<p class="bullet-info text-brand-copy-2">We provide a secure dashboard for you to review and revoke the consent you’ve given. Access it via:</p>
-				<p class="bullet-arrow-invert"><a href="#" class="font-weight-bold border-bottom-0">mycdr.regionalaustraliabank.com.au</a></p>
+				<p class="bullet-arrow-invert"><a href="#" class="font-weight-bold border-bottom-0 h8 text-sm-h7">mycdr.regionalaustraliabank.com.au</a></p>
 			</div>
 		</accordion>
 		<accordion title="How to revoke your consent" class="my-3 pb-1 pb-sm-0">
@@ -41,11 +41,11 @@ ComponentVue_ConsentFlow3Confirm
 
 <script>
 export default {
+	name: 'ConsentFlow3Confirm',
 	data: function() {
 		return {
 			// REQUIRED PROPERTY - state to be shared with the rules engine - this is the entered value of the question
-			entered: {
-			},
+			entered: {},
 		};
 	},
 };

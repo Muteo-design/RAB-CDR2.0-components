@@ -4,7 +4,8 @@ ComponentVue_Tickbox
 		vueJSWidget.registerComponent('tickbox', {
 */
 export default {
-	// v0.1.2
+	// v0.2.0
+	name: 'Tickbox',
 	template: `
 		<div class="rounded p-2"
 			@mouseenter="hover = true"

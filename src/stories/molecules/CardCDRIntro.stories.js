@@ -13,6 +13,7 @@ const Template = (args) => ({
 	template: `
 		<card-cdr-intro>
 			<h3>How often will we access your data?</h3>
+			<p class="bullet-info mb-0">Lorem ipsum</p>
 		</card-cdr-intro>
 	`,
 });

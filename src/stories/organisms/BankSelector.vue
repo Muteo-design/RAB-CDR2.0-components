@@ -1,7 +1,7 @@
 ComponentVue_BankSelector
 <template>
 	<div class="rab-cdr">
-	<!-- v0.8.0 -->
+	<!-- v0.9.0 -->
 	<!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
 		<div @click="focusSearchInput()" class="bank-search position-relative" :class="{ 'conceal': editingPills }">
 			<div class="position-absolute center-y p-4"
@@ -68,6 +68,7 @@ ComponentVue_BankSelector
 
 <script>
 export default {
+	name: 'BankSelector',
 	data: function() {
 		return {
 			// REQUIRED PROPERTY - state to be shared with the rules engine - this is the entered value of the question
