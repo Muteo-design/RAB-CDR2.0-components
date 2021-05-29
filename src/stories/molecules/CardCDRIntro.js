@@ -1,26 +1,15 @@
 /*
-ComponentVue_CardCDR
+ComponentVue_CardCDRIntro
 	[[
-		vueJSWidget.registerComponent('card-cdr', {
+		vueJSWidget.registerComponent('card-cdr-intro', {
 */
 export default {
-	// v0.3.0
+	// v0.1.0
 	template: `
-		<div class="component-card-cdr rounded border border-light px-2 pb-2 p-sm-3 text-left">
-			<div class="d-flex align-items-center pb-1 pb-sm-0">
-				<i class="icon-rab-logo-cdr d-sm-none" :style="{ width: '90px' }"></i>
-				<i class="icon-rab-logo-cdr d-none d-sm-inline"></i>
-				<div class="pt-1 mt-n3 ml-2 ml-sm-4">
-					<h5 class="mb-0 mt-4 mt-sm-2 line-height-4 h7 text-sm-h6">Regional Australia Bank</h5>
-					<p class="my-0 line-height-4 h9 text-black">Accredited Data Recipient:
-						<br class="d-sm-none"/>{{ adrNumber }}
-					</p>
-				</div>
-			</div>
+		<div class="rounded-lg border p-4">
+			<i class="icon-rab-logo-cdr float-right d-none d-sm-block mt-n2" :style="{ width: '90px' }"></i>
+			<slot></slot>
+			<i class="icon-rab-logo-cdr d-block d-sm-none mt-3" :style="{ width: '90px' }"></i>
 		</div>
 	`,
-	props: {
-		adrNumber: String,
-	},
 };
-

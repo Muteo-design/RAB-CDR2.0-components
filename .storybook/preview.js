@@ -15,6 +15,7 @@ import DataholderPill from '@/stories/molecules/DataholderPill';
 import CardDataholderConnect from '@/stories/molecules/CardDataholderConnect';
 import CardBadge from '@/stories/molecules/CardBadge';
 import CardCDR from '@/stories/molecules/CardCDR';
+import CardCDRIntro from '@/stories/molecules/CardCDRIntro';
 import Accordion from '@/stories/molecules/Accordion';
 import AccordionDataCluster from '@/stories/molecules/AccordionDataCluster';
 // Atoms
@@ -50,6 +51,7 @@ app.component('dataholder-select', DataholderSelect);
 app.component('dataholder-pill', DataholderPill);
 app.component('card-badge', CardBadge);
 app.component('card-cdr', CardCDR);
+app.component('card-cdr-intro', CardCDRIntro);
 app.component('card-dataholder-connect', CardDataholderConnect);
 app.component('accordion', Accordion);
 app.component('accordion-data-cluster', AccordionDataCluster);
