@@ -9,10 +9,10 @@ import ConsentFlow2Clusters from '@/stories/organisms/ConsentFlow2Clusters';
 import ConsentFlow3Intro from '@/stories/organisms/ConsentFlow3Intro';
 import ConsentFlow3Confirm from '@/stories/organisms/ConsentFlow3Confirm';
 // Molecules
-import DataholderDetails from '@/stories/molecules/DataholderDetails';
-import DataholderSelect from '@/stories/molecules/DataholderSelect';
-import DataholderPill from '@/stories/molecules/DataholderPill';
-import CardDataholderConnect from '@/stories/molecules/CardDataholderConnect';
+import BankDetails from '@/stories/molecules/BankDetails';
+import BankSelect from '@/stories/molecules/BankSelect';
+import BankPill from '@/stories/molecules/BankPill';
+import CardBankConnect from '@/stories/molecules/CardBankConnect';
 import CardBadge from '@/stories/molecules/CardBadge';
 import CardCDR from '@/stories/molecules/CardCDR';
 import CardCDRIntro from '@/stories/molecules/CardCDRIntro';
@@ -46,13 +46,13 @@ app.component('consent-flow-2-clusters', ConsentFlow2Clusters);
 app.component('consent-flow-3-intro', ConsentFlow3Intro);
 app.component('consent-flow-3-confirm', ConsentFlow3Confirm);
 // Molecules
-app.component('dataholder-details', DataholderDetails);
-app.component('dataholder-select', DataholderSelect);
-app.component('dataholder-pill', DataholderPill);
+app.component('bank-details', BankDetails);
+app.component('bank-select', BankSelect);
+app.component('bank-pill', BankPill);
 app.component('card-badge', CardBadge);
 app.component('card-cdr', CardCDR);
 app.component('card-cdr-intro', CardCDRIntro);
-app.component('card-dataholder-connect', CardDataholderConnect);
+app.component('card-bank-connect', CardBankConnect);
 app.component('accordion', Accordion);
 app.component('accordion-data-cluster', AccordionDataCluster);
 // Atoms

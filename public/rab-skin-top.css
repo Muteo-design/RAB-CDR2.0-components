@@ -1,116 +1,131 @@
 /* NOTE: Located at the top of `RABSkin` in the rulebook */
 /** Bank Selector Widget Styling **/
 .multiAnswerGroup > .rab-cdr {
-  float: none !important
+	float: none !important
 }
 #cloudcase-form #page_AffordabilityAssessmentChooseYourBanks .shownQuestionPanel.hiddenQuestionTextPanel,
 #cloudcase-form #page_ConnectToBank .shownQuestionPanel.hiddenQuestionTextPanel {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
+	padding-top: 0 !important;
+	margin-top: 0 !important;
 }
 #cloudcase-form #page_AffordabilityAssessmentChooseYourBanks .questionContainer.fullWidthQuestion .multiAnswerGroup,
 #cloudcase-form #page_ConnectToBank .questionContainer.fullWidthQuestion .multiAnswerGroup {
-  margin-left: 0;
+	margin-left: 0;
 }
 #cloudcase-form #page_AffordabilityAssessmentChooseYourBanks .questionContainer.fullWidthQuestion > .questionContent,
 #cloudcase-form #page_ConnectToBank .questionContainer.fullWidthQuestion > .questionContent {
-  margin-top: 0px !important;
-  width: 100% !important;
+	margin-top: 0px !important;
+	width: 100% !important;
 }
 #cloudcase-form #page_AffordabilityAssessmentChooseYourBanks .questionContainer,
 #cloudcase-form #page_ConnectToBank .questionContainer {
-  margin-bottom: 0 !important;
+	margin-bottom: 0 !important;
+}
+#question_UIEventBridge {
+	display: none;
 }
 #vue-modal {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 .mobile-infobox-overlay {
-  display: none;
+	display: none;
 }
 .mobile-infobox-overlay.active {
-  display: block;
+	display: block;
 }
+
+.infobox-tablet {
+	clear: both;
+	margin-right: 42px;
+}
+
 .infobox-tablet,
 .infobox-desktop {
-  display: none;
-  padding: 1rem;
-  font-size: 13px;
+	display: none;
+	padding: 1rem;
+	font-size: 13px;
 }
 .infobox-mobile {
-  position: fixed;
-  z-index: 101;
-  bottom: 0;
-  max-height: 0px;
-  left: 0;
-  right: 0;
-  flex-direction: column;
-  -webkit-transition: max-height 0.4s ease;
-  -moz-transition: max-height 0.4s ease;
-  transition: max-height 0.4s ease;
+	position: fixed;
+	z-index: 101;
+	bottom: 0;
+	max-height: 0px;
+	left: 0;
+	right: 0;
+	flex-direction: column;
+	-webkit-transition: max-height 0.4s ease;
+	-moz-transition: max-height 0.4s ease;
+	transition: max-height 0.4s ease;
 }
 .infobox-mobile-header {
-  width: 100%;
-  height: 60px;
-  border-radius: 15px 15px 0px 0px;
+	width: 100%;
+	height: 60px;
+	border-radius: 15px 15px 0px 0px;
 }
 .infobox-mobile.active {
-  max-height: 250px;
-  display: flex;
+	max-height: 250px;
+	display: flex;
 }
 .infobox-desktop {
-  display: none;
+	display: none;
 }
 @media (min-width: 650px) {
-  .mobile-infobox-overlay.active {
-    display: none;
-  }
-  .infobox-tablet {
-    display: block;
-  }
-  .infobox-mobile.active {
-    display: none;
-  }
+	.mobile-infobox-overlay.active {
+		display: none;
+	}
+	.infobox-tablet {
+		display: block;
+	}
+	.infobox-mobile.active {
+		display: none;
+	}
 }
 @media (min-width: 1200px) {
-  .infobox-tablet {
-    display: none;
-  }
-  .infobox-desktop.active {
-    display: block;
-  }
+	.infobox-tablet {
+		display: none;
+	}
+	.infobox-desktop.active {
+		display: block;
+	}
 }
+
+.toggle-mobile-infobox div,
+.toggle-tablet-infobox div {
+	padding: 6px 6px 6px 5px;
+}
+
 .infobox-tablet .toggle-tablet-infobox,
 .infobox-mobile .toggle-mobile-infobox {
-  width: 20px;
-  border-radius: 50%;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  float: right;
-  backdrop-filter: blur(54.3656px);
+	width: 20px;
+	border-radius: 50%;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	float: right;
+	backdrop-filter: blur(54.3656px);
 }
 .infobox-mobile .toggle-mobile-infobox {
-  height: 24px;
-  width: 24px;
+	height: 24px;
+	width: 24px;
 }
 
 .infobox-tablet strong,
 .infobox-desktop strong,
 .infobox-mobile strong {
-  font-style: italic;
-  font-size: 16px;
-  line-height: 19px;
+	font-style: italic;
+	font-size: 16px;
+	line-height: 19px;
 }
 .infobox-tablet.info,
 .infobox-desktop.info,
 .infobox-mobile.info .infobox-mobile-header {
-  color: #31708F;
-  background: #F5FAFF;
-  border: 1px solid #E9F6FF;
+	color: #31708F;
+	background: #F5FAFF;
+	border: 1px solid #E9F6FF;
 }
 .infobox-mobile.info {
-  color: #31708F;
+	color: #31708F;
 }
 .infobox-tablet.info strong,
 .infobox-tablet.info a,
@@ -118,22 +133,22 @@
 .infobox-desktop.info a,
 .infobox-mobile.info strong,
 .infobox-mobile.info a {
-  color: #245269;
-  font-weight: 800;
+	color: #245269;
+	font-weight: 800;
 }
 .infobox-tablet.info .toggle-tablet-infobox,
 .infobox-mobile.info .toggle-mobile-infobox {
-  background-color: #98B7C7;
+	background-color: #98B7C7;
 }
 .infobox-tablet.success,
 .infobox-desktop.success,
 .infobox-mobile.success .infobox-mobile-header {
-  color: #3C763D;
-  background: #DFF0D8;
-  border: 1px solid #D0E9C6;
+	color: #3C763D;
+	background: #DFF0D8;
+	border: 1px solid #D0E9C6;
 }
 .infobox-mobile.success {
-  color: #3C763D;
+	color: #3C763D;
 }
 .infobox-tablet.success strong,
 .infobox-tablet.success a,
@@ -141,22 +156,22 @@
 .infobox-desktop.success a,
 .infobox-mobile.success strong,
 .infobox-mobile.success a {
-  color: #224421;
-  font-weight: 800;
+	color: #224421;
+	font-weight: 800;
 }
 .infobox-tablet.success .toggle-tablet-infobox,
 .infobox-mobile.success .toggle-mobile-infobox {
-  background-color: #9DBA9E;
+	background-color: #9DBA9E;
 }
 .infobox-tablet.warning,
 .infobox-desktop.warning,
 .infobox-mobile.warning .infobox-mobile-header {
-  color: #8A6D3B;
-  background: #FCF8E3;
-  border: 1px solid #FAF2CC;
+	color: #8A6D3B;
+	background: #FCF8E3;
+	border: 1px solid #FAF2CC;
 }
 .infobox-mobile.warning {
-  color: #8A6D3B;
+	color: #8A6D3B;
 }
 .infobox-tablet.warning strong,
 .infobox-tablet.warning a,
@@ -164,22 +179,22 @@
 .infobox-desktop.warning a,
 .infobox-mobile.warning strong,
 .infobox-mobile.warning a {
-  color: #66512C;
-  font-weight: 800;
+	color: #66512C;
+	font-weight: 800;
 }
 .infobox-tablet.warning .toggle-tablet-infobox,
 .infobox-mobile.warning .toggle-mobile-infobox {
-  background-color: #C4B69D;
+	background-color: #C4B69D;
 }
 .infobox-tablet.error,
 .infobox-desktop.error,
 .infobox-mobile.error .infobox-mobile-header {
-  color: #A94442;
-  background: #F2DEDE;
-  border: 1px solid #EBCCCC;
+	color: #A94442;
+	background: #F2DEDE;
+	border: 1px solid #EBCCCC;
 }
 .infobox-mobile.error {
-  color: #A94442;
+	color: #A94442;
 }
 .infobox-tablet.error strong,
 .infobox-tablet.error a,
@@ -187,10 +202,10 @@
 .infobox-desktop.error a,
 .infobox-mobile.error strong,
 .infobox-mobile.error a {
-  color: #721C24;
-  font-weight: 800;
+	color: #721C24;
+	font-weight: 800;
 }
 .infobox-tablet.error .toggle-tablet-infobox,
 .infobox-mobile.error .toggle-mobile-infobox {
-  background-color: #D4A1A0;
+	background-color: #D4A1A0;
 }

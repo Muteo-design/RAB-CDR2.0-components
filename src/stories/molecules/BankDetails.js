@@ -1,25 +1,25 @@
 /*
-ComponentVue_DataholderDetails
+ComponentVue_BankDetails
 	[[
-		vueJSWidget.registerComponent('dataholder-details', {
+		vueJSWidget.registerComponent('bank-details', {
 */
 export default {
-	// v0.6.0
+	// v0.7.0
 	template: `
-		<!-- NOTE: class attribute on this component is rendered on child element .dataholder-name via $attr.class -->
+		<!-- NOTE: class attribute on this component is rendered on child element .bank-name via $attr.class -->
 		<!--  dummy div required to prevent default behaviour, ie: $attr.class rendered on parent -->
 		<div></div>
-		<div class="dataholder-details d-flex align-items-center">
+		<div class="bank-details d-flex align-items-center">
 			<div class="flex-none rounded-circle bg-white mr-2" :class="[ small ? 'icon-24' : 'icon-32' ]" :style="brandStyle">
 				<div class="w-100 h-100 rounded-circle overflow-hidden position-relative">
-					<img :src="dataholder.imageUrl" @load="setBrand($event)" class="center-xy"/>
+					<img :src="bank.imageUrl" @load="setBrand($event)" class="center-xy"/>
 				</div>
 			</div>
-			<div class="dataholder-name" :class="[$attrs.class, { 'h8': small }, truncate ? 'overflow-text' : 'mw-100']">{{ dataholder.name }}</div>
+			<div class="bank-name" :class="[$attrs.class, { 'h8': small }, truncate ? 'overflow-text' : 'mw-100']">{{ bank.name }}</div>
 		</div>
 	`,
 	props: {
-		dataholder: Object,
+		bank: Object,
 		small: Boolean,
 		truncate: Boolean,
 	},

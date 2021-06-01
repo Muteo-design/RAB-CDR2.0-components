@@ -1,5 +1,5 @@
 import ConsentFlow1Dataholders from './ConsentFlow1Dataholders';
-import { default as dataholders } from '@/assets/dataholders-connect.json';
+import { default as banks } from '@/assets/dataholders-connect.json';
 
 export default {
 	title: 'CDR 2.0/Organisms/ConsentFlow1Dataholders',
@@ -14,7 +14,10 @@ const Template = (args) => ({
 	template: '<consent-flow-1-dataholders :entered-data="args.entered"/>',
 });
 
+const dataholders = banks.filter(x => x.CDREnabled);
+const nonDataholders = banks.filter(x => !x.CDREnabled);
+
 export const Default = Template.bind({});
 Default.args = {
-	entered: JSON.stringify({ dataholders }),
+	entered: JSON.stringify({ dataholders, nonDataholders })
 };

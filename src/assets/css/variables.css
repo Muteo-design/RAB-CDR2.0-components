@@ -67,8 +67,8 @@
   --shadow-2: 0px 2px 4px rgba(117, 117, 117, 0.1), 0px 4px 5px rgba(117, 117, 117, 0.08), 0px 1px 10px rgba(117, 117, 117, 0.12);
 
   /* Fonts */
-  --font-arial: Arial, Helvetica, sans-serif;
-  --font-karbon: Karbon, var(--font-arial);
+  --font-stack-arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-stack-karbon: Karbon, "Trebuchet MS", "Century Gothic", CenturyGothic, AppleGothic, "Segoe UI", "DejaVu Sans", "Bitstream Vera Sans", Verdana, "Verdana Ref", sans-serif;
 
   /* Typograhpy */
   --line-height-1: 0.5;

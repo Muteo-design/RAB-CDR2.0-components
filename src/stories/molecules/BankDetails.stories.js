@@ -1,27 +1,27 @@
-import DataholderDetails from './DataholderDetails';
+import BankDetails from './BankDetails';
 import { default as shortName } from '@/assets/dataholder-westpac.json';
 import { default as longName } from '@/assets/dataholder-cba.json';
 
 export default {
-	title: 'CDR 2.0/Molecules/DataholderDetails',
-	component: DataholderDetails,
+	title: 'CDR 2.0/Molecules/BankDetails',
+	component: BankDetails,
 };
 
 const Template = (args) => ({
-	components: { DataholderDetails },
+	components: { BankDetails },
 	setup() {
 		return { args }
 	},
 	template:
-		'<dataholder-details :dataholder="args.dataholder"/>',
+		'<bank-details :bank="args.bank"/>',
 });
 
 export const ShortName = Template.bind({});
 ShortName.args = {
-	dataholder: shortName,
+	bank: shortName,
 };
 
 export const LongName = Template.bind({});
 LongName.args = {
-	dataholder: longName,
+	bank: longName,
 };

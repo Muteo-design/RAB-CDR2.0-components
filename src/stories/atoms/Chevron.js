@@ -4,7 +4,7 @@ ComponentVue_Chevron
 		vueJSWidget.registerComponent('chevron', {
 */
 export default {
-	// v0.1.0
+	// v0.2.0
 	template: `
 		<div class="rounded-circle cursor-pointer hover-bg-brand-secondary-1 p-1">
 			<i class="icon-24" :class="iconName"></i>
