@@ -8,6 +8,7 @@ import ConsentFlow2Intro from '@/stories/organisms/ConsentFlow2Intro';
 import ConsentFlow2Clusters from '@/stories/organisms/ConsentFlow2Clusters';
 import ConsentFlow3Intro from '@/stories/organisms/ConsentFlow3Intro';
 import ConsentFlow3Confirm from '@/stories/organisms/ConsentFlow3Confirm';
+import ConsentFlow3Actions from '@/stories/organisms/ConsentFlow3Actions';
 // Molecules
 import BankDetails from '@/stories/molecules/BankDetails';
 import BankSelect from '@/stories/molecules/BankSelect';
@@ -34,6 +35,7 @@ const topLevelComponents = [
   ConsentFlow2Clusters,
   ConsentFlow3Intro,
   ConsentFlow3Confirm,
+  ConsentFlow3Actions,
 ];
 for (const component of topLevelComponents) {
   component.mixins = [mixinCloudcaseState];
@@ -45,6 +47,7 @@ app.component('consent-flow-2-intro', ConsentFlow2Intro);
 app.component('consent-flow-2-clusters', ConsentFlow2Clusters);
 app.component('consent-flow-3-intro', ConsentFlow3Intro);
 app.component('consent-flow-3-confirm', ConsentFlow3Confirm);
+app.component('consent-flow-3-actions', ConsentFlow3Actions);
 // Molecules
 app.component('bank-details', BankDetails);
 app.component('bank-select', BankSelect);

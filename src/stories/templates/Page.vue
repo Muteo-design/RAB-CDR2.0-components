@@ -108,7 +108,7 @@
 										<div class="sections-container">
 											<slot/>
 										</div>
-										<div class="buttonPanel">
+										<div v-if="!hideButtons" class="buttonPanel">
 											<button class="btn btn-primary next disabled">Continue</button>
 											<button class="btn btn-default previous ">Previous</button>
 										</div>
@@ -138,6 +138,7 @@ export default {
 		wide: Boolean,
 		currentStep: Number,
 		stepCount: Number,
+		hideButtons: Boolean,
 	},
 };
 </script>

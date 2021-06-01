@@ -8,10 +8,10 @@
 /********************************************************************************************************/
 
 /* fonts */
-@font-face {font-family:'Open Sans';src:local('Open Sans'), local('OpenSans'), url(../fonts/opensans.woff) format('woff');}
+@font-face {font-family: "Open Sans";src:local("Open Sans"), local("OpenSans"), url(../fonts/opensans.woff) format("woff");}
 
 /* standard elements */
-html, body {margin:0px;font-family:'Open Sans',sans-serif;font-size:14px;background-color:#e6e6e6;}
+html, body {margin:0px;font-family: "Open Sans",sans-serif;font-size:14px;background-color:#e6e6e6;}
 h1 {color:#428bca;margin-left:0px;margin-bottom:15px;margin-right:0px;margin-top:0px;padding:0px;text-decoration:none;font-style:normal;font-weight:normal;font-size:26px;}
 h2 {text-decoration:none;font-style:normal;font-weight:normal;font-size:16px;}
 h3 {margin-left:0px;margin-bottom:20px;margin-right:0px;margin-top:0px;padding:0px;font-style:normal;font-weight:normal;font-size:16px;}
@@ -61,9 +61,9 @@ input[type="button"] + input[type="button"] {margin-left:5px;}
 .ui-dialog .ui-dialog-buttonpane {margin-top: unset;}
 .ui-dialog .ui-dialog-buttonpane button {min-width: 80px;}
 .ui-menu .ui-menu-item {padding: 6px 3px 6px 12px;white-space: nowrap;}
-.ui-widget {font-family: 'Open Sans', sans-serif;font-size: 1em;}
+.ui-widget {font-family: "Open Sans", sans-serif;font-size: 1em;}
 .ui-widget .ui-widget {font-size: 1em;}
-.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {font-family: 'Open Sans', sans-serif;font-size: 1em;}
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {font-family: "Open Sans", sans-serif;font-size: 1em;}
 .ui-widget-content {border: 1px solid #dddddd;background: #ffffff;color: #333333;}
 .ui-widget-header {border: 1px solid #dddddd;background: #e9e9e9;color: #333333;font-weight: bold;}
 .ui-widget-header a {color: #333333;}
@@ -495,7 +495,7 @@ input[type="button"] + input[type="button"] {margin-left:5px;}
 	font-family: Karbon;
 	src: url("../fonts/community/Karbon-Medium.woff2") format("woff2"),
 	url("../fonts/community/Karbon-Medium.woff") format("woff");
-	font-weight: 600;
+	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
@@ -503,7 +503,7 @@ input[type="button"] + input[type="button"] {margin-left:5px;}
 	font-family: Karbon;
 	src: url("../fonts/community/Karbon-MediumItalic.woff2") format("woff2"),
 	url("../fonts/community/Karbon-MediumItalic.woff") format("woff");
-	font-weight: 600;
+	font-weight: 700;
 	font-style: italic;
 	font-display: swap;
 }
@@ -833,7 +833,7 @@ input[type="button"].uploadDocumentButton {
 .cloudcase-skin .ui-dialog .ui-dialog-buttonpane .btn {
 	border-radius: 100px;
 	font-family: Karbon, "Trebuchet MS", "Century Gothic", CenturyGothic, AppleGothic, "Segoe UI", "DejaVu Sans", "Bitstream Vera Sans", Verdana, "Verdana Ref", sans-serif;
-	font-weight: 600;
+	font-weight: 800;
 	line-height: 1;
 	display: inline-block;
 	box-sizing: border-box;
@@ -998,7 +998,7 @@ input[type="button"].uploadDocumentButton {
 }
 
 .cloudcase-skin .result_text {
-	font-weight: 600;
+	font-weight: 700;
 	margin-top: 4px;
 	font-size: 16px;
 }
@@ -1094,7 +1094,7 @@ input[type="radio"]:checked + label:before {
 }
 
 input[type="radio"]:hover + label:before {
-	font-weight: 600 !important;
+	font-weight: 700 !important;
 	cursor: pointer;
 }
 
@@ -1109,7 +1109,7 @@ input[type="checkbox"]:checked + label:before {
 }
 
 input[type="checkbox"]:hover + label:before {
-	font-weight: 600 !important;
+	font-weight: 700 !important;
 	cursor: pointer;
 }
 
@@ -1217,7 +1217,6 @@ input[type="checkbox"]:disabled + label:before {
 .cloudcase-skin h6,
 .cloudcase-skin #cloudcase-form h6 {
 	font-family: Karbon, "Trebuchet MS", "Century Gothic", CenturyGothic, AppleGothic, "Segoe UI", "DejaVu Sans", "Bitstream Vera Sans", Verdana, "Verdana Ref", sans-serif;
-	font-weight: 900;
 	margin-top: 0;
 	color: #00424d;
 	letter-spacing: 0.01em;
@@ -1226,6 +1225,17 @@ input[type="checkbox"]:disabled + label:before {
 .cloudcase-skin h1,
 .cloudcase-skin #cloudcase-form h1 {
 	color: #015060;
+	font-weight: 900;
+}
+
+.cloudcase-skin h1,
+.cloudcase-skin #cloudcase-form h2 {
+	font-weight: 800;
+}
+
+.cloudcase-skin h3,
+.cloudcase-skin #cloudcase-form h3 {
+	font-weight: 900;
 }
 
 .cloudcase-skin h1,
@@ -2068,7 +2078,7 @@ svg {
 .tab.selected {
 	border-bottom: 3px solid #A5D867;
 	color: #015060;
-	font-weight: 600;
+	font-weight: 700;
 }
 .nav-tabs .tab:first-of-type {
 	margin-left: 0;
