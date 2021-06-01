@@ -27,6 +27,10 @@ svg {
   border-radius: var(--rounded) !important;
 }
 
+.rounded-sm {
+  border-radius: var(--rounded-sm) !important;
+}
+
 .rounded-lg {
   border-radius: var(--rounded-lg) !important;
 }
@@ -69,6 +73,14 @@ svg {
 
 .content-box {
   box-sizing: content-box;
+}
+
+.mh-0 {
+  min-height: 0 !important;
+}
+
+.mw-0 {
+  min-width: 0 !important;
 }
 
 .cursor-default {
@@ -125,6 +137,9 @@ svg {
 
 @media (--breakpoint-sm) {
   .shadow-sm-1 {
+    box-shadow: var(--shadow-1);
+  }
+  .shadow-sm-2 {
     box-shadow: var(--shadow-2);
   }
 }

@@ -9,6 +9,7 @@ import ConsentFlow2Clusters from '@/stories/organisms/ConsentFlow2Clusters';
 import ConsentFlow3Intro from '@/stories/organisms/ConsentFlow3Intro';
 import ConsentFlow3Confirm from '@/stories/organisms/ConsentFlow3Confirm';
 import ConsentFlow3Actions from '@/stories/organisms/ConsentFlow3Actions';
+import ConnectBanksChecklist from '@/stories/organisms/ConnectBanksChecklist';
 // Molecules
 import BankDetails from '@/stories/molecules/BankDetails';
 import BankSelect from '@/stories/molecules/BankSelect';
@@ -19,6 +20,7 @@ import CardCDR from '@/stories/molecules/CardCDR';
 import CardCDRIntro from '@/stories/molecules/CardCDRIntro';
 import Accordion from '@/stories/molecules/Accordion';
 import AccordionDataCluster from '@/stories/molecules/AccordionDataCluster';
+import BankConnect from '@/stories/molecules/BankConnect';
 // Atoms
 import Tickbox from '@/stories/atoms/Tickbox';
 import Chevron from '@/stories/atoms/Chevron';
@@ -36,6 +38,7 @@ const topLevelComponents = [
   ConsentFlow3Intro,
   ConsentFlow3Confirm,
   ConsentFlow3Actions,
+  ConnectBanksChecklist
 ];
 for (const component of topLevelComponents) {
   component.mixins = [mixinCloudcaseState];
@@ -48,6 +51,7 @@ app.component('consent-flow-2-clusters', ConsentFlow2Clusters);
 app.component('consent-flow-3-intro', ConsentFlow3Intro);
 app.component('consent-flow-3-confirm', ConsentFlow3Confirm);
 app.component('consent-flow-3-actions', ConsentFlow3Actions);
+app.component('connect-banks-checklist', ConnectBanksChecklist);
 // Molecules
 app.component('bank-details', BankDetails);
 app.component('bank-select', BankSelect);
@@ -58,6 +62,7 @@ app.component('card-cdr-intro', CardCDRIntro);
 app.component('card-bank-connect', CardBankConnect);
 app.component('accordion', Accordion);
 app.component('accordion-data-cluster', AccordionDataCluster);
+app.component('bank-connect', BankConnect);
 // Atoms
 app.component('tickbox', Tickbox);
 app.component('chevron', Chevron);
@@ -96,6 +101,7 @@ export const parameters = {
             'ConsentFlow1',
             'ConsentFlow2',
             'ConsentFlow3',
+            'ConnectBanks',
           ],
           'Organisms', [
             'BankSelector',
@@ -105,6 +111,7 @@ export const parameters = {
             'ConsentFlow2Clusters',
             'ConsentFlow3Intro',
             'ConsentFlow3Confirm',
+            'ConsentFlow3Actions',
           ],
           'Molecules',
           'Atoms',

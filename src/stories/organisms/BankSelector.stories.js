@@ -31,6 +31,5 @@ PreSelected.args = {
 			}
 			return x;
 		}),
-		borrower: { name: 'Michael Howlett' },
 	}),
 };

@@ -61,6 +61,7 @@
 
   /* Layout */
   --rounded: 9px;
+  --rounded-sm: 5px;
   --rounded-lg: 12px;
 
   --shadow-1: 0px 6px 20px rgba(158, 158, 158, 0.08);

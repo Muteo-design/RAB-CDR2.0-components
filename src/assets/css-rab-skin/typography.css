@@ -86,7 +86,7 @@ h4,
 
 /*! Feature text */
 .text-feature {
-  font-family: var(--font-karbon);
+  font-family: var(--font-stack-karbon);
   padding-left: var(--space-3);
   padding-right: var(--space-3);
   color: var(--brand-primary-1);

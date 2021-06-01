@@ -217,6 +217,21 @@
 
 /* BS overrides */
 
+.text-muted {
+  opacity: 0.75;
+}
+
+/* NOTE: Only used on progress bar AFAIK */
+.text-light {
+  color: #cfcfcf !important;
+}
+
+.bg-light {
+  background-color: #f2f2f2;
+}
+
+/* ------------------------------------ */
+
 /* alias for .border-brand-secondary-2 */
 .border,
 .border-top,

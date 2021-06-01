@@ -78,11 +78,15 @@
 
 /* BankPill */
 .bank-pill .bank-details {
-  max-width: calc(100% - calc(2 * var(--space-3)));
+  max-width: calc(100% - 2rem);
 }
 
 .bank-pill .bank-name {
   max-width: 2.4rem;
+}
+
+.bank-connect .bank-details {
+  max-width: calc(100% - 7.5rem);
 }
 
 @media (--breakpoint-sm) {
@@ -91,6 +95,9 @@
   }
   .bank-pill .bank-name {
     max-width: 100%;
+  }
+  .bank-connect .bank-details {
+    max-width: none;
   }
 }
 

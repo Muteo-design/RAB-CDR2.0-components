@@ -48,7 +48,7 @@ div.bullet-i-danger:before {
 [class*="alert-"] li,
 [class*="alert-"] ul,
 [class*="alert-"] ol {
-  font-family: var(--font-arial);
+  font-family: var(--font-stack-arial);
   font-size: 13px !important;
 }
 
