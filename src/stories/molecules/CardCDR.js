@@ -5,7 +5,6 @@ ComponentVue_CardCDR
 */
 export default {
 	// v0.4.1
-	name: 'CardCDR',
 	template: `
 		<div class="component-card-cdr rounded border border-light px-2 pb-2 p-sm-3 text-left">
 			<div class="d-flex align-items-center pb-1 pb-sm-0">

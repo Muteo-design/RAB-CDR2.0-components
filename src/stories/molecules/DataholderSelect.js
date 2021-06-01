@@ -6,7 +6,6 @@ ComponentVue_DataholderSelect
 */
 export default {
 	// v0.3.0
-	name: 'DataholderSelect',
 	template: `
 		<div class="pb-sm-1">
 			<label :tabindex="editing ? -1 : 0"

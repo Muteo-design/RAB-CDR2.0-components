@@ -68,7 +68,6 @@ ComponentVue_BankSelector
 
 <script>
 export default {
-	name: 'BankSelector',
 	data: function() {
 		return {
 			// REQUIRED PROPERTY - state to be shared with the rules engine - this is the entered value of the question

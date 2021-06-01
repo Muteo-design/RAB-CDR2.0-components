@@ -10,7 +10,7 @@
 import Question from '@/stories/templates/Question';
 
 export default {
-  components: { Question },
   name: 'question-text',
+  components: { Question },
 };
 </script>

@@ -15,7 +15,6 @@ ComponentVue_ConsentFlow2Intro
 
 <script>
 export default {
-	name: 'ConsentFlow2Intro',
 	data: function() {
 		return {
 			// REQUIRED PROPERTY - state to be shared with the rules engine - this is the entered value of the question

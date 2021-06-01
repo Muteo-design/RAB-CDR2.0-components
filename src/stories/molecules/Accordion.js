@@ -5,7 +5,6 @@ ComponentVue_Accordion
 */
 export default {
 	// v0.3.0
-	name: 'Accordion',
 	template: `
 		<div>
 			<slot name="above" :setClass="setClass" :setStyle="setStyle"></slot>

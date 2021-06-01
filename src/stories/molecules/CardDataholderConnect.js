@@ -5,7 +5,6 @@ ComponentVue_CardDataholderConnect
 */
 export default {
 	// v0.2.1
-	name: 'CardDataholderConnect',
 	template: `
 		<div class="d-flex align-items-stretch">
 			<div class="rounded-lg border border-light bg-brand-secondary-4 p-3 w-100">

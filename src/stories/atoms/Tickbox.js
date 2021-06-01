@@ -5,7 +5,6 @@ ComponentVue_Tickbox
 */
 export default {
 	// v0.2.0
-	name: 'Tickbox',
 	template: `
 		<div class="rounded p-2"
 			@mouseenter="hover = true"

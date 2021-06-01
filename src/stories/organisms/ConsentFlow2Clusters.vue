@@ -19,7 +19,6 @@ ComponentVue_ConsentFlow2Clusters
 
 <script>
 export default {
-	name: 'ConsentFlow2Clusters',
 	data: function() {
 		return {
 			// REQUIRED PROPERTY - state to be shared with the rules engine - this is the entered value of the question

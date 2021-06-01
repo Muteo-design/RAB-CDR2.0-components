@@ -5,7 +5,6 @@ ComponentVue_DataholderDetails
 */
 export default {
 	// v0.6.0
-	name: 'DataholderDetails',
 	template: `
 		<!-- NOTE: class attribute on this component is rendered on child element .dataholder-name via $attr.class -->
 		<!--  dummy div required to prevent default behaviour, ie: $attr.class rendered on parent -->

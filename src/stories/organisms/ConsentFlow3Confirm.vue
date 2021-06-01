@@ -41,7 +41,6 @@ ComponentVue_ConsentFlow3Confirm
 
 <script>
 export default {
-	name: 'ConsentFlow3Confirm',
 	data: function() {
 		return {
 			// REQUIRED PROPERTY - state to be shared with the rules engine - this is the entered value of the question

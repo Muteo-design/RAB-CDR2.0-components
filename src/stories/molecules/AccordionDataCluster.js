@@ -5,7 +5,6 @@ ComponentVue_AccordionDataCluster
 */
 export default {
 	// v0.4.0
-	name: 'AccordionDataCluster',
 	template: `
 		<accordion :title="accordionTitle" :open="isOpen" @update:released="updateReleased">
 			<template v-slot:above="{ setClass, setStyle }">
