@@ -118,7 +118,7 @@ export default {
 			event.currentTarget.blur();
 		},
 		alphaSortedBanks: function() {
-			return this.entered.bank.sort(function(a, b) {
+			return this.entered.banks.sort(function(a, b) {
 				return (a.name.toLowerCase() > b.name.toLowerCase() || a.id === 'other') ? 1 : -1;
 			});
 		},

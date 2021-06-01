@@ -17,7 +17,7 @@ const Template = (args) => ({
 export const Default = Template.bind({});
 Default.args = {
 	entered: JSON.stringify({
-		dataholders,
+		banks: dataholders,
 		borrower: { name: 'Michael Howlett' },
 	}),
 };
@@ -25,7 +25,7 @@ Default.args = {
 export const PreSelected = Template.bind({});
 PreSelected.args = {
 	entered: JSON.stringify({
-		dataholders: dataholders.map(x => {
+		banks: dataholders.map(x => {
 			if (x.name === 'Commonwealth Bank of Australia' || x.name === 'Westpac') {
 				x.selected = true;
 			}
