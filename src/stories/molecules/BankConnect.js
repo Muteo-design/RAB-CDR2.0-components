@@ -4,11 +4,11 @@ ComponentVue_BankConnect
 		vueJSWidget.registerComponent('bank-connect', {
 */
 export default {
-	// v0.1.0
+	// v0.1.1
 	template: `
 		<div class="bank-connect w-100 rounded-lg border bg-white p-3">
 			<div class="d-flex align-items-center">
-				<bank-details :bank="bank" truncate class="font-brand-bold text-brand-copy-1 h5 ml-sm-2 pr-1"></bank-details>
+				<bank-details :bank="bank" truncate class="font-brand-bold text-brand-copy-1 h5 ml-sm-2 px-1"></bank-details>
 				<div class="ml-auto">
 					<button v-if="!bank.status" type="button" @click="$emit('update:status', 'pending')"
 						class="btn btn-primary w-auto rounded-sm mh-0 mw-0 p-2 line-height-2">
@@ -17,8 +17,8 @@ export default {
 					</button>
 					<template v-else>
 						<div class="d-flex text-right align-items-center">
-							<h6 class="h7 mb-0 mx-2" :class="[ 'text-' + getStatus(bank.status).color ]">{{ getStatus(bank.status).text }}</h6>
-							<i class="icon-24" :class="[ 'icon-rab-' + getStatus(bank.status).icon ]"></i>
+							<h6 class="h7 mb-0 mx-2" :class="[ 'text-' + statusMap[bank.status].color ]">{{ statusMap[bank.status].text }}</h6>
+							<i class="icon-24" :class="[ 'icon-rab-' + statusMap[bank.status].icon ]"></i>
 						</div>
 					</template>
 				</div>
@@ -50,10 +50,5 @@ export default {
 				},
 			},
 		};
-	},
-	methods: {
-		getStatus: function(status) {
-			return this.statusMap[status];
-		}
 	},
 };

@@ -1,7 +1,7 @@
 ComponentVue_ConsentFlow3Actions
 <template>
 	<div class="rab-cdr">
-	<!-- v0.1.0 -->
+	<!-- v0.1.1 -->
 <!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
 		<div class="row">
 			<h3 class="col-xs-6 d-none d-sm-block">Connect Now</h3>
@@ -9,7 +9,7 @@ ComponentVue_ConsentFlow3Actions
 				<h6 class="d-flex flex-wrap h7 mb-2">
 					<span>Completed:</span>
 					<span class="ml-auto">
-					<span :class="{ 'text-muted': !completed }">{{ pad(completed, 2) }}</span><span class="text-light">/{{ pad(entered.banks.length, 2) }}</span>
+					<span :class="{ 'text-light': !completed }">{{ pad(completed, 2) }}</span><span class="text-light">/{{ pad(entered.banks.length, 2) }}</span>
 				</span>
 				</h6>
 				<div class="w-100 position-relative rounded-sm bg-light overflow-hidden d-flex">
@@ -17,7 +17,7 @@ ComponentVue_ConsentFlow3Actions
 				</div>
 			</div>
 		</div>
-		<bank-connect v-for="bank in entered.banks" :key="bank.id" :bank="bank" @update:status="bank.status = $event" class="my-4"></bank-connect>
+		<bank-connect v-for="bank in entered.banks" :key="bank.id" :bank="bank" @update:status="bank.status = $event" class="my-3-1"></bank-connect>
 	</div>
 </template>
 
