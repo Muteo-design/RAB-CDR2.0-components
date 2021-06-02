@@ -1,7 +1,7 @@
-ComponentVue_ConsentFlow3Actions
+ComponentVue_ConnectBanksChecklist
 <template>
 	<div class="rab-cdr">
-	<!-- v0.1.1 -->
+	<!-- v0.1.2 -->
 <!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
 		<div class="row">
 			<h3 class="col-xs-6 d-none d-sm-block">Connect Now</h3>
