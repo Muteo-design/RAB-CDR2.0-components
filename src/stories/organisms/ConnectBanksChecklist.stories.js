@@ -43,3 +43,15 @@ AllComplete.args = {
 		}),
 	}),
 };
+
+export const Failed = Template.bind({});
+Failed.args = {
+	entered: JSON.stringify({
+		banks: banks.map(x => {
+			if (x.name === 'National Australia Bank') {
+				x.status = 'failed';
+			}
+			return x;
+		}),
+	}),
+};

@@ -17,7 +17,14 @@ export default {
 					</button>
 					<template v-else>
 						<div class="d-flex text-right align-items-center">
-							<h6 class="h7 mb-0 mx-2" :class="[ 'text-' + statusMap[bank.status].color ]">{{ statusMap[bank.status].text }}</h6>
+							<h6 class="h7 mb-0 mx-2">
+								<span v-if="bank.status === 'failed'" class="text-danger text-muted">
+									Failed<span class="d-none d-sm-inline"> to connect</span>
+								</span>
+								<template v-else>
+									{{ statusMap[bank.status].text }}
+								</template>
+							</h6>
 							<i class="icon-24" :class="[ 'icon-rab-' + statusMap[bank.status].icon ]"></i>
 						</div>
 					</template>
@@ -44,9 +51,7 @@ export default {
 					icon: 'check-green',
 				},
 				'failed': {
-					text: 'Failed to connect',
 					icon: 'attention',
-					color: 'danger text-muted'
 				},
 			},
 		};
