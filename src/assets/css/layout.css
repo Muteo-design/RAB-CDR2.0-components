@@ -75,48 +75,48 @@ svg {
   box-sizing: content-box;
 }
 
+/* More granular sizes. "2-1" = "space 2 + space 1", ie: "0.5rem + 0.25rem" */
+.ml-2-1,
+.mx-2-1 {
+  margin-left: var(--space-2-1) !important;
+}
+
+.mr-2-1,
+.mx-2-1 {
+  margin-right: var(--space-2-1) !important;
+}
+
+.mt-2-1,
+.my-2-1 {
+  margin-top: var(--space-2-1) !important;
+}
+
+.mb-2-1,
+.my-2-1 {
+  margin-bottom: var(--space-2-1) !important;
+}
+
+.pl-2-1,
+.px-2-1 {
+  padding-left: var(--space-2-1) !important;
+}
+
+.pr-2-1,
+.px-2-1 {
+  padding-right: var(--space-2-1) !important;
+}
+
+.pt-2-1,
+.py-2-1 {
+  padding-top: var(--space-2-1) !important;
+}
+
+.pb-2-1,
+.py-2-1 {
+  padding-bottom: var(--space-2-1) !important;
+}
+
 /* More granular sizes. "3-1" = "space 3 + space 1", ie: "1rem + 0.25rem" */
-.ml-3-1,
-.mx-3-1 {
-  margin-left: var(--space-3-1) !important;
-}
-
-.mr-3-1,
-.mx-3-1 {
-  margin-right: var(--space-3-1) !important;
-}
-
-.mt-3-1,
-.my-3-1 {
-  margin-top: var(--space-3-1) !important;
-}
-
-.mb-3-1,
-.my-3-1 {
-  margin-bottom: var(--space-3-1) !important;
-}
-
-.pl-3-1,
-.px-3-1 {
-  padding-left: var(--space-3-1) !important;
-}
-
-.pr-3-1,
-.px-3-1 {
-  padding-right: var(--space-3-1) !important;
-}
-
-.pt-3-1,
-.py-3-1 {
-  padding-top: var(--space-3-1) !important;
-}
-
-.pb-3-1,
-.py-3-1 {
-  padding-bottom: var(--space-3-1) !important;
-}
-
-/* More granular sizes. "3-1" = "space 2 + space 1", ie: "0.5rem + 0.25rem" */
 .ml-3-1,
 .mx-3-1 {
   margin-left: var(--space-3-1) !important;
