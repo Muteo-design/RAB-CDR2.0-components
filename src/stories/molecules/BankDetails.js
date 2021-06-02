@@ -50,9 +50,10 @@ export default {
 			if (((rgb[0] + rgb[1] + rgb[2]) > 715) || (rgb[0] + rgb[1] + rgb[2]) < 50) {
 				rgb = [2, 145, 173];
 			}
+			var shadowWidth = this.small ? 1.2 : 1.5;
 			this.brandStyle = {
-				padding: '3px',
-				boxShadow: 'inset 0 0 0 1.7px rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')',
+				padding: '1px',
+				boxShadow: '0 0 0 ' + shadowWidth + 'px rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')',
 			};
 		},
 	},

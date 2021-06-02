@@ -4,7 +4,7 @@ ComponentVue_BankSelector
 	<!-- v0.11.0 -->
 <!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
 		<div @click="focusSearchInput()" class="bank-search position-relative" :class="{ 'conceal': editingPills }">
-			<div class="position-absolute center-y p-4" :class="{ 'pointer-none': !searchValue }">
+			<div class="position-absolute center-y p-4 mt-1" :class="{ 'pointer-none': !searchValue }">
 				<i v-if="searchValue" class="center-xy icon-rab-arrow-left-gray cursor-pointer" @click="searchValue = ''"></i>
 				<i v-else class="center-xy" :class="[ searchFocussed || searchHovered || editingPills ? 'icon-rab-search-gray' : 'icon-rab-search']"></i>
 			</div>
@@ -19,12 +19,11 @@ ComponentVue_BankSelector
 			<h6 class="mt-3 mb-2">Banks selected: {{ selectedBanks.length }}</h6>
 			<div class="bank-selected-wrapper d-flex" :class="[ editingPills ? 'flex-wrap overflow-auto' : 'mr-n4' ]">
 				<button type="button" @click="togglePills($event)"
-					class="flex-none btn btn-info btn-pill w-auto h-auto px-4 pt-1 pb-2 m-0 mb-2 font-weight-bold">
+					class="flex-none btn btn-info btn-pill w-auto h-auto px-4 pt-1 pb-2 m-0 mb-2-1 font-weight-bold">
 					{{ editingPills ? 'Done' : 'Edit' }}
 				</button>
-				<div class="border-brand-primary-1 border-right-0 mx-2 mb-2"></div>
-				<bank-pill v-for="bank in selectedBanks" :key="bank.id"
-					:bank="bank" :editing="editingPills" :truncate="!editingPills"
+				<div class="border-brand-primary-1 border-right-0 mx-2-1 mb-2-1"></div>
+				<bank-pill v-for="bank in selectedBanks" :key="bank.id" :bank="bank" :editing="editingPills" :truncate="!editingPills"
 					@queue-deselect="bank.deselect = true" :disabled="bank.deselect">
 				</bank-pill>
 			</div>
@@ -33,7 +32,7 @@ ComponentVue_BankSelector
 			<div v-if="!searchMatch" class="alert alert-validate">
 				We can't find this bank. Try again or choose <strong>My bank is not listed</strong>
 			</div>
-			<div class="bank-list-container mt-3 overflow-hidden" :class="{ 'pr-4': editingPills }">
+			<div class="bank-list-container mt-2 overflow-hidden" :class="{ 'pr-4': editingPills }">
 				<div class="bank-list-wrapper pt-2 pr-2 mr-n3" :class="{ 'overflow-hidden': editingPills }">
 					<div v-if="searchMatch">
 						<bank-select v-for="(bank, index) in filteredBanks.match" :key="bank.id"

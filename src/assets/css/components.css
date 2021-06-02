@@ -44,7 +44,7 @@
 }
 
 .bank-list-wrapper {
-  height: 300px;
+  max-height: 35vh;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: var(--space-2);
