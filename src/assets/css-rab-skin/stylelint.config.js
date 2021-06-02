@@ -6,5 +6,6 @@ module.exports = {
     'comment-whitespace-inside': null,
     'rule-empty-line-before': 'never',
     'no-descending-specificity': null,
+    'at-rule-empty-line-before': 'never',
   },
 };

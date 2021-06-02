@@ -18,7 +18,6 @@ export const Default = Template.bind({});
 Default.args = {
 	entered: JSON.stringify({
 		banks: dataholders,
-		borrower: { name: 'Michael Howlett' },
 	}),
 };
 

@@ -11,8 +11,9 @@ export default {
 			<div class="d-flex align-items-center">
 				<bank-details :bank="bank" small :truncate="truncate" class="overflow-text font-body pr-1"></bank-details>
 				<div class="flex-none ml-auto pl-2">
-					<i v-if="editing" @click="$emit('ask-deselect', bank)" class="icon-rab-close icon-24 cursor-pointer"></i>
-					<i v-else class="icon-24" :class="[ 'icon-rab-' + (disabled ? 'close-gray' : 'check-green') ]"></i>
+					<i v-if="disabled" class="icon-rab-close-gray icon-24"></i>
+					<i v-else-if="editing" @click="$emit('queue-deselect', bank)" class="icon-rab-close icon-24 cursor-pointer"></i>
+					<i v-else class="icon-rab-check-green icon-24"></i>
 				</div>
 			</div>
 		</div>

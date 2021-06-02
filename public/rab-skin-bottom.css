@@ -9,7 +9,6 @@ h1,
 .cloudcase-skin #cloudcase-form legend {
 	font-size: 26px;
 }
-
 @media (min-width: 650px) {
 	h1,
 	.cloudcase-skin #cloudcase-form legend {
@@ -91,7 +90,6 @@ h4,
 	margin-top: 1rem !important;
 	margin-bottom: 1.5rem !important;
 }
-
 @media (min-width: 650px) {
 	.text-feature {
 		font-size: 20px;

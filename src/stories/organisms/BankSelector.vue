@@ -18,14 +18,14 @@ ComponentVue_BankSelector
 		<div v-if="selectedBanks.length > 0">
 			<h6 class="mt-3 mb-2">Banks selected: {{ selectedBanks.length }}</h6>
 			<div class="bank-selected-wrapper d-flex" :class="[ editingPills ? 'flex-wrap overflow-auto' : 'mr-n4' ]">
-				<button type="button" @click="editPills($event)"
+				<button type="button" @click="togglePills($event)"
 					class="flex-none btn btn-info btn-pill w-auto h-auto px-4 pt-1 pb-2 m-0 mb-2 font-weight-bold">
 					{{ editingPills ? 'Done' : 'Edit' }}
 				</button>
 				<div class="border-brand-primary-1 border-right-0 mx-2 mb-2"></div>
 				<bank-pill v-for="bank in selectedBanks" :key="bank.id"
 					:bank="bank" :editing="editingPills" :truncate="!editingPills"
-					@ask-deselect="askDeselect($event)">
+					@queue-deselect="bank.deselect = true" :disabled="bank.deselect">
 				</bank-pill>
 			</div>
 		</div>
@@ -55,10 +55,10 @@ ComponentVue_BankSelector
 			<div v-if="modalActive" class="rab-cdr">
 				<h1 class="font-italic">Are you sure you want to remove this bank?</h1>
 				<p class="mb-4">A complete banking history will help us to provide you with the best possible offer.</p>
-				<bank-pill :bank="deselectingBank" disabled small class="d-inline-block"></bank-pill>
+				<bank-pill v-for="bank in deselectQueue" :key="bank.id" :bank="bank" disabled small class="d-inline-block"></bank-pill>
 				<div class="text-center mt-4">
-					<button type="button" @click="closeModal" class="btn btn-modal">Keep bank</button>
-					<button type="button" @click="deselect(deselectingBank)" class="btn btn-modal">Remove Bank</button>
+					<button type="button" @click="processDeselect()" class="btn btn-modal">Keep bank{{ deselectQueue.length > 1 ? 's' : '' }}</button>
+					<button type="button" @click="processDeselect(true)" class="btn btn-modal">Remove Bank{{ deselectQueue.length > 1 ? 's' : '' }}</button>
 				</div>
 			</div>
 		</teleport>
@@ -79,7 +79,6 @@ export default {
 			searchFocussed: false,
 			editingPills: false,
 			modalActive: false,
-			deselectingBank: {},
 		};
 	},
 	methods: {
@@ -90,9 +89,16 @@ export default {
 		setSearch: function(value) {
 			this.searchValue = value;
 		},
-		askDeselect: function(bank) {
+		togglePills: function(event) {
+			if (this.editingPills && this.deselectQueue.length) {
+				this.confirmDeselect();
+			} else {
+				this.editingPills = !this.editingPills;
+				event.currentTarget.blur();
+			}
+		},
+		confirmDeselect: function() {
 			var vm = this;
-			this.deselectingBank = bank;
 			this.modalActive = true;
 
 			// Show modal
@@ -104,18 +110,16 @@ export default {
 		closeModal: function() {
 			CCExtension.closeVueModal();
 			this.modalActive = false;
-			this.deselectingBank = {};
 		},
-		deselect: function(bank) {
-			bank.selected = !bank.selected;
-			if (!this.selectedBanks.length) {
-				this.editingPills = false;
-			}
+		processDeselect: function(confirm) {
+			this.selectedBanks.forEach(function(bank) {
+				if (confirm && bank.deselect) {
+					bank.selected = false;
+				}
+				delete bank.deselect;
+			});
+			this.editingPills = false;
 			this.closeModal();
-		},
-		editPills: function(event) {
-			this.editingPills = !this.editingPills;
-			event.currentTarget.blur();
 		},
 		alphaSortedBanks: function() {
 			return this.entered.banks.sort(function(a, b) {
@@ -163,6 +167,11 @@ export default {
 		searchMatch: function() {
 			return this.filteredBanks.match.length > 0;
 		},
+		deselectQueue: function() {
+			return this.selectedBanks.filter(function(bank) {
+				return bank.deselect === true;
+			})
+		}
 	},
 };
 </script>
