@@ -1,8 +1,8 @@
 ComponentVue_BankSelector
 <template>
 	<div class="rab-cdr">
-	<!-- v0.10.0 -->
-	<!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
+	<!-- v0.11.0 -->
+<!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
 		<div @click="focusSearchInput()" class="bank-search position-relative" :class="{ 'conceal': editingPills }">
 			<div class="position-absolute center-y p-4" :class="{ 'pointer-none': !searchValue }">
 				<i v-if="searchValue" class="center-xy icon-rab-arrow-left-gray cursor-pointer" @click="searchValue = ''"></i>

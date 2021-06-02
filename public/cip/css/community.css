@@ -609,9 +609,9 @@ body.cloudcase-skin {
 	font-family: Karbon, "Trebuchet MS", "Century Gothic", CenturyGothic, AppleGothic, "Segoe UI", "DejaVu Sans", "Bitstream Vera Sans", Verdana, "Verdana Ref", sans-serif;
 	font-weight: 900;
 	font-size: 35px;
+	font-style: italic;
 	letter-spacing: 0.01em;
-	margin: 0;
-	margin-top: 10px;
+	margin: 10px 0 0 0;
 	color: #015060;
 	border: none;
 	line-height: 1;
