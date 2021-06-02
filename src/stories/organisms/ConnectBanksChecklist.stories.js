@@ -16,15 +16,19 @@ const Template = (args) => ({
 
 export const Default = Template.bind({});
 Default.args = {
-	entered: JSON.stringify({ banks })
+	entered: JSON.stringify({ banks: banks.map(bank => ({ ...bank, ...{ status: null }}))})
 }
 
 export const Mixed = Template.bind({});
 Mixed.args = {
 	entered: JSON.stringify({
 		banks: banks.map(x => {
-			if (x.name === 'Commonwealth Bank of Australia' || x.name === 'Westpac') {
+			delete x.status;
+			if (x.name === 'Commonwealth Bank of Australia') {
 				x.status = 'complete';
+			}
+			if (x.name === 'Westpac') {
+				x.status = 'failed';
 			}
 			if (x.name === 'National Australia Bank') {
 				x.status = 'pending';
@@ -48,7 +52,8 @@ export const Failed = Template.bind({});
 Failed.args = {
 	entered: JSON.stringify({
 		banks: banks.map(x => {
-			if (x.name === 'National Australia Bank') {
+			delete x.status;
+			if (x.name === 'National Australia Bank' || x.name === 'ANZ Bank') {
 				x.status = 'failed';
 			}
 			return x;
