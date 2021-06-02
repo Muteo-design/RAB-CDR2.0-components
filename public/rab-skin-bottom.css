@@ -5,6 +5,17 @@ p {
 h1 {
 	font-style: italic;
 }
+h1,
+.cloudcase-skin #cloudcase-form legend {
+	font-size: 26px;
+}
+
+@media (min-width: 650px) {
+	h1,
+	.cloudcase-skin #cloudcase-form legend {
+		font-size: 36px;
+	}
+}
 /*! Reset some utility props (inherited from community.css) */
 .h1,
 .h2,
@@ -73,12 +84,18 @@ h4,
 	font-family: Karbon, "Trebuchet MS", "Century Gothic", CenturyGothic, AppleGothic, "Segoe UI", "DejaVu Sans", "Bitstream Vera Sans", Verdana, "Verdana Ref", sans-serif;
 	padding-left: 1rem;
 	padding-right: 1rem;
-	color: #00424d;
-	font-size: 20px;
+	color: #212121;
+	font-size: 16px;
 	line-height: 1.25;
 	border-left: 3px solid #a5d867;
 	margin-top: 1rem !important;
 	margin-bottom: 1.5rem !important;
+}
+
+@media (min-width: 650px) {
+	.text-feature {
+		font-size: 20px;
+	}
 }
 /*! Modals */
 .ui-dialog.ui-widget.ui-widget-content {

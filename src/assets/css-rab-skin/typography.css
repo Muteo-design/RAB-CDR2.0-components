@@ -7,6 +7,18 @@ h1 {
   font-style: italic;
 }
 
+h1,
+.cloudcase-skin #cloudcase-form legend {
+  font-size: 26px;
+}
+
+@media (--breakpoint-sm) {
+  h1,
+  .cloudcase-skin #cloudcase-form legend {
+    font-size: 36px;
+  }
+}
+
 /*! Reset some utility props (inherited from community.css) */
 .h1,
 .h2,
@@ -89,10 +101,16 @@ h4,
   font-family: var(--font-stack-karbon);
   padding-left: var(--space-3);
   padding-right: var(--space-3);
-  color: var(--brand-primary-1);
-  font-size: 20px;
+  color: var(--brand-copy-1);
+  font-size: 16px;
   line-height: var(--line-height-4);
   border-left: 3px solid var(--brand-primary-2);
   margin-top: var(--space-3) !important;
   margin-bottom: var(--space-4) !important;
+}
+
+@media (--breakpoint-sm) {
+  .text-feature {
+    font-size: 20px;
+  }
 }

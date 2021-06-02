@@ -9,11 +9,11 @@ ComponentVue_ConsentFlow3Actions
 				<h6 class="d-flex flex-wrap h7 mb-2">
 					<span>Completed:</span>
 					<span class="ml-auto">
-						<span :class="{ 'text-muted': !this.completed.length }">{{ pad(this.completed.length, 2) }}</span><span class="text-light">/{{ pad(this.entered.banks.length, 2) }}</span>
-					</span>
+					<span :class="{ 'text-muted': !completed }">{{ pad(completed, 2) }}</span><span class="text-light">/{{ pad(entered.banks.length, 2) }}</span>
+				</span>
 				</h6>
 				<div class="w-100 position-relative rounded-sm bg-light overflow-hidden d-flex">
-					<div class="rounded-sm border-thick border-brand-primary-3 " :class="{ 'border-transparent':  !this.completed.length }" :style="progress"></div>
+					<div class="rounded-sm border-thick border-brand-primary-3 " :class="{ 'border-transparent':  !completed }" :style="progress"></div>
 				</div>
 			</div>
 		</div>
@@ -27,26 +27,28 @@ export default {
 		return {
 			// REQUIRED PROPERTY - state to be shared with the rules engine - this is the entered value of the question
 			entered: {
-				banks: []
+				banks: [],
 			},
 		};
 	},
 	methods: {
 		pad: function(num, size) {
 			num = num.toString();
-			while (num.length < size) num = "0" + num;
+			while (num.length < size) num = '0' + num;
 			return num;
-		}
+		},
 	},
 	computed: {
 		completed: function() {
-			return this.entered.banks.filter(function(bank){return bank.status === 'complete'});
+			return this.entered.banks.filter(function(bank) {
+				return bank.status === 'complete';
+			}).length;
 		},
 		progress: function() {
 			return {
-				width: ((this.completed.length / this.entered.banks.length) * 100) + '%',
-			}
-		}
-	}
+				width: ((this.completed / this.entered.banks.length) * 100) + '%',
+			};
+		},
+	},
 };
 </script>

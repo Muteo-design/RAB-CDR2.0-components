@@ -549,6 +549,7 @@ html {
 	text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background-color: #fff;
 }
 
 body.cloudcase-skin {
