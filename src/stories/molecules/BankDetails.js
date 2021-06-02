@@ -4,7 +4,7 @@ ComponentVue_BankDetails
 		vueJSWidget.registerComponent('bank-details', {
 */
 export default {
-	// v0.7.0
+	// v0.7.1
 	template: `
 		<!-- NOTE: class attribute on this component is rendered on child element .bank-name via $attr.class -->
 		<!--  dummy div required to prevent default behaviour, ie: $attr.class rendered on parent -->

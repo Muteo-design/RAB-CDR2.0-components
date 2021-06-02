@@ -1,11 +1,10 @@
-
 /*
 ComponentVue_BankSelect
 	[[
 		vueJSWidget.registerComponent('bank-select', {
 */
 export default {
-	// v0.4.0
+	// v0.4.1
 	template: `
 		<div class="pb-sm-1">
 			<label :tabindex="editing ? -1 : 0"

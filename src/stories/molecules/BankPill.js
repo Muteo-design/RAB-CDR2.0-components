@@ -4,7 +4,7 @@ ComponentVue_BankPill
 		vueJSWidget.registerComponent('bank-pill', {
 */
 export default {
-	// v0.6.0
+	// v0.6.1
 	template: `
 		<div class="bank-pill rounded-pill border-brand-primary-1 bg-white p-2 mr-2-1 mb-2-1 mw-100"
 			:class="{ 'hover-shadow-2': editing && !disabled }">
