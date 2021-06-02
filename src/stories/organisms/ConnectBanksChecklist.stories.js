@@ -19,14 +19,26 @@ Default.args = {
 	entered: JSON.stringify({ banks })
 }
 
-
-export const SomeComplete = Template.bind({});
-SomeComplete.args = {
+export const Mixed = Template.bind({});
+Mixed.args = {
 	entered: JSON.stringify({
 		banks: banks.map(x => {
 			if (x.name === 'Commonwealth Bank of Australia' || x.name === 'Westpac') {
 				x.status = 'complete';
 			}
+			if (x.name === 'National Australia Bank') {
+				x.status = 'pending';
+			}
+			return x;
+		}),
+	}),
+};
+
+export const AllComplete = Template.bind({});
+AllComplete.args = {
+	entered: JSON.stringify({
+		banks: banks.map(x => {
+			x.status = 'complete';
 			return x;
 		}),
 	}),
