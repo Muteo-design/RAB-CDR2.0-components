@@ -35,17 +35,16 @@ This will output two CSS files into the `public` folder ready for integration:
 /assets/css-rab-skin/app.css —> public/rab-skin-bottom.css
 ```
 
+Please refer to `app.css` files for integration notes.
+
 ## Deploy
 Simply pushing Git commits to the `main` branch will deploy the Storybook on Chromatic.
 
-Deployemnts pipelines here:
+Deployemnts pipelines here:<br/>
 https://app.circleci.com/pipelines/github/Digitool-Lab/RAB-CDR2.0-components
 
-Chromatic Library:
+Chromatic Library:<br/>
 https://www.chromatic.com/library?appId=608e70833e26140039d57625&groupPrefix=CDR+2.0
-
-
-Please refer to `app.css` files for integration notes.
 
 ## Development Notes
 
