@@ -1,7 +1,6 @@
 # RAB CDR2.0 Components
 
 ## Download and installation
-
 ```
 Using your terminal navigate to the folder you want clone the project in
 ```
@@ -18,12 +17,25 @@ Run cd RAB-CDR2.0-components
 npm install
 ```
 
-## Run storybook
+## Run
 
+### Storybook
 ```
 npm run storybook
-
 ```
+
+### CSS
+```
+npm run watch:css
+```
+
+This will output two CSS files into the `public` folder ready for integration:
+```
+/assets/css/app.css          —> public/rab-skin-scoped.css
+/assets/css-rab-skin/app.css —> public/rab-skin-bottom.css
+```
+
+Please refer to `app.css` files for integration notes.
 
 ## Development Notes
 
@@ -31,22 +43,20 @@ npm run storybook
 All files in `/public/cip` should only be modified by camslice until such time as he deems another developer has enough context to safely make changes there.
 
 ### Coding Style
-- Use Tabs for indentation, not spaces. Tab width should equal 4 spaces
+- Refer to the various `.editconfig` and `.eslint.json` files used throughout the project.
+- For components and CSS that will be integrated, use Tabs for indentation, not spaces.
 - Ensure closing tags exists for all HTML elements that are not "empty elements", otherwise known as "self-closing tags". This includes all Vue components. A few examples of empty elements are: `<img/>`, `<input/>` and `<br/>`. Comprehensive list: https://developer.mozilla.org/en-US/docs/Glossary/Empty_element
-- 
 
 ### CSS
-Make all css changes in `/src/assets/css`
+Make all css changes in `/src/assets/css` or `/src/assets/css-rab-skin`
 
 There is a build process that prefixes everything with `.rab-cdr` (see `postcss.config.js`) in order to properly scope our styles to the widgets and ensure they are not unintentionally applied to some other rulebook or other part of the UI.
 
 If you're writing CSS like this: `#cloudcase-form .steps { some: thing; }` there's a risk that it will be applied to some other rulebook that uses the .steps class which we are completely unaware of.
 
-If you can't achieve what you need to with the `.rab-cdr` prefix, then the CSS that needs to be written is ultimately Cloudcase's responsibility because it's outside the domain of the widgets. Some of this CSS can be written by us, but at this stage only camslice has enough context to do it safely. It's essentially a global theme update that will apply to all other rulebooks and needs to be done with care and coordination with Cloudcase developers.
+If you can't achieve what you need to with the `.rab-cdr` prefix, then the CSS will need to be promoted into the `RABSkin` or `community.css`. This is ultimately Cloudcase's responsibility because it's outside the domain of the widgets. Some of this CSS can be written by us, but at this stage only camslice has enough context to do it safely. It's essentially a global theme update that will apply to all other rulebooks and needs to be done with care and coordination with Cloudcase developers.
 
 Widgets are also rendered on the "staff" channel. The `.rab-cdr` prefix helps us minimise the difference between how the widgets are rendered on the customer channel vs the staff channel.
-
-CSS is integrated into Cloudcase by manually copying the output `<style>` tag from the Storybook and commiting this to the Cloudcase UAT rulebook in a separate Git repository.
 
 #### Bootstrap
 
@@ -54,7 +64,19 @@ Cloudcase global CSS and theme are build on Bootstrap 3.
 
 Boostrap 4 utility classes are made available us via this repo: https://github.com/jbarreiros/bs4-utilities-for-bs3
 
-The utility classes were built from SASS with variable $spacer: 1rem; meaning that fonts and all spacing utilities are using `rem` units. Additional custom utility classes should also use `rem` units.
+The utility classes were built from SASS with the following variables defined:
+```
+$spacer: 1rem;
+// `sm` and `md` breakpoints adjusted to match community.css:
+$grid-breakpoints: (
+xs: 0,
+sm: 650px,  (default 768)
+md: 960px,  (default 992)
+lg: 1200px
+) !default;
+```
+
+All spacing utilities are using `rem` units. Additional custom utility classes should also use `rem` units.
 
 BS4 utility class documentation: https://getbootstrap.com/docs/4.0/utilities/borders/
 
@@ -70,6 +92,16 @@ Steps to generate CSS:
 1. Duplicate existing icon CSS to easily copy correct data URI prefix: `data:image/svg+xml;charset=UTF-8,` 
 
 ### Cloudcase Integration
+
+#### CSS
+
+CSS is integrated into Cloudcase by manually copying from the following output files:
+```
+/public/rab-skin-scoped.css
+/public/rab-skin-bottom.css
+```
+
+Then committing this to the Cloudcase UAT rulebook in a separate Git repository.
 
 #### Component Registration
 
