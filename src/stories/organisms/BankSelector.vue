@@ -1,7 +1,7 @@
 ComponentVue_BankSelector
 <template>
 	<div class="rab-cdr">
-	<!-- v0.11.1 -->
+	<!-- v0.11.2 -->
 <!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
 		<div @click="focusSearchInput()" class="bank-search position-relative" :class="{ 'conceal': editingPills }">
 			<div class="position-absolute center-y p-4 mt-1" :class="{ 'pointer-none': !searchValue }">
@@ -32,20 +32,22 @@ ComponentVue_BankSelector
 			<div v-if="!searchMatch" class="alert alert-validate">
 				We can't find this bank. Try again or choose <strong>My bank is not listed</strong>
 			</div>
-			<div class="bank-list-container mt-3 mt-sm-4 overflow-hidden" :class="{ 'pr-4': editingPills }">
-				<div class="bank-list-wrapper pt-2 pr-2 mr-n3" :class="{ 'overflow-hidden': editingPills }">
-					<div v-if="searchMatch">
-						<bank-select v-for="(bank, index) in filteredBanks.match" :key="bank.id"
-							:bank="bank" :editing="editingPills" @update:selected="bank.selected = $event"
-							:class="{ 'pt-sm-1': index === 0 }">
-						</bank-select>
-					</div>
-					<div v-if="filteredBanks.other.length">
-						<h6 v-if="searchMatch" class="my-1">Other banks:</h6>
-						<bank-select v-for="(bank, index) in filteredBanks.other" :key="bank.id"
-							:bank="bank" :editing="editingPills" @update:selected="bank.selected = $event"
-							:class="{ 'pt-sm-1': index === 0 }">
-						</bank-select>
+			<div class="mt-3 pt-sm-3">
+				<div class="bank-list-container overflow-hidden" :class="{ 'pr-4': editingPills }">
+					<div class="bank-list-wrapper pt-2 pr-2 mr-n3" :class="{ 'overflow-hidden': editingPills }">
+						<div v-if="searchMatch">
+							<bank-select v-for="(bank, index) in filteredBanks.match" :key="bank.id"
+								:bank="bank" :editing="editingPills" @update:selected="bank.selected = $event"
+								:class="{ 'pt-sm-1': index === 0 }">
+							</bank-select>
+						</div>
+						<div v-if="filteredBanks.other.length">
+							<h6 v-if="searchMatch" class="my-1">Other banks:</h6>
+							<bank-select v-for="(bank, index) in filteredBanks.other" :key="bank.id"
+								:bank="bank" :editing="editingPills" @update:selected="bank.selected = $event"
+								:class="{ 'pt-sm-1': index === 0 }">
+							</bank-select>
+						</div>
 					</div>
 				</div>
 			</div>
