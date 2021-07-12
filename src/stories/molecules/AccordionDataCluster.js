@@ -4,14 +4,14 @@ ComponentVue_AccordionDataCluster
 		vueJSWidget.registerComponent('accordion-data-cluster', {
 */
 export default {
-	// v0.4.0
+	// v0.5.0
 	template: `
 		<accordion :title="accordionTitle" :open="isOpen" @update:released="updateReleased">
 			<template v-slot:above="{ setClass, setStyle }">
 				<div @click="checkedLocal = !isChecked" class="border border-bottom-0 rounded-top cursor-pointer d-flex align-items-center p-2">
 					<i class="ml-1 my-2 mr-2 icon-36" :class="[ 'icon-rab-' + icon ]"></i>
 					<h6 class="m-0 font-weight-normal">{{ title }}</h6>
-					<tickbox :checked="checkedLocal" class="flex-none ml-auto"></tickbox>
+					<togglebox :checked="checkedLocal" class="flex-none ml-auto mr-2 my-0"></togglebox>
 				</div>
 				<div class="px-3 bg-gradient-top">
 					<div :class="setClass" :style="setStyle(content)" class="position-relative text-brand-copy-2 compress">

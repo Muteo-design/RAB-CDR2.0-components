@@ -29,6 +29,9 @@
               <i class="icon-rab-check-invert"/>
             </li>
             <li class="p-2">
+              <i class="icon-rab-check-raw"/>
+            </li>
+            <li class="p-2">
               <i class="icon-rab-chevron-down"/>
             </li>
             <li class="p-2">
@@ -64,6 +67,12 @@
         <ul class="d-flex flex-wrap list-unstyled pl-0">
           <li class="p-2">
             <i class="icon-rab-close"/>
+          </li>
+          <li class="p-2">
+            <i class="icon-rab-close-gray"/>
+          </li>
+          <li class="p-2">
+            <i class="icon-rab-close-gray-raw"/>
           </li>
           <li class="p-2">
             <i class="icon-rab-info"/>

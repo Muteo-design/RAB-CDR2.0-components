@@ -1433,36 +1433,34 @@ label.input-toggle > span {
 	margin: 0;
 	display: inline-block;
 	position: relative;
-	background-color: #fff;
-	border-radius: 32px;
-	width: 36px;
-	height: 10px;
+	background-color: #e2e2e2;
+	border-radius: 34px;
+	width: 56px;
+	height: 34px;
+	padding: 1px;
 	cursor: pointer;
-	-webkit-transition: background-position 0.2s ease-in;
-	-moz-transition: background-position 0.2s ease-in;
-	transition: background-position 0.2s ease-in;
+	-webkit-transition: background-position 0.2s ease-in, background-color 0.2s ease-in;
+	-moz-transition: background-position 0.2s ease-in, background-color 0.2s ease-in;
+	transition: background-position 0.2s ease-in, background-color 0.2s ease-in;
+}
+label.input-toggle > input:checked + span,
+label.input-toggle > input:active + span {
+	background-color: #a5d867;
 }
 
-label.input-toggle > span i {
+label.input-toggle > span > i {
 	display: block;
 	position: absolute;
-	width: 20px;
-	height: 20px;
-	background: #d8e5f0;
-	border: 1px solid #fff;
-	/*
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
-    align-self: center;
-    */
+	width: 30px;
+	height: 30px;
 	top: 50%;
-	left: 0;
+	left: 2px;
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 	border-radius: 100%;
-	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 	-webkit-transition: left 0.2s ease-in, background-color 0.2s ease-in, -webkit-transform 0.3s ease;
 	transition: left 0.2s ease-in, background-color 0.2s ease-in, -webkit-transform 0.3s ease;
 	transition: left 0.2s ease-in, background-color 0.2s ease-in, transform 0.3s ease;
@@ -1470,8 +1468,7 @@ label.input-toggle > span i {
 
 label.input-toggle > input:checked + span i,
 label.input-toggle > input:active + span i {
-	left: calc(100% - 20px);
-	background-color: #a5d867;
+	left: 24px;
 }
 
 label.input-toggle > span i svg {
