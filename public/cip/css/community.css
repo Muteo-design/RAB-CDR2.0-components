@@ -1426,7 +1426,7 @@ label.input-toggle {
 	line-height: 0;
 	font-size: 0;
 	display: inline-block;
-	margin: 0;
+	margin-bottom: 0 !important;
 }
 
 label.input-toggle > span {
