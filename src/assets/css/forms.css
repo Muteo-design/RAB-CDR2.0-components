@@ -38,6 +38,7 @@ button {
 
 .btn-toggle {
   font-weight: 600;
+  font-size: 14px;
   min-width: 0 !important;
   width: 8rem !important;
   border-radius: var(--rounded-sm);
