@@ -161,6 +161,8 @@ div[class*="bullet-"]::before {
 	background-size: 18px;
 	background-repeat: no-repeat;
 	background-position: 0 0.075em;
+	padding-top: 0.075em;
+	box-sizing: content-box;
 	speak: none;
 }
 [class*="alert-"]::before {

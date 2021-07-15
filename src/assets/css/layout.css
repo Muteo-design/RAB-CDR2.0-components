@@ -140,7 +140,7 @@ svg {
     box-shadow: var(--shadow-1);
   }
   .shadow-sm-2 {
-    box-shadow: var(--shadow-2) !important                      ;
+    box-shadow: var(--shadow-2) !important;
   }
 }
 
