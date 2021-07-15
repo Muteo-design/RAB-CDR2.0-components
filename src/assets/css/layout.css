@@ -132,7 +132,7 @@ svg {
 
 .shadow-2,
 .hover-shadow-2:hover {
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-2) !important;
 }
 
 @media (--breakpoint-sm) {
@@ -140,7 +140,7 @@ svg {
     box-shadow: var(--shadow-1);
   }
   .shadow-sm-2 {
-    box-shadow: var(--shadow-2);
+    box-shadow: var(--shadow-2) !important                      ;
   }
 }
 

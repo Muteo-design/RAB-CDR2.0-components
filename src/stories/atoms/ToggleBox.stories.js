@@ -1,18 +1,17 @@
-import Togglebox from './Togglebox';
+import ToggleBox from './ToggleBox';
 
 export default {
-	title: 'CDR 2.0/Atoms/Togglebox',
-	component: Togglebox,
-	// decorators: [() => ({ template: '<label><story/></label>' })],
+	title: 'CDR 2.0/Atoms/ToggleBox',
+	component: ToggleBox,
 };
 
 const Template = (args) => ({
-	components: { Togglebox },
+	components: { ToggleBox },
 	setup() {
 		return { args }
 	},
 	template:
-		'<togglebox v-bind="args"/>',
+		'<toggle-box v-bind="args"/>',
 });
 
 export const Default = Template.bind({});

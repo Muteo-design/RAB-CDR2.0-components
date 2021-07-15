@@ -35,3 +35,14 @@ button {
   background-color: var(--brand-primary-3) !important;
   color: var(--brand-white) !important;
 }
+
+.btn-toggle {
+  font-weight: 600;
+  min-width: 0 !important;
+  width: 8rem !important;
+  border-radius: var(--rounded-sm);
+  color: var(--brand-primary-1);
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2) !important;
+  line-height: var(--line-height-4);
+}

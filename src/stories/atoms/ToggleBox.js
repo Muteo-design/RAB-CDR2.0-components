@@ -1,12 +1,12 @@
 /*
-ComponentVue_Togglebox
+ComponentVue_ToggleBox
 	[[
-		vueJSWidget.registerComponent('togglebox', {
+		vueJSWidget.registerComponent('toggle-box', {
 */
 export default {
 	// v0.1.0
 	template: `
-		<label class="input-toggle" :class="[ disabled ? 'cursor-not-allowed' : 'cursor-pointer' ]">
+		<label class="input-toggle d-sm-none" :class="[ disabled ? 'cursor-not-allowed' : 'cursor-pointer' ]">
 			<input type="checkbox" class="d-none" v-model="checkedLocal" :disabled="disabled"/>
 			<span>
 				<i :class="['icon-rab-' + (isChecked ? 'check-raw' : 'close-gray-raw')]"></i>
@@ -32,13 +32,6 @@ export default {
 		},
 	},
 	computed: {
-		iconName: function() {
-			if (this.checkedLocal) {
-				return '-active' + (this.disabled ? '-disabled' : '');
-			} else {
-				return this.disabled ? '-disabled' : (this.hover ? '-hover' : '');
-			}
-		},
 		checkedLocal: {
 			get: function() {
 				return this.isChecked;

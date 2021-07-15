@@ -23,7 +23,8 @@ import AccordionDataCluster from '@/stories/molecules/AccordionDataCluster';
 import BankConnect from '@/stories/molecules/BankConnect';
 // Atoms
 import Tickbox from '@/stories/atoms/Tickbox';
-import Togglebox from '@/stories/atoms/Togglebox';
+import ToggleBox from '@/stories/atoms/ToggleBox';
+import ToggleButton from '@/stories/atoms/ToggleButton';
 import Chevron from '@/stories/atoms/Chevron';
 // Mixin that mimics Cloudcase passing data from server to component state
 import mixinCloudcaseState from '@/mixins/cloudcase-state';
@@ -66,7 +67,8 @@ app.component('accordion-data-cluster', AccordionDataCluster);
 app.component('bank-connect', BankConnect);
 // Atoms
 app.component('tickbox', Tickbox);
-app.component('togglebox', Togglebox);
+app.component('toggle-box', ToggleBox);
+app.component('toggle-button', ToggleButton);
 app.component('chevron', Chevron);
 
 import '@/assets/css/app.css';
