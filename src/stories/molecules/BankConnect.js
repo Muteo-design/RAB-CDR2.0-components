@@ -10,7 +10,7 @@ export default {
 		<div class="d-flex align-items-center">
 			<bank-details :bank="bank" truncate class="font-brand-semibold text-brand-copy-1 h5 ml-sm-2 px-1"></bank-details>
 			<div class="ml-auto">
-				<div v-if="nonDataholder" class="btn pointer-none bg-brand-secondary-3 w-auto rounded-sm mh-0 px-2-1 pt-2-1 line-height-1">
+				<div v-if="nonDataholder" class="btn pointer-none bg-brand-secondary-3 w-auto rounded-sm mh-0 p-2 pb-2-1 line-height-2">
 					<span class="h7 text-brand-copy-2 font-weight-medium">No action required yet</span>
 				</div>
 				<button v-else-if="!bank.status" type="button" @click="$emit('update:status', 'pending')"
