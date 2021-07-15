@@ -10,7 +10,7 @@ export default {
 			<slot name="above" :setClass="setClass" :setStyle="setStyle"></slot>
 			<div class="border shadow-sm" :class="[ $slots.above ? 'rounded-bottom border-top-0' : 'rounded' ]">
 				<div @click="openLocal = !isOpen" class="cursor-pointer d-flex align-items-center py-2 pl-3">
-					<h6 class="ml-1 mb-0 font-weight-normal brand-primary-3">{{ title }}</h6>
+					<h6 class="ml-1 mb-0 font-weight-normal brand-primary-3 sm-h5 py-sm-2">{{ title }}</h6>
 					<chevron :expanded="isReleased" class="ml-auto mr-2"></chevron>
 				</div>
 				<div class="compress" :class="setClass" :style="setStyle()">

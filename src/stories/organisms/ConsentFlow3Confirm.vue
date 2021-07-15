@@ -19,18 +19,18 @@ ComponentVue_ConsentFlow3Confirm
 		</div>
 		<h3 class="py-2 px-sm-3 m-sm-1">Managing your data</h3>
 		<accordion title="How to review your consent" class="my-3 pb-1 pb-sm-0">
-			<div class="h7 px-1">
-				<p class="bullet-info text-brand-copy-2">We provide a secure dashboard for you to review and revoke the consent you’ve given. Access it via:</p>
-				<p class="bullet-arrow-invert"><a href="#" class="font-weight-bold border-bottom-0 h8 sm-h7">mycdr.regionalaustraliabank.com.au</a></p>
+			<div class="px-1">
+				<p class="bullet-info text-brand-copy-2 h7 sm-h6">We provide a secure dashboard for you to review and revoke the consent you’ve given. Access it via:</p>
+				<p class="bullet-arrow-invert line-height-3"><a href="#" class="font-weight-bold border-bottom-0 h8 sm-h6">mycdr.regionalaustraliabank.com.au</a></p>
 			</div>
 		</accordion>
 		<accordion title="How to revoke your consent" class="my-3 pb-1 pb-sm-0">
-			<div class="h7 px-1">
-				<p class="bullet-info text-brand-copy-2">Visit your dashboard and follow the instructions to revoke your consent anytime.</p>
+			<div class="px-1">
+				<p class="bullet-info text-brand-copy-2 h7 sm-h6">Visit your dashboard and follow the instructions to revoke your consent anytime.</p>
 			</div>
 		</accordion>
 		<accordion title="How to stop sharing your data">
-			<ul class="bullet-info h7 px-1 mb-0">
+			<ul class="bullet-info px-1 mb-0 h7 sm-h6">
 				<li>If we're processing your loan application, it will be cancelled.</li>
 				<li>You'll have to restart your application and upload your bank statements manually.</li>
 				<li>You'll have to restart your application and upload your bank statements manually.</li>

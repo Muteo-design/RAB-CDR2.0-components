@@ -10,7 +10,7 @@ export default {
 			<template v-slot:above="{ setClass, setStyle }">
 				<div @click="checkedLocal = !isChecked" class="border border-bottom-0 rounded-top cursor-pointer d-flex align-items-center p-2">
 					<i class="ml-1 my-2 mr-2 icon-36" :class="[ 'icon-rab-' + icon ]"></i>
-					<h6 class="m-0 font-weight-normal">{{ title }}</h6>
+					<h6 class="m-0 font-weight-normal sm-h5 py-sm-2">{{ title }}</h6>
 					<toggle-box :checked="checkedLocal" checked-text="I agree" un-checked-text="I don't agree" class="flex-none ml-auto mr-2 my-0"></toggle-box>
 				</div>
 				<div class="px-3 bg-gradient-top">

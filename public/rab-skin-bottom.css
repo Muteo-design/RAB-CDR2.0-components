@@ -160,7 +160,7 @@ div[class*="bullet-"]::before {
 	width: 2em;
 	background-size: 18px;
 	background-repeat: no-repeat;
-	background-position: 0 0;
+	background-position: 0 0.075em;
 	speak: none;
 }
 [class*="alert-"]::before {
