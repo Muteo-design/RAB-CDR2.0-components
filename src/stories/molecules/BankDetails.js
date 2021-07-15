@@ -9,13 +9,13 @@ export default {
 		<!-- NOTE: class attribute on this component is rendered on child element .bank-name via $attr.class -->
 		<!--  dummy div required to prevent default behaviour, ie: $attr.class rendered on parent -->
 		<div></div>
-		<div class="bank-details d-flex align-items-center">
+		<div class="bank-details d-flex align-items-center mw-0">
 			<div class="flex-none rounded-circle bg-white mr-2" :class="[ small ? 'icon-24' : 'icon-32' ]" :style="brandStyle">
 				<div class="w-100 h-100 rounded-circle overflow-hidden position-relative">
 					<img :src="bank.imageUrl" @load="setBrand($event)" class="center-xy"/>
 				</div>
 			</div>
-			<div class="bank-name" :class="[$attrs.class, { 'h8': small }, truncate ? 'overflow-text' : 'mw-100']">{{ bank.name }}</div>
+			<div class="bank-name" :class="[$attrs.class, { 'h8': small }, truncate ? 'overflow-text mw-0' : 'mw-100']">{{ bank.name }}</div>
 		</div>
 	`,
 	props: {

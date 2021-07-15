@@ -14,6 +14,7 @@ export default {
   },
   methods: {
     setEntered() {
+      console.log(this.enteredData)
       this.entered = JSON.parse(this.enteredData);
     },
     setText() {

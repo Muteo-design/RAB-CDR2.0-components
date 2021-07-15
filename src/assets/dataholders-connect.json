@@ -1,14 +1,4 @@
 [{
-  "name": "Commonwealth Bank of Australia",
-  "alias": "CBA",
-  "id": 48123123124,
-  "imageUrl": "48123123124.jpg"
-}, {
-  "name": "Westpac",
-  "alias": "",
-  "id": 33007457141,
-  "imageUrl": "33007457141.png"
-}, {
   "name": "ANZ Bank",
   "alias": "ANZ",
   "id": 11005357522,

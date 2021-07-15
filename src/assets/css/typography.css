@@ -42,6 +42,13 @@ input.font-brand {
   font-family: var(--font-stack-karbon);
 }
 
+.font-brand-semibold,
+label.font-brand-semibold,
+input.font-brand-semibold {
+  font-family: var(--font-stack-karbon);
+  font-weight: 800;
+}
+
 .font-brand-bold,
 label.font-brand-bold,
 input.font-brand-bold {

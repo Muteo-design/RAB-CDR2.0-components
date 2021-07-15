@@ -1,15 +1,15 @@
 ComponentVue_ConnectBanksChecklist
 <template>
 	<div class="rab-cdr">
-	<!-- v0.1.2 -->
-<!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
+		<!-- v0.1.2 -->
+		<!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
 		<div class="row">
 			<h3 class="col-xs-6 d-none d-sm-block">Connect Now</h3>
 			<div class="col-xs-12 col-sm-6">
 				<h6 class="d-flex flex-wrap h7 mb-2">
 					<span>Completed:</span>
 					<span class="ml-auto">
-						<span :class="{ 'text-light': !completed.length }">{{ pad(completed.length, 2) }}</span><span :class="{ 'text-light': completed.length !== banks.length }">/{{ pad(banks.length, 2) }}</span>
+						<span :class="{ 'text-light': !completed.length }">{{ pad(completed.length, 2) }}</span><span :class="{ 'text-light': completed.length !== dataholders.length }">/{{ pad(dataholders.length, 2) }}</span>
 					</span>
 				</h6>
 				<div class="w-100 position-relative rounded-sm bg-light overflow-hidden d-flex">
@@ -17,7 +17,8 @@ ComponentVue_ConnectBanksChecklist
 				</div>
 			</div>
 		</div>
-		<bank-connect v-for="bank in banks" :key="bank.id" :bank="bank" @update:status="bank.status = $event" class="my-3-1"></bank-connect>
+		<bank-connect v-for="bank in dataholders" :key="bank.id" :bank="bank" @update:status="bank.status = $event" class="my-3-1"></bank-connect>
+		<bank-connect v-for="bank in nonDataholders" :key="bank.id" :bank="bank" nonDataholder class="my-3-1"></bank-connect>
 	</div>
 </template>
 
@@ -27,7 +28,8 @@ export default {
 		return {
 			// REQUIRED PROPERTY - state to be shared with the rules engine - this is the entered value of the question
 			entered: {
-				banks: [],
+				dataholders: [],
+				nonDataholders: [],
 			},
 		};
 	},
@@ -39,17 +41,20 @@ export default {
 		},
 	},
 	computed: {
-		banks: function() {
-			return this.entered.banks;
+		dataholders: function() {
+			return this.entered.dataholders;
+		},
+		nonDataholders: function() {
+			return this.entered.nonDataholders;
 		},
 		completed: function() {
-			return this.entered.banks.filter(function(bank) {
+			return this.entered.dataholders.filter(function(bank) {
 				return bank.status === 'complete';
 			});
 		},
 		progress: function() {
 			return {
-				width: ((this.completed.length / this.entered.banks.length) * 100) + '%',
+				width: ((this.completed.length / this.entered.dataholders.length) * 100) + '%',
 			};
 		},
 	},
