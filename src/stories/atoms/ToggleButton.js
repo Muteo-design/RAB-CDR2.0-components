@@ -27,14 +27,6 @@ export default {
 			isChecked: this.checked,
 		};
 	},
-	methods: {
-		setChecked: function(value) {
-			var vm = this;
-			setTimeout(function() {
-				vm.isChecked = value;
-			}, 150);
-		},
-	},
 	computed: {
 		bgColor: function() {
 			return this.isChecked ? 'primary-2' : 'secondary-3';
@@ -50,14 +42,14 @@ export default {
 				return this.isChecked;
 			},
 			set: function(value) {
-				this.setChecked(value);
+				this.isChecked = value;
 				this.$emit('update:checked', value);
 			},
 		},
 	},
 	watch: {
 		checked: function(value) {
-			this.setChecked(value);
+			this.isChecked = value;
 		},
 	},
 };
