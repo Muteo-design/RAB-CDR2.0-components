@@ -3,6 +3,7 @@ export default {
     // Requires a JSON object string
     enteredData: String,
     textData: String,
+    disabled: Boolean,
   },
   created() {
     if (this.enteredData) {
@@ -14,7 +15,6 @@ export default {
   },
   methods: {
     setEntered() {
-      console.log(this.enteredData)
       this.entered = JSON.parse(this.enteredData);
     },
     setText() {

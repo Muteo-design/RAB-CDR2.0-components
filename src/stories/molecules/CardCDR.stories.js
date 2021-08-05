@@ -6,13 +6,11 @@ export default {
 	decorators: [() => ({ template: '<div class="text-center"><div class="d-inline-block mx-auto"><story/></div></div>' })],
 };
 
-const Template = (args) => ({
+const Template = (args, { argTypes }) => ({
 	components: { CardCDR },
-	setup() {
-		return { args };
-	},
+	props: Object.keys(argTypes),
 	template:
-		'<card-cdr v-bind="args"/>',
+		'<card-cdr v-bind="$props"/>',
 });
 
 export const Default = Template.bind({});

@@ -5,11 +5,9 @@ export default {
   component: Icons,
 };
 
-const Template = (args) => ({
+const Template = (args, { argTypes }) => ({
   components: { Icons },
-  setup() {
-    return { args };
-  },
+  props: Object.keys(argTypes),
   template: '<icons/>',
 });
 

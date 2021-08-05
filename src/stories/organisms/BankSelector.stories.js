@@ -6,12 +6,10 @@ export default {
 	component: BankSelector,
 };
 
-const Template = (args) => ({
+const Template = (args, { argTypes }) => ({
 	components: { BankSelector },
-	setup() {
-		return { args }
-	},
-	template: '<bank-selector :entered-data="args.entered"/>',
+	props: Object.keys(argTypes),
+	template: '<bank-selector :entered-data="entered"/>',
 });
 
 export const Default = Template.bind({});

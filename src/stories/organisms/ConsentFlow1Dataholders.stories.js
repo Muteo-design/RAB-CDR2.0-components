@@ -6,12 +6,10 @@ export default {
 	component: ConsentFlow1Dataholders,
 };
 
-const Template = (args) => ({
+const Template = (args, { argTypes }) => ({
 	components: { ConsentFlow1Dataholders },
-	setup() {
-		return { args };
-	},
-	template: '<consent-flow-1-dataholders :entered-data="args.entered"/>',
+	props: Object.keys(argTypes),
+	template: '<consent-flow-1-dataholders :entered-data="entered"/>',
 });
 
 const dataholders = banks.filter(x => x.CDREnabled);

@@ -23,6 +23,9 @@
               <i class="icon-rab-check-green"/>
             </li>
             <li class="p-2">
+              <i class="icon-rab-check-gray"/>
+            </li>
+            <li class="p-2">
               <i class="icon-rab-check-green-glow"/>
             </li>
             <li class="p-2">

@@ -5,12 +5,10 @@ export default {
   component: Questions,
 };
 
-const Template = (args) => ({
+const Template = (args, { argTypes }) => ({
   components: { Questions },
-  setup() {
-    return { args };
-  },
-  template: '<questions v-bind="args"/>',
+  props: Object.keys(argTypes),
+  template: '<questions v-bind="$props"/>',
 });
 
 export const Default = Template.bind({});

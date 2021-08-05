@@ -1,34 +1,35 @@
 ComponentVue_BankSelector
 <template>
 	<div class="rab-cdr">
-	<!-- v0.11.2 -->
+	<!-- v0.14.1 -->
 <!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
-		<div @click="focusSearchInput()" class="bank-search position-relative" :class="{ 'conceal': editingPills }">
-			<div class="position-absolute center-y p-4 mt-1" :class="{ 'pointer-none': !searchValue }">
+		<div @click="focusSearchInput()" class="bank-search position-relative" :class="{ 'conceal': editingPills || disabled }">
+			<div class="position-absolute center-y p-4" :class="{ 'pointer-none': !searchValue }">
 				<i v-if="searchValue" class="center-xy icon-rab-arrow-left-gray cursor-pointer" @click="searchValue = ''"></i>
 				<i v-else class="center-xy" :class="[ searchFocussed || searchHovered || editingPills ? 'icon-rab-search-gray' : 'icon-rab-search']"></i>
 			</div>
 			<input type="text" ref="search" name="search" id="search" placeholder="Find your bank"
-				v-model="searchValue" :disabled="editingPills"
+				v-model="searchValue" :disabled="editingPills || disabled"
 				@mouseenter="searchHovered = true" @mouseleave="searchHovered = false"
 				@focus="searchFocussed = true" @blur="searchFocussed = false"
 				class="h-auto w-100 rounded bg-white pl-5 py-3 pr-3 font-brand h5"
-				:class="[ { 'border' : editingPills }, (searchValue && !filteredBanks.match.length) ? 'border-danger' : 'border-brand-primary-1', { 'hover-shadow-2': searchHovered } ]"/>
+				:class="[ { 'border' : editingPills || disabled }, (searchValue && !filteredBanks.match.length) ? 'border-danger' : 'border-brand-primary-1', { 'hover-shadow-2': searchHovered } ]"/>
 		</div>
 		<div v-if="selectedBanks.length > 0">
 			<h6 class="mt-3 mb-2">Banks selected: {{ selectedBanks.length }}</h6>
 			<div class="bank-selected-wrapper d-flex" :class="[ editingPills ? 'flex-wrap overflow-auto' : 'mr-n4' ]">
 				<button type="button" @click="togglePills($event)"
+					:disabled="disabled"
 					class="flex-none btn btn-info btn-pill w-auto h-auto px-4 pt-1 pb-2 m-0 mb-2-1 font-weight-bold">
 					{{ editingPills ? 'Done' : 'Edit' }}
 				</button>
 				<div class="border-brand-primary-1 border-right-0 mx-2-1 mb-2-1"></div>
 				<bank-pill v-for="bank in selectedBanks" :key="bank.id" :bank="bank" :editing="editingPills" :truncate="!editingPills"
-					@queue-deselect="bank.deselect = true" :disabled="bank.deselect">
+					@queue-deselect="queueDeselect(bank)" :disabled="bank.deselect || bank.disabled">
 				</bank-pill>
 			</div>
 		</div>
-		<div :class="{ 'conceal': editingPills }">
+		<div :class="{ 'conceal': editingPills || disabled }">
 			<div v-if="!searchMatch" class="alert alert-validate">
 				We can't find this bank. Try again or choose <strong>My bank is not listed</strong>
 			</div>
@@ -52,8 +53,8 @@ ComponentVue_BankSelector
 				</div>
 			</div>
 		</div>
-		<teleport to="#vue-modal">
-			<div v-if="modalActive" class="rab-cdr">
+		<mounting-portal v-if="modalActive" mount-to="#vue-modal" append name="confirmDeselectModal">
+			<div class="rab-cdr">
 				<h1 class="font-italic">Are you sure you want to remove this bank?</h1>
 				<p class="mb-4">A complete banking history will help us to provide you with the best possible offer.</p>
 				<bank-pill v-for="bank in deselectQueue" :key="bank.id" :bank="bank" disabled small class="d-inline-block"></bank-pill>
@@ -62,7 +63,7 @@ ComponentVue_BankSelector
 					<button type="button" @click="processDeselect(true)" class="btn btn-modal">Remove Bank{{ deselectQueue.length > 1 ? 's' : '' }}</button>
 				</div>
 			</div>
-		</teleport>
+		</mounting-portal>
 	</div>
 </template>
 
@@ -112,6 +113,9 @@ export default {
 			CCExtension.closeVueModal();
 			this.modalActive = false;
 		},
+		queueDeselect: function(bank) {
+			this.$set(bank, 'deselect', true);
+		},
 		processDeselect: function(confirm) {
 			this.selectedBanks.forEach(function(bank) {
 				if (confirm && bank.deselect) {
@@ -123,7 +127,8 @@ export default {
 			this.closeModal();
 		},
 		alphaSortedBanks: function() {
-			return this.entered.banks.sort(function(a, b) {
+			var sortedBanks = _.clone(this.entered.banks);
+			return sortedBanks.sort(function(a, b) {
 				return (a.name.toLowerCase() > b.name.toLowerCase() || a.id === 'other') ? 1 : -1;
 			});
 		},
@@ -174,5 +179,8 @@ export default {
 			})
 		}
 	},
+	components: {
+		'mounting-portal': window[ 'PortalVue' ].MountingPortal,
+	}
 };
 </script>

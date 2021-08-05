@@ -5,11 +5,9 @@ export default {
 	component: ConsentFlow2Intro,
 };
 
-const Template = (args) => ({
+const Template = (args, { argTypes }) => ({
 	components: { ConsentFlow2Intro },
-	setup() {
-		return { args };
-	},
+	props: Object.keys(argTypes),
 	template:
 		'<consent-flow-2-intro/>',
 });

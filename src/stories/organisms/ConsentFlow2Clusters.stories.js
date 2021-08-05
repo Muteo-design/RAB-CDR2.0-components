@@ -5,13 +5,11 @@ export default {
 	component: ConsentFlow2Consent,
 };
 
-const Template = args => ({
+const Template = (args, { argTypes }) => ({
 	components: { ConsentFlow2Consent },
-	setup() {
-		return { args };
-	},
+	props: Object.keys(argTypes),
 	template:
-		'<consent-flow-2-clusters v-bind:entered-data="args.entered" v-bind:text-data="args.text"/>',
+		'<consent-flow-2-clusters v-bind:entered-data="entered" v-bind:text-data="text"/>',
 });
 
 const text = 'Please agree for us to collect your:';

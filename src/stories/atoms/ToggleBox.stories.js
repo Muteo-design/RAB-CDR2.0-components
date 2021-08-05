@@ -5,13 +5,11 @@ export default {
 	component: ToggleBox,
 };
 
-const Template = (args) => ({
+const Template = (args, { argTypes }) => ({
 	components: { ToggleBox },
-	setup() {
-		return { args }
-	},
+	props: Object.keys(argTypes),
 	template:
-		'<toggle-box v-bind="args"/>',
+		'<toggle-box v-bind="$props"/>',
 });
 
 export const Default = Template.bind({});

@@ -6,13 +6,11 @@ export default {
 	decorators: [() => ({ template: '<label><story/></label>' })],
 };
 
-const Template = (args) => ({
+const Template = (args, { argTypes }) => ({
 	components: { Chevron },
-	setup() {
-		return { args };
-	},
+	props: Object.keys(argTypes),
 	template:
-		'<chevron v-bind="args"/>',
+		'<chevron v-bind="$props"/>',
 });
 
 export const Default = Template.bind({});

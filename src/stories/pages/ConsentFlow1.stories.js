@@ -7,13 +7,11 @@ export default {
 	component: ConsentFlow1,
 };
 
-const Template = (args) => ({
+const Template = (args, { argTypes }) => ({
 	components: { ConsentFlow1 },
-	setup() {
-		return { args };
-	},
+	props: Object.keys(argTypes),
 	template:
-		'<consent-flow-1 v-bind="args"/>',
+		'<consent-flow-1 v-bind="$props"/>',
 });
 
 export const Default = Template.bind({});

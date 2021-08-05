@@ -2,17 +2,34 @@
   "name": "ANZ Bank",
   "alias": "ANZ",
   "id": 11005357522,
-  "imageUrl": "11005357522.png"
+  "imageUrl": "11005357522.png",
+  "authorisation": {
+    "authoriseUrl": true
+  }
 }, {
   "name": "National Australia Bank",
   "alias": "NAB",
   "id": 12004044937,
   "imageUrl": "12004044937.jpg",
-  "CDREnabled": true
+  "CDREnabled": true,
+  "authorisation": {
+    "authoriseUrl": true
+  }
 }, {
   "name": "Regional Australia Bank",
   "alias": "RAB",
   "id": 21087650360,
   "imageUrl": "21087650360.png",
-  "CDREnabled": true
+  "CDREnabled": true,
+  "authorisation": {
+    "authoriseUrl": true
+  }
+}, {
+  "name": "ING Bank",
+  "alias": "",
+  "id": 24000893292,
+  "imageUrl": "24000893292.png",
+  "authorisation": {
+    "authoriseUrl": true
+  }
 }]

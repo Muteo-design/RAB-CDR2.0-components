@@ -7,13 +7,11 @@ export default {
 	component: BankDetails,
 };
 
-const Template = (args) => ({
+const Template = (args, { argTypes }) => ({
 	components: { BankDetails },
-	setup() {
-		return { args }
-	},
+	props: Object.keys(argTypes),
 	template:
-		'<bank-details :bank="args.bank"/>',
+		'<bank-details :bank="bank"/>',
 });
 
 export const ShortName = Template.bind({});

@@ -11,13 +11,11 @@ export default {
 	decorators: [() => ({ template: '<div class="row"><div class="col-sm-3"><story/></div></div>' })],
 };
 
-const Template = (args) => ({
+const Template = ({ icon }, { argTypes }) => ({
 	components: { CardBadge },
-	setup() {
-		return { args };
-	},
+	props: Object.keys(argTypes),
 	template: `
-		<card-badge v-bind="args"><i class="icon-48 icon-rab-${args.icon}"/></card-badge>
+		<card-badge v-bind="$props"><i class="icon-48 icon-rab-${icon}"/></card-badge>
 	`,
 });
 

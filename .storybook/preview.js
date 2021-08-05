@@ -1,5 +1,5 @@
 // Register components globally that will be integrated into Cloudcase
-import { app } from '@storybook/vue3';
+import Vue from 'vue';
 // Organisms (top level)
 import BankSelector from '@/stories/organisms/BankSelector';
 import ConsentFlow1Intro from '@/stories/organisms/ConsentFlow1Intro';
@@ -9,7 +9,7 @@ import ConsentFlow2Clusters from '@/stories/organisms/ConsentFlow2Clusters';
 import ConsentFlow3Intro from '@/stories/organisms/ConsentFlow3Intro';
 import ConsentFlow3Confirm from '@/stories/organisms/ConsentFlow3Confirm';
 import ConsentFlow3Actions from '@/stories/organisms/ConsentFlow3Actions';
-import ConnectBanksChecklist from '@/stories/organisms/ConnectBanksChecklist';
+import DataholderConnector from '@/stories/organisms/DataholderConnector';
 // Molecules
 import BankDetails from '@/stories/molecules/BankDetails';
 import BankSelect from '@/stories/molecules/BankSelect';
@@ -20,7 +20,7 @@ import CardCDR from '@/stories/molecules/CardCDR';
 import CardCDRIntro from '@/stories/molecules/CardCDRIntro';
 import Accordion from '@/stories/molecules/Accordion';
 import AccordionDataCluster from '@/stories/molecules/AccordionDataCluster';
-import BankConnect from '@/stories/molecules/BankConnect';
+import DataholderConnect from '@/stories/molecules/DataholderConnect';
 // Atoms
 import Tickbox from '@/stories/atoms/Tickbox';
 import ToggleBox from '@/stories/atoms/ToggleBox';
@@ -39,35 +39,35 @@ const topLevelComponents = [
   ConsentFlow3Intro,
   ConsentFlow3Confirm,
   ConsentFlow3Actions,
-  ConnectBanksChecklist
+  DataholderConnector
 ];
 for (const component of topLevelComponents) {
   component.mixins = [mixinCloudcaseState];
 }
-app.component('bank-selector', BankSelector);
-app.component('consent-flow-1-intro', ConsentFlow1Intro);
-app.component('consent-flow-1-dataholders', ConsentFlow1Dataholders);
-app.component('consent-flow-2-intro', ConsentFlow2Intro);
-app.component('consent-flow-2-clusters', ConsentFlow2Clusters);
-app.component('consent-flow-3-intro', ConsentFlow3Intro);
-app.component('consent-flow-3-confirm', ConsentFlow3Confirm);
-app.component('consent-flow-3-actions', ConsentFlow3Actions);
-app.component('connect-banks-checklist', ConnectBanksChecklist);
+Vue.component('bank-selector', BankSelector);
+Vue.component('consent-flow-1-intro', ConsentFlow1Intro);
+Vue.component('consent-flow-1-dataholders', ConsentFlow1Dataholders);
+Vue.component('consent-flow-2-intro', ConsentFlow2Intro);
+Vue.component('consent-flow-2-clusters', ConsentFlow2Clusters);
+Vue.component('consent-flow-3-intro', ConsentFlow3Intro);
+Vue.component('consent-flow-3-confirm', ConsentFlow3Confirm);
+Vue.component('consent-flow-3-actions', ConsentFlow3Actions);
+Vue.component('dataholder-connector', DataholderConnector);
 // Molecules
-app.component('bank-details', BankDetails);
-app.component('bank-select', BankSelect);
-app.component('bank-pill', BankPill);
-app.component('card-badge', CardBadge);
-app.component('card-cdr', CardCDR);
-app.component('card-cdr-intro', CardCDRIntro);
-app.component('card-bank-connect', CardBankConnect);
-app.component('accordion', Accordion);
-app.component('accordion-data-cluster', AccordionDataCluster);
-app.component('bank-connect', BankConnect);
+Vue.component('bank-details', BankDetails);
+Vue.component('bank-select', BankSelect);
+Vue.component('bank-pill', BankPill);
+Vue.component('card-badge', CardBadge);
+Vue.component('card-cdr', CardCDR);
+Vue.component('card-cdr-intro', CardCDRIntro);
+Vue.component('card-bank-connect', CardBankConnect);
+Vue.component('accordion', Accordion);
+Vue.component('accordion-data-cluster', AccordionDataCluster);
+Vue.component('dataholder-connect', DataholderConnect);
 // Atoms
-app.component('tickbox', Tickbox);
-app.component('toggle-box', ToggleBox);
-app.component('chevron', Chevron);
+Vue.component('tickbox', Tickbox);
+Vue.component('toggle-box', ToggleBox);
+Vue.component('chevron', Chevron);
 
 import '@/assets/css/app.css';
 

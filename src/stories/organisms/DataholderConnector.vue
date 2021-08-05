@@ -1,8 +1,8 @@
-ComponentVue_ConnectBanksChecklist
+ComponentVue_DataholderConnector
 <template>
 	<div class="rab-cdr">
-		<!-- v0.1.2 -->
-		<!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
+	<!-- v0.1.3 -->
+	<!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
 		<div class="row">
 			<h3 class="col-xs-6 d-none d-sm-block">Connect Now</h3>
 			<div class="col-xs-12 col-sm-6">
@@ -17,8 +17,8 @@ ComponentVue_ConnectBanksChecklist
 				</div>
 			</div>
 		</div>
-		<bank-connect v-for="bank in dataholders" :key="bank.id" :bank="bank" @update:status="bank.status = $event" class="my-3-1"></bank-connect>
-		<bank-connect v-for="bank in nonDataholders" :key="bank.id" :bank="bank" nonDataholder class="my-3-1"></bank-connect>
+		<dataholder-connect v-for="dataholder in dataholders" :key="dataholder.id" :dataholder="dataholder" @update:status="dataholder.status = $event" class="my-3-1"></dataholder-connect>
+		<dataholder-connect v-for="dataholder in nonDataholders" :key="dataholder.id" :dataholder="dataholder" nonDataholder class="my-3-1"></dataholder-connect>
 	</div>
 </template>
 

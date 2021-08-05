@@ -6,13 +6,11 @@ export default {
 	decorators: [() => ({ template: '<label><story/></label>' })],
 };
 
-const Template = (args) => ({
+const Template = (args, { argTypes }) => ({
 	components: { Tickbox },
-	setup() {
-		return { args }
-	},
+	props: Object.keys(argTypes),
 	template:
-		'<tickbox v-bind="args"/>',
+		'<tickbox v-bind="$props"/>',
 });
 
 export const Default = Template.bind({});

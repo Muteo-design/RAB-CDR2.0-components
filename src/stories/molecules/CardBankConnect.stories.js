@@ -7,13 +7,11 @@ export default {
 	component: CardBankConnect,
 };
 
-const Template = (args) => ({
+const Template = ({ slotTemplate }, { argTypes }) => ({
 	components: { CardBankConnect },
-	setup() {
-		return { args };
-	},
+	props: Object.keys(argTypes),
 	template: `
-		<card-bank-connect :bank="args.bank" :is-dataholder="args.isDataholder">${args.slotTemplate || ''}</card-bank-connect>
+		<card-bank-connect :bank="bank" :is-dataholder="isDataholder">${slotTemplate || ''}</card-bank-connect>
 	`,
 });
 

@@ -11,13 +11,11 @@ export default {
 	},
 };
 
-const Template = (args) => ({
+const Template = (args, { argTypes }) => ({
 	components: { BankSelect },
-	setup() {
-		return { args };
-	},
+	props: Object.keys(argTypes),
 	template:
-		'<bank-select v-bind="args"/>',
+		'<bank-select v-bind="$props"/>',
 });
 
 export const Default = Template.bind({});

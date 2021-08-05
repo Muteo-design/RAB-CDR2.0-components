@@ -5,11 +5,9 @@ export default {
 	component: CardCDRIntro,
 };
 
-const Template = (args) => ({
+const Template = (args, { argTypes }) => ({
 	components: { CardCDRIntro },
-	setup() {
-		return { args };
-	},
+	props: Object.keys(argTypes),
 	template: `
 		<card-cdr-intro>
 			<h3>How often will we access your data?</h3>

@@ -5,13 +5,11 @@ export default {
 	component: AccordionDataCluster,
 };
 
-const Template = ({ accountBalanceList, ...args }) => ({
+const Template = (args, { argTypes }) => ({
 	components: { AccordionDataCluster },
-	setup() {
-		return { args, accountBalanceList };
-	},
+	props: Object.keys(argTypes),
 	template: `
-		<accordion-data-cluster v-bind="args">
+		<accordion-data-cluster v-bind="$props">
 			<ul class="bullet-check-invert text-brand-copy-2 h7 columns-sm-2">
 				<li v-for="listItem in accountBalanceList" :key="listItem">{{ listItem }}</li>
 			</ul>
