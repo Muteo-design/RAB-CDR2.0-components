@@ -15,7 +15,10 @@ const Template = (args, { argTypes }) => ({
 const text = 'Please agree for us to collect your:';
 
 export const Default = Template.bind({});
-Default.args = { text };
+Default.args = {
+	entered: '{}',
+	text,
+};
 
 export const ConsentTransactionDetails = Template.bind({});
 ConsentTransactionDetails.args = {

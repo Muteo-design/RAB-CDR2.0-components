@@ -11,7 +11,7 @@ const Template = ({ slotTemplate }, { argTypes }) => ({
 	components: { CardBankConnect },
 	props: Object.keys(argTypes),
 	template: `
-		<card-bank-connect :bank="bank" :is-dataholder="isDataholder">${slotTemplate || ''}</card-bank-connect>
+		<card-bank-connect v-bind:bank="bank" v-bind:is-dataholder="isDataholder">${slotTemplate || ''}</card-bank-connect>
 	`,
 });
 
@@ -25,4 +25,5 @@ CDRDataholder.args = {
 export const NonCDRDataholder = Template.bind({});
 NonCDRDataholder.args = {
 	bank: nonDataholder,
+	isDataholder: false,
 };
