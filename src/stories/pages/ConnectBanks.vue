@@ -2,7 +2,7 @@
 	<page hide-buttons>
 		<panel legend="Now let's connect" feature-text="Please select your banks below and securely connect them one by one. We'll then be able to collect the data we need to fast track your application.">
 			<question>
-				<connect-banks-checklist :entered-data="connectBanksChecklistEntered"/>
+				<dataholder-connector :entered-data="connectBanksChecklistEntered"/>
 			</question>
 		</panel>
 	</page>

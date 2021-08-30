@@ -229,6 +229,9 @@ div.bullet-check-raw::before {
 .icon-rab-arrow-right-white::before {
 	background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path fill="%23fff" d="M14.4 9l-4.9 4.8c-.1.2-.2.2-.4.2s-.3 0-.3-.2c-.2-.2-.2-.5 0-.7l3.6-3.7H4.1c-.2.1-.5-.1-.5-.4s.2-.5.5-.5h8.3L8.8 4.8c-.2-.2-.2-.5 0-.7.2-.1.5-.1.7.1L14.4 9z"/></svg>');
 }
+.icon-rab-arrow-right-blue::before {
+	background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path fill="%23D3F4FB" d="M14.4 9l-4.9 4.8c-.1.2-.2.2-.4.2s-.3 0-.3-.2c-.2-.2-.2-.5 0-.7l3.6-3.7H4.1c-.2.1-.5-.1-.5-.4s.2-.5.5-.5h8.3L8.8 4.8c-.2-.2-.2-.5 0-.7.2-.1.5-.1.7.1L14.4 9z"/></svg>');
+}
 .icon-rab-plus-green::before {
 	background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18"><path fill="%23015060" fill-rule="evenodd" d="M18 9c0 4.9706-4.0294 9-9 9s-9-4.0294-9-9 4.0294-9 9-9 9 4.0294 9 9zm-5.3682.5698a.569.569 0 000-1.138h-3.062v-3.062a.569.569 0 10-1.138 0v3.062h-3.062a.569.569 0 100 1.138h3.062v3.062a.569.569 0 001.138 0v-3.062h3.062z" clip-rule="evenodd"/></svg>');
 }

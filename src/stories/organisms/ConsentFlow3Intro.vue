@@ -1,7 +1,7 @@
 ComponentVue_ConsentFlow3Intro
 <template>
 	<div class="rab-cdr">
-	<!-- v0.4.0 -->
+		<!-- v0.3.0 -->
 <!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
 		<card-cdr-intro>
 			<h3>How often will we access your data?</h3>

@@ -53,6 +53,9 @@
               <i class="icon-rab-arrow-right-white"/>
             </li>
             <li class="p-2">
+              <i class="icon-rab-arrow-right-blue"/>
+            </li>
+            <li class="p-2">
               <i class="icon-rab-plus-green"/>
             </li>
             <li class="p-2">

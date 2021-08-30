@@ -1,5 +1,5 @@
 import ConnectBanks from './ConnectBanks';
-import * as ConnectBanksChecklist from '../organisms/DataholderConnector.stories';
+import * as DataholderConnector from '../organisms/DataholderConnector.stories';
 
 export default {
 	title: 'CDR 2.0/Pages/ConnectBanks',
@@ -15,5 +15,5 @@ const Template = (args, { argTypes }) => ({
 
 export const Default = Template.bind({});
 Default.args = {
-	connectBanksChecklistEntered: ConnectBanksChecklist.Default.$propsentered,
+	connectBanksChecklistEntered: DataholderConnector.Default.args.entered,
 };

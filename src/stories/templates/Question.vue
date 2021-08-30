@@ -1,7 +1,7 @@
 <template>
 	<div :id="questionId" :cc-panel="ccName" class="questionPanel shownQuestionPanel shownQuestionTextPanel">
-		<div class="questionContainer" :class="[($slots.content ? 'fixed' : 'full') + 'WidthQuestion']" :cc-type="ccType" :cc-style="ccStyle">
-			<template v-if="featureText || $slots.content">
+		<div class="questionContainer" :class="[($scopedSlots.content ? 'fixed' : 'full') + 'WidthQuestion']" :cc-type="ccType" :cc-style="ccStyle">
+			<template v-if="featureText || $scopedSlots.content">
 				<div class="questionAnnotationsAndText">
 					<div class="questionAnnotations"><em>&nbsp;</em></div>
 					<div class="questionText" :cc-text="ccName">

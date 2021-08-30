@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "storybook": "BROWSER=none start-storybook -s ./public -p 6006 --no-manager-cache",
+    "storybook": "BROWSER=none start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -s public",
     "chromatic": "npx chromatic --auto-accept-changes --project-token 7e6808db6957",
     "watch:css": "run-p css:rab-skin-bottom css:rab-skin-scoped css:stylelint",

@@ -1,7 +1,7 @@
 ComponentVue_DataholderConnector
 <template>
 	<div class="rab-cdr">
-	<!-- v0.1.3 -->
+	<!-- v0.2.0 -->
 	<!--	<div id="vue-{{question.id}}" class="rab-cdr">-->
 		<div class="row">
 			<h3 class="col-xs-6 d-none d-sm-block">Connect Now</h3>
@@ -13,7 +13,7 @@ ComponentVue_DataholderConnector
 					</span>
 				</h6>
 				<div class="w-100 position-relative rounded-sm bg-light overflow-hidden d-flex">
-					<div class="rounded-sm border-thick border-brand-primary-3 " :class="{ 'border-transparent':  !completed.length }" :style="progress"></div>
+					<div class="rounded-sm border-thick border-brand-primary-3" :class="{ 'border-transparent': !completed.length }" :style="progress"></div>
 				</div>
 			</div>
 		</div>
@@ -48,8 +48,8 @@ export default {
 			return this.entered.nonDataholders;
 		},
 		completed: function() {
-			return this.entered.dataholders.filter(function(bank) {
-				return bank.status === 'complete';
+			return this.entered.dataholders.filter(function(dataholder) {
+				return dataholder.status === 'complete';
 			});
 		},
 		progress: function() {
@@ -58,5 +58,27 @@ export default {
 			};
 		},
 	},
+	mounted: function() {
+		var vm = this;
+		localStorage.removeItem('consent');
+		window.addEventListener('storage', function(e) {
+			if (e.key == 'consent' && !!e.newValue) {
+				var consent = JSON.parse(e.newValue);
+				consent.state = {
+					application: unescape(consent.state).split('|')[0],
+					dataholderId: unescape(consent.state).split('|')[1]
+				};
+
+				var dataholder = vm.entered.dataholders.find(function(dataholder) {
+					return dataholder.dataholderId === consent.state.dataholderId;
+				});
+
+				if (dataholder) {
+					vm.$set(dataholder, 'consent', consent);
+				}
+				localStorage.removeItem('consent');
+			}
+		})
+	}
 };
 </script>

@@ -1,5 +1,5 @@
 /*
-ComponentVue_DataholderConnet
+ComponentVue_DataholderConnect
 	[[
 		vueJSWidget.registerComponent('dataholder-connect', {
 */
